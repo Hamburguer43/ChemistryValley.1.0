@@ -1,9 +1,14 @@
-[gd_resource type="Resource" script_class="Compound_Res" load_steps=2 format=3 uid="uid://ciw7m8otpoeno"]
+[gd_resource type="Resource" script_class="Compound_Res" load_steps=3 format=3 uid="uid://ciw7m8otpoeno"]
 
 [ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_lv0j0"]
+[ext_resource type="Texture2D" uid="uid://rinxr6kaosaq" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Background/Icon27.png" id="2_42x2k"]
 
 [resource]
 script = ExtResource("1_lv0j0")
-nombre = "Dioxido de Titanio"
+nombre = "Óxido Titánico"
 formula = "TiO2"
+textura = ExtResource("2_42x2k")
+descripcion = "La forma más estable y pura de la oxidación del titanio. Es un polvo blanco de un brillo y opacidad inigualables. Debido a su capacidad para reflejar la luz y su extrema resistencia a la corrosión, es el pigmento base por excelencia en todo el mundo."
+rareza = "Comun"
+efectos = Array[String]([])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

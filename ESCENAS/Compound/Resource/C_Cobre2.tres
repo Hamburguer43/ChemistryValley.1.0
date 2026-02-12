@@ -1,9 +1,14 @@
-[gd_resource type="Resource" script_class="Compound_Res" load_steps=2 format=3 uid="uid://cmdmlmtpqar83"]
+[gd_resource type="Resource" script_class="Compound_Res" load_steps=3 format=3 uid="uid://cmdmlmtpqar83"]
 
 [ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_qtuow"]
+[ext_resource type="Texture2D" uid="uid://gqwug2hmipj8" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Background/Icon7.png" id="2_ptkvw"]
 
 [resource]
 script = ExtResource("1_qtuow")
-nombre = "Oxido Cuprico"
+nombre = "Oxido cúprico"
 formula = "CuO"
+textura = ExtResource("2_ptkvw")
+descripcion = "Polvo negro fino. Se usa en la fabricación de semiconductores y para dar color azul o verde a vidrios y cerámicas."
+rareza = "Comun"
+efectos = Array[String]([])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

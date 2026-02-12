@@ -32,6 +32,10 @@ func reset_tween():
 func _on_texture_button_pressed() -> void:
 	reset_tween()
 	
+	#limpiamos para evitar duplicados
+	for children in grid.get_children():
+		children.queue_free()
+	
 	animation.play("close")
 	await animation.animation_finished
 	

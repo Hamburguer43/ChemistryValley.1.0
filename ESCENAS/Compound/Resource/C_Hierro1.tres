@@ -1,9 +1,14 @@
-[gd_resource type="Resource" script_class="Compound_Res" load_steps=2 format=3 uid="uid://dgo7rm73ft746"]
+[gd_resource type="Resource" script_class="Compound_Res" load_steps=3 format=3 uid="uid://dgo7rm73ft746"]
 
 [ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_5g2rt"]
+[ext_resource type="Texture2D" uid="uid://b4wb7xjn6dpdd" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Background/Icon8.png" id="2_ol6at"]
 
 [resource]
 script = ExtResource("1_5g2rt")
-nombre = "Oxido Ferroso"
+nombre = "Óxido ferroso"
 formula = "FeO"
+textura = ExtResource("2_ol6at")
+descripcion = "Polvo negro usado en metalurgia y vidrios especiales."
+rareza = "Raro"
+efectos = Array[String]([])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

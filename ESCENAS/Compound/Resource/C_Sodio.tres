@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="Compound_Res" load_steps=2 format=3 uid="uid://bn2foaaslxqik"]
+[gd_resource type="Resource" script_class="Compound_Res" load_steps=3 format=3 uid="uid://bn2foaaslxqik"]
 
 [ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_ymcb6"]
+[ext_resource type="Texture2D" uid="uid://ctumr67131ru2" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Background/Icon5.png" id="2_xhmn6"]
 
 [resource]
 script = ExtResource("1_ymcb6")
-nombre = ""
-formula = ""
-efecto = ""
+nombre = "Oxido de sodio"
+formula = "Na2O"
+textura = ExtResource("2_xhmn6")
+descripcion = "Componente esencial en la industria del vidrio. Actúa como fundente para reducir la temperatura a la que se funde la arena de sílice."
+rareza = "Comun"
+efectos = Array[String]([])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

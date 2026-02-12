@@ -1,9 +1,14 @@
-[gd_resource type="Resource" script_class="Compound_Res" load_steps=2 format=3 uid="uid://s10qdj4qty2s"]
+[gd_resource type="Resource" script_class="Compound_Res" load_steps=3 format=3 uid="uid://s10qdj4qty2s"]
 
 [ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_vc6ww"]
+[ext_resource type="Texture2D" uid="uid://cceb4w77a2n3t" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Background/Icon6.png" id="2_l4vea"]
 
 [resource]
 script = ExtResource("1_vc6ww")
-nombre = "Oxido Cuproso"
+nombre = "Oxido cuproso"
 formula = "Cu2O"
+textura = ExtResource("2_l4vea")
+descripcion = "Sólido de color rojo intenso. Se utiliza en pinturas marinas para evitar que algas y moluscos se peguen a los barcos."
+rareza = "Raro"
+efectos = Array[String]([])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

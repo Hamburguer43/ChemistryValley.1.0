@@ -1,9 +1,14 @@
-[gd_resource type="Resource" script_class="Compound_Res" load_steps=2 format=3 uid="uid://c0fw6cbjtevsp"]
+[gd_resource type="Resource" script_class="Compound_Res" load_steps=3 format=3 uid="uid://c0fw6cbjtevsp"]
 
 [ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_srrc5"]
+[ext_resource type="Texture2D" uid="uid://bfutan4lw41yg" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Background/Icon3.png" id="2_2p0sw"]
 
 [resource]
 script = ExtResource("1_srrc5")
-nombre = "Oxido de Magnesio"
+nombre = "Oxido de magnesio"
 formula = "MgO"
+textura = ExtResource("2_2p0sw")
+descripcion = "Un excelente aislante térmico. Se utiliza para fabricar ladrillos refractarios en hornos donde se funden otros metales."
+rareza = "Comun"
+efectos = Array[String]([])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

@@ -6,4 +6,7 @@
 script = ExtResource("1_h1bra")
 nombre = "Oxido Auroso"
 formula = "Au2O"
+descripcion = ""
+rareza = "Comun"
+efectos = Array[String]([])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

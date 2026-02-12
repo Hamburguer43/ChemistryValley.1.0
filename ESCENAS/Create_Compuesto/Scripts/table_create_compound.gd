@@ -7,6 +7,7 @@ class_name table_create_compound
 
 @export var metal_actual: Element_Res
 @export var valencia: int = 0
+@export var compound_card_scene: PackedScene
 
 func _ready() -> void:
 	
@@ -48,10 +49,29 @@ func _on_button_mezcla_pressed() -> void:
 	var compound = Compoud_Global.search_compound(formula)
 	
 	if compound:
+		show_card_compound(compound)
 		print("creado con exito el compuesto:", compound.formula, "/", compound.nombre)
 	else:
 		print("compuesto no existente o imposible de mezclar")
 		
+
+func show_card_compound(compound: Compound_Res):
+	# Instanciamos la escena
+	var card = compound_card_scene.instantiate()
+	
+	# La añadimos al árbol de nodos
+	add_child(card)
+	
+	# Le pasamos los datos del recurso
+	card.show_card_compound(compound)
+	
+	card.guardar_compound.connect(send_compound)
+
+func send_compound(res: Compound_Res):
+	var compound = res
+	var cantidad = 1
+	Inventory_Global.agregar_compound(compound, cantidad)
+	
 
 #RUTA DEL FUNCIONAMIENTO DE TABLE-CREATE-COMPOUND -------------------------------------
 

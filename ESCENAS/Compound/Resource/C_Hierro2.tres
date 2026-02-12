@@ -1,9 +1,14 @@
-[gd_resource type="Resource" script_class="Compound_Res" load_steps=2 format=3 uid="uid://c2xa1vy58hb8k"]
+[gd_resource type="Resource" script_class="Compound_Res" load_steps=3 format=3 uid="uid://c2xa1vy58hb8k"]
 
 [ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_6o7bs"]
+[ext_resource type="Texture2D" uid="uid://fbmlu0opcs3x" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Background/Icon9.png" id="2_ltqun"]
 
 [resource]
 script = ExtResource("1_6o7bs")
-nombre = "Oxido Ferrico"
+nombre = "Óxido férrico"
 formula = "Fe2O3"
+textura = ExtResource("2_ltqun")
+descripcion = "El óxido rojo común; esencial para pigmentos y acero."
+rareza = "Comun"
+efectos = Array[String]([])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

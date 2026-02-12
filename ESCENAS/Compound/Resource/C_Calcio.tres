@@ -1,9 +1,14 @@
-[gd_resource type="Resource" script_class="Compound_Res" load_steps=2 format=3 uid="uid://diqqmr1putivc"]
+[gd_resource type="Resource" script_class="Compound_Res" load_steps=3 format=3 uid="uid://diqqmr1putivc"]
 
 [ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_qbf3u"]
+[ext_resource type="Texture2D" uid="uid://br32hkpbkg824" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Background/Icon2.png" id="2_5swgj"]
 
 [resource]
 script = ExtResource("1_qbf3u")
-nombre = "Oxido de Calcio"
+nombre = "Oxido de calcio"
 formula = "Ca0"
+textura = ExtResource("2_5swgj")
+descripcion = "Conocido como cal viva. Es un material básico en la construcción que reacciona de forma exotérmica (libera calor) al mezclarse con agua."
+rareza = "Comun"
+efectos = Array[String]([])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

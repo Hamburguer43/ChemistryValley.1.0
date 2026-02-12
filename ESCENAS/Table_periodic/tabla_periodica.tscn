@@ -1,8 +1,9 @@
-[gd_scene load_steps=148 format=3 uid="uid://bqsili828wrj5"]
+[gd_scene load_steps=152 format=3 uid="uid://bqsili828wrj5"]
 
 [ext_resource type="Script" uid="uid://dy71aofiech78" path="res://ESCENAS/Table_periodic/Script/tabla_periodica.gd" id="1_debvc"]
 [ext_resource type="Texture2D" uid="uid://dli0rwpdva628" path="res://ASSETS/Sprites/Menu_Quimica/Periodic_Table/TablaPeriodica.png" id="1_hm5xp"]
 [ext_resource type="PackedScene" uid="uid://dsmvofjjtll8q" path="res://ESCENAS/Table_periodic/tarjetas.tscn" id="3_a1ie4"]
+[ext_resource type="FontFile" uid="uid://c4u4rlhswm0ap" path="res://ASSETS/Letras/Antiquity/antiquity-print.ttf" id="3_untkr"]
 [ext_resource type="Texture2D" uid="uid://ck8owrl6tnlve" path="res://ASSETS/Sprites/Elements/Simbolo/oro.png" id="4_swm78"]
 [ext_resource type="Texture2D" uid="uid://dbk21o4r4x16c" path="res://ASSETS/Sprites/Elements/Png/Metales/oro.png" id="5_e2evl"]
 [ext_resource type="Texture2D" uid="uid://bna6l7ucog7w0" path="res://ASSETS/Sprites/Elements/Png/Nometales/hidrogeno.png" id="6_3fymb"]
@@ -148,6 +149,15 @@
 [ext_resource type="Texture2D" uid="uid://4p1vrfgq7dcq" path="res://ASSETS/Sprites/Elements/Simbolo/Uus.png" id="144_dafwc"]
 [ext_resource type="Texture2D" uid="uid://cap5vawu8ddih" path="res://ASSETS/Sprites/Elements/Simbolo/Uuo.png" id="145_rjhjw"]
 
+[sub_resource type="Theme" id="Theme_2q077"]
+default_font = ExtResource("3_untkr")
+
+[sub_resource type="Theme" id="Theme_untkr"]
+default_font = ExtResource("3_untkr")
+
+[sub_resource type="Theme" id="Theme_l0ura"]
+default_font = ExtResource("3_untkr")
+
 [node name="TablaPeriodica" type="Node2D"]
 script = ExtResource("1_debvc")
 
@@ -165,6 +175,7 @@ offset_top = 444.0
 offset_right = 710.0
 offset_bottom = 516.0
 scale = Vector2(0.7, 1)
+theme = SubResource("Theme_2q077")
 flat = true
 
 [node name="Tarjetas" parent="Oro" instance=ExtResource("3_a1ie4")]
@@ -195,6 +206,7 @@ offset_left = 512.857
 offset_top = 205.0
 offset_right = 555.857
 offset_bottom = 228.0
+theme = SubResource("Theme_untkr")
 text = "ORO"
 
 [node name="Label2" type="Label" parent="Oro/Tarjetas"]
@@ -202,6 +214,7 @@ offset_left = 395.714
 offset_top = 228.0
 offset_right = 587.714
 offset_bottom = 303.0
+theme = SubResource("Theme_l0ura")
 text = "Numero Atomico: 79
 Peso Atomico: 196.96654
 Simbolo: Auw"

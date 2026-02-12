@@ -5,3 +5,8 @@ class_name Compound_Res
 @export var nombre: String = ""
 @export var formula: String = ""
 @export var textura: CompressedTexture2D
+@export_multiline var descripcion: String = ""
+
+@export_group("Mecánicas de Juego")
+@export_enum("Comun", "Raro", "Epico", "Peligroso") var rareza: String = "Comun"
+@export var efectos: Array[String] = []

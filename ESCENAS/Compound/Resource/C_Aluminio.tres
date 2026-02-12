@@ -1,9 +1,14 @@
-[gd_resource type="Resource" script_class="Compound_Res" load_steps=2 format=3 uid="uid://uuimk1qy1mmi"]
+[gd_resource type="Resource" script_class="Compound_Res" load_steps=3 format=3 uid="uid://uuimk1qy1mmi"]
 
 [ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_x1312"]
+[ext_resource type="Texture2D" uid="uid://usivffll2oqk" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon1.png" id="2_f611y"]
 
 [resource]
 script = ExtResource("1_x1312")
-nombre = "Oxido de Aluminio"
+nombre = "Oxido de aluminio"
 formula = "Al2O3"
+textura = ExtResource("2_f611y")
+descripcion = "Conocido como Alúmina. Es extremadamente duro (casi como el diamante). Forma gemas como rubíes y zafiros."
+rareza = "Comun"
+efectos = Array[String]([])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

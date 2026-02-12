@@ -1,9 +1,14 @@
-[gd_resource type="Resource" script_class="Compound_Res" load_steps=2 format=3 uid="uid://2hm63nvk2ghq"]
+[gd_resource type="Resource" script_class="Compound_Res" load_steps=3 format=3 uid="uid://2hm63nvk2ghq"]
 
 [ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_4v83e"]
+[ext_resource type="Texture2D" uid="uid://yhq66fjwwjqn" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Background/Icon15.png" id="2_5wvqd"]
 
 [resource]
 script = ExtResource("1_4v83e")
-nombre = "Trioxido de Dititanio"
+nombre = "Óxido Titanioso"
 formula = "Ti2O3"
+textura = ExtResource("2_5wvqd")
+descripcion = "Este sólido de color púrpura oscuro actúa como un semiconductor exótico. Su estructura cambia drásticamente ante variaciones de temperatura y campos magnéticos, lo que lo convierte en un material muy codiciado por los alquimistas tecnológicos para crear sensores avanzados."
+rareza = "Epico"
+efectos = Array[String]([])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"
