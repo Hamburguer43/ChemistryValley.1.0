@@ -27,7 +27,7 @@ func show_card_compound(compound_res):
 		"Raro":
 			LabelNombre.add_theme_color_override("font_color", Color.DODGER_BLUE)
 		"Epico":
-			LabelNombre.add_theme_color_override("font_color", Color.MEDIUM_PURPLE)
+			LabelNombre.add_theme_color_override("font_color", Color.REBECCA_PURPLE)
 		"Peligroso":
 			LabelNombre.add_theme_color_override("font_color", Color.ORANGE_RED)
 
@@ -36,6 +36,7 @@ func _on_guardar_pressed() -> void:
 	if compound_actual:
 		print("emitir signal")
 		guardar_compound.emit(compound_actual)
+		queue_free()
 
 
 func _on_cancelar_pressed() -> void:
