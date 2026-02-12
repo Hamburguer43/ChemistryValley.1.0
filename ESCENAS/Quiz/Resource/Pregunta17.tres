@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://c4lqgck2s0p5k"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_oayf8"]
+
+[resource]
+script = ExtResource("1_oayf8")
+question_info = "Nombre del compuesto SnO2​ en el sistema Stock:"
+question_option = Array[String](["Óxido de estaño (IV)", "Dióxido de estaño", "Óxido estánnico", "Óxido de estaño (II)"])
+question_correct = "Óxido de estaño (IV)"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

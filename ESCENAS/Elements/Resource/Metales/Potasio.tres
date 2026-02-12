@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://fywg8c5fscvp"]
+
+[ext_resource type="Texture2D" uid="uid://blgpmuwh2v68h" path="res://ASSETS/Sprites/Elements/Png/Metales/Potasio.png" id="1_fmdra"]
+[ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_y7sbv"]
+
+[resource]
+script = ExtResource("1_y7sbv")
+nombre = "Potasio"
+simbolo = "K"
+valencias = Array[int]([1])
+tipo = "Metal"
+icono = ExtResource("1_fmdra")
+metadata/_custom_type_script = "uid://dfxkj61cckpm1"

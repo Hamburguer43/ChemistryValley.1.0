@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgac3tden811i"
+path="res://.godot/imported/Monster_FrothyGrowl.mp3-c1838f7da144bf1beaa48129e6189c13.mp3str"
+
+[deps]
+
+source_file="res://ASSETS/Audios/Monsters SFX Vol.1/Monsters/Monster_FrothyGrowl.mp3"
+dest_files=["res://.godot/imported/Monster_FrothyGrowl.mp3-c1838f7da144bf1beaa48129e6189c13.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

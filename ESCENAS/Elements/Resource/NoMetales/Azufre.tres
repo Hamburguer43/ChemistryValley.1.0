@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://br04as65awrts"]
+
+[ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_j3ti0"]
+[ext_resource type="Texture2D" uid="uid://c4cwafuheima" path="res://ASSETS/Sprites/Elements/Png/Nometales/azufre.png" id="1_p6kip"]
+
+[resource]
+script = ExtResource("1_j3ti0")
+nombre = "Azufre"
+simbolo = "S"
+valencias = Array[int]([2, 4, 6])
+tipo = "No Metal"
+icono = ExtResource("1_p6kip")
+metadata/_custom_type_script = "uid://dfxkj61cckpm1"

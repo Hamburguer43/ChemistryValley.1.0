@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://h8ehfdpi3otw"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_5nf0p"]
+
+[resource]
+script = ExtResource("1_5nf0p")
+question_info = "Cuando un elemento no metálico tiene dos números de valencia y se une al oxígeno con el menor, en el sistema clásico el nombre genérico es:"
+question_option = Array[String](["Óxido", "Hidróxido", "Ácido", "Anhídrido"])
+question_correct = "Anhídrido"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

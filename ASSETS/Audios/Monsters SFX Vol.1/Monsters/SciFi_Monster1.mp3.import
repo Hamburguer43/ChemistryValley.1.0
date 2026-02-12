@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0l1g5ieq4167"
+path="res://.godot/imported/SciFi_Monster1.mp3-f56d0057131b9ccc90b14b2d2c4ce700.mp3str"
+
+[deps]
+
+source_file="res://ASSETS/Audios/Monsters SFX Vol.1/Monsters/SciFi_Monster1.mp3"
+dest_files=["res://.godot/imported/SciFi_Monster1.mp3-f56d0057131b9ccc90b14b2d2c4ce700.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

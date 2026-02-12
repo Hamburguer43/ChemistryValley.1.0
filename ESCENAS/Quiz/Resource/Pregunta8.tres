@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://cvho3ixemavjx"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_7uo4b"]
+
+[resource]
+script = ExtResource("1_7uo4b")
+question_info = "Nombre del compuesto SeO3​ en el sistema clásico:"
+question_option = Array[String](["Óxido selénico", "Anhídrido selenioso", "Anhídrido selénico", "Óxido hiposelenioso"])
+question_correct = "Anhídrido selénico"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

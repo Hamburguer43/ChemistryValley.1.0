@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://pyk55oh6t50w"
+path="res://.godot/imported/Monster_SoftGrowl2.mp3-d0d7911619e8196131675306012a4560.mp3str"
+
+[deps]
+
+source_file="res://ASSETS/Audios/Monsters SFX Vol.1/Monsters/Monster_SoftGrowl2.mp3"
+dest_files=["res://.godot/imported/Monster_SoftGrowl2.mp3-d0d7911619e8196131675306012a4560.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

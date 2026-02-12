@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://o7mmubebxa3p"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_p0hmp"]
+
+[resource]
+script = ExtResource("1_p0hmp")
+question_info = "La unión de un no metal y el oxígeno, dan como resultado un:"
+question_option = Array[String](["Óxido ácido", "Óxido básico", "Anhídrido", "Hidrácido"])
+question_correct = "Anhídrido"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://dh7qh6lfy0xm8"]
+
+[ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_c3o16"]
+[ext_resource type="Texture2D" uid="uid://t4ah80x4d3kl" path="res://ASSETS/Sprites/Elements/Png/Metales/Niquel.png" id="1_jx5tx"]
+
+[resource]
+script = ExtResource("1_c3o16")
+nombre = "Niquel"
+simbolo = "Ni"
+valencias = Array[int]([2, 3])
+tipo = "Metal"
+icono = ExtResource("1_jx5tx")
+metadata/_custom_type_script = "uid://dfxkj61cckpm1"

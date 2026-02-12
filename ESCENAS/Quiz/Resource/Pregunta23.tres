@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://btjh34i4eqlfh"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_hxc3b"]
+
+[resource]
+script = ExtResource("1_hxc3b")
+question_info = "Es la fórmula del óxido hiposelenoso:"
+question_option = Array[String](["SeO2​", "SeO", "Se2​O", "SeO3​"])
+question_correct = "SeO"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://dyp3ia0iv8tn"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_pqgn4"]
+
+[resource]
+script = ExtResource("1_pqgn4")
+question_info = "Nombre del compuesto BaO en el sistema Stock:"
+question_option = Array[String](["Anhídrido bárico", "Óxido de bario", "Óxido de bario (II)", "Monóxido de bario"])
+question_correct = "Óxido de bario (II)"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://dlkusclu0m3ou"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_sml41"]
+
+[resource]
+script = ExtResource("1_sml41")
+question_info = "Es la fórmula del pentaóxido de difósforo:"
+question_option = Array[String](["P2​O3​", "P3​O2​", "P5​O2​", "P2​O5​"])
+question_correct = "P2​O5​"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

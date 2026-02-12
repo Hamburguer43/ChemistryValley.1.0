@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://si8g55srdwul"]
+
+[ext_resource type="Texture2D" uid="uid://dbx4xmy5pduav" path="res://ASSETS/Sprites/Elements/Png/Metales/sodio.png" id="1_k3h0e"]
+[ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_w3fgy"]
+
+[resource]
+script = ExtResource("1_w3fgy")
+nombre = "Sodio"
+simbolo = "Na"
+valencias = Array[int]([1])
+tipo = "Metal"
+icono = ExtResource("1_k3h0e")
+metadata/_custom_type_script = "uid://dfxkj61cckpm1"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://h3kdkr4s6wq7"]
+
+[ext_resource type="Texture2D" uid="uid://tcahp87x1fsn" path="res://ASSETS/Sprites/Elements/Png/Metales/Calcio.png" id="1_kpaww"]
+[ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_x1b14"]
+
+[resource]
+script = ExtResource("1_x1b14")
+nombre = "Calcio"
+simbolo = "Ca"
+valencias = Array[int]([2])
+tipo = "Metal"
+icono = ExtResource("1_kpaww")
+metadata/_custom_type_script = "uid://dfxkj61cckpm1"

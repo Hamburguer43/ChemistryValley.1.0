@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://bm3ngqchxvl3o"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_0xtpg"]
+
+[resource]
+script = ExtResource("1_0xtpg")
+question_info = "La unión de un metal y el oxígeno dan como resultado un:"
+question_option = Array[String](["Óxido básico", "Óxido ácido", "Anhídrido", "Sal oxisal"])
+question_correct = "Óxido básico"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

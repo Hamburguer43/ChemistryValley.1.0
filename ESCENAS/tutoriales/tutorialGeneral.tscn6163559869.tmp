@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://bow5t4cluud5p"]
+
+[ext_resource type="Texture2D" uid="uid://cah7lh65ccakn" path="res://RECURSOS/Sprites/Player/Mago.png" id="1_gvoa2"]
+[ext_resource type="Script" uid="uid://ck7mpig63xm42" path="res://SCENES/tutoriales/tutorial_general.gd" id="1_ql7um"]
+[ext_resource type="Texture2D" uid="uid://d0vstdmbum2s3" path="res://RECURSOS/Sprites/Chat BalloonsBubbles - Pixel Art/X2/Chat-1.png" id="2_sfnk4"]
+[ext_resource type="FontFile" uid="uid://cj5k4sisw80kq" path="res://RECURSOS/Letras/Fonts/Kenney Pixel.ttf" id="4_x5xv5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sfnk4"]
+bg_color = Color(0.16565639, 0.16565642, 0.1656563, 0.60784316)
+
+[node name="TutorialGeneral" type="CanvasLayer"]
+script = ExtResource("1_ql7um")
+
+[node name="Panel" type="Panel" parent="."]
+top_level = true
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sfnk4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel"]
+position = Vector2(192, 88)
+scale = Vector2(3.7265625, 3.3937502)
+texture = ExtResource("1_gvoa2")
+region_enabled = true
+region_rect = Rect2(17.6363, 9.096222, 24.809715, 27.20364)
+
+[node name="Chat1" type="Sprite2D" parent="Panel/Sprite2D"]
+position = Vector2(2.1467505, 45.672195)
+scale = Vector2(0.58478606, 0.53808975)
+texture = ExtResource("2_sfnk4")
+region_enabled = true
+region_rect = Rect2(1629.9639, 528.4999, 100.1001, 115.50012)
+
+[node name="Label" type="Label" parent="Panel/Sprite2D/Chat1"]
+offset_left = -44.052017
+offset_top = -36.689373
+offset_right = 44.05201
+offset_bottom = 42.16538
+theme_override_fonts/font = ExtResource("4_x5xv5")
+theme_override_font_sizes/font_size = 12
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 456.0
+offset_right = 913.0
+offset_bottom = 495.0
+theme_override_fonts/font = ExtResource("4_x5xv5")
+theme_override_font_sizes/font_size = 50
+text = "Presiona la pantalla para continuar..."

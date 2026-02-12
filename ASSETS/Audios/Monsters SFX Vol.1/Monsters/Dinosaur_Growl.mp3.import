@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dj5l2omen52ag"
+path="res://.godot/imported/Dinosaur_Growl.mp3-8637e360b060be926adb2a2399cbb5b5.mp3str"
+
+[deps]
+
+source_file="res://ASSETS/Audios/Monsters SFX Vol.1/Monsters/Dinosaur_Growl.mp3"
+dest_files=["res://.godot/imported/Dinosaur_Growl.mp3-8637e360b060be926adb2a2399cbb5b5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

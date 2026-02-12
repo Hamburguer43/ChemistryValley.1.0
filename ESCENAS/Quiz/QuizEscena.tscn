@@ -1,0 +1,241 @@
+[gd_scene load_steps=37 format=3 uid="uid://ckk5he413v12t"]
+
+[ext_resource type="Script" uid="uid://cnwcyamknfvfo" path="res://ESCENAS/Quiz/Scripts/quiz_escena.gd" id="1_tqyif"]
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="2_ft7jj"]
+[ext_resource type="Resource" uid="uid://o7mmubebxa3p" path="res://ESCENAS/Quiz/Resource/Pregunta1.tres" id="3_1o46k"]
+[ext_resource type="Resource" uid="uid://bm3ngqchxvl3o" path="res://ESCENAS/Quiz/Resource/Pregunta2.tres" id="4_vtyew"]
+[ext_resource type="Resource" uid="uid://1yxhr8qe0uxs" path="res://ESCENAS/Quiz/Resource/Pregunta3.tres" id="5_4c4p7"]
+[ext_resource type="Resource" uid="uid://duxd6hxghb056" path="res://ESCENAS/Quiz/Resource/Pregunta4.tres" id="6_yrive"]
+[ext_resource type="Resource" uid="uid://h8ehfdpi3otw" path="res://ESCENAS/Quiz/Resource/Pregunta5.tres" id="7_twig1"]
+[ext_resource type="Resource" uid="uid://cl5s4be1ektkb" path="res://ESCENAS/Quiz/Resource/Pregunta6.tres" id="8_u1o3b"]
+[ext_resource type="Resource" uid="uid://bvdlw5mg4d0td" path="res://ESCENAS/Quiz/Resource/Pregunta7.tres" id="9_rovev"]
+[ext_resource type="Resource" uid="uid://cvho3ixemavjx" path="res://ESCENAS/Quiz/Resource/Pregunta8.tres" id="10_jobji"]
+[ext_resource type="Resource" uid="uid://dd5uig3v5i5lt" path="res://ESCENAS/Quiz/Resource/Pregunta9.tres" id="11_irir1"]
+[ext_resource type="Resource" uid="uid://c64ojnyabt8cp" path="res://ESCENAS/Quiz/Resource/Pregunta10.tres" id="12_gcgrw"]
+[ext_resource type="Resource" uid="uid://cuyrkfeeo22x8" path="res://ESCENAS/Quiz/Resource/Pregunta11.tres" id="13_g57kk"]
+[ext_resource type="Resource" uid="uid://d3blg4ua4w05r" path="res://ESCENAS/Quiz/Resource/Pregunta12.tres" id="14_ktjol"]
+[ext_resource type="Resource" uid="uid://cq00qnailx8x2" path="res://ESCENAS/Quiz/Resource/Pregunta13.tres" id="15_d5wdp"]
+[ext_resource type="Resource" uid="uid://dvc542h2p6wb2" path="res://ESCENAS/Quiz/Resource/Pregunta14.tres" id="16_vp36h"]
+[ext_resource type="Resource" uid="uid://cqnkpmucpjmmm" path="res://ESCENAS/Quiz/Resource/Pregunta15.tres" id="17_hncuc"]
+[ext_resource type="Texture2D" uid="uid://b2yaqnr3sg7ac" path="res://ASSETS/Sprites/X Square Button.png" id="17_mgpl5"]
+[ext_resource type="Resource" uid="uid://dyp3ia0iv8tn" path="res://ESCENAS/Quiz/Resource/Pregunta16.tres" id="18_14kkm"]
+[ext_resource type="Texture2D" uid="uid://cushew3t5l6a1" path="res://ASSETS/Sprites/Questionmark Square Button.png" id="18_ju7yy"]
+[ext_resource type="AudioStream" uid="uid://bsj484u8enicv" path="res://ASSETS/Audios/Audio/808522__licht2003__error.mp3" id="18_xcs45"]
+[ext_resource type="FontFile" uid="uid://dikplhd3wbrh5" path="res://ASSETS/Letras/Kenney pixel/Kenney Pixel.ttf" id="19_ju7yy"]
+[ext_resource type="Resource" uid="uid://c4lqgck2s0p5k" path="res://ESCENAS/Quiz/Resource/Pregunta17.tres" id="19_rqs43"]
+[ext_resource type="AudioStream" uid="uid://cckmt5fpa53f6" path="res://ASSETS/Audios/Audio/404359__kagateni__success2.wav" id="20_ju7yy"]
+[ext_resource type="Resource" uid="uid://bvj41sqccni4a" path="res://ESCENAS/Quiz/Resource/Pregunta18.tres" id="20_spfu0"]
+[ext_resource type="Resource" uid="uid://c8xmmxjdwvcdn" path="res://ESCENAS/Quiz/Resource/Pregunta19.tres" id="21_nwq80"]
+[ext_resource type="Resource" uid="uid://3qg57bl1325y" path="res://ESCENAS/Quiz/Resource/Pregunta20.tres" id="22_iq2l6"]
+[ext_resource type="Resource" uid="uid://bv5ck7xqr7404" path="res://ESCENAS/Quiz/Resource/Pregunta21.tres" id="23_qmr45"]
+[ext_resource type="Resource" uid="uid://1fjalub66vld" path="res://ESCENAS/Quiz/Resource/Pregunta22.tres" id="24_aejqw"]
+[ext_resource type="Resource" uid="uid://btjh34i4eqlfh" path="res://ESCENAS/Quiz/Resource/Pregunta23.tres" id="25_jj1cy"]
+[ext_resource type="Resource" uid="uid://u126iulrpqo7" path="res://ESCENAS/Quiz/Resource/Pregunta24.tres" id="26_mskbx"]
+[ext_resource type="Resource" uid="uid://bybbbnok8jbeh" path="res://ESCENAS/Quiz/Resource/Pregunta25.tres" id="27_3e3gj"]
+[ext_resource type="Resource" uid="uid://pju7tgrvs1vp" path="res://ESCENAS/Quiz/Resource/Pregunta26.tres" id="28_ceix3"]
+[ext_resource type="Resource" uid="uid://b5tff0epabcjx" path="res://ESCENAS/Quiz/Resource/Pregunta27.tres" id="29_7567o"]
+[ext_resource type="Resource" uid="uid://dlkusclu0m3ou" path="res://ESCENAS/Quiz/Resource/Pregunta28.tres" id="30_gndkn"]
+[ext_resource type="Resource" uid="uid://c27nbyd27jpy5" path="res://ESCENAS/Quiz/Resource/Pregunta29.tres" id="31_u76x3"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_tqyif")
+quiz_Data = Array[ExtResource("2_ft7jj")]([ExtResource("3_1o46k"), ExtResource("4_vtyew"), ExtResource("5_4c4p7"), ExtResource("6_yrive"), ExtResource("7_twig1"), ExtResource("8_u1o3b"), ExtResource("9_rovev"), ExtResource("10_jobji"), ExtResource("11_irir1"), ExtResource("12_gcgrw"), ExtResource("13_g57kk"), ExtResource("14_ktjol"), ExtResource("15_d5wdp"), ExtResource("16_vp36h"), ExtResource("17_hncuc"), ExtResource("18_14kkm"), ExtResource("19_rqs43"), ExtResource("20_spfu0"), ExtResource("21_nwq80"), ExtResource("22_iq2l6"), ExtResource("23_qmr45"), ExtResource("24_aejqw"), ExtResource("25_jj1cy"), ExtResource("26_mskbx"), ExtResource("27_3e3gj"), ExtResource("28_ceix3"), ExtResource("29_7567o"), ExtResource("30_gndkn"), ExtResource("31_u76x3")])
+metadata/_edit_lock_ = true
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 27.0
+offset_right = 113.0
+offset_bottom = 90.0
+icon = ExtResource("17_mgpl5")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="OptionButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 27.0
+offset_right = 214.0
+offset_bottom = 89.0
+icon = ExtResource("18_ju7yy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="TimerTxt" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("19_ju7yy")
+theme_override_font_sizes/font_size = 70
+text = "30:00"
+
+[node name="Titulo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -96.0
+offset_right = 138.0
+offset_bottom = 117.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("19_ju7yy")
+theme_override_font_sizes/font_size = 90
+text = "QUIZ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Questions" type="BoxContainer" parent="."]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 129.0
+offset_right = 918.0
+offset_bottom = 336.0
+metadata/_edit_lock_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="Questions"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 9.9
+
+[node name="Label" type="Label" parent="Questions/PanelContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("19_ju7yy")
+theme_override_font_sizes/font_size = 32
+text = "Pregunta"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 328.0
+offset_right = 931.0
+offset_bottom = 570.0
+alignment = 1
+
+[node name="HBox_Respustas" type="HBoxContainer" parent="BoxContainer"]
+custom_minimum_size = Vector2(628, 0)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="BoxContainer/HBox_Respustas"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("19_ju7yy")
+theme_override_font_sizes/font_size = 26
+autowrap_mode = 3
+
+[node name="Button2" type="Button" parent="BoxContainer/HBox_Respustas"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("19_ju7yy")
+theme_override_font_sizes/font_size = 26
+autowrap_mode = 3
+
+[node name="Button3" type="Button" parent="BoxContainer/HBox_Respustas"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("19_ju7yy")
+theme_override_font_sizes/font_size = 26
+autowrap_mode = 3
+
+[node name="Button4" type="Button" parent="BoxContainer/HBox_Respustas"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("19_ju7yy")
+theme_override_font_sizes/font_size = 26
+autowrap_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.458824, 0.458824, 0.458824, 0.870588)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 208.0
+offset_right = 208.0
+offset_bottom = 231.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "ACERTASTE LA SIGUIENTE CANTIDAD DE PREGUNTAS:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Score" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -11.5
+offset_right = 12.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "0/0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exit" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -180.0
+offset_top = -179.0
+offset_right = 214.0
+offset_bottom = -117.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Salir"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="SuccesSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_ju7yy")
+max_polyphony = 3
+
+[node name="ErrorSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_xcs45")
+volume_db = -4.238
+pitch_scale = 0.77
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="OptionButton" to="." method="_on_option_button_pressed"]
+[connection signal="pressed" from="ColorRect/Exit" to="." method="_on_exit_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://c3pl5wsabbsjn"]
+
+[ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_3jkk8"]
+[ext_resource type="Texture2D" uid="uid://bfoyweh6la72a" path="res://ASSETS/Sprites/Elements/Png/Metales/titanio.png" id="1_bdeef"]
+
+[resource]
+script = ExtResource("1_3jkk8")
+nombre = "Titanio"
+simbolo = "Ti"
+valencias = Array[int]([2, 3, 4])
+tipo = "Metal"
+icono = ExtResource("1_bdeef")
+metadata/_custom_type_script = "uid://dfxkj61cckpm1"

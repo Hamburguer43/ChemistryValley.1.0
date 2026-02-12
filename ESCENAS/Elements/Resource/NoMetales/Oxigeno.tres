@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://b6gi2fnyj0l3n"]
+
+[ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_0ok83"]
+[ext_resource type="Texture2D" uid="uid://dhhqtump8mqpp" path="res://ASSETS/Sprites/Elements/Png/Nometales/oxigeno.png" id="1_2xmxn"]
+
+[resource]
+script = ExtResource("1_0ok83")
+nombre = "Oxigeno"
+simbolo = "O"
+valencias = Array[int]([2])
+tipo = "Metal"
+icono = ExtResource("1_2xmxn")
+metadata/_custom_type_script = "uid://dfxkj61cckpm1"

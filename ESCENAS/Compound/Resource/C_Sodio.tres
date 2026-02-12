@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Compound_Res" load_steps=2 format=3 uid="uid://bn2foaaslxqik"]
+
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_ymcb6"]
+
+[resource]
+script = ExtResource("1_ymcb6")
+nombre = ""
+formula = ""
+efecto = ""
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"

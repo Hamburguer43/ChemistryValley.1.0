@@ -1,0 +1,92 @@
+extends Control
+class_name inventario_elements
+
+@onready var grid = $Book/MarginContainer/VScrollBar/GridContainer
+@onready var slot = preload("res://ESCENAS/Create_Compuesto/slot_inventory.tscn")
+@onready var animation: AnimationPlayer = $Book/AnimatedSprite2D
+var tween: Tween
+
+signal take_metal(metal: Element_Res)
+
+# -- animaciones de tween para el inventario -------
+func _on_button_pressed() -> void:
+	
+	self.pivot_offset = size/2
+	self.scale = Vector2.ZERO
+	self.modulate.a = 0.0
+	self.show()
+	
+	reset_tween()
+	
+	tween.parallel().tween_property(self, "scale", Vector2.ONE, 0.4).set_trans(Tween.TRANS_BACK)
+	tween.parallel().tween_property(self, "modulate:a", 1.0, 0.2)
+	
+	
+	animation.play("open")
+	
+func reset_tween():
+	if tween:
+		tween.kill()
+	tween = create_tween()
+
+func _on_texture_button_pressed() -> void:
+	reset_tween()
+	
+	animation.play("close")
+	await animation.animation_finished
+	
+	tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
+	tween.parallel().tween_property(self, "scale", Vector2.ZERO, 0.4)
+	tween.parallel().tween_property(self, "modulate:a", 0.0, 0.2)
+	
+
+func close_nodo():
+	self.hide()
+
+# -----------------------------------------------------
+
+func _ready() -> void:
+	#esto es de prueba ya que el personaje tendria quec conseguirlos en el world
+	
+	var hierro = load("res://ESCENAS/Elements/Resource/Metales/Hierro.tres")
+	var oro = load("res://ESCENAS/Elements/Resource/Metales/Oro.tres")
+	var Magnesio = load("res://ESCENAS/Elements/Resource/Metales/Magnesio.tres")
+	var Titanio = load("res://ESCENAS/Elements/Resource/Metales/Titanio.tres")
+	var aluminio = load("res://ESCENAS/Elements/Resource/Metales/Aluminio.tres")
+	var Calcio = load("res://ESCENAS/Elements/Resource/Metales/Calcio.tres")
+	var Plomo = load("res://ESCENAS/Elements/Resource/Metales/Plomo.tres")
+	var cantidad = 1
+	Inventory_Global.agregar_element(hierro, cantidad)
+	Inventory_Global.agregar_element(oro, cantidad)
+	Inventory_Global.agregar_element(Magnesio, cantidad)
+	Inventory_Global.agregar_element(Titanio, cantidad)
+	Inventory_Global.agregar_element(aluminio, cantidad)
+	Inventory_Global.agregar_element(Calcio, cantidad)
+	Inventory_Global.agregar_element(Plomo, cantidad)
+
+func create_grid_inventory(): 
+	
+	#limpiamos para evitar duplicados
+	for children in grid.get_children():
+		children.queue_free()
+		
+	for metal in Inventory_Global.Elementos:
+		var new_slot = slot.instantiate()
+		grid.add_child(new_slot)
+		new_slot.set_datos(metal)
+		
+		new_slot.pressed.connect(metal_elegido.bind(metal))
+
+func metal_elegido(metal: Element_Res):
+	
+	if metal != null:
+		take_metal.emit(metal)
+	
+	_on_texture_button_pressed()
+
+func _on_animated_sprite_2d_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "open":
+		create_grid_inventory()
+	
+	if anim_name == "close":
+		close_nodo()

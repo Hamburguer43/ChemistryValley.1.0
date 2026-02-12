@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://pju7tgrvs1vp"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_ukha5"]
+
+[resource]
+script = ExtResource("1_ukha5")
+question_info = "Es la fórmula del anhídrido hiponitroso:"
+question_option = Array[String](["NO2​", "N2​O", "NO", "N2​O3​"])
+question_correct = "N2​O"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

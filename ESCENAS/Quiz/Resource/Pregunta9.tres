@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://dd5uig3v5i5lt"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_72wgl"]
+
+[resource]
+script = ExtResource("1_72wgl")
+question_info = "Nombre del compuesto Al2​O3​ en el sistema clásico:"
+question_option = Array[String](["Anhídrido alumínico", "Óxido alumínico", "Óxido de aluminio (III)", "Trióxido de aluminio"])
+question_correct = "Óxido alumínico"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

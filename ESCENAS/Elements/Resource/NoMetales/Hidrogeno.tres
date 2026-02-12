@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://inmktohe1f7v"]
+
+[ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_6ryy2"]
+[ext_resource type="Texture2D" uid="uid://bna6l7ucog7w0" path="res://ASSETS/Sprites/Elements/Png/Nometales/hidrogeno.png" id="1_xc8mk"]
+
+[resource]
+script = ExtResource("1_6ryy2")
+nombre = "Hidrogeno"
+simbolo = "H"
+valencias = Array[int]([1])
+tipo = "No Metal"
+icono = ExtResource("1_xc8mk")
+metadata/_custom_type_script = "uid://dfxkj61cckpm1"

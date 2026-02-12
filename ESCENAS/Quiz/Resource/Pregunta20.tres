@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://3qg57bl1325y"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_doavj"]
+
+[resource]
+script = ExtResource("1_doavj")
+question_info = "Nombre del compuesto Hg2​O en el sistema Estequiométrico:"
+question_option = Array[String](["Monóxido de dimercurio", "Óxido mercuroso", "Anhídrido mercuroso", "Óxido mercúrico"])
+question_correct = "Monóxido de dimercurio"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

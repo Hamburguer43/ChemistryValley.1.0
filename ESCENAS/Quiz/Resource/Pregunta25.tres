@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://bybbbnok8jbeh"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_wivb4"]
+
+[resource]
+script = ExtResource("1_wivb4")
+question_info = "Es la fórmula del óxido férrico:"
+question_option = Array[String](["FeO", "Fe3​O2​", "Fe2​O3​", "Fe2​O"])
+question_correct = "Fe2​O3​"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

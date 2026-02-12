@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://cq00qnailx8x2"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_00iji"]
+
+[resource]
+script = ExtResource("1_00iji")
+question_info = "Nombre del compuesto Ni2​O3​ en el sistema Stock:"
+question_option = Array[String](["Óxido niqueloso", "Óxido niquélico", "Óxido de níquel (III)", "Trióxido de níquel"])
+question_correct = "Óxido de níquel (III)"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

@@ -1,0 +1,4423 @@
+[gd_scene load_steps=148 format=3 uid="uid://bqsili828wrj5"]
+
+[ext_resource type="Script" uid="uid://dy71aofiech78" path="res://ESCENAS/Table_periodic/Script/tabla_periodica.gd" id="1_debvc"]
+[ext_resource type="Texture2D" uid="uid://dli0rwpdva628" path="res://ASSETS/Sprites/Menu_Quimica/Periodic_Table/TablaPeriodica.png" id="1_hm5xp"]
+[ext_resource type="PackedScene" uid="uid://dsmvofjjtll8q" path="res://ESCENAS/Table_periodic/tarjetas.tscn" id="3_a1ie4"]
+[ext_resource type="Texture2D" uid="uid://ck8owrl6tnlve" path="res://ASSETS/Sprites/Elements/Simbolo/oro.png" id="4_swm78"]
+[ext_resource type="Texture2D" uid="uid://dbk21o4r4x16c" path="res://ASSETS/Sprites/Elements/Png/Metales/oro.png" id="5_e2evl"]
+[ext_resource type="Texture2D" uid="uid://bna6l7ucog7w0" path="res://ASSETS/Sprites/Elements/Png/Nometales/hidrogeno.png" id="6_3fymb"]
+[ext_resource type="Texture2D" uid="uid://c41vkrgdd6bh" path="res://ASSETS/Sprites/Elements/Simbolo/hidrogeno.png" id="7_7xe2w"]
+[ext_resource type="Texture2D" uid="uid://drl0ym3ykk7it" path="res://ASSETS/Sprites/Elements/Png/Nometales/carbono.png" id="8_rmq2f"]
+[ext_resource type="Texture2D" uid="uid://80m521wk0ejc" path="res://ASSETS/Sprites/Elements/Simbolo/carbono.png" id="9_k2uui"]
+[ext_resource type="Texture2D" uid="uid://cqtleo8wstgxr" path="res://ASSETS/Sprites/Elements/Png/Nometales/nitrogeno.png" id="10_po2i3"]
+[ext_resource type="Texture2D" uid="uid://bee84rve4q31i" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon47.png" id="10_qjmna"]
+[ext_resource type="Texture2D" uid="uid://b346kn35bxsa2" path="res://ASSETS/Sprites/Elements/Simbolo/nitrogeno.png" id="11_6umu2"]
+[ext_resource type="Texture2D" uid="uid://csnsjrgjfxhn6" path="res://ASSETS/Sprites/Elements/Simbolo/Boro.png" id="11_y55b2"]
+[ext_resource type="Texture2D" uid="uid://dhhqtump8mqpp" path="res://ASSETS/Sprites/Elements/Png/Nometales/oxigeno.png" id="12_pkb41"]
+[ext_resource type="Texture2D" uid="uid://iumht4g1wb71" path="res://ASSETS/Sprites/Elements/Simbolo/oxigeno.png" id="13_5nx4d"]
+[ext_resource type="Texture2D" uid="uid://dbx4xmy5pduav" path="res://ASSETS/Sprites/Elements/Png/Metales/sodio.png" id="14_4s8jo"]
+[ext_resource type="Texture2D" uid="uid://cs7ix5weptg2" path="res://ASSETS/Sprites/Elements/Simbolo/sodio.png" id="15_tkqq6"]
+[ext_resource type="Texture2D" uid="uid://bbt0w5copgu8p" path="res://ASSETS/Sprites/Elements/Png/Metales/aluminio.png" id="16_8umxi"]
+[ext_resource type="Texture2D" uid="uid://lv0hq31meexc" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon2.png" id="17_1h6fh"]
+[ext_resource type="Texture2D" uid="uid://c2t3if3jnec2f" path="res://ASSETS/Sprites/Elements/Simbolo/aluminio.png" id="17_61jph"]
+[ext_resource type="Texture2D" uid="uid://c4cwafuheima" path="res://ASSETS/Sprites/Elements/Png/Nometales/azufre.png" id="18_u73i2"]
+[ext_resource type="Texture2D" uid="uid://cqssg6fgi30w4" path="res://ASSETS/Sprites/Elements/Simbolo/Fluor.png" id="19_2kl1k"]
+[ext_resource type="Texture2D" uid="uid://lbbrow2vm4tc" path="res://ASSETS/Sprites/Elements/Simbolo/azufre.png" id="19_3lc61"]
+[ext_resource type="Texture2D" uid="uid://dtbkiqjaog5d" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon1.png" id="20_eccqa"]
+[ext_resource type="Texture2D" uid="uid://bttkrwdgkw781" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon48.png" id="21_6clr0"]
+[ext_resource type="Texture2D" uid="uid://bidsh3a7s0l6" path="res://ASSETS/Sprites/Elements/Simbolo/titanio.png" id="21_fjdvx"]
+[ext_resource type="Texture2D" uid="uid://b8f6484hb7sbd" path="res://ASSETS/Sprites/Elements/Png/Metales/Hierro.png" id="22_6liiu"]
+[ext_resource type="Texture2D" uid="uid://dnqhyurbcq2xv" path="res://ASSETS/Sprites/Elements/Simbolo/hierro.png" id="23_hhw2a"]
+[ext_resource type="Texture2D" uid="uid://b1diuskus46xh" path="res://ASSETS/Sprites/Elements/Simbolo/Silicio.png" id="23_l4cpx"]
+[ext_resource type="Texture2D" uid="uid://d3rmpo7jybi05" path="res://ASSETS/Sprites/Elements/Png/Nometales/bromo.png" id="24_5rwke"]
+[ext_resource type="Texture2D" uid="uid://bnu8im58dws81" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon43.png" id="24_fyi3i"]
+[ext_resource type="Texture2D" uid="uid://d1et7evi3m5mp" path="res://ASSETS/Sprites/Elements/Simbolo/Fosforo.png" id="25_brb50"]
+[ext_resource type="Texture2D" uid="uid://dedn3uctdolxo" path="res://ASSETS/Sprites/Elements/Simbolo/bromo.png" id="25_u842n"]
+[ext_resource type="Texture2D" uid="uid://b2yaqnr3sg7ac" path="res://ASSETS/Sprites/X Square Button.png" id="26_btwtx"]
+[ext_resource type="Texture2D" uid="uid://cushew3t5l6a1" path="res://ASSETS/Sprites/Questionmark Square Button.png" id="27_whs4y"]
+[ext_resource type="AudioStream" uid="uid://d2ps7plf37dwk" path="res://ASSETS/Audios/Audio/collectcoin-6075.mp3" id="29_ao8q5"]
+[ext_resource type="Texture2D" uid="uid://ci4rqwdvldr6r" path="res://ASSETS/Sprites/Elements/Simbolo/Cloro.png" id="29_jl4s7"]
+[ext_resource type="Texture2D" uid="uid://ci7ecgid78ldb" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon15.png" id="31_cy50s"]
+[ext_resource type="Texture2D" uid="uid://cyw82h32mp6lv" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon32.png" id="32_eccqa"]
+[ext_resource type="Texture2D" uid="uid://b75ps77cmdtse" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon19.png" id="32_my3vi"]
+[ext_resource type="Texture2D" uid="uid://cd4srkhuwjvb" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon24.png" id="33_dqdti"]
+[ext_resource type="Texture2D" uid="uid://jtf8ldc3bibp" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon37.png" id="34_hrimn"]
+[ext_resource type="Texture2D" uid="uid://cag4wb2ou3tf1" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon10.png" id="35_6clr0"]
+[ext_resource type="Texture2D" uid="uid://5t2chtrc2kl8" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon7.png" id="35_me0cc"]
+[ext_resource type="Texture2D" uid="uid://c37sxlf0fug1w" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon8.png" id="36_voulh"]
+[ext_resource type="Texture2D" uid="uid://bwjvrbwwlgt61" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon30.png" id="37_0avyl"]
+[ext_resource type="Texture2D" uid="uid://beq8nsfyhmfga" path="res://ASSETS/Sprites/Elements/Simbolo/Cobre.png" id="37_8twao"]
+[ext_resource type="Texture2D" uid="uid://c4tb21p12mpxw" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon44.png" id="38_hr5w5"]
+[ext_resource type="Texture2D" uid="uid://dc83ccu2ujk7s" path="res://ASSETS/Sprites/Elements/Simbolo/Selenio.png" id="39_512mv"]
+[ext_resource type="Texture2D" uid="uid://dvnk3xrgl0rce" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon18.png" id="39_xsvmt"]
+[ext_resource type="Texture2D" uid="uid://cm0ecrlgvwpk7" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon46.png" id="40_6nxxq"]
+[ext_resource type="Texture2D" uid="uid://c228jbdrhch0v" path="res://ASSETS/Sprites/Elements/Simbolo/Arsenico.png" id="41_02q5h"]
+[ext_resource type="Texture2D" uid="uid://dpdytjop0g0tn" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon41.png" id="41_vyxwn"]
+[ext_resource type="Texture2D" uid="uid://ov2nql2r0rl6" path="res://ASSETS/Sprites/Elements/Simbolo/Berilio.png" id="43_02ddu"]
+[ext_resource type="Texture2D" uid="uid://ccqb1wignlaw3" path="res://ASSETS/Sprites/Elements/Simbolo/Germanio.png" id="43_xiabp"]
+[ext_resource type="Texture2D" uid="uid://bt63dkco3fjs1" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon27.png" id="44_dqdti"]
+[ext_resource type="Texture2D" uid="uid://b36xpgwexdktv" path="res://ASSETS/Sprites/Elements/Simbolo/Galio.png" id="45_duvk5"]
+[ext_resource type="Texture2D" uid="uid://bgijsdc4vttwe" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon16.png" id="45_hrimn"]
+[ext_resource type="Texture2D" uid="uid://dj7iyf7smyrlr" path="res://ASSETS/Sprites/Elements/Simbolo/Litio.png" id="45_sxueg"]
+[ext_resource type="Texture2D" uid="uid://boam68gulfe6f" path="res://ASSETS/Sprites/Elements/Simbolo/Cromo.png" id="45_uobvf"]
+[ext_resource type="Texture2D" uid="uid://beq5ylnrcjxn6" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon26.png" id="46_me0cc"]
+[ext_resource type="Texture2D" uid="uid://cq01eicdbdcyw" path="res://ASSETS/Sprites/Elements/Simbolo/Vanadio V.png" id="47_0f8a5"]
+[ext_resource type="Texture2D" uid="uid://cywp46vnq2pd6" path="res://ASSETS/Sprites/Elements/Simbolo/Zinc.png" id="47_jb73w"]
+[ext_resource type="Texture2D" uid="uid://okcnbd417w0g" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon11.png" id="47_voulh"]
+[ext_resource type="Texture2D" uid="uid://843s4akunu1m" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon13.png" id="48_0avyl"]
+[ext_resource type="Texture2D" uid="uid://cnq67tq3cmjls" path="res://ASSETS/Sprites/Elements/Simbolo/Niquel.png" id="49_0nx2y"]
+[ext_resource type="Texture2D" uid="uid://bfrmc6cb235qh" path="res://ASSETS/Sprites/Elements/Simbolo/Escandio Sc.png" id="49_bfeti"]
+[ext_resource type="Texture2D" uid="uid://c0caeeq1iv2ks" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon14.png" id="49_xsvmt"]
+[ext_resource type="Texture2D" uid="uid://loawlx7uatj7" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon21.png" id="50_6nxxq"]
+[ext_resource type="Texture2D" uid="uid://df0263l43w8kb" path="res://ASSETS/Sprites/Elements/Simbolo/Calcio.png" id="50_hiteh"]
+[ext_resource type="Texture2D" uid="uid://te4aub6pqwm5" path="res://ASSETS/Sprites/Elements/Simbolo/Cobalto.png" id="51_kc25j"]
+[ext_resource type="Texture2D" uid="uid://bwricdhbolt04" path="res://ASSETS/Sprites/Elements/Simbolo/Potasio.png" id="51_l21ce"]
+[ext_resource type="Texture2D" uid="uid://dimjs7wka6083" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon33.png" id="51_vyxwn"]
+[ext_resource type="Texture2D" uid="uid://caloe0g1ov1sk" path="res://ASSETS/Sprites/Elements/Simbolo/Magnesio.png" id="52_6hebv"]
+[ext_resource type="Texture2D" uid="uid://cful15qcny3c4" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon5.png" id="52_icmah"]
+[ext_resource type="Texture2D" uid="uid://b2ldcpd87ccrm" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon31.png" id="53_y55b2"]
+[ext_resource type="Texture2D" uid="uid://cj3jybt2b0mwd" path="res://ASSETS/Sprites/Elements/Simbolo/Manganeso.png" id="53_yx6pp"]
+[ext_resource type="Texture2D" uid="uid://cfrhy0njjpfbt" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon36.png" id="54_02ddu"]
+[ext_resource type="Texture2D" uid="uid://be62biam5g7k2" path="res://ASSETS/Sprites/Elements/Simbolo/Helio.png" id="58_m2gwl"]
+[ext_resource type="Texture2D" uid="uid://u28o3jypp6ye" path="res://ASSETS/Sprites/Elements/Simbolo/Yodo I.png" id="66_xkna2"]
+[ext_resource type="Texture2D" uid="uid://cf6pwvpka74we" path="res://ASSETS/Sprites/Elements/Simbolo/Telurio Te.png" id="68_b06l4"]
+[ext_resource type="Texture2D" uid="uid://bh8jo4olecorf" path="res://ASSETS/Sprites/Elements/Simbolo/Neon.png" id="69_xeya5"]
+[ext_resource type="Texture2D" uid="uid://b4bkuhrhoidaf" path="res://ASSETS/Sprites/Elements/Simbolo/Argon.png" id="70_8twao"]
+[ext_resource type="Texture2D" uid="uid://t674s3gmipvt" path="res://ASSETS/Sprites/Elements/Simbolo/Antimonio Sb.png" id="70_o1r0b"]
+[ext_resource type="Texture2D" uid="uid://dkthuynsgpps2" path="res://ASSETS/Sprites/Elements/Simbolo/Estaño Sn.png" id="71_k27a6"]
+[ext_resource type="Texture2D" uid="uid://22dgr2dsmg80" path="res://ASSETS/Sprites/Elements/Simbolo/Indio In.png" id="73_87n7m"]
+[ext_resource type="Texture2D" uid="uid://biu4bnri4iiae" path="res://ASSETS/Sprites/Elements/Simbolo/Cadmio Cd.png" id="74_w8ok6"]
+[ext_resource type="Texture2D" uid="uid://c5qrhoe7t5poo" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/_edited_48_Minerals_Pixel_Art_Icons_Pack(2).png" id="75_84ufr"]
+[ext_resource type="Texture2D" uid="uid://b224jrvbmga3g" path="res://ASSETS/Sprites/Elements/Simbolo/Plata Ag.png" id="76_pkd88"]
+[ext_resource type="Texture2D" uid="uid://c8e5hfv64663n" path="res://ASSETS/Sprites/Elements/Simbolo/Rubidio.png" id="77_iaopp"]
+[ext_resource type="Texture2D" uid="uid://ciprsh3nkq6tq" path="res://ASSETS/Sprites/Elements/Simbolo/Paladio Pd.png" id="78_7it1t"]
+[ext_resource type="Texture2D" uid="uid://bmsnt1g57xd6x" path="res://ASSETS/Sprites/Elements/Simbolo/Rodio Rh.png" id="80_d41tb"]
+[ext_resource type="Texture2D" uid="uid://05dxhhntdxpa" path="res://ASSETS/Sprites/Elements/Simbolo/Kripton.png" id="81_rbvlh"]
+[ext_resource type="Texture2D" uid="uid://r7dxn3wej2ox" path="res://ASSETS/Sprites/Elements/Simbolo/Rutenio Ru.png" id="82_5nc3f"]
+[ext_resource type="Texture2D" uid="uid://cm4e8jk5wsk8f" path="res://ASSETS/Sprites/Elements/Simbolo/Tecnecio Tc.png" id="84_eokd7"]
+[ext_resource type="Texture2D" uid="uid://bm42oocjwuvih" path="res://ASSETS/Sprites/Elements/Simbolo/Molibedno Mo.png" id="86_yyn2f"]
+[ext_resource type="Texture2D" uid="uid://cmtpt0nxverug" path="res://ASSETS/Sprites/Elements/Simbolo/Niobio Nb.png" id="88_mqw0x"]
+[ext_resource type="Texture2D" uid="uid://5my08viki5by" path="res://ASSETS/Sprites/Elements/Simbolo/Zirconio Zr.png" id="90_10h13"]
+[ext_resource type="Texture2D" uid="uid://ccep4taig6qac" path="res://ASSETS/Sprites/Elements/Simbolo/Ytrio Y.png" id="92_0mtwo"]
+[ext_resource type="Texture2D" uid="uid://xosv8k32xdrl" path="res://ASSETS/Sprites/Elements/Simbolo/Estroncio Sr.png" id="93_17qjq"]
+[ext_resource type="Texture2D" uid="uid://c8s5vrcgh6ggr" path="res://ASSETS/Sprites/Elements/Simbolo/Xenon Xe.png" id="99_5mxvj"]
+[ext_resource type="Texture2D" uid="uid://bd0w2g86d5que" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/_edited_48_Minerals_Pixel_Art_Icons_Pack(1).png" id="100_aj8ti"]
+[ext_resource type="Texture2D" uid="uid://byj0a11p75iqj" path="res://ASSETS/Sprites/Elements/Simbolo/Cesio Cs.png" id="101_8y4h2"]
+[ext_resource type="Texture2D" uid="uid://d2ohpbp3p6iv5" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon12.png" id="102_o7fji"]
+[ext_resource type="Texture2D" uid="uid://cfu4w2fiek3fx" path="res://ASSETS/Sprites/Elements/Simbolo/Bario Ba.png" id="103_siep0"]
+[ext_resource type="Texture2D" uid="uid://cxkitk63sr43c" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon38.png" id="104_aoyk7"]
+[ext_resource type="Texture2D" uid="uid://b2oe54mwsxwri" path="res://ASSETS/Sprites/Elements/Simbolo/Lantano Ln.png" id="105_racx7"]
+[ext_resource type="Texture2D" uid="uid://bswglbblm6oiq" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon39.png" id="106_adtbv"]
+[ext_resource type="Texture2D" uid="uid://cjai2nscnhbqb" path="res://ASSETS/Sprites/Elements/Simbolo/Hafnio Hf.png" id="107_qedot"]
+[ext_resource type="Texture2D" uid="uid://bwg73ttbrs34t" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon28.png" id="108_uaa2b"]
+[ext_resource type="Texture2D" uid="uid://qjnjktpe4fym" path="res://ASSETS/Sprites/Elements/Simbolo/Wolframio W.png" id="109_rmj5f"]
+[ext_resource type="Texture2D" uid="uid://d0k6vq1w0186g" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/_edited_48_Minerals_Pixel_Art_Icons_Pack(15).png" id="110_bopfj"]
+[ext_resource type="Texture2D" uid="uid://qctp2ioqfvdr" path="res://ASSETS/Sprites/Elements/Simbolo/Renio Re.png" id="111_efxd1"]
+[ext_resource type="Texture2D" uid="uid://c4h0cuio6ea11" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/_edited_48_Minerals_Pixel_Art_Icons_Pack(5).png" id="112_42hdd"]
+[ext_resource type="Texture2D" uid="uid://fp1o3j1ewd5g" path="res://ASSETS/Sprites/Elements/Simbolo/Osmio Os.png" id="113_m4iag"]
+[ext_resource type="Texture2D" uid="uid://vgunl72wp6by" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon45.png" id="114_5d1n2"]
+[ext_resource type="Texture2D" uid="uid://bn8m3b342f7ci" path="res://ASSETS/Sprites/Elements/Simbolo/Iridio Ir.png" id="115_7ovd5"]
+[ext_resource type="Texture2D" uid="uid://bh1ub85vu1sgj" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/_edited_48_Minerals_Pixel_Art_Icons_Pack(4).png" id="116_xrte3"]
+[ext_resource type="Texture2D" uid="uid://drbv5ae58jcm8" path="res://ASSETS/Sprites/Elements/Simbolo/Platinio Pt.png" id="117_06gop"]
+[ext_resource type="Texture2D" uid="uid://b3bsq8s77ns0p" path="res://ASSETS/Sprites/Elements/Simbolo/Mercurio Hg.png" id="118_843kv"]
+[ext_resource type="Texture2D" uid="uid://3ihi84wwmvkd" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/_edited_48_Minerals_Pixel_Art_Icons_Pack(7).png" id="119_ha4o4"]
+[ext_resource type="Texture2D" uid="uid://d0kb2okff6tvt" path="res://ASSETS/Sprites/Elements/Simbolo/Talio Tl.png" id="120_u31ee"]
+[ext_resource type="Texture2D" uid="uid://dml57rbkuudnr" path="res://ASSETS/Sprites/Elements/Simbolo/Plomo Pb.png" id="121_0g2hq"]
+[ext_resource type="Texture2D" uid="uid://b4if6tj28h1aw" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon25.png" id="122_hd3w2"]
+[ext_resource type="Texture2D" uid="uid://diyebby4gu14e" path="res://ASSETS/Sprites/Elements/Simbolo/Bismuto Bi.png" id="123_h2ky5"]
+[ext_resource type="Texture2D" uid="uid://vquwclvp62co" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/_edited_48_Minerals_Pixel_Art_Icons_Pack(16).png" id="124_o7t6u"]
+[ext_resource type="Texture2D" uid="uid://x6kejm1im8yy" path="res://ASSETS/Sprites/Elements/Simbolo/Polonio Po.png" id="125_khulh"]
+[ext_resource type="Texture2D" uid="uid://dwxgebwj7ko2o" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/_edited_48_Minerals_Pixel_Art_Icons_Pack(9).png" id="126_my53s"]
+[ext_resource type="Texture2D" uid="uid://dvlrn6qeekvo1" path="res://ASSETS/Sprites/Elements/Simbolo/Astato At.png" id="127_rvne4"]
+[ext_resource type="Texture2D" uid="uid://cw7llcidq2lfq" path="res://ASSETS/Sprites/Elements/Simbolo/Radon Rn.png" id="128_sdxoo"]
+[ext_resource type="Texture2D" uid="uid://5xbt0nuvjiol" path="res://ASSETS/Sprites/Elements/Simbolo/Fr.png" id="129_fl4oq"]
+[ext_resource type="Texture2D" uid="uid://cym73tj8f3fl7" path="res://ASSETS/Sprites/Elements/Simbolo/Ra.png" id="130_uct0n"]
+[ext_resource type="Texture2D" uid="uid://do06u58ewpejx" path="res://ASSETS/Sprites/Elements/Simbolo/Ac.png" id="131_fnctd"]
+[ext_resource type="Texture2D" uid="uid://ce2jk1gep5ked" path="res://ASSETS/Sprites/Elements/Simbolo/Rf.png" id="132_t7vkv"]
+[ext_resource type="Texture2D" uid="uid://p0fcw8omykvi" path="res://ASSETS/Sprites/Elements/Simbolo/Db.png" id="133_uhq12"]
+[ext_resource type="Texture2D" uid="uid://c3xws4oln1t4n" path="res://ASSETS/Sprites/Elements/Simbolo/Sg.png" id="134_8vaha"]
+[ext_resource type="Texture2D" uid="uid://dvm0vwkhc4ot3" path="res://ASSETS/Sprites/Elements/Simbolo/Bh.png" id="135_8qi8q"]
+[ext_resource type="Texture2D" uid="uid://chh53l8q1t8t7" path="res://ASSETS/Sprites/Elements/Simbolo/Hs.png" id="136_0ih0e"]
+[ext_resource type="Texture2D" uid="uid://clql18kvxnxba" path="res://ASSETS/Sprites/Elements/Simbolo/Mt.png" id="137_kvsea"]
+[ext_resource type="Texture2D" uid="uid://bvrlhqs3h3w6u" path="res://ASSETS/Sprites/Elements/Simbolo/Uun.png" id="138_mghuw"]
+[ext_resource type="Texture2D" uid="uid://coyawo2m07fe5" path="res://ASSETS/Sprites/Elements/Simbolo/Uuu.png" id="139_wunmk"]
+[ext_resource type="Texture2D" uid="uid://pe5ya6jivm2y" path="res://ASSETS/Sprites/Elements/Simbolo/Uut.png" id="140_5w25d"]
+[ext_resource type="Texture2D" uid="uid://btycwbk5u0hie" path="res://ASSETS/Sprites/Elements/Simbolo/Uuq.png" id="141_oqeok"]
+[ext_resource type="Texture2D" uid="uid://ctp3qremjnqay" path="res://ASSETS/Sprites/Elements/Simbolo/Uup.png" id="142_pyiqt"]
+[ext_resource type="Texture2D" uid="uid://bggnnrv7jc0n1" path="res://ASSETS/Sprites/Elements/Simbolo/Uuh.png" id="143_fpmf4"]
+[ext_resource type="Texture2D" uid="uid://4p1vrfgq7dcq" path="res://ASSETS/Sprites/Elements/Simbolo/Uus.png" id="144_dafwc"]
+[ext_resource type="Texture2D" uid="uid://cap5vawu8ddih" path="res://ASSETS/Sprites/Elements/Simbolo/Uuo.png" id="145_rjhjw"]
+
+[node name="TablaPeriodica" type="Node2D"]
+script = ExtResource("1_debvc")
+
+[node name="tabla" type="Sprite2D" parent="."]
+light_mask = 524289
+visibility_layer = 524289
+position = Vector2(-141, -1)
+scale = Vector2(1.7925, 1.63)
+texture = ExtResource("1_hm5xp")
+centered = false
+
+[node name="Oro" type="Button" parent="." groups=["elementos"]]
+offset_left = 638.0
+offset_top = 444.0
+offset_right = 710.0
+offset_bottom = 516.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas" parent="Oro" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1031.43, -509)
+
+[node name="png" type="Sprite2D" parent="Oro/Tarjetas"]
+position = Vector2(305.714, 252)
+scale = Vector2(4, 4)
+texture = ExtResource("5_e2evl")
+
+[node name="simbolo" type="Sprite2D" parent="Oro/Tarjetas"]
+position = Vector2(765.714, 249)
+scale = Vector2(3.61607, 2.39063)
+texture = ExtResource("4_swm78")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Oro/Tarjetas"]
+offset_left = 385.286
+offset_top = 342.0
+offset_right = 694.286
+offset_bottom = 580.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Metal precioso que se ha valorado a lo largo de la historia por su belleza y rareza. Se utiliza en la fabricación de joyas, monedas y componentes electrónicos debido a su resistencia a la corrosión y conductividad eléctrica.
+Compuestos en los cuales interviene: Es menos propenso a formar compuestos en comparacion a otros elementos, aunque puede formar algunos como el Aurocloruro de Sodio y Tetracianuro de Oro"
+
+[node name="Label" type="Label" parent="Oro/Tarjetas"]
+offset_left = 512.857
+offset_top = 205.0
+offset_right = 555.857
+offset_bottom = 228.0
+text = "ORO"
+
+[node name="Label2" type="Label" parent="Oro/Tarjetas"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 79
+Peso Atomico: 196.96654
+Simbolo: Auw"
+
+[node name="Hidrogeno" type="Button" parent="." groups=["elementos"]]
+offset_left = 64.0
+offset_top = 52.0
+offset_right = 136.0
+offset_bottom = 124.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas" parent="Hidrogeno" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-211.429, -117)
+
+[node name="png" type="Sprite2D" parent="Hidrogeno/Tarjetas"]
+position = Vector2(305.714, 252)
+scale = Vector2(4, 3)
+texture = ExtResource("6_3fymb")
+
+[node name="simbolo" type="Sprite2D" parent="Hidrogeno/Tarjetas"]
+position = Vector2(765.714, 249)
+scale = Vector2(3.61607, 2.39063)
+texture = ExtResource("7_7xe2w")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Hidrogeno/Tarjetas"]
+offset_left = 385.286
+offset_top = 342.0
+offset_right = 694.286
+offset_bottom = 580.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico más ligero y abundante en el universo. Se utiliza en una variedad de aplicaciones, como la producción de amoníaco, propulsion de cohetes, combustibles y en la industria petroquímica. 
+Compuestos en los cuales interviene: Hidruros, Compuestos toxicos y Hidracidos.
+"
+
+[node name="Label" type="Label" parent="Hidrogeno/Tarjetas"]
+offset_left = 481.429
+offset_top = 205.0
+offset_right = 579.429
+offset_bottom = 228.0
+text = "HIDROGENO"
+
+[node name="Label2" type="Label" parent="Hidrogeno/Tarjetas"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 1
+Peso Atomico: 1.00794
+Simbolo: H"
+
+[node name="Carbono" type="Button" parent="." groups=["elementos"]]
+offset_left = 810.0
+offset_top = 130.0
+offset_right = 882.0
+offset_bottom = 202.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas2" parent="Carbono" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1277.14, -195)
+
+[node name="png" type="Sprite2D" parent="Carbono/Tarjetas2"]
+position = Vector2(294.286, 248)
+scale = Vector2(4, 3)
+texture = ExtResource("8_rmq2f")
+
+[node name="simbolo" type="Sprite2D" parent="Carbono/Tarjetas2"]
+position = Vector2(765.714, 249)
+scale = Vector2(3.61607, 2.39063)
+texture = ExtResource("9_k2uui")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Carbono/Tarjetas2"]
+offset_left = 385.286
+offset_top = 342.0
+offset_right = 694.286
+offset_bottom = 580.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico fundamental que se encuentra en la naturaleza en diversas formas, como el diamante, el grafito y los compuestos orgánicos. Usado en la fabricación de acero hasta la producción de plásticos y combustibles.
+Compuestos en los cuales interviene: Compuestos acíclicos, Compuestos cíclicos y Compuestos aromáticos"
+
+[node name="Label" type="Label" parent="Carbono/Tarjetas2"]
+offset_left = 490.0
+offset_top = 207.0
+offset_right = 570.0
+offset_bottom = 230.0
+text = "CARBONO"
+
+[node name="Label2" type="Label" parent="Carbono/Tarjetas2"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 6
+Peso Atomico: 12.011
+Simbolo: C"
+
+[node name="boro" type="Button" parent="." groups=["elementos"]]
+offset_left = 752.0
+offset_top = 131.0
+offset_right = 824.0
+offset_bottom = 203.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas24" parent="boro" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1194.29, -196)
+
+[node name="png" type="Sprite2D" parent="boro/Tarjetas24"]
+position = Vector2(299.857, 249.5)
+scale = Vector2(3.6518, 3.59375)
+texture = ExtResource("10_qjmna")
+
+[node name="simbolo" type="Sprite2D" parent="boro/Tarjetas24"]
+position = Vector2(766.429, 250.188)
+scale = Vector2(3.41992, 2.34115)
+texture = ExtResource("11_y55b2")
+region_rect = Rect2(495.917, 78.9186, 33.5124, 48.3768)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="boro/Tarjetas24"]
+offset_left = 385.286
+offset_top = 342.0
+offset_right = 694.286
+offset_bottom = 580.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metaloide, sólido y muy duro. Es un semiconductor de la electricidad, posee un punto de fusión muy elevado y es conocido por su extraordinaria capacidad para absorber neutrones sin romperse.
+Compuestos en los cuales interviene: Ácido bórico (H3BO3) y Bórax (Tetraborato de sodio)."
+
+[node name="Label" type="Label" parent="boro/Tarjetas24"]
+offset_left = 507.143
+offset_top = 207.0
+offset_right = 587.143
+offset_bottom = 230.0
+text = "BORO"
+
+[node name="Label2" type="Label" parent="boro/Tarjetas24"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 5
+Peso Atomico: 10.81
+Simbolo: B"
+
+[node name="nitrogeno" type="Button" parent="." groups=["elementos"]]
+offset_left = 868.0
+offset_top = 131.0
+offset_right = 940.0
+offset_bottom = 203.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas3" parent="nitrogeno" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1360, -196)
+
+[node name="png" type="Sprite2D" parent="nitrogeno/Tarjetas3"]
+position = Vector2(297.143, 244)
+scale = Vector2(4, 3)
+texture = ExtResource("10_po2i3")
+
+[node name="simbolo" type="Sprite2D" parent="nitrogeno/Tarjetas3"]
+position = Vector2(765.714, 249)
+scale = Vector2(3.61607, 2.39063)
+texture = ExtResource("11_6umu2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="nitrogeno/Tarjetas3"]
+offset_left = 385.286
+offset_top = 342.0
+offset_right = 694.286
+offset_bottom = 580.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico gaseoso e incoloro que forma parte de la composición del aire. Es fundamental para la vida en la Tierra, ya que es un componente esencial de las proteínas y ácidos nucleicos. 
+Compuestos en los cuales interviene: Amoníaco, Nitrato, Aminas, Azidas y Cianuros."
+
+[node name="Label" type="Label" parent="nitrogeno/Tarjetas3"]
+offset_left = 484.286
+offset_top = 205.0
+offset_right = 579.286
+offset_bottom = 228.0
+text = "NITROGENO"
+
+[node name="Label2" type="Label" parent="nitrogeno/Tarjetas3"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 7
+Peso Atomico: 14.00674
+Simbolo: N"
+
+[node name="oxigeno" type="Button" parent="." groups=["elementos"]]
+offset_left = 924.0
+offset_top = 130.0
+offset_right = 996.857
+offset_bottom = 202.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas10" parent="oxigeno" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1440, -195)
+
+[node name="png" type="Sprite2D" parent="oxigeno/Tarjetas10"]
+position = Vector2(295.714, 252)
+scale = Vector2(3, 3)
+texture = ExtResource("12_pkb41")
+
+[node name="simbolo" type="Sprite2D" parent="oxigeno/Tarjetas10"]
+position = Vector2(765.714, 249)
+scale = Vector2(3.61607, 2.39063)
+texture = ExtResource("13_5nx4d")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="oxigeno/Tarjetas10"]
+offset_left = 385.286
+offset_top = 342.0
+offset_right = 694.286
+offset_bottom = 580.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico gaseoso e incoloro que es esencial para la respiración de los seres vivos. Es fundamental para la combustión y la oxidación de materiales. 
+Compuestos en los que interviene: Alcoholes, Cetonas, Éteres, Ácidos carboxílicos y Anhídridos de ácido"
+
+[node name="Label" type="Label" parent="oxigeno/Tarjetas10"]
+offset_left = 494.286
+offset_top = 205.0
+offset_right = 568.286
+offset_bottom = 228.0
+text = "OXIGENO"
+
+[node name="Label2" type="Label" parent="oxigeno/Tarjetas10"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 8
+Peso Atomico: 15.9994
+Simbolo: O"
+
+[node name="sodio" type="Button" parent="." groups=["elementos"]]
+offset_left = 63.0
+offset_top = 206.0
+offset_right = 135.0
+offset_bottom = 278.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas9" parent="sodio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-210.001, -271)
+
+[node name="png" type="Sprite2D" parent="sodio/Tarjetas9"]
+position = Vector2(302.857, 259)
+scale = Vector2(4, 3)
+texture = ExtResource("14_4s8jo")
+
+[node name="simbolo" type="Sprite2D" parent="sodio/Tarjetas9"]
+position = Vector2(765.714, 249)
+scale = Vector2(3.61607, 2.39063)
+texture = ExtResource("15_tkqq6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="sodio/Tarjetas9"]
+offset_left = 385.286
+offset_top = 342.0
+offset_right = 694.286
+offset_bottom = 580.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Metal blando que es altamente reactivo en contacto con el agua y el aire. Es esencial para el equilibrio de los fluidos corporales y el funcionamiento del sistema nervioso. El sodio también se utiliza en la industria para la fabricación de productos químicos, vidrio y en la purificación de metales. Compuestos en los que interviene: Óxido de sodio, Peróxido de sodio, Cloruro de sodio, Borato de sodio, Sulfato de sodio y Nitrato de sodio"
+
+[node name="Label" type="Label" parent="sodio/Tarjetas9"]
+offset_left = 507.143
+offset_top = 205.0
+offset_right = 558.143
+offset_bottom = 228.0
+text = "SODIO"
+
+[node name="Label2" type="Label" parent="sodio/Tarjetas9"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 11
+Peso Atomico: 22.989768
+Simbolo: Na"
+
+[node name="fluor" type="Button" parent="." groups=["elementos"]]
+offset_left = 981.0
+offset_top = 130.0
+offset_right = 1053.0
+offset_bottom = 202.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas25" parent="fluor" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1521.43, -195)
+
+[node name="png" type="Sprite2D" parent="fluor/Tarjetas25"]
+position = Vector2(297.286, 249.5)
+scale = Vector2(3.65179, 3.59375)
+texture = ExtResource("17_1h6fh")
+
+[node name="simbolo" type="Sprite2D" parent="fluor/Tarjetas25"]
+position = Vector2(765.714, 249)
+scale = Vector2(3.61607, 2.39063)
+texture = ExtResource("19_2kl1k")
+region_rect = Rect2(623.942, 79.1302, 32.3878, 48.0263)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="fluor/Tarjetas25"]
+offset_left = 385.714
+offset_top = 334.0
+offset_right = 694.714
+offset_bottom = 590.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico perteneciente al grupo de los halógenos. En condiciones estándar, es un gas de color amarillo pálido, extremadamente reactivo y corrosivo. Es el elemento más electronegativo de la tabla periódica, lo que significa que reacciona con casi todas las sustancias orgánicas e inorgánicas.
+Compuestos en los que interviene: Fluoruro de sodio (NaF) y Ácido fluorhídrico (HF)."
+
+[node name="Label" type="Label" parent="fluor/Tarjetas25"]
+offset_left = 501.429
+offset_top = 205.0
+offset_right = 553.429
+offset_bottom = 228.0
+text = "FLUOR"
+
+[node name="Label2" type="Label" parent="fluor/Tarjetas25"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 9
+Peso Atomico: 18.998
+Simbolo: F"
+
+[node name="alum" type="Button" parent="." groups=["elementos"]]
+offset_left = 752.0
+offset_top = 208.0
+offset_right = 824.0
+offset_bottom = 280.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas8" parent="alum" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1194.29, -273)
+
+[node name="png" type="Sprite2D" parent="alum/Tarjetas8"]
+position = Vector2(305.714, 252)
+scale = Vector2(4, 4)
+texture = ExtResource("16_8umxi")
+
+[node name="simbolo" type="Sprite2D" parent="alum/Tarjetas8"]
+position = Vector2(765.714, 249)
+scale = Vector2(3.61607, 2.39063)
+texture = ExtResource("17_61jph")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="alum/Tarjetas8"]
+offset_left = 385.286
+offset_top = 342.0
+offset_right = 694.286
+offset_bottom = 580.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Material metálico ligero y resistente que se utiliza en una variedad de aplicaciones industriales y de construcción debido a sus propiedades de conductividad eléctrica y térmica. 
+Compuestos en los que interviene: Alúmina, Acetato de aluminio, Antimoniuro de aluminio, Alumbre de potasio y Aluminato tricálcico."
+
+[node name="Label" type="Label" parent="alum/Tarjetas8"]
+offset_left = 491.428
+offset_top = 205.0
+offset_right = 572.428
+offset_bottom = 228.0
+text = "ALUMINIO"
+
+[node name="Label2" type="Label" parent="alum/Tarjetas8"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 13
+Peso Atomico: 26.981539
+Simbolo: Al"
+
+[node name="silicio" type="Button" parent="." groups=["elementos"]]
+offset_left = 810.0
+offset_top = 208.0
+offset_right = 882.0
+offset_bottom = 280.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas26" parent="silicio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1277.14, -273)
+
+[node name="png" type="Sprite2D" parent="silicio/Tarjetas26"]
+position = Vector2(301.571, 247.5)
+scale = Vector2(3.74108, 3.71875)
+texture = ExtResource("20_eccqa")
+
+[node name="simbolo" type="Sprite2D" parent="silicio/Tarjetas26"]
+position = Vector2(768.404, 249)
+scale = Vector2(3.45305, 2.39063)
+texture = ExtResource("23_l4cpx")
+region_rect = Rect2(528.905, 126.788, 32.4466, 49.659)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="silicio/Tarjetas26"]
+offset_left = 381.428
+offset_top = 332.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metaloide que se presenta como un sólido cristalino duro y quebradizo, con un brillo metálico grisáceo. Es el segundo elemento más abundante en la corteza terrestre después del oxígeno. Es un semiconductor intrínseco, capacidad para conducir electricidad puede ser controlada con precisión.
+Compuestos en los que interviene: Dióxido de silicio (SiO2) y Carburo de silicio (SiC)."
+
+[node name="Label" type="Label" parent="silicio/Tarjetas26"]
+offset_left = 502.857
+offset_top = 204.0
+offset_right = 583.857
+offset_bottom = 227.0
+text = "SILICIO"
+
+[node name="Label2" type="Label" parent="silicio/Tarjetas26"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 14
+Peso Atomico: 28.085
+Simbolo: Si"
+
+[node name="fosforo" type="Button" parent="." groups=["elementos"]]
+offset_left = 868.0
+offset_top = 208.0
+offset_right = 940.0
+offset_bottom = 280.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas27" parent="fosforo" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1360, -273)
+
+[node name="png" type="Sprite2D" parent="fosforo/Tarjetas27"]
+position = Vector2(300.143, 247.5)
+scale = Vector2(3.6518, 3.71875)
+texture = ExtResource("21_6clr0")
+
+[node name="simbolo" type="Sprite2D" parent="fosforo/Tarjetas27"]
+position = Vector2(765.714, 250.785)
+scale = Vector2(3.39286, 2.31776)
+texture = ExtResource("25_brb50")
+region_rect = Rect2(561.146, 125.735, 32.0001, 50.8918)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="fosforo/Tarjetas27"]
+offset_left = 381.428
+offset_top = 332.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico no metálico multiforme que nunca se encuentra libre en la naturaleza debido a su alta reactividad. Sus formas más comunes son el fósforo blanco y el fósforo rojo. Es un elemento vital, constituyente esencial del ADN y el ATP en todos los organismos vivos.
+Compuestos en los que interviene: Ácido fosfórico (H3PO4) y Fosfato de calcio."
+
+[node name="Label" type="Label" parent="fosforo/Tarjetas27"]
+offset_left = 494.286
+offset_top = 204.0
+offset_right = 575.286
+offset_bottom = 227.0
+text = "FOSFORO"
+
+[node name="Label2" type="Label" parent="fosforo/Tarjetas27"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 15
+Peso Atomico: 30.974
+Simbolo: P"
+
+[node name="azufre" type="Button" parent="." groups=["elementos"]]
+offset_left = 925.0
+offset_top = 208.0
+offset_right = 997.0
+offset_bottom = 283.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas7" parent="azufre" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1441.43, -271)
+
+[node name="png" type="Sprite2D" parent="azufre/Tarjetas7"]
+position = Vector2(297.143, 252)
+scale = Vector2(4, 3)
+texture = ExtResource("18_u73i2")
+
+[node name="simbolo" type="Sprite2D" parent="azufre/Tarjetas7"]
+position = Vector2(765.714, 249)
+scale = Vector2(3.61607, 2.39063)
+texture = ExtResource("19_3lc61")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="azufre/Tarjetas7"]
+offset_left = 385.286
+offset_top = 342.0
+offset_right = 694.286
+offset_bottom = 580.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico utilizado en la industria  para la fabricación de diversos productos como fertilizantes, polvora, explosivos, productos farmacéuticos y productos de caucho. 
+Compuestos en los que interviene: Sulfato de hidrógeno, Ácido sulfúrico, Hidrógeno sulfuroso y Sulfuros metálicos."
+
+[node name="Label" type="Label" parent="azufre/Tarjetas7"]
+offset_left = 502.859
+offset_top = 205.0
+offset_right = 562.859
+offset_bottom = 228.0
+text = "AZUFRE"
+
+[node name="Label2" type="Label" parent="azufre/Tarjetas7"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 16
+Peso Atomico: 32.066
+Simbolo: S"
+
+[node name="cloro" type="Button" parent="." groups=["elementos"]]
+offset_left = 981.0
+offset_top = 208.0
+offset_right = 1053.0
+offset_bottom = 283.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas28" parent="cloro" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1521.43, -271)
+
+[node name="png" type="Sprite2D" parent="cloro/Tarjetas28"]
+position = Vector2(297.143, 250.5)
+scale = Vector2(4, 3.65625)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="cloro/Tarjetas28"]
+position = Vector2(766.596, 249)
+scale = Vector2(3.55918, 2.39063)
+texture = ExtResource("29_jl4s7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="cloro/Tarjetas28"]
+offset_left = 385.286
+offset_top = 342.0
+offset_right = 694.286
+offset_bottom = 540.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico perteneciente al grupo de los halógenos. Es altamente reactivo y un potente agente oxidante, por lo que no se encuentra libre en la naturaleza, sino formando sales.
+Compuestos en los que interviene: Cloruro de sodio (NaCl) y Hipoclorito de sodio (NaClO)."
+
+[node name="Label" type="Label" parent="cloro/Tarjetas28"]
+offset_left = 502.859
+offset_top = 205.0
+offset_right = 562.859
+offset_bottom = 228.0
+text = "CLORO"
+
+[node name="Label2" type="Label" parent="cloro/Tarjetas28"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 17
+Peso Atomico: 35.45
+Simbolo: Cl"
+
+[node name="titanio" type="Button" parent="." groups=["elementos"]]
+offset_left = 238.0
+offset_top = 288.0
+offset_right = 310.0
+offset_bottom = 360.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas6" parent="titanio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-460.001, -353)
+
+[node name="png" type="Sprite2D" parent="titanio/Tarjetas6"]
+position = Vector2(305.714, 252)
+scale = Vector2(4, 3)
+
+[node name="simbolo" type="Sprite2D" parent="titanio/Tarjetas6"]
+position = Vector2(765.714, 249)
+scale = Vector2(3.61607, 2.39063)
+texture = ExtResource("21_fjdvx")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="titanio/Tarjetas6"]
+offset_left = 385.286
+offset_top = 342.0
+offset_right = 694.286
+offset_bottom = 580.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Metal conocido por su alta resistencia y ligereza. Se utiliza en una variedad de aplicaciones industriales y aeroespaciales debido a su resistencia a la corrosión. 
+Compuestos en los cuales interviene: Dióxido de titanio, Tetracloruro de titanio y Tricloruro de titanio.
+"
+
+[node name="Label" type="Label" parent="titanio/Tarjetas6"]
+offset_left = 502.857
+offset_top = 205.0
+offset_right = 566.857
+offset_bottom = 228.0
+text = "TITANIO"
+
+[node name="Label2" type="Label" parent="titanio/Tarjetas6"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 22
+Peso Atomico: 47.88
+Simbolo: Ti"
+
+[node name="hierro" type="Button" parent="." groups=["elementos"]]
+offset_left = 465.0
+offset_top = 288.0
+offset_right = 537.0
+offset_bottom = 360.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas5" parent="hierro" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-784.287, -353)
+
+[node name="png" type="Sprite2D" parent="hierro/Tarjetas5"]
+position = Vector2(301.428, 252)
+scale = Vector2(4, 4)
+texture = ExtResource("22_6liiu")
+
+[node name="simbolo" type="Sprite2D" parent="hierro/Tarjetas5"]
+position = Vector2(765.714, 249)
+scale = Vector2(3.61607, 2.39063)
+texture = ExtResource("23_hhw2a")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="hierro/Tarjetas5"]
+offset_left = 385.286
+offset_top = 342.0
+offset_right = 694.286
+offset_bottom = 580.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Metal de los más comunes en la Tierra. Es utilizado en la fabricación de acero, que es un material crucial en la construcción de edificios, puentes y maquinaria. 
+Compuestos en los cuales interviene: Óxidos de hierro, Sulfato de hierro y Cloruro de hierro. "
+
+[node name="Label" type="Label" parent="hierro/Tarjetas5"]
+offset_left = 512.857
+offset_top = 205.0
+offset_right = 555.857
+offset_bottom = 228.0
+text = "HIERRO"
+
+[node name="Label2" type="Label" parent="hierro/Tarjetas5"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 26
+Peso Atomico: 55.847
+Simbolo: Fe"
+
+[node name="bromo" type="Button" parent="." groups=["elementos"]]
+offset_left = 981.0
+offset_top = 289.0
+offset_right = 1053.0
+offset_bottom = 361.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas4" parent="bromo" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1521.43, -354)
+
+[node name="png" type="Sprite2D" parent="bromo/Tarjetas4"]
+position = Vector2(301.428, 252)
+scale = Vector2(3, 3)
+texture = ExtResource("24_5rwke")
+
+[node name="simbolo" type="Sprite2D" parent="bromo/Tarjetas4"]
+position = Vector2(765.714, 249)
+scale = Vector2(3.61607, 2.39063)
+texture = ExtResource("25_u842n")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="bromo/Tarjetas4"]
+offset_left = 385.286
+offset_top = 342.0
+offset_right = 694.286
+offset_bottom = 580.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico líquido utilizado en la industria para la fabricación de productos farmacéuticos y productos de limpieza. Tambien es util en la purificación del agua y en la síntesis de compuestos orgánicos. 
+Compuestos en los cuales interviene: Bromuro de sodio y Bromuro de potasio"
+
+[node name="Label" type="Label" parent="bromo/Tarjetas4"]
+offset_left = 501.429
+offset_top = 205.0
+offset_right = 562.429
+offset_bottom = 228.0
+text = "BROMO"
+
+[node name="Label2" type="Label" parent="bromo/Tarjetas4"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 35
+Peso Atomico: 79.904
+Simbolo: Br"
+
+[node name="cobre" type="Button" parent="." groups=["elementos"]]
+offset_left = 638.0
+offset_top = 289.0
+offset_right = 709.429
+offset_bottom = 361.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas11" parent="cobre" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1031.43, -354)
+
+[node name="png" type="Sprite2D" parent="cobre/Tarjetas11"]
+position = Vector2(301.429, 249.5)
+scale = Vector2(3.75, 3.59375)
+texture = ExtResource("31_cy50s")
+
+[node name="simbolo" type="Sprite2D" parent="cobre/Tarjetas11"]
+position = Vector2(765.714, 250.5)
+scale = Vector2(3.39286, 2.41304)
+texture = ExtResource("37_8twao")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="cobre/Tarjetas11"]
+offset_left = 381.429
+offset_top = 328.0
+offset_right = 690.429
+offset_bottom = 581.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico de color rojizo y brillo metálico que se caracteriza por ser uno de los mejores conductores de electricidad y calor. Es un metal duradero, reciclable y resistente a la corrosión, fundamental en la infraestructura moderna y la tecnología.
+Compuestos en los cuales interviene: Sulfato de cobre (II) y Óxido de cobre (I) y (II)"
+
+[node name="Label" type="Label" parent="cobre/Tarjetas11"]
+offset_left = 501.429
+offset_top = 205.0
+offset_right = 562.429
+offset_bottom = 228.0
+text = "COBRE"
+
+[node name="Label2" type="Label" parent="cobre/Tarjetas11"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 29
+Peso Atomico: 63.546
+Simbolo: Cu"
+
+[node name="selenio" type="Button" parent="." groups=["elementos"]]
+offset_left = 924.0
+offset_top = 289.0
+offset_right = 999.714
+offset_bottom = 361.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas12" parent="selenio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1440, -352)
+
+[node name="png" type="Sprite2D" parent="selenio/Tarjetas12"]
+position = Vector2(298.571, 251)
+scale = Vector2(3.57143, 3.625)
+texture = ExtResource("32_eccqa")
+
+[node name="simbolo" type="Sprite2D" parent="selenio/Tarjetas12"]
+position = Vector2(766.429, 249)
+scale = Vector2(3.4375, 2.39063)
+texture = ExtResource("39_512mv")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="selenio/Tarjetas12"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 559.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico no metálico que presenta propiedades fotoeléctricas (convierte luz en electricidad) y semiconductoras. Se encuentra en la naturaleza en varias formas alotrópicas, siendo la más estable un sólido gris de brillo metálico.
+Compuestos en los cuales interviene: Selenito de sodio y Sulfuro de selenio"
+
+[node name="Label" type="Label" parent="selenio/Tarjetas12"]
+offset_left = 501.429
+offset_top = 204.0
+offset_right = 574.571
+offset_bottom = 227.0
+text = "SELENIO"
+
+[node name="Label2" type="Label" parent="selenio/Tarjetas12"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 34
+Peso Atomico: 78.971
+Simbolo: Se"
+
+[node name="arsenico" type="Button" parent="." groups=["elementos"]]
+offset_left = 868.0
+offset_top = 289.0
+offset_right = 943.714
+offset_bottom = 361.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas29" parent="arsenico" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1360, -352)
+
+[node name="png" type="Sprite2D" parent="arsenico/Tarjetas29"]
+position = Vector2(301.429, 250.5)
+scale = Vector2(3.75, 3.65625)
+texture = ExtResource("32_my3vi")
+
+[node name="simbolo" type="Sprite2D" parent="arsenico/Tarjetas29"]
+position = Vector2(766.429, 250.188)
+scale = Vector2(3.4375, 2.34115)
+texture = ExtResource("41_02q5h")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="arsenico/Tarjetas29"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metaloide que se encuentra en la naturaleza en diversas formas alotrópicas, siendo la más común un sólido gris metálico, cristalino y quebradizo. Es ampliamente conocido por su toxicidad, aunque también es un elemento que se encuentra de forma natural en la corteza terrestre, el agua y el aire.
+Compuestos en los cuales interviene: Arseniuro de galio (GaAs) y Trióxido de arsénico (As2O3)"
+
+[node name="Label" type="Label" parent="arsenico/Tarjetas29"]
+offset_left = 490.0
+offset_top = 205.0
+offset_right = 569.0
+offset_bottom = 228.0
+text = "ARSENICO"
+
+[node name="Label2" type="Label" parent="arsenico/Tarjetas29"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 33
+Peso Atomico: 74.922
+Simbolo: As"
+
+[node name="germanio" type="Button" parent="." groups=["elementos"]]
+offset_left = 810.0
+offset_top = 288.0
+offset_right = 885.714
+offset_bottom = 360.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas30" parent="germanio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1277.14, -351)
+
+[node name="png" type="Sprite2D" parent="germanio/Tarjetas30"]
+position = Vector2(301.428, 251)
+scale = Vector2(3.75, 3.625)
+texture = ExtResource("33_dqdti")
+
+[node name="simbolo" type="Sprite2D" parent="germanio/Tarjetas30"]
+position = Vector2(767.5, 250.188)
+scale = Vector2(3.50446, 2.34115)
+texture = ExtResource("43_xiabp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="germanio/Tarjetas30"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metaloide, sólido, duro y quebradizo, de color blanco grisáceo con un brillo metálico. Al igual que el silicio, es un semiconductor intrínseco. Posee la propiedad inusual de expandirse al congelarse y es transparente a la radiación infrarroja.
+Compuestos en los cuales interviene: Dióxido de germanio (GeO2) y Arseniuro de galio-germanio."
+
+[node name="Label" type="Label" parent="germanio/Tarjetas30"]
+offset_left = 490.0
+offset_top = 205.0
+offset_right = 577.0
+offset_bottom = 228.0
+text = "GERMANIO"
+
+[node name="Label2" type="Label" parent="germanio/Tarjetas30"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 32
+Peso Atomico: 72.630
+Simbolo: Ge"
+
+[node name="galio" type="Button" parent="." groups=["elementos"]]
+offset_left = 752.0
+offset_top = 288.0
+offset_right = 827.714
+offset_bottom = 360.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas31" parent="galio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1194.29, -351)
+
+[node name="png" type="Sprite2D" parent="galio/Tarjetas31"]
+position = Vector2(301.429, 251)
+scale = Vector2(3.75, 3.625)
+texture = ExtResource("35_6clr0")
+
+[node name="simbolo" type="Sprite2D" parent="galio/Tarjetas31"]
+position = Vector2(768.572, 250.785)
+scale = Vector2(3.2653, 2.31776)
+texture = ExtResource("45_duvk5")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="galio/Tarjetas31"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico de color plateado brillante y blando. Posee una característica física extraordinaria: su punto de fusión es de tan solo 29.76 °C, lo que significa que puede fundirse en la palma de la mano. Es un metal que se expande al solidificarse.
+Compuestos en los cuales interviene: Arseniuro de galio (GaAs) y Nitruro de galio (GaN)."
+
+[node name="Label" type="Label" parent="galio/Tarjetas31"]
+offset_left = 507.143
+offset_top = 205.0
+offset_right = 594.143
+offset_bottom = 228.0
+text = "GALIO"
+
+[node name="Label2" type="Label" parent="galio/Tarjetas31"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 31
+Peso Atomico: 69.723
+Simbolo: Ga"
+
+[node name="zinc" type="Button" parent="." groups=["elementos"]]
+offset_left = 696.0
+offset_top = 288.0
+offset_right = 771.714
+offset_bottom = 360.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas14" parent="zinc" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1114.29, -351)
+
+[node name="png" type="Sprite2D" parent="zinc/Tarjetas14"]
+position = Vector2(298.571, 250.5)
+scale = Vector2(3.57143, 3.65625)
+texture = ExtResource("34_hrimn")
+
+[node name="simbolo" type="Sprite2D" parent="zinc/Tarjetas14"]
+position = Vector2(766.596, 249.59)
+scale = Vector2(3.55918, 2.36553)
+texture = ExtResource("47_jb73w")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="zinc/Tarjetas14"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico de color blanco azulado que se extrae principalmente del mineral esfalerita. Es un metal moderadamente reactivo que se combina con el oxígeno y otros no metales; es conocido por su alta resistencia a la oxidación y corrosión.
+Compuestos en los cuales interviene: Óxido de zinc (ZnO) y Sulfato de zinc (ZnSO₄)."
+
+[node name="Label" type="Label" parent="zinc/Tarjetas14"]
+offset_left = 512.857
+offset_top = 205.0
+offset_right = 567.143
+offset_bottom = 228.0
+text = "ZINC"
+
+[node name="Label2" type="Label" parent="zinc/Tarjetas14"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 30
+Peso Atomico: 65.38
+Simbolo: Zn"
+
+[node name="niquel" type="Button" parent="." groups=["elementos"]]
+offset_left = 581.0
+offset_top = 289.0
+offset_right = 656.714
+offset_bottom = 361.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas15" parent="niquel" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-950, -352)
+
+[node name="png" type="Sprite2D" parent="niquel/Tarjetas15"]
+position = Vector2(300, 250.5)
+scale = Vector2(3.66071, 3.65625)
+texture = ExtResource("35_me0cc")
+
+[node name="simbolo" type="Sprite2D" parent="niquel/Tarjetas15"]
+position = Vector2(765.714, 251.008)
+scale = Vector2(3.39286, 2.47792)
+texture = ExtResource("49_0nx2y")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="niquel/Tarjetas15"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico de color blanco plateado con un ligero matiz dorado. Pertenece al grupo de los metales de transición, es duro, maleable, dúctil y posee propiedades ferromagnéticas. Es altamente valorado por su resistencia a la corrosión y a las altas temperaturas.
+Compuestos en los cuales interviene: Sulfato de níquel (II) y Óxido de níquel (II)."
+
+[node name="Label" type="Label" parent="niquel/Tarjetas15"]
+offset_left = 501.429
+offset_top = 205.0
+offset_right = 561.429
+offset_bottom = 228.0
+text = "NIQUEL"
+
+[node name="Label2" type="Label" parent="niquel/Tarjetas15"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 28
+Peso Atomico: 58.693
+Simbolo: Ni"
+
+[node name="cobalto" type="Button" parent="." groups=["elementos"]]
+offset_left = 523.0
+offset_top = 288.0
+offset_right = 598.714
+offset_bottom = 360.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas16" parent="cobalto" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-867.143, -351)
+
+[node name="png" type="Sprite2D" parent="cobalto/Tarjetas16"]
+position = Vector2(298.571, 249.5)
+scale = Vector2(3.57143, 3.71875)
+texture = ExtResource("36_voulh")
+
+[node name="simbolo" type="Sprite2D" parent="cobalto/Tarjetas16"]
+position = Vector2(767.5, 250.188)
+scale = Vector2(3.50446, 2.34115)
+texture = ExtResource("51_kc25j")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="cobalto/Tarjetas16"]
+offset_left = 381.428
+offset_top = 333.0
+offset_right = 690.428
+offset_bottom = 611.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico de transición, sólido a temperatura ambiente, con un característico brillo gris plateado y tonalidades azuladas. Al igual que el hierro y el níquel, es ferromagnético, manteniendo sus propiedades magnéticas incluso a temperaturas elevadas.
+Compuestos en los cuales interviene: Cloruro de cobalto (II) y Cobalamina (Vitamina B12)."
+
+[node name="Label" type="Label" parent="cobalto/Tarjetas16"]
+offset_left = 491.428
+offset_top = 205.0
+offset_right = 566.428
+offset_bottom = 228.0
+text = "COBALTO"
+
+[node name="Label2" type="Label" parent="cobalto/Tarjetas16"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 27
+Peso Atomico: 58.933
+Simbolo: Co"
+
+[node name="manga" type="Button" parent="." groups=["elementos"]]
+offset_left = 410.0
+offset_top = 288.0
+offset_right = 485.714
+offset_bottom = 360.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas17" parent="manga" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-705.714, -351)
+
+[node name="png" type="Sprite2D" parent="manga/Tarjetas17"]
+position = Vector2(299.286, 250.5)
+scale = Vector2(3.88393, 3.65625)
+texture = ExtResource("37_0avyl")
+
+[node name="simbolo" type="Sprite2D" parent="manga/Tarjetas17"]
+position = Vector2(767.143, 249.59)
+scale = Vector2(3.37662, 2.36553)
+texture = ExtResource("53_yx6pp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="manga/Tarjetas17"]
+offset_left = 381.428
+offset_top = 333.0
+offset_right = 690.428
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico de transición, de aspecto gris rosáceo, duro y muy quebradizo. Es un metal que se oxida con facilidad en contacto con el aire y es fundamental en la metalurgia debido a su capacidad para mejorar las propiedades mecánicas de las aleaciones.
+Compuestos en los cuales interviene: Dióxido de manganeso (MnO2) y Permanganato de potasio (KMnO4)."
+
+[node name="Label" type="Label" parent="manga/Tarjetas17"]
+offset_left = 481.429
+offset_top = 205.0
+offset_right = 584.429
+offset_bottom = 228.0
+text = "MANGANESO"
+
+[node name="Label2" type="Label" parent="manga/Tarjetas17"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 25
+Peso Atomico: 54.938
+Simbolo: Mn"
+
+[node name="cromo" type="Button" parent="." groups=["elementos"]]
+offset_left = 350.0
+offset_top = 288.0
+offset_right = 425.714
+offset_bottom = 360.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas18" parent="cromo" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-620, -351)
+
+[node name="png" type="Sprite2D" parent="cromo/Tarjetas18"]
+position = Vector2(301.429, 249.5)
+scale = Vector2(3.75, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="cromo/Tarjetas18"]
+position = Vector2(767.5, 249)
+scale = Vector2(3.50445, 2.39063)
+texture = ExtResource("45_uobvf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="cromo/Tarjetas18"]
+offset_left = 381.428
+offset_top = 333.0
+offset_right = 690.428
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico de transición, de color gris plateado, duro y muy resistente a la corrosión. Se caracteriza por su capacidad de adquirir un brillo extremadamente alto al ser pulido y por su resistencia al empañamiento.
+Compuestos en los cuales interviene: Óxido de cromo (III) y Dicromato de potasio."
+
+[node name="Label" type="Label" parent="cromo/Tarjetas18"]
+offset_left = 501.429
+offset_top = 205.0
+offset_right = 604.429
+offset_bottom = 228.0
+text = "CROMO"
+
+[node name="Label2" type="Label" parent="cromo/Tarjetas18"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 24
+Peso Atomico: 51.996
+Simbolo: Cr"
+
+[node name="vanadio" type="Button" parent="." groups=["elementos"]]
+offset_left = 295.0
+offset_top = 288.0
+offset_right = 370.714
+offset_bottom = 360.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas24" parent="vanadio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-541.429, -351)
+
+[node name="png" type="Sprite2D" parent="vanadio/Tarjetas24"]
+position = Vector2(300, 249.5)
+scale = Vector2(3.66072, 3.71875)
+texture = ExtResource("38_hr5w5")
+
+[node name="simbolo" type="Sprite2D" parent="vanadio/Tarjetas24"]
+position = Vector2(768.404, 249)
+scale = Vector2(3.45305, 2.39063)
+texture = ExtResource("47_0f8a5")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="vanadio/Tarjetas24"]
+offset_left = 381.428
+offset_top = 333.0
+offset_right = 690.428
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico de transición, de color gris plateado, dúctil y blando en estado puro. En la naturaleza, se encuentra principalmente en diversos minerales y es valorado por su capacidad para formar aleaciones extremadamente fuertes.
+Compuestos en los cuales interviene: Pentóxido de vanadio (V2O5) y Ferrovanadio."
+
+[node name="Label" type="Label" parent="vanadio/Tarjetas24"]
+offset_left = 494.286
+offset_top = 205.0
+offset_right = 597.286
+offset_bottom = 228.0
+text = "VANADIO"
+
+[node name="Label2" type="Label" parent="vanadio/Tarjetas24"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 23
+Peso Atomico: 50.941
+Simbolo: V"
+
+[node name="escandio" type="Button" parent="." groups=["elementos"]]
+offset_left = 175.0
+offset_top = 288.0
+offset_right = 250.714
+offset_bottom = 360.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas25" parent="escandio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-370, -351)
+
+[node name="png" type="Sprite2D" parent="escandio/Tarjetas25"]
+position = Vector2(300, 250.5)
+scale = Vector2(3.66072, 3.65625)
+texture = ExtResource("39_xsvmt")
+
+[node name="simbolo" type="Sprite2D" parent="escandio/Tarjetas25"]
+position = Vector2(765.714, 249)
+scale = Vector2(3.5023, 2.39063)
+texture = ExtResource("49_bfeti")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="escandio/Tarjetas25"]
+offset_left = 381.429
+offset_top = 330.0
+offset_right = 705.714
+offset_bottom = 606.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico de transición, de color blanco plateado que a menudo desarrolla un tinte amarillento o rosado cuando se expone al aire. Es un metal blando, muy ligero y es considerado históricamente como una \"tierra rara\" debido a su dificultad para ser aislado en estado puro.
+Compuestos en los cuales interviene: Óxido de escandio (Sc2O3) y Yoduro de escandio (ScI3)."
+
+[node name="Label" type="Label" parent="escandio/Tarjetas25"]
+offset_left = 491.429
+offset_top = 205.0
+offset_right = 594.429
+offset_bottom = 228.0
+text = "ESCANDIO"
+
+[node name="Label2" type="Label" parent="escandio/Tarjetas25"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 21
+Peso Atomico: 44.956
+Simbolo: Sc"
+
+[node name="calcio" type="Button" parent="." groups=["elementos"]]
+offset_left = 118.0
+offset_top = 289.0
+offset_right = 193.714
+offset_bottom = 361.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas19" parent="calcio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-288.571, -352)
+
+[node name="png" type="Sprite2D" parent="calcio/Tarjetas19"]
+position = Vector2(300, 250.5)
+scale = Vector2(3.66071, 3.65625)
+texture = ExtResource("10_qjmna")
+
+[node name="simbolo" type="Sprite2D" parent="calcio/Tarjetas19"]
+position = Vector2(768.404, 249)
+scale = Vector2(3.45305, 2.39063)
+texture = ExtResource("50_hiteh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="calcio/Tarjetas19"]
+offset_left = 381.429
+offset_top = 324.0
+offset_right = 695.714
+offset_bottom = 602.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales alcalinotérreos. Es un metal blando, de color gris plateado que se oxida rápidamente en contacto con el aire y reacciona con el agua. Es el quinto elemento más abundante en la corteza terrestre y es vital para los organismos vivos.
+Compuestos en los cuales interviene: Cloruro de calcio (CaCl2) y Carbonato de calcio (CaCO3)."
+
+[node name="Label" type="Label" parent="calcio/Tarjetas19"]
+offset_left = 501.429
+offset_top = 205.0
+offset_right = 604.429
+offset_bottom = 228.0
+text = "CALCIO"
+
+[node name="Label2" type="Label" parent="calcio/Tarjetas19"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 20
+Peso Atomico: 40.078
+Simbolo: Ca"
+
+[node name="potasio" type="Button" parent="." groups=["elementos"]]
+offset_left = 63.0
+offset_top = 288.0
+offset_right = 138.714
+offset_bottom = 360.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas20" parent="potasio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-210, -351)
+
+[node name="png" type="Sprite2D" parent="potasio/Tarjetas20"]
+position = Vector2(300, 249.5)
+scale = Vector2(3.66072, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="potasio/Tarjetas20"]
+position = Vector2(767.143, 249.688)
+scale = Vector2(3.18367, 2.36198)
+texture = ExtResource("51_l21ce")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="potasio/Tarjetas20"]
+offset_left = 381.429
+offset_top = 332.0
+offset_right = 690.0
+offset_bottom = 610.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales alcalinos. Es un sólido blando, de color blanco plateado que se empaña rápidamente en contacto con el aire. Es altamente reactivo, especialmente con el agua, con la que reacciona violentamente liberando hidrógeno.
+Compuestos en los cuales interviene: Cloruro de potasio (KCl) y Nitrato de potasio (KNO3)."
+
+[node name="Label" type="Label" parent="potasio/Tarjetas20"]
+offset_left = 494.286
+offset_top = 205.0
+offset_right = 597.286
+offset_bottom = 228.0
+text = "POTASIO"
+
+[node name="Label2" type="Label" parent="potasio/Tarjetas20"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 19
+Peso Atomico: 39.098
+Simbolo: K"
+
+[node name="magne" type="Button" parent="." groups=["elementos"]]
+offset_left = 118.0
+offset_top = 208.0
+offset_right = 193.714
+offset_bottom = 280.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas21" parent="magne" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-288.571, -271)
+
+[node name="png" type="Sprite2D" parent="magne/Tarjetas21"]
+position = Vector2(300, 250.5)
+scale = Vector2(3.66071, 3.65625)
+texture = ExtResource("38_hr5w5")
+
+[node name="simbolo" type="Sprite2D" parent="magne/Tarjetas21"]
+position = Vector2(767.143, 250.785)
+scale = Vector2(3.37662, 2.31776)
+texture = ExtResource("52_6hebv")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="magne/Tarjetas21"]
+offset_left = 381.429
+offset_top = 332.0
+offset_right = 690.0
+offset_bottom = 610.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico alcalinotérreo, de color blanco plateado, ligero y relativamente fuerte. Es altamente inflamable cuando se encuentra en forma de polvo o virutas. Es un elemento esencial para la vida, presente en la clorofila de las plantas y vital para los seres humanos.
+Compuestos en los cuales interviene: Óxido de magnesio (MgO) y Sulfato de magnesio (MgSO4)."
+
+[node name="Label" type="Label" parent="magne/Tarjetas21"]
+offset_left = 490.0
+offset_top = 205.0
+offset_right = 593.0
+offset_bottom = 228.0
+text = "MAGNESIO"
+
+[node name="Label2" type="Label" parent="magne/Tarjetas21"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 12
+Peso Atomico: 24.305
+Simbolo: Mg"
+
+[node name="berilio" type="Button" parent="." groups=["elementos"]]
+offset_left = 118.0
+offset_top = 131.0
+offset_right = 193.714
+offset_bottom = 203.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas22" parent="berilio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-288.571, -196)
+
+[node name="png" type="Sprite2D" parent="berilio/Tarjetas22"]
+position = Vector2(299.286, 249.5)
+scale = Vector2(3.61607, 3.59375)
+texture = ExtResource("20_eccqa")
+
+[node name="simbolo" type="Sprite2D" parent="berilio/Tarjetas22"]
+position = Vector2(766.786, 250.785)
+scale = Vector2(3.5491, 2.31776)
+texture = ExtResource("43_02ddu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="berilio/Tarjetas22"]
+offset_left = 381.429
+offset_top = 332.0
+offset_right = 690.0
+offset_bottom = 610.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico de color gris acero, perteneciente al grupo de los metales alcalinotérreos. Se caracteriza por ser uno de los metales más ligeros. Es extremadamente rígido, no magnético y un excelente conductor térmico.
+Compuestos en los cuales interviene: Óxido de berilio (BeO) y Aleaciones de Cobre-Berilio."
+
+[node name="Label" type="Label" parent="berilio/Tarjetas22"]
+offset_left = 502.857
+offset_top = 204.0
+offset_right = 605.857
+offset_bottom = 227.0
+text = "BERILIO"
+
+[node name="Label2" type="Label" parent="berilio/Tarjetas22"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 4
+Peso Atomico: 9.0122
+Simbolo: Be"
+
+[node name="litio" type="Button" parent="." groups=["elementos"]]
+offset_left = 63.0
+offset_top = 131.0
+offset_right = 138.714
+offset_bottom = 203.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas23" parent="litio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-210, -196)
+
+[node name="png" type="Sprite2D" parent="litio/Tarjetas23"]
+position = Vector2(299.286, 249.5)
+scale = Vector2(3.61607, 3.59375)
+texture = ExtResource("40_6nxxq")
+
+[node name="simbolo" type="Sprite2D" parent="litio/Tarjetas23"]
+position = Vector2(766.429, 249.188)
+scale = Vector2(3.22449, 2.38281)
+texture = ExtResource("45_sxueg")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="litio/Tarjetas23"]
+offset_left = 381.429
+offset_top = 332.0
+offset_right = 690.0
+offset_bottom = 610.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales alcalinos. Es el metal más ligero y el elemento sólido menos denso que existe. En su forma pura, es un metal blando de color blanco plateado que se oxida rápidamente en contacto con el aire y el agua.
+Compuestos en los cuales interviene: Carbonato de litio (Li2CO3) y Hidróxido de litio (LiOH)."
+
+[node name="Label" type="Label" parent="litio/Tarjetas23"]
+offset_left = 507.143
+offset_top = 204.0
+offset_right = 610.143
+offset_bottom = 227.0
+text = "LITIO"
+
+[node name="Label2" type="Label" parent="litio/Tarjetas23"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 3
+Peso Atomico: 6.94
+Simbolo: Li"
+
+[node name="yodo" type="Button" parent="." groups=["elementos"]]
+offset_left = 981.0
+offset_top = 369.0
+offset_right = 1056.71
+offset_bottom = 441.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas13" parent="yodo" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1521.43, -432)
+
+[node name="png" type="Sprite2D" parent="yodo/Tarjetas13"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("41_vyxwn")
+
+[node name="simbolo" type="Sprite2D" parent="yodo/Tarjetas13"]
+position = Vector2(768.571, 250.188)
+scale = Vector2(3.68664, 2.34115)
+texture = ExtResource("66_xkna2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="yodo/Tarjetas13"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico no metálico perteneciente al grupo de los halógenos. Se presenta como un sólido negro-grisáceo con brillo metálico que, al calentarse, se sublima produciendo un vapor de color violeta intenso y olor característico. 
+Compuestos en los cuales interviene: Yoduro de potasio (KI) y Povidona yodada"
+
+[node name="Label" type="Label" parent="yodo/Tarjetas13"]
+offset_left = 507.143
+offset_top = 205.0
+offset_right = 561.428
+offset_bottom = 228.0
+text = "YODO"
+
+[node name="Label2" type="Label" parent="yodo/Tarjetas13"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 53
+Peso Atomico: 126.90
+Simbolo: I"
+
+[node name="telurio" type="Button" parent="." groups=["elementos"]]
+offset_left = 924.0
+offset_top = 365.0
+offset_right = 999.714
+offset_bottom = 437.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas47" parent="telurio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1440, -428)
+
+[node name="png" type="Sprite2D" parent="telurio/Tarjetas47"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("44_dqdti")
+
+[node name="simbolo" type="Sprite2D" parent="telurio/Tarjetas47"]
+position = Vector2(765.714, 249)
+scale = Vector2(3.39286, 2.39063)
+texture = ExtResource("68_b06l4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="telurio/Tarjetas47"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico semimetálico (metaloide) perteneciente al grupo de los anfígenos. Se presenta comúnmente como un sólido de color blanco plateado con brillo metálico, aunque también posee una forma amorfa de color gris oscuro. Es quebradizo, escaso en la corteza terrestre.
+Compuestos en los cuales interviene:  Telururo de hidrógeno (H2Te) y Dióxido de telurio (TeO2). "
+
+[node name="Label" type="Label" parent="telurio/Tarjetas47"]
+offset_left = 501.429
+offset_top = 205.0
+offset_right = 558.571
+offset_bottom = 228.0
+text = "TELURIO"
+
+[node name="Label2" type="Label" parent="telurio/Tarjetas47"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 52
+Peso Atomico: 127.60
+Simbolo: Te"
+
+[node name="antimonio" type="Button" parent="." groups=["elementos"]]
+offset_left = 868.0
+offset_top = 365.0
+offset_right = 943.714
+offset_bottom = 437.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas46" parent="antimonio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1362.86, -428)
+
+[node name="png" type="Sprite2D" parent="antimonio/Tarjetas46"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("45_hrimn")
+
+[node name="simbolo" type="Sprite2D" parent="antimonio/Tarjetas46"]
+position = Vector2(767.857, 250.188)
+scale = Vector2(3.4375, 2.34115)
+texture = ExtResource("70_o1r0b")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="antimonio/Tarjetas46"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metaloid perteneciente al grupo de los nitrogenoideos. Se presenta principalmente en su forma alotrópica estable como un sólido cristalino, fundible. Es un conductor deficiente de calor y electricidad, y se encuentra en la naturaleza mayoritariamente en forma de sulfuros.
+Compuestos en los cuales interviene: Trióxido de antimonio (Sb2O3) y Trisulfuro de antimonio (Sb2S3). "
+
+[node name="Label" type="Label" parent="antimonio/Tarjetas46"]
+offset_left = 484.286
+offset_top = 205.0
+offset_right = 579.286
+offset_bottom = 228.0
+text = "ANTIMONIO"
+
+[node name="Label2" type="Label" parent="antimonio/Tarjetas46"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 51
+Peso Atomico: 121.76
+Simbolo: Sb"
+
+[node name="estaño" type="Button" parent="." groups=["elementos"]]
+offset_left = 810.0
+offset_top = 365.0
+offset_right = 885.714
+offset_bottom = 437.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas45" parent="estaño" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1280, -428)
+
+[node name="png" type="Sprite2D" parent="estaño/Tarjetas45"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("31_cy50s")
+
+[node name="simbolo" type="Sprite2D" parent="estaño/Tarjetas45"]
+position = Vector2(768.928, 250.188)
+scale = Vector2(3.41517, 2.34115)
+texture = ExtResource("71_k27a6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="estaño/Tarjetas45"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los carbonoideos. Se presenta como un sólido, es muy maleable, resistente a la corrosión y fácil de fundir. Una característica distintiva es que, al doblar una barra de este metal, emite un sonido crujiente conocido debido a la fricción de sus cristales.
+Compuestos en los cuales interviene:  Dióxido de estaño (SnO2) y Cloruro de estaño (II) (SnCl2). "
+
+[node name="Label" type="Label" parent="estaño/Tarjetas45"]
+offset_left = 497.143
+offset_top = 205.0
+offset_right = 560.143
+offset_bottom = 228.0
+text = "ESTAÑO"
+
+[node name="Label2" type="Label" parent="estaño/Tarjetas45"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 50
+Peso Atomico: 118.71
+Simbolo: Sn"
+
+[node name="indio" type="Button" parent="." groups=["elementos"]]
+offset_left = 752.0
+offset_top = 365.0
+offset_right = 827.714
+offset_bottom = 437.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas44" parent="indio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1197.14, -428)
+
+[node name="png" type="Sprite2D" parent="indio/Tarjetas44"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("46_me0cc")
+
+[node name="simbolo" type="Sprite2D" parent="indio/Tarjetas44"]
+position = Vector2(766.429, 249)
+scale = Vector2(3.31933, 2.39063)
+texture = ExtResource("73_87n7m")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="indio/Tarjetas44"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los térreos. Se presenta como un sólido brillante, con un lustre intenso. Es uno de los metales más blandos que existen (puede rayarse con la uña) y es extremadamente maleable.
+Compuestos en los cuales interviene: Óxido de indio y estaño (ITO) y Arseniuro de indio (InAs)."
+
+[node name="Label" type="Label" parent="indio/Tarjetas44"]
+offset_left = 507.143
+offset_top = 205.0
+offset_right = 561.428
+offset_bottom = 228.0
+text = "INDIO"
+
+[node name="Label2" type="Label" parent="indio/Tarjetas44"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 49
+Peso Atomico: 114.82
+Simbolo: In"
+
+[node name="cadmio" type="Button" parent="." groups=["elementos"]]
+offset_left = 696.0
+offset_top = 365.0
+offset_right = 771.714
+offset_bottom = 437.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas43" parent="cadmio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1117.14, -428)
+
+[node name="png" type="Sprite2D" parent="cadmio/Tarjetas43"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("40_6nxxq")
+
+[node name="simbolo" type="Sprite2D" parent="cadmio/Tarjetas43"]
+position = Vector2(768.571, 250.383)
+scale = Vector2(3.39286, 2.33531)
+texture = ExtResource("74_w8ok6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="cadmio/Tarjetas43"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición. Se presenta como un sólido de color blanco azulado, es blando, dáctil y maleable. Se encuentra frecuentemente en la naturaleza, aunque es considerablemente tóxico y resistente a la corrosión. 
+Compuestos en los cuales interviene:  Sulfuro de cadmio (CdS) y Óxido de cadmio (CdO). "
+
+[node name="Label" type="Label" parent="cadmio/Tarjetas43"]
+offset_left = 497.143
+offset_top = 207.0
+offset_right = 562.143
+offset_bottom = 230.0
+text = "CADMIO"
+
+[node name="Label2" type="Label" parent="cadmio/Tarjetas43"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 48
+Peso Atomico: 112.41
+Simbolo: Cd"
+
+[node name="plata" type="Button" parent="." groups=["elementos"]]
+offset_left = 638.0
+offset_top = 365.0
+offset_right = 713.714
+offset_bottom = 437.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas42" parent="plata" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1034.29, -428)
+
+[node name="png" type="Sprite2D" parent="plata/Tarjetas42"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("75_84ufr")
+
+[node name="simbolo" type="Sprite2D" parent="plata/Tarjetas42"]
+position = Vector2(768.571, 249.5)
+scale = Vector2(3.19328, 2.17308)
+texture = ExtResource("76_pkd88")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="plata/Tarjetas42"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición. Se presenta como un sólido de color blanco brillante, es el mejor conductor de calor y electricidad de todos los metales. Es extremadamente maleable y dáctil.
+Compuestos en los cuales interviene: Nitrato de plata (AgNO3) y Cloruro de plata (AgCl). "
+
+[node name="Label" type="Label" parent="plata/Tarjetas42"]
+offset_left = 504.286
+offset_top = 204.0
+offset_right = 558.571
+offset_bottom = 227.0
+text = "PLATA"
+
+[node name="Label2" type="Label" parent="plata/Tarjetas42"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 47
+Peso Atomico: 107.87
+Simbolo: Ag "
+
+[node name="paladio" type="Button" parent="." groups=["elementos"]]
+offset_left = 581.0
+offset_top = 365.0
+offset_right = 656.714
+offset_bottom = 437.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas41" parent="paladio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-952.857, -428)
+
+[node name="png" type="Sprite2D" parent="paladio/Tarjetas41"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("47_voulh")
+
+[node name="simbolo" type="Sprite2D" parent="paladio/Tarjetas41"]
+position = Vector2(768.571, 250)
+scale = Vector2(3.29004, 2.24)
+texture = ExtResource("78_7it1t")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="paladio/Tarjetas41"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición. Se presenta como un sólido, es blando, dáctil y maleable. Destaca por su extraordinaria capacidad para absorber hidrógeno hasta 900 veces su propio volumen a temperatura ambiente y por su uso extensivo como catalizador.
+Compuestos en los cuales interviene: Cloruro de paladio (II) (PdCl2) y Acetato de paladio (II) ((Pd(C2H3O2)2). "
+
+[node name="Label" type="Label" parent="paladio/Tarjetas41"]
+offset_left = 492.857
+offset_top = 205.0
+offset_right = 561.857
+offset_bottom = 228.0
+text = "PALADIO"
+
+[node name="Label2" type="Label" parent="paladio/Tarjetas41"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 46
+Peso Atomico: 106.42
+Simbolo: Pd"
+
+[node name="rodio" type="Button" parent="." groups=["elementos"]]
+offset_left = 523.0
+offset_top = 369.0
+offset_right = 598.714
+offset_bottom = 441.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas40" parent="rodio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-870, -432)
+
+[node name="png" type="Sprite2D" parent="rodio/Tarjetas40"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("48_0avyl")
+
+[node name="simbolo" type="Sprite2D" parent="rodio/Tarjetas40"]
+position = Vector2(767.143, 250.188)
+scale = Vector2(3.27731, 2.34115)
+texture = ExtResource("80_d41tb")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="rodio/Tarjetas40"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición.  Es extremadamente resistente a la corrosión, posee un punto de fusión muy elevado y destaca por ser uno de los metales más raros y valiosos de la corteza terrestre.
+Compuestos en los cuales interviene: Cloruro de rodio (III) (RhCl3) y Óxido de rodio (III) (Rh2O3). "
+
+[node name="Label" type="Label" parent="rodio/Tarjetas40"]
+offset_left = 507.143
+offset_top = 205.0
+offset_right = 561.428
+offset_bottom = 228.0
+text = "RODIO"
+
+[node name="Label2" type="Label" parent="rodio/Tarjetas40"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 45
+Peso Atomico: 102.91
+Simbolo: Rh "
+
+[node name="rutenio" type="Button" parent="." groups=["elementos"]]
+offset_left = 465.0
+offset_top = 365.0
+offset_right = 540.714
+offset_bottom = 437.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas39" parent="rutenio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-787.143, -428)
+
+[node name="png" type="Sprite2D" parent="rutenio/Tarjetas39"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("49_xsvmt")
+
+[node name="simbolo" type="Sprite2D" parent="rutenio/Tarjetas39"]
+position = Vector2(768.571, 250.883)
+scale = Vector2(3.29004, 2.31532)
+texture = ExtResource("82_5nc3f")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="rutenio/Tarjetas39"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición. Es un metal noble muy poco abundante en la naturaleza, destaca por su gran resistencia a la corrosión y por no empañarse a temperaturas ordinarias.
+Compuestos en los cuales interviene: Cloruro de rutenio (III) (RuCl3) y Tetraóxido de rutenio (RuO4)"
+
+[node name="Label" type="Label" parent="rutenio/Tarjetas39"]
+offset_left = 497.143
+offset_top = 207.0
+offset_right = 568.143
+offset_bottom = 230.0
+text = "RUTENIO"
+
+[node name="Label2" type="Label" parent="rutenio/Tarjetas39"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 44
+Peso Atomico: 101.07
+Simbolo: Ru"
+
+[node name="tecnecio" type="Button" parent="." groups=["elementos"]]
+offset_left = 410.0
+offset_top = 365.0
+offset_right = 485.714
+offset_bottom = 437.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas38" parent="tecnecio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-708.571, -428)
+
+[node name="png" type="Sprite2D" parent="tecnecio/Tarjetas38"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("50_6nxxq")
+
+[node name="simbolo" type="Sprite2D" parent="tecnecio/Tarjetas38"]
+position = Vector2(768.571, 251.383)
+scale = Vector2(3.19328, 2.29532)
+texture = ExtResource("84_eokd7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="tecnecio/Tarjetas38"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición. Es el elemento más ligero de la tabla periódica que no posee isótopos estables y el primer elemento producido artificialmente, siendo su presencia en la naturaleza extremadamente rara como producto de la fisión espontánea de uranio.
+Compuestos en los cuales interviene: Pertecnato de sodio (NaTcO4) y Heptóxido de ditecnecio (Tc2O7)"
+
+[node name="Label" type="Label" parent="tecnecio/Tarjetas38"]
+offset_left = 492.857
+offset_top = 207.0
+offset_right = 570.857
+offset_bottom = 230.0
+text = "TECNECIO"
+
+[node name="Label2" type="Label" parent="tecnecio/Tarjetas38"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 43
+Peso Atomico: 98.90
+Simbolo: Tc"
+
+[node name="molibdeno" type="Button" parent="." groups=["elementos"]]
+offset_left = 350.0
+offset_top = 365.0
+offset_right = 425.714
+offset_bottom = 437.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas37" parent="molibdeno" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-622.857, -428)
+
+[node name="png" type="Sprite2D" parent="molibdeno/Tarjetas37"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("51_vyxwn")
+
+[node name="simbolo" type="Sprite2D" parent="molibdeno/Tarjetas37"]
+position = Vector2(768.571, 250.785)
+scale = Vector2(3.29004, 2.31776)
+texture = ExtResource("86_yyn2f")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="molibdeno/Tarjetas37"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición. No se encuentra libre en la naturaleza y destaca por su capacidad para soportar temperaturas extremas sin expandirse o ablandarse significativamente, siendo esencial en la fabricación de aleaciones de acero de alta resistencia.
+Compuestos en los cuales interviene:Disulfuro de molibdeno (MoS2) y Molibdato de sodio (Na2MoO4)."
+
+[node name="Label" type="Label" parent="molibdeno/Tarjetas37"]
+offset_left = 484.286
+offset_top = 209.0
+offset_right = 582.286
+offset_bottom = 232.0
+text = "MOLIBDENO"
+
+[node name="Label2" type="Label" parent="molibdeno/Tarjetas37"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 42
+Peso Atomico: 95.95
+Simbolo: Mo"
+
+[node name="niobio" type="Button" parent="." groups=["elementos"]]
+offset_left = 291.0
+offset_top = 365.0
+offset_right = 366.714
+offset_bottom = 437.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas36" parent="niobio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-538.571, -428)
+
+[node name="png" type="Sprite2D" parent="niobio/Tarjetas36"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("52_icmah")
+
+[node name="simbolo" type="Sprite2D" parent="niobio/Tarjetas36"]
+position = Vector2(768.571, 249)
+scale = Vector2(3.29004, 2.39063)
+texture = ExtResource("88_mqw0x")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="niobio/Tarjetas36"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición. Destaca por sus propiedades de superconductor y su alta resistencia a la corrosión y a temperaturas extremas.
+Compuestos en los cuales interviene: Pentóxido de niobio (Nb2O5) y Carburo de niobio (NbC)"
+
+[node name="Label" type="Label" parent="niobio/Tarjetas36"]
+offset_left = 497.143
+offset_top = 205.0
+offset_right = 556.143
+offset_bottom = 228.0
+text = "NIOBIO"
+
+[node name="Label2" type="Label" parent="niobio/Tarjetas36"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 41
+Peso Atomico: 92.90
+Simbolo: Nb "
+
+[node name="zirconio" type="Button" parent="." groups=["elementos"]]
+offset_left = 238.0
+offset_top = 365.0
+offset_right = 313.714
+offset_bottom = 437.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas35" parent="zirconio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-462.857, -428)
+
+[node name="png" type="Sprite2D" parent="zirconio/Tarjetas35"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("53_y55b2")
+
+[node name="simbolo" type="Sprite2D" parent="zirconio/Tarjetas35"]
+position = Vector2(768.571, 249)
+scale = Vector2(3.29004, 2.39063)
+texture = ExtResource("90_10h13")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="zirconio/Tarjetas35"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición. Es un metal duro y dúctil, destaca por su bajísima capacidad de absorción de neutrones, lo que lo hace indispensable en la fabricación de reactores nucleares.
+Compuestos en los cuales interviene: Dióxido de zirconio (ZrO2, conocido como circonita) y Silicato de zirconio (ZrSiO4)."
+
+[node name="Label" type="Label" parent="zirconio/Tarjetas35"]
+offset_left = 497.143
+offset_top = 205.0
+offset_right = 575.143
+offset_bottom = 228.0
+text = "ZIRCONIO"
+
+[node name="Label2" type="Label" parent="zirconio/Tarjetas35"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 40
+Peso Atomico: 91.22
+Simbolo: Zr"
+
+[node name="ytrio" type="Button" parent="." groups=["elementos"]]
+offset_left = 179.0
+offset_top = 365.0
+offset_right = 254.714
+offset_bottom = 437.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas34" parent="ytrio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-378.571, -428)
+
+[node name="png" type="Sprite2D" parent="ytrio/Tarjetas34"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("54_02ddu")
+
+[node name="simbolo" type="Sprite2D" parent="ytrio/Tarjetas34"]
+position = Vector2(768.571, 250.883)
+scale = Vector2(3.29004, 2.31532)
+texture = ExtResource("92_0mtwo")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ytrio/Tarjetas34"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición y clasificado comúnmente como una \"tierra rara\". Es relativamente estable en el aire debido a la formación de una capa protectora de óxido, y es ampliamente reconocido por su uso en aleaciones para aumentar la resistencia de otros metales y en la fabricación de materiales fosforescentes.
+Compuestos en los cuales interviene: Óxido de itrio (III) (Y2O3) y Granate de itrio y aluminio (YAG)."
+
+[node name="Label" type="Label" parent="ytrio/Tarjetas34"]
+offset_left = 507.143
+offset_top = 205.0
+offset_right = 561.428
+offset_bottom = 228.0
+text = "YTRIO"
+
+[node name="Label2" type="Label" parent="ytrio/Tarjetas34"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 39
+Peso Atomico: 88.91
+Simbolo: Y"
+
+[node name="estroncio" type="Button" parent="." groups=["elementos"]]
+offset_left = 122.0
+offset_top = 365.0
+offset_right = 197.714
+offset_bottom = 441.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas33" parent="estroncio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-297.143, -428)
+
+[node name="png" type="Sprite2D" parent="estroncio/Tarjetas33"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("34_hrimn")
+
+[node name="simbolo" type="Sprite2D" parent="estroncio/Tarjetas33"]
+position = Vector2(768.571, 249)
+scale = Vector2(3.29004, 2.39063)
+texture = ExtResource("93_17qjq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="estroncio/Tarjetas33"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales alcalinotérreos. Se presenta como un sólido blando, dáctil y extremadamente reactivo, oxidándose rápidamente en contacto con el aire. Es conocido principalmente por producir una llama de color rojo carmesí intenso cuando se quema, propiedad aprovechada frecuentemente en pirotecnia.
+Compuestos en los cuales interviene: Carbonato de estroncio (SrCO3) y Nitrato de estroncio (Sr(NO3)2). "
+
+[node name="Label" type="Label" parent="estroncio/Tarjetas33"]
+offset_left = 487.143
+offset_top = 207.0
+offset_right = 577.143
+offset_bottom = 230.0
+text = "ESTRONCIO"
+
+[node name="Label2" type="Label" parent="estroncio/Tarjetas33"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 38
+Peso Atomico: 87.62
+Simbolo: Sr"
+
+[node name="rubidio" type="Button" parent="." groups=["elementos"]]
+offset_left = 59.0
+offset_top = 365.0
+offset_right = 140.429
+offset_bottom = 441.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas32" parent="rubidio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-207.143, -428)
+
+[node name="png" type="Sprite2D" parent="rubidio/Tarjetas32"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="rubidio/Tarjetas32"]
+position = Vector2(767.143, 250.785)
+scale = Vector2(3.18367, 2.31776)
+texture = ExtResource("77_iaopp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="rubidio/Tarjetas32"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales alcalinos. Es extremadamente reactivo, siendo el segundo metal alcalino más electropositivo; puede arder espontáneamente en presencia de aire y reacciona violentamente con el agua, desprendiendo hidrógeno e inflamándose.
+Compuestos en los cuales interviene: Cloruro de rubidio (RbCl) e Hidróxido de rubidio (RbOH)."
+
+[node name="Label" type="Label" parent="rubidio/Tarjetas32"]
+offset_left = 497.143
+offset_top = 205.0
+offset_right = 564.143
+offset_bottom = 228.0
+text = "RUBIDIO"
+
+[node name="Label2" type="Label" parent="rubidio/Tarjetas32"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 37
+Peso Atomico: 85.47
+Simbolo: Rb"
+
+[node name="helio" type="Button" parent="." groups=["elementos"]]
+offset_left = 1034.0
+offset_top = 49.0
+offset_right = 1115.43
+offset_bottom = 125.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas48" parent="helio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1600, -112)
+
+[node name="png" type="Sprite2D" parent="helio/Tarjetas48"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="helio/Tarjetas48"]
+position = Vector2(765.714, 249)
+scale = Vector2(3.61607, 2.39063)
+texture = ExtResource("58_m2gwl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="helio/Tarjetas48"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico no metálico, gas noble incoloro, inodoro, insípido e inerte. Se presenta como un gas extremadamente ligero que posee el punto de ebullición más bajo de todos los elementos conocidos, lo que lo convierte en un líquido esencial para aplicaciones criogénicas. Es el segundo elemento más abundante del universo.
+Compuestos en los cuales interviene: El helio es inerte y no forma compuestos químicos estables bajo condiciones normales."
+
+[node name="Label" type="Label" parent="helio/Tarjetas48"]
+offset_left = 507.143
+offset_top = 205.0
+offset_right = 574.143
+offset_bottom = 228.0
+text = "HELIO"
+
+[node name="Label2" type="Label" parent="helio/Tarjetas48"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 2
+Peso Atomico: 4.0026
+Simbolo: He"
+
+[node name="neon" type="Button" parent="." groups=["elementos"]]
+offset_left = 1034.0
+offset_top = 126.0
+offset_right = 1115.43
+offset_bottom = 202.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas49" parent="neon" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1600, -189)
+
+[node name="png" type="Sprite2D" parent="neon/Tarjetas49"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="neon/Tarjetas49"]
+position = Vector2(767.857, 251)
+scale = Vector2(3.33333, 2.375)
+texture = ExtResource("69_xeya5")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="neon/Tarjetas49"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico no metálico, gas noble incoloro, inodoro e insípido. Se presenta como un gas monoatómico prácticamente inerte que se encuentra en trazas en la atmósfera terrestre. Es mundialmente conocido por emitir un distintivo resplandor de color rojo anaranjado cuando es presionado por una descarga eléctrica en tubos de vacío, lo que lo hace fundamental en la industria de la iluminación publicitaria.
+Compuestos en los cuales interviene: El neón es químicamente inerte y no se conocen compuestos estables de este elemento en condiciones normales de presión y temperatura."
+
+[node name="Label" type="Label" parent="neon/Tarjetas49"]
+offset_left = 507.143
+offset_top = 205.0
+offset_right = 574.143
+offset_bottom = 228.0
+text = "NEON"
+
+[node name="Label2" type="Label" parent="neon/Tarjetas49"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 10
+Peso Atomico: 20.180
+Simbolo: Ne"
+
+[node name="argon" type="Button" parent="." groups=["elementos"]]
+offset_left = 1034.0
+offset_top = 208.0
+offset_right = 1115.43
+offset_bottom = 284.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas50" parent="argon" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1600, -271)
+
+[node name="png" type="Sprite2D" parent="argon/Tarjetas50"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="argon/Tarjetas50"]
+position = Vector2(768.571, 250.188)
+scale = Vector2(3.29004, 2.34115)
+texture = ExtResource("70_8twao")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="argon/Tarjetas50"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico no metálico, gas noble incoloro, inodoro e insípido. Se presenta como el tercer gas más abundante en la atmósfera terrestre. Es químicamente inerte y se utiliza principalmente para crear atmósferas protectoras en procesos industriales, como la soldadura por arco y la fabricación de cristales de silicio, evitando reacciones no deseadas con el oxígeno o el nitrógeno del aire.
+Compuestos en los cuales interviene: El argón es extremadamente inerte; aunque se ha sintetizado el fluorohidruro de argón (HArF) en condiciones de laboratorio muy específicas y temperaturas bajísimas, no forma compuestos estables en condiciones normales."
+
+[node name="Label" type="Label" parent="argon/Tarjetas50"]
+offset_left = 497.143
+offset_top = 205.0
+offset_right = 564.143
+offset_bottom = 228.0
+text = "ARGON"
+
+[node name="Label2" type="Label" parent="argon/Tarjetas50"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 18
+Peso Atomico: 39.948
+Simbolo: Ar "
+
+[node name="kripton" type="Button" parent="." groups=["elementos"]]
+offset_left = 1034.0
+offset_top = 288.0
+offset_right = 1115.43
+offset_bottom = 364.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas51" parent="kripton" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1600, -351)
+
+[node name="png" type="Sprite2D" parent="kripton/Tarjetas51"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="kripton/Tarjetas51"]
+position = Vector2(767.857, 250.188)
+scale = Vector2(3.33333, 2.34115)
+texture = ExtResource("81_rbvlh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="kripton/Tarjetas51"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 586.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico no metálico, gas noble incoloro, inodoro e insípido. Se presenta en la atmósfera terrestre en trazas y se obtiene mediante la destilación fraccionada del aire líquido. Se caracteriza por emitir una luz blanca brillante y nítida cuando es presionado eléctricamente, lo que lo hace ideal para su uso en bombillas de alta intensidad, flashes fotográficos de alta velocidad y en la tecnología láser. 
+Compuestos en los cuales interviene:Difluoruro de kriptón (KrF2) y clatratos de kriptón (estructuras donde el gas queda atrapado físicamente)."
+
+[node name="Label" type="Label" parent="kripton/Tarjetas51"]
+offset_left = 494.286
+offset_top = 204.0
+offset_right = 564.286
+offset_bottom = 227.0
+text = "KRIPTON"
+
+[node name="Label2" type="Label" parent="kripton/Tarjetas51"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 36
+Peso Atomico: 83.798
+Simbolo: Kr"
+
+[node name="xenon" type="Button" parent="." groups=["elementos"]]
+offset_left = 1034.0
+offset_top = 365.0
+offset_right = 1115.43
+offset_bottom = 441.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas52" parent="xenon" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1600, -428)
+
+[node name="png" type="Sprite2D" parent="xenon/Tarjetas52"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="xenon/Tarjetas52"]
+position = Vector2(766.429, 249.688)
+scale = Vector2(3.31933, 2.36198)
+texture = ExtResource("99_5mxvj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="xenon/Tarjetas52"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico no metálico, gas noble incoloro e inodoro. Se encuentra en la atmósfera terrestre y es conocido por ser el primer gas noble del que se sintetizaron compuestos químicos estables. Produce un brillo azulado o violáceo cuando es presionado eléctricamente, por lo que se emplea en lámparas de alta intensidad, flashes fotográficos y propulsores de iones para naves espaciales.
+Compuestos en los cuales interviene: Tetrafluoruro de xenón (XeF4) y Trióxido de xenón (XeO3)."
+
+[node name="Label" type="Label" parent="xenon/Tarjetas52"]
+offset_left = 497.143
+offset_top = 205.0
+offset_right = 564.143
+offset_bottom = 228.0
+text = "XENON"
+
+[node name="Label2" type="Label" parent="xenon/Tarjetas52"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 54
+Peso Atomico: 131.29
+Simbolo: Xe"
+
+[node name="cesio" type="Button" parent="." groups=["elementos"]]
+offset_left = 60.0
+offset_top = 441.0
+offset_right = 141.429
+offset_bottom = 517.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas53" parent="cesio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-208.571, -504)
+
+[node name="png" type="Sprite2D" parent="cesio/Tarjetas53"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("100_aj8ti")
+
+[node name="simbolo" type="Sprite2D" parent="cesio/Tarjetas53"]
+position = Vector2(766.429, 250.383)
+scale = Vector2(3.22449, 2.33531)
+texture = ExtResource("101_8y4h2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="cesio/Tarjetas53"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales alcalinos. Es el elemento estable más reactivo y electropositivo de la tabla periódica. Tiene un punto de fusión extremadamente bajo y reacciona de forma explosiva con el agua, produciendo una llama violeta. Su uso más crítico y conocido es en los relojes atómicos, que definen la base del tiempo estándar mundial.
+Compuestos en los cuales interviene: Cloruro de cesio (CsCl) e Hidróxido de cesio (CsOH)."
+
+[node name="Label" type="Label" parent="cesio/Tarjetas53"]
+offset_left = 507.143
+offset_top = 207.0
+offset_right = 574.143
+offset_bottom = 230.0
+text = "CESIO"
+
+[node name="Label2" type="Label" parent="cesio/Tarjetas53"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 55
+Peso Atomico: 132.91
+Simbolo: Cs "
+
+[node name="bario" type="Button" parent="." groups=["elementos"]]
+offset_left = 118.0
+offset_top = 441.0
+offset_right = 199.429
+offset_bottom = 517.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas54" parent="bario" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-291.429, -504)
+
+[node name="png" type="Sprite2D" parent="bario/Tarjetas54"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("102_o7fji")
+
+[node name="simbolo" type="Sprite2D" parent="bario/Tarjetas54"]
+position = Vector2(769.118, 250.383)
+scale = Vector2(3.40976, 2.33531)
+texture = ExtResource("103_siep0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="bario/Tarjetas54"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales alcalinotérreos. Debido a su alta reactividad, nunca se encuentra libre en la naturaleza. Es conocido por su alta densidad y por ser opaco a los rayos X en ciertos compuestos, lo que permite su uso en diagnósticos médicos. 
+Compuestos en los cuales interviene: Sulfato de bario (BaSO4) y Cloruro de bario (BaCl2)."
+
+[node name="Label" type="Label" parent="bario/Tarjetas54"]
+offset_left = 505.714
+offset_top = 207.0
+offset_right = 572.714
+offset_bottom = 230.0
+text = "BARIO"
+
+[node name="Label2" type="Label" parent="bario/Tarjetas54"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 56
+Peso Atomico: 137.33
+Simbolo: Ba"
+
+[node name="lantano" type="Button" parent="." groups=["elementos"]]
+offset_left = 175.0
+offset_top = 444.0
+offset_right = 256.429
+offset_bottom = 520.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas55" parent="lantano" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-372.857, -507)
+
+[node name="png" type="Sprite2D" parent="lantano/Tarjetas55"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("104_aoyk7")
+
+[node name="simbolo" type="Sprite2D" parent="lantano/Tarjetas55"]
+position = Vector2(768.571, 250.188)
+scale = Vector2(3.19328, 2.34115)
+texture = ExtResource("105_racx7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="lantano/Tarjetas55"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de las tierras raras (lantánidos). Es uno de los lantánidos más reactivos; se oxida rápidamente en contacto con el aire y reacciona con el agua para formar hidróxido, siendo fundamental en la fabricación de vidrios ópticos especiales y catalizadores para el refinado de petróleo.
+Compuestos en los cuales interviene: Óxido de lantano (La2O3) y Carbonato de lantano (La2(CO3)3)."
+
+[node name="Label" type="Label" parent="lantano/Tarjetas55"]
+offset_left = 494.286
+offset_top = 204.0
+offset_right = 571.286
+offset_bottom = 227.0
+text = "LANTANO"
+
+[node name="Label2" type="Label" parent="lantano/Tarjetas55"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 57
+Peso Atomico: 138.91
+Simbolo: La"
+
+[node name="hafnio" type="Button" parent="." groups=["elementos"]]
+offset_left = 232.0
+offset_top = 444.0
+offset_right = 313.429
+offset_bottom = 520.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas56" parent="hafnio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-454.286, -507)
+
+[node name="png" type="Sprite2D" parent="hafnio/Tarjetas56"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("106_adtbv")
+
+[node name="simbolo" type="Sprite2D" parent="hafnio/Tarjetas56"]
+position = Vector2(767.857, 250.883)
+scale = Vector2(3.33334, 2.31532)
+texture = ExtResource("107_qedot")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="hafnio/Tarjetas56"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición. Destaca por su gran capacidad de absorción de neutrones y su altísimo punto de fusión, lo que lo hace ideal para barras de control en reactores nucleares y aleaciones para motores de reacción.
+Compuestos en los cuales interviene: Dióxido de hafnio (HfO2) y Tetracloruro de hafnio (HfCl4)."
+
+[node name="Label" type="Label" parent="hafnio/Tarjetas56"]
+offset_left = 497.143
+offset_top = 205.0
+offset_right = 564.143
+offset_bottom = 228.0
+text = "HAFNIO"
+
+[node name="Label2" type="Label" parent="hafnio/Tarjetas56"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 72
+Peso Atomico: 178.49
+Simbolo: Hf"
+
+[node name="tantalio" type="Button" parent="." groups=["elementos"]]
+offset_left = 291.0
+offset_top = 441.0
+offset_right = 372.429
+offset_bottom = 517.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas57" parent="tantalio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-538.571, -504)
+
+[node name="png" type="Sprite2D" parent="tantalio/Tarjetas57"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="tantalio/Tarjetas57"]
+position = Vector2(765.714, 249)
+scale = Vector2(3.61607, 2.39063)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="tantalio/Tarjetas57"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición. Posee uno de los puntos de fusión más altos de todos los elementos es altamente biocompatible y destaca por su gran capacidad para almacenar carga eléctrica en volúmenes muy pequeños, lo que lo hace indispensable en la industria electrónica.
+Compuestos en los cuales interviene: Pentóxido de tántalo (Ta2O5) y Carburo de tántalo."
+
+[node name="Label" type="Label" parent="tantalio/Tarjetas57"]
+offset_left = 492.857
+offset_top = 205.0
+offset_right = 570.857
+offset_bottom = 228.0
+text = "TANTALIO"
+
+[node name="Label2" type="Label" parent="tantalio/Tarjetas57"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 73
+Peso Atomico: 180.95
+Simbolo: Ta "
+
+[node name="wolframio" type="Button" parent="." groups=["elementos"]]
+offset_left = 350.0
+offset_top = 444.0
+offset_right = 431.429
+offset_bottom = 520.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas58" parent="wolframio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-622.857, -507)
+
+[node name="png" type="Sprite2D" parent="wolframio/Tarjetas58"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("108_uaa2b")
+
+[node name="simbolo" type="Sprite2D" parent="wolframio/Tarjetas58"]
+position = Vector2(768.571, 250.285)
+scale = Vector2(3.10204, 2.33817)
+texture = ExtResource("109_rmj5f")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="wolframio/Tarjetas58"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición. Posee el punto de fusión más elevado de todos los metales y la mayor resistencia a la tracción a temperaturas superiores a los 1650 °C.
+Compuestos en los cuales interviene: Carburo de wolframio (WC) y Trióxido de wolframio (WO3). "
+
+[node name="Label" type="Label" parent="wolframio/Tarjetas58"]
+offset_left = 497.143
+offset_top = 205.0
+offset_right = 564.143
+offset_bottom = 228.0
+text = "WOLFRAMIO"
+
+[node name="Label2" type="Label" parent="wolframio/Tarjetas58"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 74
+Peso Atomico: 183.84
+Simbolo: W"
+
+[node name="renio" type="Button" parent="." groups=["elementos"]]
+offset_left = 408.0
+offset_top = 444.0
+offset_right = 489.429
+offset_bottom = 520.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas59" parent="renio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-705.714, -507)
+
+[node name="png" type="Sprite2D" parent="renio/Tarjetas59"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("110_bopfj")
+
+[node name="simbolo" type="Sprite2D" parent="renio/Tarjetas59"]
+position = Vector2(768.571, 250.188)
+scale = Vector2(3.29004, 2.34115)
+texture = ExtResource("111_efxd1")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="renio/Tarjetas59"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición. Es uno de los metales más raros en la corteza terrestre y destaca por su extraordinaria resistencia a la corrosión y su capacidad para mantener la estabilidad mecánica bajo temperaturas extremas.
+Compuestos en los cuales interviene: Heptóxido de direnio (Re2O7)"
+
+[node name="Label" type="Label" parent="renio/Tarjetas59"]
+offset_left = 504.286
+offset_top = 205.0
+offset_right = 571.286
+offset_bottom = 228.0
+text = "RENIO"
+
+[node name="Label2" type="Label" parent="renio/Tarjetas59"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 75
+Peso Atomico: 186.21
+Simbolo: Re "
+
+[node name="osmio" type="Button" parent="." groups=["elementos"]]
+offset_left = 465.0
+offset_top = 444.0
+offset_right = 546.429
+offset_bottom = 520.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas60" parent="osmio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-787.143, -507)
+
+[node name="png" type="Sprite2D" parent="osmio/Tarjetas60"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("112_42hdd")
+
+[node name="simbolo" type="Sprite2D" parent="osmio/Tarjetas60"]
+position = Vector2(768.571, 250.785)
+scale = Vector2(3.29004, 2.31776)
+texture = ExtResource("113_m4iag")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="osmio/Tarjetas60"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición. Debido a su dureza y alta resistencia a la corrosión, se utiliza en aleaciones para fabricar contactos eléctricos y puntas de plumas estilográficas, aunque su manipulación requiere cuidado ya que su oxidación produce vapores altamente tóxicos.
+Compuestos en los cuales interviene: Tetróxido de osmio (OsO4) y Cloruro de osmio (III) (OsCl3)."
+
+[node name="Label" type="Label" parent="osmio/Tarjetas60"]
+offset_left = 507.143
+offset_top = 205.0
+offset_right = 574.143
+offset_bottom = 228.0
+text = "OSMIO"
+
+[node name="Label2" type="Label" parent="osmio/Tarjetas60"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 76
+Peso Atomico: 190.23
+Simbolo: Os"
+
+[node name="iridio" type="Button" parent="." groups=["elementos"]]
+offset_left = 523.0
+offset_top = 444.0
+offset_right = 604.429
+offset_bottom = 520.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas61" parent="iridio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-870, -507)
+
+[node name="png" type="Sprite2D" parent="iridio/Tarjetas61"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("114_5d1n2")
+
+[node name="simbolo" type="Sprite2D" parent="iridio/Tarjetas61"]
+position = Vector2(768.571, 250.883)
+scale = Vector2(3.19328, 2.31532)
+texture = ExtResource("115_7ovd5")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="iridio/Tarjetas61"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición. Es considerado el material más resistente a la corrosión que se conoce, incluso a temperaturas elevadas, y es el segundo elemento más denso de la tabla periódica. Debido a su extrema dureza y estabilidad, se utiliza en aleaciones de alta resistencia y en bujías de larga duración.
+Compuestos en los cuales interviene: Dióxido de iridio (IrO2) y Cloruro de iridio (III) (IrCl3). "
+
+[node name="Label" type="Label" parent="iridio/Tarjetas61"]
+offset_left = 497.143
+offset_top = 205.0
+offset_right = 564.143
+offset_bottom = 228.0
+text = "IRIDIO"
+
+[node name="Label2" type="Label" parent="iridio/Tarjetas61"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 77
+Peso Atomico: 192.22
+Simbolo: Ir"
+
+[node name="platino" type="Button" parent="." groups=["elementos"]]
+offset_left = 581.0
+offset_top = 444.0
+offset_right = 656.714
+offset_bottom = 520.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas62" parent="platino" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-952.857, -507)
+
+[node name="png" type="Sprite2D" parent="platino/Tarjetas62"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("116_xrte3")
+
+[node name="simbolo" type="Sprite2D" parent="platino/Tarjetas62"]
+position = Vector2(768.571, 249.688)
+scale = Vector2(3.19328, 2.36198)
+texture = ExtResource("117_06gop")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="platino/Tarjetas62"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición. Es un metal noble altamente resistente a la corrosión y al ataque químico, incluso a temperaturas elevadas. Se encuentra de forma nativa en la naturaleza y es ampliamente valorado tanto en joyería como en aplicaciones industriales debido a sus excepcionales propiedades catalíticas.
+Compuestos en los cuales interviene:  Ácido cloroplatínico (H2PtCl6) y Cisplatino (PtCl2(NH3)2). "
+
+[node name="Label" type="Label" parent="platino/Tarjetas62"]
+offset_left = 497.143
+offset_top = 205.0
+offset_right = 566.143
+offset_bottom = 228.0
+text = "PLATINO"
+
+[node name="Label2" type="Label" parent="platino/Tarjetas62"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 78
+Peso Atomico: 195.08
+Simbolo: Pt"
+
+[node name="mercurio" type="Button" parent="." groups=["elementos"]]
+offset_left = 696.0
+offset_top = 444.0
+offset_right = 771.714
+offset_bottom = 520.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas64" parent="mercurio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1117.14, -507)
+
+[node name="png" type="Sprite2D" parent="mercurio/Tarjetas64"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="mercurio/Tarjetas64"]
+position = Vector2(768.571, 250.188)
+scale = Vector2(3.29004, 2.34115)
+texture = ExtResource("118_843kv")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="mercurio/Tarjetas64"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición. Es un metal pesado con alta tensión superficial y es conocido por su toxicidad. Su uso ha disminuido debido a preocupaciones ambientales y de salud, pero históricamente fue vital en termómetros, barómetros e interruptores eléctricos. 
+Compuestos en los cuales interviene: Cloruro de mercurio (II) (HgCl2) y Sulfuro de mercurio (II) (HgS)."
+
+[node name="Label" type="Label" parent="mercurio/Tarjetas64"]
+offset_left = 492.857
+offset_top = 205.0
+offset_right = 576.857
+offset_bottom = 228.0
+text = "MERCURIO"
+
+[node name="Label2" type="Label" parent="mercurio/Tarjetas64"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 80
+Peso Atomico: 200.59
+Simbolo: Hg"
+
+[node name="talio" type="Button" parent="." groups=["elementos"]]
+offset_left = 752.0
+offset_top = 444.0
+offset_right = 833.429
+offset_bottom = 520.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas65" parent="talio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1197.14, -507)
+
+[node name="png" type="Sprite2D" parent="talio/Tarjetas65"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("119_ha4o4")
+
+[node name="simbolo" type="Sprite2D" parent="talio/Tarjetas65"]
+position = Vector2(768.571, 250.285)
+scale = Vector2(3.19328, 2.33817)
+texture = ExtResource("120_u31ee")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="talio/Tarjetas65"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los térreos. Es conocido por ser altamente tóxico para los seres humanos, ya que el organismo lo confunde con el potasio, lo que interfiere con procesos celulares vitales.
+Compuestos en los cuales interviene: Sulfato de talio (I) (Tl2SO4) y Óxido de talio (I) (Tl2O). "
+
+[node name="Label" type="Label" parent="talio/Tarjetas65"]
+offset_left = 508.571
+offset_top = 205.0
+offset_right = 575.571
+offset_bottom = 228.0
+text = "TALIO"
+
+[node name="Label2" type="Label" parent="talio/Tarjetas65"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 81
+Peso Atomico: 204.38
+Simbolo: Tl"
+
+[node name="plomo" type="Button" parent="." groups=["elementos"]]
+offset_left = 810.0
+offset_top = 444.0
+offset_right = 891.429
+offset_bottom = 520.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas66" parent="plomo" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1280, -507)
+
+[node name="png" type="Sprite2D" parent="plomo/Tarjetas66"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("100_aj8ti")
+
+[node name="simbolo" type="Sprite2D" parent="plomo/Tarjetas66"]
+position = Vector2(768.571, 251.383)
+scale = Vector2(3.29004, 2.29532)
+texture = ExtResource("121_0g2hq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="plomo/Tarjetas66"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los carbonoideos. Es extremadamente resistente a la corrosión y tiene la capacidad de absorber radiaciones ionizantes, como los rayos X y gamma; sin embargo, es un metal altamente tóxico que puede causar daños severos al sistema nervioso si se ingiere o inhala.
+Compuestos en los cuales interviene: Óxido de plomo (II) (PbO) y Tetraetilo de plomo (Pb(C2H5)4). "
+
+[node name="Label" type="Label" parent="plomo/Tarjetas66"]
+offset_left = 497.143
+offset_top = 205.0
+offset_right = 564.143
+offset_bottom = 228.0
+text = "PLOMO"
+
+[node name="Label2" type="Label" parent="plomo/Tarjetas66"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 82
+Peso Atomico: 207.2
+Simbolo: Pb"
+
+[node name="bismuto" type="Button" parent="." groups=["elementos"]]
+offset_left = 868.0
+offset_top = 444.0
+offset_right = 942.286
+offset_bottom = 520.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas67" parent="bismuto" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1362.86, -507)
+
+[node name="png" type="Sprite2D" parent="bismuto/Tarjetas67"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("122_hd3w2")
+
+[node name="simbolo" type="Sprite2D" parent="bismuto/Tarjetas67"]
+position = Vector2(768.571, 249)
+scale = Vector2(3.39286, 2.39063)
+texture = ExtResource("123_h2ky5")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="bismuto/Tarjetas67"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los nitrogenoideos. Es el metal con el mayor diamagnetismo (repulsión a los campos magnéticos), es prácticamente no tóxico, lo que permite su uso frecuente en aplicaciones farmacéuticas y cosméticas.
+Compuestos en los cuales interviene: Subsalicilato de bismuto (C7H5BiO4) y Oxicloruro de bismuto (BiOCl). "
+
+[node name="Label" type="Label" parent="bismuto/Tarjetas67"]
+offset_left = 494.286
+offset_top = 207.0
+offset_right = 567.286
+offset_bottom = 230.0
+text = "BISMUTO"
+
+[node name="Label2" type="Label" parent="bismuto/Tarjetas67"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 83
+Peso Atomico: 208.98
+Simbolo: Bi"
+
+[node name="polonio" type="Button" parent="." groups=["elementos"]]
+offset_left = 924.0
+offset_top = 444.0
+offset_right = 1005.43
+offset_bottom = 520.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas68" parent="polonio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1442.86, -507)
+
+[node name="png" type="Sprite2D" parent="polonio/Tarjetas68"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("124_o7t6u")
+
+[node name="simbolo" type="Sprite2D" parent="polonio/Tarjetas68"]
+position = Vector2(766.429, 249)
+scale = Vector2(3.52678, 2.39063)
+texture = ExtResource("125_khulh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="polonio/Tarjetas68"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico semimetálico perteneciente al grupo de los anfígenos. Es un elemento muy raro en la naturaleza, en minerales de uranio. Destaca por emitir partículas alfa con una energía tan alta que genera una cantidad considerable de calor, lo que permite su uso como fuente de energía termoeléctrica en aplicaciones espaciales.
+Compuestos en los cuales interviene:Dióxido de polonio (PoO2) y Cloruro de polonio (IV) (PoCl4). "
+
+[node name="Label" type="Label" parent="polonio/Tarjetas68"]
+offset_left = 488.571
+offset_top = 207.0
+offset_right = 562.571
+offset_bottom = 230.0
+text = "POLONIO"
+
+[node name="Label2" type="Label" parent="polonio/Tarjetas68"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 84
+Peso Atomico: (209)
+Simbolo: Po "
+
+[node name="astato" type="Button" parent="." groups=["elementos"]]
+offset_left = 981.0
+offset_top = 444.0
+offset_right = 1053.86
+offset_bottom = 520.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas69" parent="astato" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1524.29, -507)
+
+[node name="png" type="Sprite2D" parent="astato/Tarjetas69"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("126_my53s")
+
+[node name="simbolo" type="Sprite2D" parent="astato/Tarjetas69"]
+position = Vector2(765.357, 248.992)
+scale = Vector2(3.59376, 2.39097)
+texture = ExtResource("127_rvne4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="astato/Tarjetas69"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico no metálico, radiactivo y perteneciente al grupo de los halógenos. Es el elemento natural más raro de la corteza terrestre, ya que solo se produce por la desintegración de elementos más pesados y tiene una vida media muy corta. Aunque sus propiedades físicas exactas son difíciles de medir que se comporta de manera similar al yodo, pero con un carácter más metálico.
+Compuestos en los cuales interviene:Astátido de sodio (NaAt) y Monocloruro de astato (AtCl)."
+
+[node name="Label" type="Label" parent="astato/Tarjetas69"]
+offset_left = 497.143
+offset_top = 205.0
+offset_right = 564.143
+offset_bottom = 228.0
+text = "ASTATO"
+
+[node name="Label2" type="Label" parent="astato/Tarjetas69"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 85
+Peso Atomico: (210)
+Simbolo: At"
+
+[node name="radon" type="Button" parent="." groups=["elementos"]]
+offset_left = 1034.0
+offset_top = 441.0
+offset_right = 1115.43
+offset_bottom = 517.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="radon" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1600, -504)
+
+[node name="png" type="Sprite2D" parent="radon/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="radon/Tarjetas70"]
+position = Vector2(764.453, 250.188)
+scale = Vector2(3.53965, 2.34115)
+texture = ExtResource("128_sdxoo")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="radon/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico no metálico, gas noble incoloro, inodoro e insípido. Es el gas más denso conocido y, debido a su naturaleza gaseosa, puede filtrarse en los edificios, representando un riesgo para la salud al ser la segunda causa principal de cáncer de pulmón después del tabaco.
+Compuestos en los cuales interviene: El radón es químicamente inerte, pero se han logrado sintetizar compuestos inestables bajo condiciones extremas, como el Difluoruro de radón (RnF2)."
+
+[node name="Label" type="Label" parent="radon/Tarjetas70"]
+offset_left = 497.143
+offset_top = 205.0
+offset_right = 564.143
+offset_bottom = 228.0
+text = "RADON"
+
+[node name="Label2" type="Label" parent="radon/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 86
+Peso Atomico: (222)
+Simbolo: Rn"
+
+[node name="francio" type="Button" parent="." groups=["elementos"]]
+offset_left = 60.0
+offset_top = 520.0
+offset_right = 141.429
+offset_bottom = 596.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="francio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-208.571, -583)
+
+[node name="png" type="Sprite2D" parent="francio/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="francio/Tarjetas70"]
+position = Vector2(768.571, 249.5)
+scale = Vector2(3.01587, 2.21569)
+texture = ExtResource("129_fl4oq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="francio/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales alcalinos. Se presenta como un elemento extremadamente radiactivo y es el metal más inestable de los que aparecen de forma natural, con una vida media de apenas 22 minutos. Debido a su rápida desintegración y a la inmensa cantidad de calor que genera, no es posible reunir una cantidad visible del metal.
+Compuestos en los cuales interviene: Debido a su extrema inestabilidad, no se han aislado compuestos pesables, pero se han estudiado trazas de compuestos como el Perclorato de francio (FrClO4) y el Cloruro de francio (FrCl). "
+
+[node name="Label" type="Label" parent="francio/Tarjetas70"]
+offset_left = 492.857
+offset_top = 205.0
+offset_right = 562.857
+offset_bottom = 228.0
+text = "FRANCIO"
+
+[node name="Label2" type="Label" parent="francio/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 87
+Peso Atomico: (223)
+Simbolo: Fr"
+
+[node name="radio" type="Button" parent="." groups=["elementos"]]
+offset_left = 118.0
+offset_top = 520.0
+offset_right = 199.429
+offset_bottom = 596.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="radio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-291.429, -583)
+
+[node name="png" type="Sprite2D" parent="radio/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="radio/Tarjetas70"]
+position = Vector2(767.857, 250.188)
+scale = Vector2(3.14286, 2.34115)
+texture = ExtResource("130_uct0n")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="radio/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales alcalinotérreos. Es intensamente radiactivo y emite una luminiscencia azul tenue en la oscuridad debido a la ionización del aire que lo rodea. Fue descubierto por Marie y Pierre Curie en 1898 y fue fundamental en las primeras investigaciones sobre la radiactividad.
+Compuestos en los cuales interviene: Cloruro de radio (RaCl2) y Bromuro de radio (RaBr2). "
+
+[node name="Label" type="Label" parent="radio/Tarjetas70"]
+offset_left = 510.0
+offset_top = 205.0
+offset_right = 577.0
+offset_bottom = 228.0
+text = "RADIO"
+
+[node name="Label2" type="Label" parent="radio/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 88
+Peso Atomico: (226)
+Simbolo: Ra"
+
+[node name="actinio" type="Button" parent="." groups=["elementos"]]
+offset_left = 175.0
+offset_top = 520.0
+offset_right = 256.429
+offset_bottom = 596.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="actinio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-372.857, -583)
+
+[node name="png" type="Sprite2D" parent="actinio/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="actinio/Tarjetas70"]
+position = Vector2(767.143, 251.358)
+scale = Vector2(3.37663, 2.29433)
+texture = ExtResource("131_fnctd")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="actinio/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico perteneciente al grupo de los metales de transición y primer elemento de la serie de los actínidos. Es aproximadamente 150 veces más radiactivo que el radio, lo que lo convierte en una fuente valiosa de neutrones y un elemento de estudio en terapias contra el cáncer. 
+Compuestos en los cuales interviene: Óxido de actinio (Ac2O3) y Fluoruro de actinio (AcF3). "
+
+[node name="Label" type="Label" parent="actinio/Tarjetas70"]
+offset_left = 497.143
+offset_top = 205.0
+offset_right = 564.143
+offset_bottom = 228.0
+text = "ACTINIO"
+
+[node name="Label2" type="Label" parent="actinio/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 89
+Peso Atomico: (227)
+Simbolo: Ac "
+
+[node name="rutherfordio" type="Button" parent="." groups=["elementos"]]
+offset_left = 232.0
+offset_top = 520.0
+offset_right = 313.429
+offset_bottom = 596.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="rutherfordio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-454.286, -583)
+
+[node name="png" type="Sprite2D" parent="rutherfordio/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="rutherfordio/Tarjetas70"]
+position = Vector2(764.453, 250.188)
+scale = Vector2(3.53965, 2.34115)
+texture = ExtResource("132_t7vkv")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="rutherfordio/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico sintético, altamente radiactivo, perteneciente al grupo de los metales de transición. Debido a que todos sus isótopos tienen una vida media extremadamente corta, el rutherfordio no posee usos comerciales ni aplicaciones fuera de la investigación científica en laboratorios nucleares especializados. 
+Compuestos en los cuales interviene: Debido a su inestabilidad, solo se han estudiado trazas de compuestos en fase gaseosa como el Tetracloruro de rutherfordio (RfCl4) y el Tetrafluoruro de rutherfordio (RfF4)."
+
+[node name="Label" type="Label" parent="rutherfordio/Tarjetas70"]
+offset_left = 462.857
+offset_top = 205.0
+offset_right = 585.857
+offset_bottom = 228.0
+text = "RUTHERFORDIO"
+
+[node name="Label2" type="Label" parent="rutherfordio/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 104
+Peso Atomico: (267)
+Simbolo: Rf"
+
+[node name="dubnio" type="Button" parent="." groups=["elementos"]]
+offset_left = 291.0
+offset_top = 520.0
+offset_right = 372.429
+offset_bottom = 596.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="dubnio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-538.571, -583)
+
+[node name="png" type="Sprite2D" parent="dubnio/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="dubnio/Tarjetas70"]
+position = Vector2(768.571, 251.5)
+scale = Vector2(3.29004, 2.3)
+texture = ExtResource("133_uhq12")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="dubnio/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico sintético y altamente radiactivo, perteneciente al grupo de los metales de transición. Es un elemento transactínido que no existe de forma natural y solo puede ser producido en aceleradores de partículas mediante el bombardeo de otros elementos pesados. Debido a que tiene una vida media de apenas unas pocas horas, sus propiedades físicas no se han observado visualmente.
+Compuestos en los cuales interviene: Debido a su extrema inestabilidad, solo se han realizado estudios químicos sobre trazas de compuestos como el Pentacloruro de dubnio (DbCl5) y el Oxicloruro de dubnio (DbOCl3)."
+
+[node name="Label" type="Label" parent="dubnio/Tarjetas70"]
+offset_left = 497.143
+offset_top = 205.0
+offset_right = 564.143
+offset_bottom = 228.0
+text = "DUBNIO"
+
+[node name="Label2" type="Label" parent="dubnio/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 105
+Peso Atomico: (268)
+Simbolo: Db"
+
+[node name="seaborgio" type="Button" parent="." groups=["elementos"]]
+offset_left = 348.0
+offset_top = 520.0
+offset_right = 429.429
+offset_bottom = 596.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="seaborgio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-620, -583)
+
+[node name="png" type="Sprite2D" parent="seaborgio/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="seaborgio/Tarjetas70"]
+position = Vector2(768.571, 251.358)
+scale = Vector2(3.29004, 2.29433)
+texture = ExtResource("134_8vaha")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="seaborgio/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico sintético y altamente radiactivo, perteneciente al grupo de los metales de transición. Recibe su nombre en honor al científico Glenn T. Seaborg. Debido a su vida media extremadamente corta, no tiene aplicaciones prácticas fuera de la investigación científica básica. 
+Compuestos en los cuales interviene: Debido a su inestabilidad, solo se han estudiado trazas de compuestos como el Hexacarbonilo de seaborgio (Sg(CO)6) y el Trióxido de seaborgio (SgO3)."
+
+[node name="Label" type="Label" parent="seaborgio/Tarjetas70"]
+offset_left = 484.286
+offset_top = 209.0
+offset_right = 575.286
+offset_bottom = 232.0
+text = "SEABORGIO"
+
+[node name="Label2" type="Label" parent="seaborgio/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 106
+Peso Atomico: (269)
+Simbolo: Sg"
+
+[node name="bohrio" type="Button" parent="." groups=["elementos"]]
+offset_left = 407.0
+offset_top = 523.0
+offset_right = 488.429
+offset_bottom = 599.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="bohrio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-704.286, -586)
+
+[node name="png" type="Sprite2D" parent="bohrio/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="bohrio/Tarjetas70"]
+position = Vector2(768.571, 250)
+scale = Vector2(3.29004, 2.24)
+texture = ExtResource("135_8qi8q")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="bohrio/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico sintético y altamente radiactivo, perteneciente al grupo de los metales de transición. Debido a que su vida media es de apenas segundos, sus propiedades físicas no se han observado directamente, aunque se predice que es un sólido denso con un comportamiento químico similar al renio. 
+Compuestos en los cuales interviene: Debido a su extrema inestabilidad, los estudios químicos se limitan a trazas de especies volátiles como el Oxicloruro de bohrio (BhOCl3). "
+
+[node name="Label" type="Label" parent="bohrio/Tarjetas70"]
+offset_left = 497.143
+offset_top = 205.0
+offset_right = 564.143
+offset_bottom = 228.0
+text = "BOHRIO"
+
+[node name="Label2" type="Label" parent="bohrio/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 107
+Peso Atomico: (270)
+Simbolo: Bh"
+
+[node name="hasio" type="Button" parent="." groups=["elementos"]]
+offset_left = 463.0
+offset_top = 520.0
+offset_right = 544.429
+offset_bottom = 596.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="hasio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-784.286, -583)
+
+[node name="png" type="Sprite2D" parent="hasio/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="hasio/Tarjetas70"]
+position = Vector2(768.571, 251)
+scale = Vector2(3.29004, 2.23529)
+texture = ExtResource("136_0ih0e")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="hasio/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico sintético y altamente radiactivo, perteneciente al grupo de los metales de transición. Es un elemento transactínido que no se encuentra en la naturaleza y solo puede ser sintetizado en aceleradores de partículas. Debido a su vida media extremadamente corta, no posee aplicaciones comerciales.
+Compuestos en los cuales interviene: Debido a su inestabilidad, solo se han estudiado trazas de compuestos volátiles como el Tetróxido de hasio (HsO4) y el Hasato de sodio (Na2[HsO4(OH)2]. "
+
+[node name="Label" type="Label" parent="hasio/Tarjetas70"]
+offset_left = 508.571
+offset_top = 205.0
+offset_right = 575.572
+offset_bottom = 228.0
+text = "HASIO"
+
+[node name="Label2" type="Label" parent="hasio/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 108
+Peso Atomico: (269)
+Simbolo: Hs"
+
+[node name="meitnerio" type="Button" parent="." groups=["elementos"]]
+offset_left = 522.0
+offset_top = 520.0
+offset_right = 603.429
+offset_bottom = 596.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="meitnerio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-868.571, -583)
+
+[node name="png" type="Sprite2D" parent="meitnerio/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="meitnerio/Tarjetas70"]
+position = Vector2(768.571, 249.5)
+scale = Vector2(3.29004, 2.22)
+texture = ExtResource("137_kvsea")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="meitnerio/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico sintético y altamente radiactivo, perteneciente al grupo de los metales de transición. Es un elemento transactínido que solo puede producirse en cantidades de trazas mediante complejas fusiones nucleares en laboratorios especializados. Debido a su vida media extremadamente corta (milisegundos), no se han podido observar sus propiedades físicas ni químicas directamente.
+Compuestos en los cuales interviene: No se han logrado sintetizar ni estudiar compuestos químicos estables de meitnerio debido a su extrema inestabilidad y corta vida media. "
+
+[node name="Label" type="Label" parent="meitnerio/Tarjetas70"]
+offset_left = 488.571
+offset_top = 209.0
+offset_right = 575.571
+offset_bottom = 232.0
+text = "MEITNERIO"
+
+[node name="Label2" type="Label" parent="meitnerio/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 109
+Peso Atomico: (278)
+Simbolo: Mt"
+
+[node name="darmstadtio" type="Button" parent="." groups=["elementos"]]
+offset_left = 580.0
+offset_top = 520.0
+offset_right = 661.429
+offset_bottom = 596.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="darmstadtio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-951.429, -583)
+
+[node name="png" type="Sprite2D" parent="darmstadtio/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="darmstadtio/Tarjetas70"]
+position = Vector2(767.857, 250.188)
+scale = Vector2(3.33334, 2.34115)
+texture = ExtResource("138_mghuw")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="darmstadtio/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico sintético y altamente radiactivo, perteneciente al grupo de los metales de transición. Es un elemento que solo puede ser producido en aceleradores de partículas. Fue sintetizado por primera vez en 1994 en la ciudad de Darmstadt, Alemania. Debido a que sus isótopos tienen vidas medias extremadamente cortas, no posee aplicaciones comerciales y sus propiedades químicas se asumen similares a las del platino.
+Compuestos en los cuales interviene: No se conocen compuestos químicos estables del darmstadtio debido a su extrema inestabilidad y a la dificultad de producir cantidades suficientes para el estudio químico."
+
+[node name="Label" type="Label" parent="darmstadtio/Tarjetas70"]
+offset_left = 484.286
+offset_top = 209.0
+offset_right = 607.143
+offset_bottom = 232.0
+text = "DARMSTADTIO"
+
+[node name="Label2" type="Label" parent="darmstadtio/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 110
+Peso Atomico: (281)
+Simbolo: Uun o Ds"
+
+[node name="roentgenio" type="Button" parent="." groups=["elementos"]]
+offset_left = 634.0
+offset_top = 520.0
+offset_right = 715.429
+offset_bottom = 596.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="roentgenio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1028.57, -583)
+
+[node name="png" type="Sprite2D" parent="roentgenio/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="roentgenio/Tarjetas70"]
+position = Vector2(768.571, 250)
+scale = Vector2(3.29004, 2.24)
+texture = ExtResource("139_wunmk")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="roentgenio/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico sintético y extremadamente radiactivo, perteneciente al grupo de los metales de transición. Se produce exclusivamente en laboratorios mediante la fusión de núcleos más ligeros. Dado que su isótopo más estable tiene una vida media de solo unos segundos, no se han podido observar sus propiedades físicas, aunque se predice que es un sólido denso con un comportamiento químico similar al del oro.
+Compuestos en los cuales interviene: Debido a su extrema inestabilidad y a que solo se producen unos pocos átomos a la vez, no se han sintetizado compuestos químicos estables de roentgenio hasta la fecha."
+
+[node name="Label" type="Label" parent="roentgenio/Tarjetas70"]
+offset_left = 484.286
+offset_top = 209.0
+offset_right = 588.286
+offset_bottom = 232.0
+text = "ROENTGENIO"
+
+[node name="Label2" type="Label" parent="roentgenio/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 111
+Peso Atomico: (282)
+Simbolo: Uuu o Rg"
+
+[node name="copernicio" type="Button" parent="." groups=["elementos"]]
+offset_left = 691.0
+offset_top = 520.0
+offset_right = 772.429
+offset_bottom = 596.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="copernicio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1110, -583)
+
+[node name="png" type="Sprite2D" parent="copernicio/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="copernicio/Tarjetas70"]
+position = Vector2(764.453, 250.188)
+scale = Vector2(3.53965, 2.34115)
+texture = ExtResource("128_sdxoo")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="copernicio/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico sintético y extremadamente radiactivo, perteneciente al grupo de los metales de transición. Debido a efectos relativistas en sus electrones, se predice que es un metal muy volátil que podría presentarse como un gas o un líquido denso a temperatura ambiente, con propiedades similares a las de los gases nobles pero comportándose químicamente de forma parecida al mercurio.
+Compuestos en los cuales interviene: Debido a su vida media de apenas unos segundos y a la dificultad de producirlo, no se han sintetizado compuestos químicos estables de copernicio hasta la fecha."
+
+[node name="Label" type="Label" parent="copernicio/Tarjetas70"]
+offset_left = 484.286
+offset_top = 209.0
+offset_right = 586.286
+offset_bottom = 232.0
+text = "COPERNICIIO"
+
+[node name="Label2" type="Label" parent="copernicio/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 112
+Peso Atomico: (285)
+Simbolo: Uub o Cn"
+
+[node name="nihonio" type="Button" parent="." groups=["elementos"]]
+offset_left = 749.0
+offset_top = 520.0
+offset_right = 830.429
+offset_bottom = 596.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="nihonio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1192.86, -583)
+
+[node name="png" type="Sprite2D" parent="nihonio/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="nihonio/Tarjetas70"]
+position = Vector2(768.571, 250.5)
+scale = Vector2(3.29004, 2.2549)
+texture = ExtResource("140_5w25d")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="nihonio/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico sintético y extremadamente radiactivo, perteneciente al grupo de los térreos. Debido a su vida media sumamente corta, de apenas unos milisegundos a segundos, no tiene aplicaciones prácticas y se predice que es un sólido denso de color plateado con propiedades químicas similares al talio.
+Compuestos en los cuales interviene: Debido a su extrema inestabilidad y a que solo se han producido unos pocos átomos en aceleradores de partículas, no se han sintetizado compuestos químicos estables de nihonio hasta la fecha."
+
+[node name="Label" type="Label" parent="nihonio/Tarjetas70"]
+offset_left = 497.143
+offset_top = 205.0
+offset_right = 564.143
+offset_bottom = 228.0
+text = "NIHONIO"
+
+[node name="Label2" type="Label" parent="nihonio/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 113
+Peso Atomico: (286)
+Simbolo: Uut o Nh"
+
+[node name="flerovio" type="Button" parent="." groups=["elementos"]]
+offset_left = 809.0
+offset_top = 523.0
+offset_right = 890.429
+offset_bottom = 599.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="flerovio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1278.57, -586)
+
+[node name="png" type="Sprite2D" parent="flerovio/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="flerovio/Tarjetas70"]
+position = Vector2(768.571, 250)
+scale = Vector2(3.29004, 2.19608)
+texture = ExtResource("141_oqeok")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="flerovio/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico sintético y extremadamente radiactivo, perteneciente al grupo de los carbonoideos. Se predice que a temperatura ambiente podría ser un metal volátil con propiedades que lo sitúan entre un sólido blando y un gas noble, debido a efectos relativistas en su configuración electrónica.
+Compuestos en los cuales interviene: Debido a su vida media extremadamente corta (de segundos) y a que solo se producen átomos individuales en aceleradores, no se han sintetizado compuestos químicos estables de flerovio para su estudio en 2026."
+
+[node name="Label" type="Label" parent="flerovio/Tarjetas70"]
+offset_left = 494.286
+offset_top = 209.0
+offset_right = 571.286
+offset_bottom = 232.0
+text = "FLEROVIO"
+
+[node name="Label2" type="Label" parent="flerovio/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 114
+Peso Atomico: (289)
+Simbolo: Uuq o Fl"
+
+[node name="moscovio" type="Button" parent="." groups=["elementos"]]
+offset_left = 867.0
+offset_top = 523.0
+offset_right = 948.429
+offset_bottom = 599.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="moscovio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1361.43, -586)
+
+[node name="png" type="Sprite2D" parent="moscovio/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="moscovio/Tarjetas70"]
+position = Vector2(768.571, 251)
+scale = Vector2(3.39286, 2.28)
+texture = ExtResource("142_pyiqt")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="moscovio/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico sintético y extremadamente radiactivo, perteneciente al grupo de los nitrogenoideos. Debido a su vida media extremadamente corta (menos de un segundo), no tiene aplicaciones prácticas y se predice que es un sólido denso de color grisáceo con propiedades químicas similares al bismuto.
+Compuestos en los cuales interviene: Debido a su extrema inestabilidad y a que solo se producen átomos individuales en aceleradores de partículas, no se han sintetizado compuestos químicos estables de moscovio para su estudio en 2026."
+
+[node name="Label" type="Label" parent="moscovio/Tarjetas70"]
+offset_left = 488.571
+offset_top = 207.0
+offset_right = 575.571
+offset_bottom = 230.0
+text = "MOSCOVIO"
+
+[node name="Label2" type="Label" parent="moscovio/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 115
+Peso Atomico: (289)
+Simbolo: Mc"
+
+[node name="livermorio" type="Button" parent="." groups=["elementos"]]
+offset_left = 924.0
+offset_top = 523.0
+offset_right = 1005.43
+offset_bottom = 599.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="livermorio" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1442.86, -586)
+
+[node name="png" type="Sprite2D" parent="livermorio/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="livermorio/Tarjetas70"]
+position = Vector2(767.857, 250)
+scale = Vector2(3.33333, 2.28571)
+texture = ExtResource("143_fpmf4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="livermorio/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico metálico sintético y extremadamente radiactivo, perteneciente al grupo de los anfígenos. Debido a que su isótopo más estable tiene una vida media de apenas unos 60 milisegundos, sus propiedades físicas no se han observado directamente, aunque se predice que es un sólido denso a temperatura ambiente con un comportamiento químico similar al polonio.
+Compuestos en los cuales interviene: Debido a su extrema inestabilidad y a la producción de apenas unos pocos átomos en aceleradores de partículas, no se han sintetizado compuestos químicos estables de livermorio para su estudio en 2026."
+
+[node name="Label" type="Label" parent="livermorio/Tarjetas70"]
+offset_left = 484.286
+offset_top = 205.0
+offset_right = 582.286
+offset_bottom = 228.0
+text = "LIVERMORIO"
+
+[node name="Label2" type="Label" parent="livermorio/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 116
+Peso Atomico: (293)
+Simbolo: Uuh o Lv"
+
+[node name="teneso" type="Button" parent="." groups=["elementos"]]
+offset_left = 981.0
+offset_top = 523.0
+offset_right = 1056.71
+offset_bottom = 599.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="teneso" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1524.29, -586)
+
+[node name="png" type="Sprite2D" parent="teneso/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="teneso/Tarjetas70"]
+position = Vector2(767.143, 249.5)
+scale = Vector2(3.48214, 2.26)
+texture = ExtResource("144_dafwc")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="teneso/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico sintético y extremadamente radiactivo, perteneciente al grupo de los halógenos. Debido a efectos relativistas, se predice que su apariencia es la de un sólido oscuro con propiedades químicas que podrían alejarse de los halógenos típicos, mostrando un comportamiento más metaloide o metálico.
+Compuestos en los cuales interviene: Debido a su vida media extremadamente corta (milisegundos) y a que solo se producen átomos individuales en aceleradores de partículas, no se han sintetizado compuestos químicos estables de teneso para su estudio en 2026."
+
+[node name="Label" type="Label" parent="teneso/Tarjetas70"]
+offset_left = 497.143
+offset_top = 205.0
+offset_right = 564.143
+offset_bottom = 228.0
+text = "TENESO"
+
+[node name="Label2" type="Label" parent="teneso/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 117
+Peso Atomico: (294)
+Simbolo: Uus o Ts"
+
+[node name="oganeson" type="Button" parent="." groups=["elementos"]]
+offset_left = 1034.0
+offset_top = 523.0
+offset_right = 1115.43
+offset_bottom = 599.0
+scale = Vector2(0.7, 1)
+flat = true
+
+[node name="Tarjetas70" parent="oganeson" instance=ExtResource("3_a1ie4")]
+visible = false
+position = Vector2(-1600, -586)
+
+[node name="png" type="Sprite2D" parent="oganeson/Tarjetas70"]
+position = Vector2(303.571, 249.5)
+scale = Vector2(3.88393, 3.71875)
+texture = ExtResource("24_fyi3i")
+
+[node name="simbolo" type="Sprite2D" parent="oganeson/Tarjetas70"]
+position = Vector2(768.571, 249.829)
+scale = Vector2(3.29004, 2.32682)
+texture = ExtResource("145_rjhjw")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="oganeson/Tarjetas70"]
+offset_left = 381.429
+offset_top = 335.0
+offset_right = 690.429
+offset_bottom = 588.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elemento químico sintético y extremadamente radiactivo, perteneciente al grupo de los gases nobles. Es el último elemento del séptimo periodo de la tabla periódica y el de mayor número atómico sintetizado hasta la fecha. A diferencia de los otros gases nobles, se predice que debido a efectos relativistas sobre sus electrones, el oganesón podría ser un sólido a temperatura ambiente y poseer una reactividad química significativamente mayor.
+Compuestos en los cuales interviene: Debido a su vida media extremadamente corta (menos de un milisegundo) y a que solo se han detectado unos pocos átomos en experimentos de bombardeo nuclear, no se han sintetizado compuestos químicos estables de oganesón para su estudio en 2026."
+
+[node name="Label" type="Label" parent="oganeson/Tarjetas70"]
+offset_left = 484.286
+offset_top = 207.0
+offset_right = 575.286
+offset_bottom = 230.0
+text = "OGANESON"
+
+[node name="Label2" type="Label" parent="oganeson/Tarjetas70"]
+offset_left = 395.714
+offset_top = 228.0
+offset_right = 587.714
+offset_bottom = 303.0
+text = "Numero Atomico: 118
+Peso Atomico: (294)
+Simbolo: Uuo o Og"
+
+[node name="Boton_Salir" type="Button" parent="."]
+offset_left = 1105.0
+offset_top = 1.0
+offset_right = 1513.33
+offset_bottom = 367.667
+scale = Vector2(0.12, 0.12)
+icon = ExtResource("26_btwtx")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Boton_Help" type="Button" parent="."]
+offset_left = 0.00012207
+offset_top = 1.0
+offset_right = 408.332
+offset_bottom = 367.667
+scale = Vector2(0.12, 0.12)
+icon = ExtResource("27_whs4y")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="pin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_ao8q5")
+volume_db = -7.913
+pitch_scale = 2.08
+
+[connection signal="pressed" from="Boton_Salir" to="." method="_on_boton_salir_pressed"]
+[connection signal="pressed" from="Boton_Help" to="." method="_on_boton_help_pressed"]

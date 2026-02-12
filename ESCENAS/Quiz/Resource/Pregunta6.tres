@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://cl5s4be1ektkb"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_dtoqc"]
+
+[resource]
+script = ExtResource("1_dtoqc")
+question_info = "En la fórmula ZnO, el Cinc (Zn) está trabajando con la valencia:"
+question_option = Array[String](["+1", "+2", "+3", "+4"])
+question_correct = "+2"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

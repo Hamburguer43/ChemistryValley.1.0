@@ -1,0 +1,194 @@
+[gd_scene load_steps=18 format=3 uid="uid://cyj6fvg6f6wtl"]
+
+[ext_resource type="Texture2D" uid="uid://cgfhgq0lfce78" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Table-Creation-Initial.png" id="1_013gn"]
+[ext_resource type="Script" uid="uid://8mabmwiqk2ca" path="res://ESCENAS/Create_Compuesto/Scripts/table_create_compound.gd" id="1_xxhx2"]
+[ext_resource type="PackedScene" uid="uid://lmy62ww2kw0o" path="res://ESCENAS/Create_Compuesto/inventario_elements.tscn" id="2_re6kj"]
+[ext_resource type="Script" uid="uid://bukw043mpeuqh" path="res://ESCENAS/Create_Compuesto/Scripts/SlotM_Button.gd" id="3_c8joe"]
+[ext_resource type="Texture2D" uid="uid://dhhqtump8mqpp" path="res://ASSETS/Sprites/Elements/Png/Nometales/oxigeno.png" id="3_hr23i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_013gn"]
+atlas = ExtResource("1_013gn")
+region = Rect2(0, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_re6kj"]
+atlas = ExtResource("1_013gn")
+region = Rect2(781, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxhx2"]
+atlas = ExtResource("1_013gn")
+region = Rect2(1562, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8joe"]
+atlas = ExtResource("1_013gn")
+region = Rect2(2343, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hr23i"]
+atlas = ExtResource("1_013gn")
+region = Rect2(3124, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0eqjr"]
+atlas = ExtResource("1_013gn")
+region = Rect2(3905, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otfrd"]
+atlas = ExtResource("1_013gn")
+region = Rect2(4686, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exxcr"]
+atlas = ExtResource("1_013gn")
+region = Rect2(5467, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbjnu"]
+atlas = ExtResource("1_013gn")
+region = Rect2(6248, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxnxf"]
+atlas = ExtResource("1_013gn")
+region = Rect2(7029, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdcs7"]
+atlas = ExtResource("1_013gn")
+region = Rect2(7810, 0, 781, 553)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qehsn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_013gn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_re6kj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxhx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8joe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hr23i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0eqjr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otfrd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exxcr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbjnu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxnxf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdcs7")
+}],
+"loop": true,
+"name": &"inital",
+"speed": 5.0
+}]
+
+[node name="Table-Create-Compound" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 8
+script = ExtResource("1_xxhx2")
+
+[node name="Sprite-Table" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite-Table"]
+position = Vector2(570.31, 321.5)
+scale = Vector2(1.53759, 1.16275)
+texture = ExtResource("1_013gn")
+hframes = 12
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite-Table/Sprite2D"]
+position = Vector2(12.0154, 3.87014)
+scale = Vector2(0.974659, 1)
+sprite_frames = SubResource("SpriteFrames_qehsn")
+animation = &"inital"
+autoplay = "inital"
+frame = 3
+frame_progress = 0.848374
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite-Table/Sprite2D"]
+position = Vector2(-62.637, -19.3507)
+scale = Vector2(1.30074, 1.88132)
+texture = ExtResource("3_hr23i")
+
+[node name="Slot-Metal" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 616.0
+offset_top = 248.0
+offset_right = 749.0
+offset_bottom = 350.0
+
+[node name="Button" type="TextureButton" parent="Slot-Metal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -1.0
+offset_right = -2.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_c8joe")
+
+[node name="Sprite2D" type="Sprite2D" parent="Slot-Metal/Button"]
+position = Vector2(69, 53)
+scale = Vector2(2, 2)
+
+[node name="Inventario-Elements" parent="." instance=ExtResource("2_re6kj")]
+visible = false
+z_index = 1
+layout_mode = 1
+offset_left = -15.0
+offset_top = 13.0
+offset_right = -15.0
+offset_bottom = 13.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = 217.0
+offset_right = 55.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SelectorValencias" type="OptionButton" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Button_mezclar" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="button_mezcla" type="Button" parent="VBoxContainer/Button_mezclar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 22.0
+offset_right = -1.0
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "mezclar"
+
+[connection signal="pressed" from="Slot-Metal/Button" to="Inventario-Elements" method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button_mezclar/button_mezcla" to="." method="_on_button_mezcla_pressed"]

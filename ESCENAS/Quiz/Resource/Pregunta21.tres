@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://bv5ck7xqr7404"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_51ycq"]
+
+[resource]
+script = ExtResource("1_51ycq")
+question_info = "Nombre del compuesto PtO en el sistema Estequiométrico:"
+question_option = Array[String](["Monóxido de platino", "Óxido de platino (II)", "Óxido platínico", "Óxido platinoso"])
+question_correct = "Monóxido de platino"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

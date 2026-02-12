@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://c27nbyd27jpy5"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_iixub"]
+
+[resource]
+script = ExtResource("1_iixub")
+question_info = "Es la fórmula del anhídrido sulfuroso:"
+question_option = Array[String](["S2​O", "SO2​", "SO3​", "S4​O2​"])
+question_correct = "SO2​"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

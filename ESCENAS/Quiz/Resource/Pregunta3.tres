@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://1yxhr8qe0uxs"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_neddg"]
+
+[resource]
+script = ExtResource("1_neddg")
+question_info = "El oxígeno al unirse con los metales y los no metales tiene un número de valencia de:"
+question_option = Array[String](["-2", "0", "+2", "-1"])
+question_correct = "-2"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

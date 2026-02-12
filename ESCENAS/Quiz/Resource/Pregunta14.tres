@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://dvc542h2p6wb2"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_brq20"]
+
+[resource]
+script = ExtResource("1_brq20")
+question_info = "Nombre del compuesto As2​O5​ en el sistema Stock:"
+question_option = Array[String](["Óxido de arsénico (V)", "Óxido arsénico", "Óxido arsénnico", "Pentaóxido de diarsénico"])
+question_correct = "Óxido de arsénico (V)"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

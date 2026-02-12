@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://duxd6hxghb056"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_qmfpn"]
+
+[resource]
+script = ExtResource("1_qmfpn")
+question_info = "Cuando un elemento tiene dos números de valencia y se une al oxígeno con el menor, en el sistema clásico el nombre específico termina en:"
+question_option = Array[String](["Escribiendo la raíz del elemento con terminacion \"ito\"", "Escribiendo la raíz del elemento con terminacion \"ato\"", "Escribiendo la raíz del elemento con terminacion \"oso\"", "Escribiendo la raíz del elemento con terminacion \"ico\""])
+question_correct = "Escribiendo la raíz del elemento con terminacion \"oso\""
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

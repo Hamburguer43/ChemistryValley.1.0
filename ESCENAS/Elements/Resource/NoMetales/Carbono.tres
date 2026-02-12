@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://kvo2pvsitcdi"]
+
+[ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_i3mmc"]
+[ext_resource type="Texture2D" uid="uid://drl0ym3ykk7it" path="res://ASSETS/Sprites/Elements/Png/Nometales/carbono.png" id="1_oxsql"]
+
+[resource]
+script = ExtResource("1_i3mmc")
+nombre = "Carbono"
+simbolo = "C"
+valencias = Array[int]([2, 4])
+tipo = "No Metal"
+icono = ExtResource("1_oxsql")
+metadata/_custom_type_script = "uid://dfxkj61cckpm1"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://bvdlw5mg4d0td"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_qtkya"]
+
+[resource]
+script = ExtResource("1_qtkya")
+question_info = "En la fórmula ZnO2​, el tipo de compuesto que se forma es un:"
+question_option = Array[String](["Anhídrido", "Óxido básico", "Peróxido", "Hidróxido"])
+question_correct = "Peróxido"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

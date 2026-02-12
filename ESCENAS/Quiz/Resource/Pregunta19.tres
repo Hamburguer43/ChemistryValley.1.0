@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://c8xmmxjdwvcdn"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_odm3d"]
+
+[resource]
+script = ExtResource("1_odm3d")
+question_info = "Nombre del compuesto MgO en el sistema Estequiométrico:"
+question_option = Array[String](["Óxido magnésico", "Anhídrido magnésico", "Monóxido de magnesio", "Óxido de magnesio (II)"])
+question_correct = "Monóxido de magnesio"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

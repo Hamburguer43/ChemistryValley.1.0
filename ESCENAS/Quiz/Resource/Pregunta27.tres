@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://b5tff0epabcjx"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_5rpv8"]
+
+[resource]
+script = ExtResource("1_5rpv8")
+question_info = "Es la fórmula del óxido fráncico:"
+question_option = Array[String](["Fr2​O", "FrO", "FrO2​", "Fr2​O2​"])
+question_correct = "Fr2​O"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

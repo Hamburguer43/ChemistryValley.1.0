@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://dfdx2fgr1s2sl"]
+
+[ext_resource type="Texture2D" uid="uid://d3rmpo7jybi05" path="res://ASSETS/Sprites/Elements/Png/Nometales/bromo.png" id="1_i4i50"]
+[ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_k571p"]
+
+[resource]
+script = ExtResource("1_k571p")
+nombre = "Bromo"
+simbolo = "Br"
+valencias = Array[int]([1, 3, 5, 7])
+tipo = "No Metal"
+icono = ExtResource("1_i4i50")
+metadata/_custom_type_script = "uid://dfxkj61cckpm1"

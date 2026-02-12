@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://1fjalub66vld"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_n2678"]
+
+[resource]
+script = ExtResource("1_n2678")
+question_info = "Nombre del compuesto I2​O7​ en el sistema Estequiométrico:"
+question_option = Array[String](["Óxido de yodo (VII)", "Heptaóxido de diyodo", "Anhídrido peryódico", "Óxido peryódico"])
+question_correct = "Heptaóxido de diyodo"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

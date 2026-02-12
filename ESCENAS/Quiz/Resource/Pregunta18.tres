@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://bvj41sqccni4a"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_7w6ft"]
+
+[resource]
+script = ExtResource("1_7w6ft")
+question_info = "Nombre del compuesto Rb2​O en el sistema Estequiométrico:"
+question_option = Array[String](["Óxido rubidioso", "Óxido rubídico", "Anhídrido rubídico", "Monóxido de dirubidio"])
+question_correct = "Monóxido de dirubidio"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

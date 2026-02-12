@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://c3jv4co8gno4v"]
+
+[ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_g4pbe"]
+[ext_resource type="Texture2D" uid="uid://ctulsg4six2cv" path="res://ASSETS/Sprites/Elements/Png/Metales/Magnesio.png" id="1_ueyi4"]
+
+[resource]
+script = ExtResource("1_g4pbe")
+nombre = "Magnesio"
+simbolo = "Mg"
+valencias = Array[int]([2])
+tipo = "Metal"
+icono = ExtResource("1_ueyi4")
+metadata/_custom_type_script = "uid://dfxkj61cckpm1"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://du4y5u2lirffn"]
+
+[ext_resource type="Texture2D" uid="uid://baw6jdmc8ccyq" path="res://ASSETS/Sprites/Elements/Png/Metales/Plomo.png" id="1_0fohm"]
+[ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_oo4kd"]
+
+[resource]
+script = ExtResource("1_oo4kd")
+nombre = "Plomo"
+simbolo = "Pb"
+valencias = Array[int]([2, 4])
+tipo = "Metal"
+icono = ExtResource("1_0fohm")
+metadata/_custom_type_script = "uid://dfxkj61cckpm1"

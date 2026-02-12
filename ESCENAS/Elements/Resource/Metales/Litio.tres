@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://cb4nfxb6yrlaj"]
+
+[ext_resource type="Texture2D" uid="uid://epe3k1sg0c5p" path="res://ASSETS/Sprites/Elements/Png/Metales/Litio.png" id="1_a3whp"]
+[ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_pr2cl"]
+
+[resource]
+script = ExtResource("1_pr2cl")
+nombre = "Litio"
+simbolo = "Li"
+valencias = Array[int]([1])
+tipo = "Metal"
+icono = ExtResource("1_a3whp")
+metadata/_custom_type_script = "uid://dfxkj61cckpm1"

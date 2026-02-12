@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsmvofjjtll8q"]
+
+[ext_resource type="Script" uid="uid://d2xn153rww5im" path="res://ESCENAS/Table_periodic/Script/tarjetas.gd" id="1_1ygmr"]
+[ext_resource type="Texture2D" uid="uid://crtvaqtnt0llt" path="res://ASSETS/Sprites/Marcos/Marco 3.png" id="1_68cxi"]
+[ext_resource type="Texture2D" uid="uid://cliodvcer4dl6" path="res://ASSETS/Sprites/Marcos/Marco 2.png" id="1_gy2go"]
+[ext_resource type="Texture2D" uid="uid://q17s02yiul2i" path="res://ASSETS/Sprites/Marcos/Marco 4.png" id="3_7ftom"]
+[ext_resource type="Texture2D" uid="uid://b2yaqnr3sg7ac" path="res://ASSETS/Sprites/X Square Button.png" id="4_o6uft"]
+
+[node name="Tarjetas" type="Node2D"]
+position = Vector2(-3, -31)
+script = ExtResource("1_1ygmr")
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_left = 709.0
+offset_top = 189.0
+offset_right = 828.0
+offset_bottom = 311.0
+color = Color(0.0823529, 0.0823529, 0.0823529, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect4"]
+modulate = Color(0.439216, 0, 0, 1)
+position = Vector2(61.5, 64)
+scale = Vector2(1.34167, 1.36667)
+texture = ExtResource("1_gy2go")
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 238.0
+offset_top = 189.0
+offset_right = 357.0
+offset_bottom = 311.0
+color = Color(0.0823529, 0.0823529, 0.0823529, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect3"]
+modulate = Color(0.439216, 0, 0, 1)
+position = Vector2(62.5, 63.5)
+scale = Vector2(1.34167, 1.35833)
+texture = ExtResource("1_gy2go")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 356.0
+offset_top = 192.0
+offset_right = 706.0
+offset_bottom = 314.0
+color = Color(0.0823529, 0.0823529, 0.0823529, 1)
+
+[node name="Marco" type="Sprite2D" parent="ColorRect2"]
+modulate = Color(0.439216, 0, 0, 1)
+position = Vector2(164, 145)
+scale = Vector2(4, 3.38333)
+texture = ExtResource("1_68cxi")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 356.0
+offset_top = 314.0
+offset_right = 706.0
+offset_bottom = 606.0
+color = Color(0.956863, 0.956863, 0.956863, 1)
+
+[node name="Marco" type="Sprite2D" parent="ColorRect"]
+modulate = Color(0.439216, 0, 0, 1)
+position = Vector2(168, 148.5)
+scale = Vector2(3.93333, 3.29167)
+texture = ExtResource("3_7ftom")
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Button" type="Button" parent="."]
+offset_left = 689.0
+offset_top = 190.0
+offset_right = 897.0
+offset_bottom = 398.0
+scale = Vector2(0.1, 0.1)
+icon = ExtResource("4_o6uft")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

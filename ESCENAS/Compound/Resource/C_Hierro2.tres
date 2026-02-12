@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Compound_Res" load_steps=2 format=3 uid="uid://c2xa1vy58hb8k"]
+
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_6o7bs"]
+
+[resource]
+script = ExtResource("1_6o7bs")
+nombre = "Oxido Ferrico"
+formula = "Fe2O3"
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"

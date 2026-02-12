@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cd6mh03xo3otc"
+path="res://.godot/imported/Leviathan_Growl1.mp3-c0817ccfda628f808c7b4e286e2641eb.mp3str"
+
+[deps]
+
+source_file="res://ASSETS/Audios/Monsters SFX Vol.1/Monsters/Leviathan_Growl1.mp3"
+dest_files=["res://.godot/imported/Leviathan_Growl1.mp3-c0817ccfda628f808c7b4e286e2641eb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

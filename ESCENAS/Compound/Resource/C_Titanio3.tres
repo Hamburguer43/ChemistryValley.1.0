@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Compound_Res" load_steps=2 format=3 uid="uid://ciw7m8otpoeno"]
+
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_lv0j0"]
+
+[resource]
+script = ExtResource("1_lv0j0")
+nombre = "Dioxido de Titanio"
+formula = "TiO2"
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"

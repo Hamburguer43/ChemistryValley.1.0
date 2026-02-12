@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://d3blg4ua4w05r"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_u3enf"]
+
+[resource]
+script = ExtResource("1_u3enf")
+question_info = "Nombre del compuesto Cl2​O7​ en el sistema clásico:"
+question_option = Array[String](["Óxido de cloro (VII)", "Anhídrido perclórico", "Heptaóxido de dicloro", "Óxido perclórico"])
+question_correct = "Anhídrido perclórico"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://c64ojnyabt8cp"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_5xm60"]
+
+[resource]
+script = ExtResource("1_5xm60")
+question_info = "Nombre del compuesto Cu2​O en el sistema clásico:"
+question_option = Array[String](["Óxido cuproso", "Anhídrido cúprico", "Óxido cúprico", "Anhídrido cuproso"])
+question_correct = "Óxido cuproso"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

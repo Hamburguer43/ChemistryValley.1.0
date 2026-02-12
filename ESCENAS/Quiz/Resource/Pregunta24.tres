@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://u126iulrpqo7"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_ibrnn"]
+
+[resource]
+script = ExtResource("1_ibrnn")
+question_info = "Es la fórmula del óxido de cobalto (II):"
+question_option = Array[String](["CoO", "Co2​O", "CoO2​", "Co2​O3​​"])
+question_correct = "CoO"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

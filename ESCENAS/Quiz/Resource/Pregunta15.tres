@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestions" load_steps=2 format=3 uid="uid://cqnkpmucpjmmm"]
+
+[ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="1_gndib"]
+
+[resource]
+script = ExtResource("1_gndib")
+question_info = "Nombre del compuesto TeO en el sistema Stock:"
+question_option = Array[String](["Óxido de telurio (II)", "Óxido hipoteluroso", "Monóxido de telurio", "Anhídrido hipoteluroso"])
+question_correct = "Óxido de telurio (II)"
+metadata/_custom_type_script = "uid://cqest5a0hchsl"

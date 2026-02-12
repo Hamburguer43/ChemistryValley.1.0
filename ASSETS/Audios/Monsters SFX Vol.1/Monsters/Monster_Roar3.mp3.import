@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c438s1bet8qlu"
+path="res://.godot/imported/Monster_Roar3.mp3-bbeae2404020f9bc4b7e0c7e702716a5.mp3str"
+
+[deps]
+
+source_file="res://ASSETS/Audios/Monsters SFX Vol.1/Monsters/Monster_Roar3.mp3"
+dest_files=["res://.godot/imported/Monster_Roar3.mp3-bbeae2404020f9bc4b7e0c7e702716a5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

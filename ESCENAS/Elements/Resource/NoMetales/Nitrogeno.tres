@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://b2nv8y1gri4s"]
+
+[ext_resource type="Texture2D" uid="uid://cqtleo8wstgxr" path="res://ASSETS/Sprites/Elements/Png/Nometales/nitrogeno.png" id="1_7agr2"]
+[ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_dw7h6"]
+
+[resource]
+script = ExtResource("1_dw7h6")
+nombre = "Nitrogeno"
+simbolo = "N"
+valencias = Array[int]([1, 2, 3, 4, 5])
+tipo = "No Metal"
+icono = ExtResource("1_7agr2")
+metadata/_custom_type_script = "uid://dfxkj61cckpm1"

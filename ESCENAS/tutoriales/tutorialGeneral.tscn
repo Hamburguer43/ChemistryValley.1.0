@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=3 uid="uid://bow5t4cluud5p"]
+
+[ext_resource type="Texture2D" uid="uid://cah7lh65ccakn" path="res://RECURSOS/Sprites/Player/Mago.png" id="1_gvoa2"]
+[ext_resource type="Script" uid="uid://ck7mpig63xm42" path="res://SCENES/tutoriales/tutorial_general.gd" id="1_ql7um"]
+[ext_resource type="Texture2D" uid="uid://clifyt8rj2gh7" path="res://RECURSOS/Sprites/Chat BalloonsBubbles - Pixel Art/Chat-1.png" id="4_tn5g1"]
+[ext_resource type="FontFile" uid="uid://cj5k4sisw80kq" path="res://RECURSOS/Letras/Fonts/Kenney Pixel.ttf" id="4_x5xv5"]
+[ext_resource type="AudioStream" uid="uid://cer6pdqoanynw" path="res://RECURSOS/Audios/Audio/153140__argos22__bip_book-checked (mp3cut.net).wav" id="5_8oks5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sfnk4"]
+bg_color = Color(0.16565639, 0.16565642, 0.1656563, 0.60784316)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x5xv5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8oks5"]
+
+[node name="TutorialGeneral" type="CanvasLayer"]
+script = ExtResource("1_ql7um")
+
+[node name="Panel" type="Panel" parent="."]
+top_level = true
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sfnk4")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel"]
+position = Vector2(498.1875, 316.48676)
+scale = Vector2(3.1816406, 3.1269186)
+texture = ExtResource("1_gvoa2")
+region_enabled = true
+region_rect = Rect2(0.72335815, 0.34953308, 64.00018, 79.421906)
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 456.0
+offset_right = 873.0
+offset_bottom = 495.0
+theme_override_fonts/font = ExtResource("4_x5xv5")
+theme_override_font_sizes/font_size = 50
+text = "Presiona la pantalla para continuar..."
+
+[node name="Chat1" type="Sprite2D" parent="Panel"]
+position = Vector2(671.6587, 152)
+scale = Vector2(1.6170292, 0.79668045)
+texture = ExtResource("4_tn5g1")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(14, 4.5, 228, 241)
+
+[node name="Label" type="RichTextLabel" parent="Panel/Chat1"]
+offset_left = -85.130615
+offset_top = -100.41667
+offset_right = 79.36859
+offset_bottom = 60.25
+focus_mode = 0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_x5xv5")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x5xv5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8oks5")
+scroll_active = false
+scroll_following_visible_characters = true
+
+[node name="Cambio" type="Sprite2D" parent="Panel"]
+position = Vector2(680, 152)
+scale = Vector2(4.312501, 2.8437502)
+
+[node name="Cerrar" type="Button" parent="Panel"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_8oks5")
+volume_db = -14.0
+pitch_scale = 0.8
+
+[connection signal="pressed" from="Panel/Cerrar" to="." method="_on_cerrar_pressed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dyfa60ov0gkun"
+path="res://.godot/imported/Monster_LongGrowl3a.mp3-a5947018dd3c53d1413714d7e32b3a30.mp3str"
+
+[deps]
+
+source_file="res://ASSETS/Audios/Monsters SFX Vol.1/Monsters/Monster_LongGrowl3a.mp3"
+dest_files=["res://.godot/imported/Monster_LongGrowl3a.mp3-a5947018dd3c53d1413714d7e32b3a30.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
