@@ -4,6 +4,7 @@ class_name inventario_elements
 @onready var grid = $Book/MarginContainer/VScrollBar/GridContainer
 @onready var slot = preload("res://ESCENAS/Create_Compuesto/slot_inventory.tscn")
 @onready var animation: AnimationPlayer = $Book/AnimatedSprite2D
+@onready var text = $Book/Text
 var tween: Tween
 
 signal take_metal(metal: Element_Res)
@@ -69,6 +70,12 @@ func _ready() -> void:
 	Inventory_Global.agregar_element(Plomo, cantidad)
 
 func create_grid_inventory(): 
+	
+	#Comprobamos de que hay elementos en el inventario, si no muestra un mensaje
+	if Inventory_Global.Elementos.size() == 0:
+		text.visible = true
+	else :
+		text.visible = false
 	
 	#limpiamos para evitar duplicados
 	for children in grid.get_children():
