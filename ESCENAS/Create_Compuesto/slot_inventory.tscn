@@ -1,14 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://carp6k2spmtv4"]
 
-[ext_resource type="Texture2D" uid="uid://eepqs656d0kc" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Slot-marco.png" id="1_ijxiv"]
+[ext_resource type="Texture2D" uid="uid://ovoi3hw16plp" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Hud-Player/Slot-3.png" id="1_ijxiv"]
 [ext_resource type="Script" uid="uid://tky63msshm8w" path="res://ESCENAS/Create_Compuesto/Scripts/slot_inventory.gd" id="2_ijxiv"]
 
 [node name="TextureButton" type="TextureButton"]
-offset_right = 32.0
-offset_bottom = 32.0
+offset_right = 45.0
+offset_bottom = 47.0
 texture_normal = ExtResource("1_ijxiv")
 script = ExtResource("2_ijxiv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(20, 19)
-scale = Vector2(1.5, 1.5)
+position = Vector2(23, 22)
