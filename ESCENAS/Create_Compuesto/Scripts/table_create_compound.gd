@@ -2,8 +2,11 @@ extends Control
 class_name table_create_compound
 
 @onready var Inventory_elements: inventario_elements = $"Inventario-Elements"
-@onready var SpriteElement = $"Slot-Metal/Button/Sprite2D"
+@onready var SpriteElement = $"Slot-Metal/Button/Metal"
 @onready var optionbutton: OptionButton = $VBoxContainer/SelectorValencias
+@onready var animation = $"Sprite-Table/Sprite2D/AnimatedSprite2D"
+@onready var Aviso = $Aviso
+@onready var label_contador = $Aviso/Contador
 
 @export var metal_actual: Element_Res
 @export var valencia: int = 0
@@ -34,6 +37,17 @@ func _on_button_mezcla_pressed() -> void:
 		print("elige un metal para realizar el compuesto")
 		return
 	
+	if animation:
+		
+		animation.play("mezclando")
+		print("Fase 1: Mezclando ingredientes...")
+		await animation.animation_finished # Espera a que termine de mezclar
+		
+		animation.play("Cocinando")
+		Aviso.visible = true
+		print("Fase 2: Cocinando el compuesto...")
+		iniciar_conteo(3)
+		await animation.animation_finished
 	#Creamos y calculamos la formula utilizando el metodo que está en el script de Logic-create-compound
 	#pasandole el metal_actual y la valencia asignada
 	
@@ -48,9 +62,12 @@ func _on_button_mezcla_pressed() -> void:
 	#y me devuelve una respuesta null o la formula
 	var compound = Compoud_Global.search_compound(formula)
 	
+	
 	if compound:
 		show_card_compound(compound)
+		Aviso.visible = false
 		print("creado con exito el compuesto:", compound.formula, "/", compound.nombre)
+		animation.play("inital")
 	else:
 		print("compuesto no existente o imposible de mezclar")
 		
@@ -73,6 +90,25 @@ func send_compound(res: Compound_Res):
 	Inventory_Global.agregar_compound(compound, cantidad)
 	
 
+func iniciar_conteo(segundos: int):
+	var tiempo_restante = segundos
+	label_contador.modulate = Color.WHITE # Color normal
+	
+	while tiempo_restante > 0:
+		label_contador.text = "Cocinando... " + str(tiempo_restante) + "s"
+		
+		# Efecto de latido (Pop)
+		var t = create_tween()
+		label_contador.pivot_offset = label_contador.size / 2 # Asegurar centro
+		t.tween_property(label_contador, "scale", Vector2(1.2, 1.2), 0.1).set_trans(Tween.TRANS_BACK)
+		t.tween_property(label_contador, "scale", Vector2.ONE, 0.1)
+		
+		await get_tree().create_timer(1.0).timeout
+		tiempo_restante -= 1
+	
+	label_contador.text = "¡Hecho!"
+	label_contador.modulate = Color.GREEN # Feedback visual de éxito
+	await get_tree().create_timer(0.5).timeout
 #RUTA DEL FUNCIONAMIENTO DE TABLE-CREATE-COMPOUND -------------------------------------
 
 #1) El slot-metal es un boton que emite una senal cuando es presionado, esa senal es conectada al script de inventario-elements

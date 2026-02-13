@@ -1,11 +1,38 @@
-[gd_scene load_steps=19 format=3 uid="uid://cyj6fvg6f6wtl"]
+[gd_scene load_steps=38 format=3 uid="uid://cyj6fvg6f6wtl"]
 
 [ext_resource type="Texture2D" uid="uid://cgfhgq0lfce78" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Table-Creation-Initial.png" id="1_013gn"]
 [ext_resource type="Script" uid="uid://8mabmwiqk2ca" path="res://ESCENAS/Create_Compuesto/Scripts/table_create_compound.gd" id="1_xxhx2"]
 [ext_resource type="PackedScene" uid="uid://lmy62ww2kw0o" path="res://ESCENAS/Create_Compuesto/inventario_elements.tscn" id="2_re6kj"]
 [ext_resource type="Script" uid="uid://bukw043mpeuqh" path="res://ESCENAS/Create_Compuesto/Scripts/SlotM_Button.gd" id="3_c8joe"]
-[ext_resource type="Texture2D" uid="uid://dhhqtump8mqpp" path="res://ASSETS/Sprites/Elements/Png/Nometales/oxigeno.png" id="3_hr23i"]
+[ext_resource type="Texture2D" uid="uid://dnyght5enbsut" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Table-Creation-Cocinando.png" id="4_exxcr"]
+[ext_resource type="Texture2D" uid="uid://ca4iw5mvanb8v" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Table-Creation-Mezclando.png" id="5_fbjnu"]
 [ext_resource type="PackedScene" uid="uid://dh75cxq0xnugm" path="res://ESCENAS/Create_Compuesto/Card_Compound.tscn" id="6_0eqjr"]
+[ext_resource type="Texture2D" uid="uid://iumht4g1wb71" path="res://ASSETS/Sprites/Elements/Simbolo/oxigeno.png" id="6_exxcr"]
+[ext_resource type="Texture2D" uid="uid://bgtgjuxl48ch6" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Elementos-UI/Button.png" id="9_fbjnu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aiw7s"]
+atlas = ExtResource("4_exxcr")
+region = Rect2(0, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qehsn"]
+atlas = ExtResource("4_exxcr")
+region = Rect2(781, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ht626"]
+atlas = ExtResource("4_exxcr")
+region = Rect2(1562, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vks3g"]
+atlas = ExtResource("4_exxcr")
+region = Rect2(2343, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edqwr"]
+atlas = ExtResource("4_exxcr")
+region = Rect2(3124, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vkm8"]
+atlas = ExtResource("4_exxcr")
+region = Rect2(3905, 0, 781, 553)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_013gn"]
 atlas = ExtResource("1_013gn")
@@ -51,8 +78,89 @@ region = Rect2(7029, 0, 781, 553)
 atlas = ExtResource("1_013gn")
 region = Rect2(7810, 0, 781, 553)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_1745q"]
+atlas = ExtResource("5_fbjnu")
+region = Rect2(0, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhywr"]
+atlas = ExtResource("5_fbjnu")
+region = Rect2(781, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei7d5"]
+atlas = ExtResource("5_fbjnu")
+region = Rect2(1562, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ris6"]
+atlas = ExtResource("5_fbjnu")
+region = Rect2(2343, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idsar"]
+atlas = ExtResource("5_fbjnu")
+region = Rect2(3124, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jumng"]
+atlas = ExtResource("5_fbjnu")
+region = Rect2(3905, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vlax"]
+atlas = ExtResource("5_fbjnu")
+region = Rect2(4686, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vycwu"]
+atlas = ExtResource("5_fbjnu")
+region = Rect2(5467, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8x0xc"]
+atlas = ExtResource("5_fbjnu")
+region = Rect2(6248, 0, 781, 553)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2m2me"]
+atlas = ExtResource("5_fbjnu")
+region = Rect2(7029, 0, 781, 553)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_qehsn"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aiw7s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qehsn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ht626")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vks3g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edqwr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vkm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aiw7s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aiw7s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aiw7s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aiw7s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aiw7s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aiw7s")
+}],
+"loop": false,
+"name": &"Cocinando",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_013gn")
@@ -90,6 +198,41 @@ animations = [{
 "loop": true,
 "name": &"inital",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1745q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhywr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ei7d5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ris6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idsar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jumng")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vlax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vycwu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8x0xc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2m2me")
+}],
+"loop": false,
+"name": &"mezclando",
+"speed": 5.0
 }]
 
 [node name="Table-Create-Compound" type="Control"]
@@ -116,20 +259,22 @@ hframes = 12
 position = Vector2(12.0154, 3.87014)
 scale = Vector2(0.974659, 1)
 sprite_frames = SubResource("SpriteFrames_qehsn")
-animation = &"new_animation"
+animation = &"Cocinando"
 autoplay = "inital"
+frame = 11
+frame_progress = 1.0
 
-[node name="Sprite2D" type="Sprite2D" parent="Sprite-Table/Sprite2D"]
-position = Vector2(-62.637, -19.3507)
-scale = Vector2(1.30074, 1.88132)
-texture = ExtResource("3_hr23i")
+[node name="Oxigeno" type="Sprite2D" parent="Sprite-Table/Sprite2D"]
+position = Vector2(-59.06, -21.5007)
+scale = Vector2(1.85965, 1.00785)
+texture = ExtResource("6_exxcr")
 
 [node name="Slot-Metal" type="Control" parent="."]
 anchors_preset = 0
 offset_left = 616.0
-offset_top = 248.0
+offset_top = 242.0
 offset_right = 749.0
-offset_bottom = 350.0
+offset_bottom = 344.0
 
 [node name="Button" type="TextureButton" parent="Slot-Metal"]
 layout_mode = 1
@@ -144,7 +289,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_c8joe")
 
-[node name="Sprite2D" type="Sprite2D" parent="Slot-Metal/Button"]
+[node name="Metal" type="Sprite2D" parent="Slot-Metal/Button"]
 position = Vector2(69, 53)
 scale = Vector2(2, 2)
 
@@ -192,6 +337,40 @@ text = "mezclar"
 
 [node name="Card_compound" parent="." instance=ExtResource("6_0eqjr")]
 visible = false
+
+[node name="Aviso" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchor_left = 0.148
+anchor_top = 0.711
+anchor_right = 0.786
+anchor_bottom = 0.906
+offset_left = 92.504
+offset_top = -240.728
+offset_right = -21.472
+offset_bottom = -206.088
+
+[node name="Text" type="Sprite2D" parent="Aviso"]
+position = Vector2(306, 77)
+scale = Vector2(4.05882, 1.875)
+texture = ExtResource("9_fbjnu")
+
+[node name="Label" type="Label" parent="Aviso"]
+layout_mode = 2
+offset_left = 65.0
+offset_top = 54.0
+offset_right = 577.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "se está cocinando el compuesto, espera unos segundos"
+
+[node name="Contador" type="Label" parent="Aviso"]
+layout_mode = 2
+offset_left = 270.0
+offset_top = 87.0
+offset_right = 311.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 
 [connection signal="pressed" from="Slot-Metal/Button" to="Inventario-Elements" method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button_mezclar/button_mezcla" to="." method="_on_button_mezcla_pressed"]

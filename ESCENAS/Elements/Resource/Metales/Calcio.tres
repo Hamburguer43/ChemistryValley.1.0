@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://h3kdkr4s6wq7"]
 
-[ext_resource type="Texture2D" uid="uid://tcahp87x1fsn" path="res://ASSETS/Sprites/Elements/Png/Metales/Calcio.png" id="1_kpaww"]
+[ext_resource type="Texture2D" uid="uid://bsqta2k88tubo" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/_edited_48_Minerals_Pixel_Art_Icons_Pack(12).png" id="1_kpaww"]
 [ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_x1b14"]
 
 [resource]

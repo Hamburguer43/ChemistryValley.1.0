@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name Enemy
 
 @onready var movement : Movement = $"Movement" as Movement
-@onready var sprite: Sprite2D = $"Sprite2D"
+@onready var sprite = $Sprite2D/AnimatedSprite2D
 @onready var rayCast: RayCast2D = $"RayCast2D"
 @onready var sensor: Area2D = $"SensorComponent"
 @onready var health_component : HealthComponent = $HealthComponent

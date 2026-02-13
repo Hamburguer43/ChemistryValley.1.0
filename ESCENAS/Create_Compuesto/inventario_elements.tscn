@@ -59,6 +59,15 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.0862745, 0.0862745, 0.0862745, 0.65098)
 
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Book" type="Sprite2D" parent="."]
 position = Vector2(572.25, 297.5)
 scale = Vector2(1.66086, 1.51389)
@@ -81,6 +90,8 @@ offset_right = -490.0
 offset_bottom = -212.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
 
 [node name="VScrollBar" type="ScrollContainer" parent="Book/MarginContainer"]
 layout_mode = 2
@@ -97,17 +108,5 @@ offset_right = 257.298
 offset_bottom = -119.67
 text = "No tienes elementos, explora el mundo y recolecta"
 
-[node name="TextureButton" type="TextureButton" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.986
-anchor_top = 0.035
-anchor_right = 0.986
-anchor_bottom = 0.035
-offset_left = -24.8721
-offset_top = -20.68
-offset_right = 23.1279
-offset_bottom = 23.32
-
-[connection signal="animation_finished" from="Book/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="animation_finished" from="Book/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
