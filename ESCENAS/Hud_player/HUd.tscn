@@ -1,0 +1,158 @@
+[gd_scene load_steps=19 format=3 uid="uid://dtakpqqxyk5ro"]
+
+[ext_resource type="Texture2D" uid="uid://dw5gm7xsrta7a" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Hud-Player/Bar-interfaz.png" id="1_dlc7i"]
+[ext_resource type="Script" uid="uid://d3ohhv21du0f5" path="res://ESCENAS/Hud_player/Scripts/health_bar.gd" id="2_i4yrx"]
+[ext_resource type="Script" uid="uid://icue1ejt68e5" path="res://ESCENAS/Hud_player/Scripts/energy_bar.gd" id="3_j2wmg"]
+[ext_resource type="Texture2D" uid="uid://d0ptsvfhixwnv" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Hud-Player/Bar-poderes.png" id="4_4ttks"]
+[ext_resource type="Script" uid="uid://botpiktwv063i" path="res://ESCENAS/Hud_player/Scripts/Barra_compound.gd" id="5_gjyx1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4yrx"]
+atlas = ExtResource("1_dlc7i")
+region = Rect2(0, 0, 140, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2wmg"]
+atlas = ExtResource("1_dlc7i")
+region = Rect2(140, 0, 140, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ttks"]
+atlas = ExtResource("1_dlc7i")
+region = Rect2(280, 0, 140, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjyx1"]
+atlas = ExtResource("1_dlc7i")
+region = Rect2(420, 0, 140, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dl04b"]
+atlas = ExtResource("1_dlc7i")
+region = Rect2(560, 0, 140, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60730"]
+atlas = ExtResource("1_dlc7i")
+region = Rect2(700, 0, 140, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kobi"]
+atlas = ExtResource("1_dlc7i")
+region = Rect2(840, 0, 140, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4inx1"]
+atlas = ExtResource("1_dlc7i")
+region = Rect2(980, 0, 140, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mvbtk"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_i4yrx")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_j2wmg")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_4ttks")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_gjyx1")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_dl04b")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_60730")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_2kobi")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_4inx1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_i4yrx"]
+offsets = PackedFloat32Array(0, 0.932692)
+colors = PackedColorArray(0, 0, 0, 0.647059, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gjyx1"]
+gradient = SubResource("Gradient_i4yrx")
+width = 40
+height = 6
+
+[sub_resource type="Gradient" id="Gradient_dl04b"]
+offsets = PackedFloat32Array(0, 0.0192308)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_60730"]
+gradient = SubResource("Gradient_dl04b")
+width = 40
+height = 6
+fill_from = Vector2(0, 1)
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Barra_Interfaz" type="HBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/MarginContainer/Barra_Interfaz"]
+position = Vector2(71, 34)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/MarginContainer/Barra_Interfaz/Sprite2D"]
+position = Vector2(46, 21)
+scale = Vector2(1.65714, 1.65625)
+sprite_frames = SubResource("SpriteFrames_mvbtk")
+autoplay = "default"
+frame = 5
+frame_progress = 0.502369
+
+[node name="HealthBar" type="TextureProgressBar" parent="Control/MarginContainer/Barra_Interfaz/Sprite2D"]
+offset_left = 33.0
+offset_top = 3.0
+offset_right = 73.0
+offset_bottom = 9.0
+scale = Vector2(2.6, 1.5)
+texture_under = SubResource("GradientTexture2D_gjyx1")
+texture_progress = SubResource("GradientTexture2D_60730")
+tint_progress = Color(0, 0.898039, 0.160784, 1)
+script = ExtResource("2_i4yrx")
+
+[node name="EnergyBar" type="TextureProgressBar" parent="Control/MarginContainer/Barra_Interfaz/Sprite2D"]
+offset_left = 33.0
+offset_top = 28.0
+offset_right = 73.0
+offset_bottom = 34.0
+scale = Vector2(2.3, 1.5)
+texture_under = SubResource("GradientTexture2D_gjyx1")
+texture_progress = SubResource("GradientTexture2D_60730")
+tint_progress = Color(0.63, 0, 0.9, 1)
+script = ExtResource("3_j2wmg")
+
+[node name="BarraCompuestos" type="Sprite2D" parent="Control/MarginContainer"]
+position = Vector2(245.5, 597.5)
+scale = Vector2(1.59667, 1.54688)
+texture = ExtResource("4_4ttks")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/BarraCompuestos"]
+offset_left = -138.1
+offset_top = -20.3636
+offset_right = -138.1
+offset_bottom = -20.3636
+size_flags_horizontal = 0
+size_flags_vertical = 8
+script = ExtResource("5_gjyx1")

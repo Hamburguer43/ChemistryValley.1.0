@@ -6,6 +6,7 @@ class_name Enemy
 @onready var rayCast: RayCast2D = $"RayCast2D"
 @onready var sensor: Area2D = $"SensorComponent"
 @onready var health_component : HealthComponent = $HealthComponent
+@onready var hitbox_component: HitboxComponent = $HitbosComponent
 
 var direction = 1.0
 var player: CollisionObject2D
@@ -28,6 +29,7 @@ func _process(delta: float) -> void:
 	
 func _ready() -> void:
 	health_component.OnDirectionChange.connect(direction_change_body)
+	hitbox_component.set_hitbox_active(true)
 
 #Modifica el valor hacia donde este mirando el Sprite2d
 func fase_sprite():

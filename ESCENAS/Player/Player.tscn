@@ -1,10 +1,11 @@
-[gd_scene load_steps=23 format=3 uid="uid://xwlmfjrolb40"]
+[gd_scene load_steps=25 format=3 uid="uid://xwlmfjrolb40"]
 
 [ext_resource type="Script" uid="uid://beyxafdq2v5p7" path="res://ESCENAS/Player/Scripts/player.gd" id="1_m1rl0"]
 [ext_resource type="Script" uid="uid://dycaxeavyv8vq" path="res://ESCENAS/Player/Scripts/movement.gd" id="3_q7xc6"]
 [ext_resource type="Script" uid="uid://beeb72a18kroc" path="res://ESCENAS/Player/Scripts/jump.gd" id="4_dju3n"]
 [ext_resource type="PackedScene" uid="uid://c01qe055ua4od" path="res://ESCENAS/Components/hitbox_component.tscn" id="4_nyric"]
 [ext_resource type="Script" uid="uid://ctqkv3w6hmun7" path="res://ESCENAS/StateMachine/Scripts/jump_state.gd" id="5_62p1g"]
+[ext_resource type="Script" uid="uid://d17srmhwurxh8" path="res://ESCENAS/Player/Scripts/energy_component.gd" id="5_brxfi"]
 [ext_resource type="PackedScene" uid="uid://dhbitao04ex5s" path="res://ESCENAS/Components/HealthComponent.tscn" id="6_msxca"]
 [ext_resource type="Script" uid="uid://cahshyjrl32t0" path="res://ESCENAS/StateMachine/Scripts/wall_slide_state.gd" id="6_nslrf"]
 [ext_resource type="Script" uid="uid://bdkcasushjf3n" path="res://ESCENAS/StateMachine/Scripts/fall_state.gd" id="7_kctr6"]
@@ -13,6 +14,7 @@
 [ext_resource type="Script" uid="uid://c6dqainciucrm" path="res://ESCENAS/StateMachine/Scripts/attack.gd" id="8_ovfga"]
 [ext_resource type="Script" uid="uid://cuuax25ou70wn" path="res://ESCENAS/StateMachine/Scripts/wallk.gd" id="9_nslrf"]
 [ext_resource type="Texture2D" uid="uid://bfbwxk8k8loui" path="res://ASSETS/Sprites/Player.1.0/Png/Sprite-Player-All-1.png" id="11_nslrf"]
+[ext_resource type="PackedScene" uid="uid://dtakpqqxyk5ro" path="res://ESCENAS/Hud_player/HUd.tscn" id="14_q5t41"]
 
 [sub_resource type="Animation" id="Animation_kctr6"]
 resource_name = "Attack"
@@ -20,7 +22,7 @@ length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Direction/Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -37,7 +39,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Direction/Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -54,7 +56,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Direction/Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -70,7 +72,7 @@ length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Direction/Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -85,7 +87,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Direction/Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -102,7 +104,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Direction/Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -119,7 +121,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Direction/Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -149,11 +151,38 @@ collision_mask = 2
 script = ExtResource("1_m1rl0")
 metadata/_edit_vertical_guides_ = [17.0, -47.0]
 
+[node name="Direction" type="Node2D" parent="."]
+position = Vector2(2, 1)
+
+[node name="HitboxComponent" parent="Direction" instance=ExtResource("4_nyric")]
+position = Vector2(36, -13)
+scale = Vector2(2, 2)
+collision_mask = 20
+
+[node name="Sprite2D" type="Sprite2D" parent="Direction"]
+position = Vector2(-4, -21)
+texture = ExtResource("11_nslrf")
+hframes = 38
+frame = 36
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Direction"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_efxxx")
+}
+
+[node name="HealthComponent" parent="." instance=ExtResource("6_msxca")]
+position = Vector2(4, -13)
+collision_layer = 1
+
+[node name="EnergyComponent" type="Node2D" parent="."]
+script = ExtResource("5_brxfi")
+
 [node name="StateMachine" type="Node2D" parent="." node_paths=PackedStringArray("State", "character", "animation")]
 script = ExtResource("7_ra4do")
 State = NodePath("IdleState")
 character = NodePath("..")
-animation = NodePath("../AnimationPlayer")
+animation = NodePath("../Direction/AnimationPlayer")
 
 [node name="IdleState" type="Node2D" parent="StateMachine"]
 script = ExtResource("8_62p1g")
@@ -182,25 +211,6 @@ speed = 120.0
 script = ExtResource("4_dju3n")
 jump_velocity = -350.0
 
-[node name="HealthComponent" parent="." instance=ExtResource("6_msxca")]
-position = Vector2(0, -15)
-collision_layer = 1
-
-[node name="HitboxComponent" parent="." instance=ExtResource("4_nyric")]
-position = Vector2(23, 1)
-collision_mask = 20
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-4, -21)
-texture = ExtResource("11_nslrf")
-hframes = 38
-frame = 36
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_efxxx")
-}
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -22)
 shape = SubResource("CapsuleShape2D_dju3n")
@@ -214,3 +224,5 @@ drag_right_margin = 0.15
 drag_bottom_margin = 0.15
 editor_draw_limits = true
 editor_draw_drag_margin = true
+
+[node name="HUD" parent="." instance=ExtResource("14_q5t41")]
