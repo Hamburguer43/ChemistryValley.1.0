@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cyj6fvg6f6wtl"]
+[gd_scene load_steps=40 format=3 uid="uid://cyj6fvg6f6wtl"]
 
 [ext_resource type="Texture2D" uid="uid://cgfhgq0lfce78" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Table-Creation-Initial.png" id="1_013gn"]
 [ext_resource type="Script" uid="uid://8mabmwiqk2ca" path="res://ESCENAS/Create_Compuesto/Scripts/table_create_compound.gd" id="1_xxhx2"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ca4iw5mvanb8v" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Table-Creation-Mezclando.png" id="5_fbjnu"]
 [ext_resource type="PackedScene" uid="uid://dh75cxq0xnugm" path="res://ESCENAS/Create_Compuesto/Card_Compound.tscn" id="6_0eqjr"]
 [ext_resource type="Texture2D" uid="uid://iumht4g1wb71" path="res://ASSETS/Sprites/Elements/Simbolo/oxigeno.png" id="6_exxcr"]
+[ext_resource type="FontFile" uid="uid://c4u4rlhswm0ap" path="res://ASSETS/Letras/Antiquity/antiquity-print.ttf" id="7_lxnxf"]
 [ext_resource type="Texture2D" uid="uid://bgtgjuxl48ch6" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Elementos-UI/Button.png" id="9_fbjnu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aiw7s"]
@@ -235,6 +236,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Theme" id="Theme_jdcs7"]
+default_font = ExtResource("7_lxnxf")
+
 [node name="Table-Create-Compound" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -268,6 +272,15 @@ frame_progress = 1.0
 position = Vector2(-59.06, -21.5007)
 scale = Vector2(1.85965, 1.00785)
 texture = ExtResource("6_exxcr")
+
+[node name="Label" type="Label" parent="Sprite-Table"]
+offset_left = 469.0
+offset_top = 28.0
+offset_right = 690.0
+offset_bottom = 53.0
+theme = SubResource("Theme_jdcs7")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "OXIDOS BÁSICOS"
 
 [node name="Slot-Metal" type="Control" parent="."]
 anchors_preset = 0

@@ -25,10 +25,6 @@ window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
 
-[gui]
-
-theme/custom_font="uid://c4u4rlhswm0ap"
-
 [input]
 
 left_move={
