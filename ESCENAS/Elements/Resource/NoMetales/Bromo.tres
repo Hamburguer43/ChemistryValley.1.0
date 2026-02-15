@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://dfdx2fgr1s2sl"]
+[gd_resource type="Resource" script_class="Element_Res" load_steps=4 format=3 uid="uid://dfdx2fgr1s2sl"]
 
 [ext_resource type="Texture2D" uid="uid://d3rmpo7jybi05" path="res://ASSETS/Sprites/Elements/Png/Nometales/bromo.png" id="1_i4i50"]
 [ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_k571p"]
+[ext_resource type="Texture2D" uid="uid://dedn3uctdolxo" path="res://ASSETS/Sprites/Elements/Simbolo/bromo.png" id="3_pmdvj"]
 
 [resource]
 script = ExtResource("1_k571p")
@@ -10,4 +11,5 @@ simbolo = "Br"
 valencias = Array[int]([1, 3, 5, 7])
 tipo = "No Metal"
 icono = ExtResource("1_i4i50")
+simbolo_texture = ExtResource("3_pmdvj")
 metadata/_custom_type_script = "uid://dfxkj61cckpm1"

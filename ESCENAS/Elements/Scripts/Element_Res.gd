@@ -9,3 +9,4 @@ class_name Element_Res
 
 @export_group("Visuales")
 @export var icono: CompressedTexture2D
+@export var simbolo_texture: CompressedTexture2D

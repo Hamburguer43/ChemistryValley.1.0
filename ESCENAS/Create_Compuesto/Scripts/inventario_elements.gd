@@ -7,7 +7,7 @@ class_name inventario_elements
 @onready var text = $Book/Text
 var tween: Tween
 
-signal take_metal(metal: Element_Res)
+signal take_element(element: Element_Res)
 
 # -- animaciones de tween para el inventario -------
 func _on_button_pressed() -> void:
@@ -30,12 +30,13 @@ func reset_tween():
 		tween.kill()
 	tween = create_tween()
 
+#Boton de cerra libro/ inventario
 func _on_texture_button_pressed() -> void:
 	reset_tween()
 	
-	#limpiamos para evitar duplicados
 	for children in grid.get_children():
 		children.queue_free()
+		$Book/Label.visible = false
 	
 	animation.play("close")
 	await animation.animation_finished
@@ -59,7 +60,7 @@ func _ready() -> void:
 	var Titanio = load("res://ESCENAS/Elements/Resource/Metales/Titanio.tres")
 	var aluminio = load("res://ESCENAS/Elements/Resource/Metales/Aluminio.tres")
 	var Calcio = load("res://ESCENAS/Elements/Resource/Metales/Calcio.tres")
-	var Plomo = load("res://ESCENAS/Elements/Resource/Metales/Plomo.tres")
+	var Plomo = load("res://ESCENAS/Elements/Resource/NoMetales/Oxigeno.tres")
 	var cantidad = 1
 	Inventory_Global.agregar_element(hierro, cantidad)
 	Inventory_Global.agregar_element(oro, cantidad)
@@ -81,17 +82,17 @@ func create_grid_inventory():
 	for children in grid.get_children():
 		children.queue_free()
 		
-	for metal in Inventory_Global.Elementos:
+	for elemento in Inventory_Global.Elementos:
 		var new_slot = slot.instantiate()
 		grid.add_child(new_slot)
-		new_slot.set_datos(metal)
+		new_slot.set_datos(elemento)
 		
-		new_slot.pressed.connect(metal_elegido.bind(metal))
+		new_slot.pressed.connect(elemento_elegido.bind(elemento))
 
-func metal_elegido(metal: Element_Res):
+func elemento_elegido(elemento: Element_Res):
 	
-	if metal != null:
-		take_metal.emit(metal)
+	if elemento != null:
+		take_element.emit(elemento)
 	
 	_on_texture_button_pressed()
 
