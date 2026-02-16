@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7lbw5jqx3pyb"
+path="res://.godot/imported/freesound_community-071695_bubble-bouncewav-88131 (mp3cut.net).mp3-15954efdf91c68cf2cfb77965559b86d.mp3str"
+
+[deps]
+
+source_file="res://ASSETS/Audios/Audio/freesound_community-071695_bubble-bouncewav-88131 (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/freesound_community-071695_bubble-bouncewav-88131 (mp3cut.net).mp3-15954efdf91c68cf2cfb77965559b86d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

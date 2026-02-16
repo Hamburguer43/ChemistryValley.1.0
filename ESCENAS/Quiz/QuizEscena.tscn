@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://ckk5he413v12t"]
+[gd_scene load_steps=44 format=3 uid="uid://ckk5he413v12t"]
 
 [ext_resource type="Script" uid="uid://cnwcyamknfvfo" path="res://ESCENAS/Quiz/Scripts/quiz_escena.gd" id="1_tqyif"]
 [ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="2_ft7jj"]
@@ -23,7 +23,6 @@
 [ext_resource type="AudioStream" uid="uid://bsj484u8enicv" path="res://ASSETS/Audios/Audio/808522__licht2003__error.mp3" id="18_xcs45"]
 [ext_resource type="FontFile" uid="uid://dikplhd3wbrh5" path="res://ASSETS/Letras/Kenney pixel/Kenney Pixel.ttf" id="19_ju7yy"]
 [ext_resource type="Resource" uid="uid://c4lqgck2s0p5k" path="res://ESCENAS/Quiz/Resource/Pregunta17.tres" id="19_rqs43"]
-[ext_resource type="AudioStream" uid="uid://cckmt5fpa53f6" path="res://ASSETS/Audios/Audio/404359__kagateni__success2.wav" id="20_ju7yy"]
 [ext_resource type="Resource" uid="uid://bvj41sqccni4a" path="res://ESCENAS/Quiz/Resource/Pregunta18.tres" id="20_spfu0"]
 [ext_resource type="Resource" uid="uid://c8xmmxjdwvcdn" path="res://ESCENAS/Quiz/Resource/Pregunta19.tres" id="21_nwq80"]
 [ext_resource type="Resource" uid="uid://3qg57bl1325y" path="res://ESCENAS/Quiz/Resource/Pregunta20.tres" id="22_iq2l6"]
@@ -36,6 +35,19 @@
 [ext_resource type="Resource" uid="uid://b5tff0epabcjx" path="res://ESCENAS/Quiz/Resource/Pregunta27.tres" id="29_7567o"]
 [ext_resource type="Resource" uid="uid://dlkusclu0m3ou" path="res://ESCENAS/Quiz/Resource/Pregunta28.tres" id="30_gndkn"]
 [ext_resource type="Resource" uid="uid://c27nbyd27jpy5" path="res://ESCENAS/Quiz/Resource/Pregunta29.tres" id="31_u76x3"]
+[ext_resource type="Texture2D" uid="uid://dwbag5rsk2woc" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Elementos-UI/Card-2.png" id="32_4c4p7"]
+[ext_resource type="Texture2D" uid="uid://c37oovjg4qerk" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Elementos-UI/woodenBorder.png" id="33_yrive"]
+[ext_resource type="AudioStream" uid="uid://xrwixcj05gma" path="res://ASSETS/Audios/Audio/404359__kagateni__success2 (mp3cut.net)(1).wav" id="36_4c4p7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yrive"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_twig1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u1o3b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rovev"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jobji"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -49,12 +61,27 @@ script = ExtResource("1_tqyif")
 quiz_Data = Array[ExtResource("2_ft7jj")]([ExtResource("3_1o46k"), ExtResource("4_vtyew"), ExtResource("5_4c4p7"), ExtResource("6_yrive"), ExtResource("7_twig1"), ExtResource("8_u1o3b"), ExtResource("9_rovev"), ExtResource("10_jobji"), ExtResource("11_irir1"), ExtResource("12_gcgrw"), ExtResource("13_g57kk"), ExtResource("14_ktjol"), ExtResource("15_d5wdp"), ExtResource("16_vp36h"), ExtResource("17_hncuc"), ExtResource("18_14kkm"), ExtResource("19_rqs43"), ExtResource("20_spfu0"), ExtResource("21_nwq80"), ExtResource("22_iq2l6"), ExtResource("23_qmr45"), ExtResource("24_aejqw"), ExtResource("25_jj1cy"), ExtResource("26_mskbx"), ExtResource("27_3e3gj"), ExtResource("28_ceix3"), ExtResource("29_7567o"), ExtResource("30_gndkn"), ExtResource("31_u76x3")])
 metadata/_edit_lock_ = true
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 94.0
+offset_top = -56.0
+offset_right = 1031.0
+offset_bottom = 689.0
+texture = ExtResource("32_4c4p7")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1016.0
+offset_right = 1152.0
+offset_bottom = 88.0
+texture = ExtResource("33_yrive")
+
 [node name="ExitButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 33.0
 offset_top = 27.0
-offset_right = 113.0
-offset_bottom = 90.0
+offset_right = 102.0
+offset_bottom = 84.0
 icon = ExtResource("17_mgpl5")
 flat = true
 icon_alignment = 1
@@ -64,8 +91,8 @@ expand_icon = true
 layout_mode = 0
 offset_left = 109.0
 offset_top = 27.0
-offset_right = 214.0
-offset_bottom = 89.0
+offset_right = 203.0
+offset_bottom = 83.0
 icon = ExtResource("18_ju7yy")
 flat = true
 icon_alignment = 1
@@ -76,11 +103,13 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 23.0
+offset_left = -112.0
+offset_top = 16.0
+offset_right = -14.0
+offset_bottom = 64.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("19_ju7yy")
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 60
 text = "30:00"
 
 [node name="Titulo" type="Label" parent="."]
@@ -88,11 +117,14 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -96.0
-offset_right = 138.0
-offset_bottom = 117.0
+offset_left = -290.0
+offset_top = 63.0
+offset_right = -166.0
+offset_bottom = 132.0
 grow_horizontal = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("19_ju7yy")
 theme_override_font_sizes/font_size = 90
 text = "QUIZ"
@@ -101,11 +133,10 @@ vertical_alignment = 1
 
 [node name="Questions" type="BoxContainer" parent="."]
 layout_mode = 0
-offset_left = 250.0
-offset_top = 129.0
-offset_right = 918.0
-offset_bottom = 336.0
-metadata/_edit_lock_ = true
+offset_left = 266.0
+offset_top = 131.0
+offset_right = 914.0
+offset_bottom = 340.0
 
 [node name="PanelContainer" type="PanelContainer" parent="Questions"]
 custom_minimum_size = Vector2(0, 150)
@@ -113,11 +144,14 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 size_flags_stretch_ratio = 9.9
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yrive")
 
 [node name="Label" type="Label" parent="Questions/PanelContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("19_ju7yy")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 46
 text = "Pregunta"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -125,10 +159,10 @@ autowrap_mode = 3
 
 [node name="BoxContainer" type="BoxContainer" parent="."]
 layout_mode = 0
-offset_left = 232.0
-offset_top = 328.0
-offset_right = 931.0
-offset_bottom = 570.0
+offset_left = 242.0
+offset_top = 367.0
+offset_right = 944.0
+offset_bottom = 534.0
 alignment = 1
 
 [node name="HBox_Respustas" type="HBoxContainer" parent="BoxContainer"]
@@ -139,30 +173,38 @@ size_flags_vertical = 4
 [node name="Button" type="Button" parent="BoxContainer/HBox_Respustas"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("19_ju7yy")
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_twig1")
 autowrap_mode = 3
 
 [node name="Button2" type="Button" parent="BoxContainer/HBox_Respustas"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("19_ju7yy")
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_u1o3b")
 autowrap_mode = 3
 
 [node name="Button3" type="Button" parent="BoxContainer/HBox_Respustas"]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("19_ju7yy")
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rovev")
 autowrap_mode = 3
 
 [node name="Button4" type="Button" parent="BoxContainer/HBox_Respustas"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("19_ju7yy")
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jobji")
 autowrap_mode = 3
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -227,7 +269,7 @@ text = "Salir"
 autostart = true
 
 [node name="SuccesSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("20_ju7yy")
+stream = ExtResource("36_4c4p7")
 max_polyphony = 3
 
 [node name="ErrorSFX" type="AudioStreamPlayer" parent="."]

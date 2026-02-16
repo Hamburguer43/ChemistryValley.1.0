@@ -25,6 +25,16 @@ func mostrar(mensaje : String):
 			{"img": "RES"},
 			{"texto": "¡¡Buena Suerte!!"}
 		]
+	if mensaje == "laboratorio":
+		tutorialAct=[
+			{"texto": ""},
+			{"texto": ""}
+		]
+	if mensaje == "principal":
+		tutorialAct=[
+			{"texto": ""},
+			{"texto": ""}
+		]
 	ind= 0
 	self.show()
 	get_tree().paused = true

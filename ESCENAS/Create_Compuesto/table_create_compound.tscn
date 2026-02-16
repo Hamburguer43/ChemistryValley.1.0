@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cyj6fvg6f6wtl"]
+[gd_scene load_steps=39 format=3 uid="uid://cyj6fvg6f6wtl"]
 
 [ext_resource type="Texture2D" uid="uid://cgfhgq0lfce78" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Table-Creation-Initial.png" id="1_013gn"]
 [ext_resource type="Script" uid="uid://8mabmwiqk2ca" path="res://ESCENAS/Create_Compuesto/Scripts/table_create_compound.gd" id="1_xxhx2"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dh75cxq0xnugm" path="res://ESCENAS/Create_Compuesto/Card_Compound.tscn" id="6_0eqjr"]
 [ext_resource type="Texture2D" uid="uid://iumht4g1wb71" path="res://ASSETS/Sprites/Elements/Simbolo/oxigeno.png" id="6_exxcr"]
 [ext_resource type="Texture2D" uid="uid://bgtgjuxl48ch6" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Elementos-UI/Button.png" id="9_fbjnu"]
+[ext_resource type="AudioStream" uid="uid://7lbw5jqx3pyb" path="res://ASSETS/Audios/Audio/freesound_community-071695_bubble-bouncewav-88131 (mp3cut.net).mp3" id="10_lxnxf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aiw7s"]
 atlas = ExtResource("4_exxcr")
@@ -356,7 +357,7 @@ scale = Vector2(4.05882, 1.875)
 texture = ExtResource("9_fbjnu")
 
 [node name="Label" type="Label" parent="Aviso"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 65.0
 offset_top = 54.0
 offset_right = 577.0
@@ -365,12 +366,17 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "se está cocinando el compuesto, espera unos segundos"
 
 [node name="Contador" type="Label" parent="Aviso"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 270.0
 offset_top = 87.0
 offset_right = 311.0
 offset_bottom = 113.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_lxnxf")
+volume_db = 6.679
+pitch_scale = 0.89
 
 [connection signal="pressed" from="Slot-Metal/Button" to="Inventario-Elements" method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button_mezclar/button_mezcla" to="." method="_on_button_mezcla_pressed"]

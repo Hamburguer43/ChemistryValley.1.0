@@ -1,10 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bow5t4cluud5p"]
+[gd_scene load_steps=7 format=3 uid="uid://bow5t4cluud5p"]
 
-[ext_resource type="Texture2D" uid="uid://cah7lh65ccakn" path="res://RECURSOS/Sprites/Player/Mago.png" id="1_gvoa2"]
-[ext_resource type="Script" uid="uid://ck7mpig63xm42" path="res://SCENES/tutoriales/tutorial_general.gd" id="1_ql7um"]
-[ext_resource type="Texture2D" uid="uid://clifyt8rj2gh7" path="res://RECURSOS/Sprites/Chat BalloonsBubbles - Pixel Art/Chat-1.png" id="4_tn5g1"]
-[ext_resource type="FontFile" uid="uid://cj5k4sisw80kq" path="res://RECURSOS/Letras/Fonts/Kenney Pixel.ttf" id="4_x5xv5"]
-[ext_resource type="AudioStream" uid="uid://cer6pdqoanynw" path="res://RECURSOS/Audios/Audio/153140__argos22__bip_book-checked (mp3cut.net).wav" id="5_8oks5"]
+[ext_resource type="Script" uid="uid://ck7mpig63xm42" path="res://ESCENAS/tutoriales/tutorial_general.gd" id="1_ql7um"]
+[ext_resource type="Texture2D" uid="uid://dkhdfagb303bi" path="res://ASSETS/Sprites/Player.1.0/Png/Mago.png" id="2_oi1ew"]
+[ext_resource type="Texture2D" uid="uid://bwr5bq622hnpc" path="res://ASSETS/Sprites/Chat-1.png" id="3_wjdyy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sfnk4"]
 bg_color = Color(0.16565639, 0.16565642, 0.1656563, 0.60784316)
@@ -26,24 +24,23 @@ metadata/_edit_lock_ = true
 [node name="Sprite2D" type="Sprite2D" parent="Panel"]
 position = Vector2(498.1875, 316.48676)
 scale = Vector2(3.1816406, 3.1269186)
-texture = ExtResource("1_gvoa2")
+texture = ExtResource("2_oi1ew")
 region_enabled = true
 region_rect = Rect2(0.72335815, 0.34953308, 64.00018, 79.421906)
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
 offset_left = 288.0
-offset_top = 456.0
-offset_right = 873.0
-offset_bottom = 495.0
-theme_override_fonts/font = ExtResource("4_x5xv5")
-theme_override_font_sizes/font_size = 50
+offset_top = 448.0
+offset_right = 910.0
+offset_bottom = 497.0
+theme_override_font_sizes/font_size = 35
 text = "Presiona la pantalla para continuar..."
 
 [node name="Chat1" type="Sprite2D" parent="Panel"]
 position = Vector2(671.6587, 152)
 scale = Vector2(1.6170292, 0.79668045)
-texture = ExtResource("4_tn5g1")
+texture = ExtResource("3_wjdyy")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(14, 4.5, 228, 241)
@@ -55,8 +52,7 @@ offset_right = 79.36859
 offset_bottom = 60.25
 focus_mode = 0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_x5xv5")
-theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/normal_font_size = 18
 theme_override_styles/normal = SubResource("StyleBoxEmpty_x5xv5")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_8oks5")
 scroll_active = false
@@ -80,7 +76,6 @@ flat = true
 metadata/_edit_lock_ = true
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_8oks5")
 volume_db = -14.0
 pitch_scale = 0.8
 

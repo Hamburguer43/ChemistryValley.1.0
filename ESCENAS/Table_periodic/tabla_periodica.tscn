@@ -4406,10 +4406,9 @@ Peso Atomico: (294)
 Simbolo: Uuo o Og"
 
 [node name="Boton_Salir" type="Button" parent="."]
-offset_left = 1105.0
-offset_top = 1.0
-offset_right = 1513.33
-offset_bottom = 367.667
+offset_left = 1.0000019
+offset_right = 409.32996
+offset_bottom = 366.667
 scale = Vector2(0.12, 0.12)
 icon = ExtResource("26_btwtx")
 flat = true
@@ -4417,10 +4416,9 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="Boton_Help" type="Button" parent="."]
-offset_left = 0.00012207
-offset_top = 1.0
-offset_right = 408.332
-offset_bottom = 367.667
+offset_left = 1107.0001
+offset_right = 1515.332
+offset_bottom = 366.667
 scale = Vector2(0.12, 0.12)
 icon = ExtResource("27_whs4y")
 flat = true

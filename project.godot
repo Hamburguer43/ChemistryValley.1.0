@@ -12,22 +12,19 @@ config_version=5
 
 config/name="ChemestryValley.1.0"
 run/main_scene="uid://b8lm4ydr65p4k"
-config/features=PackedStringArray("4.4", "Mobile")
+config/features=PackedStringArray("4.5", "Mobile")
 
 [autoload]
 
 Compoud_Global="*res://AUTOLOADS/Compoud-Global.gd"
 Inventory_Global="*res://AUTOLOADS/Inventory-Global.gd"
+TutorialGeneral="*res://ESCENAS/tutoriales/tutorialGeneral.tscn"
 
 [display]
 
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
-
-[gui]
-
-theme/custom_font="uid://c4u4rlhswm0ap"
 
 [input]
 

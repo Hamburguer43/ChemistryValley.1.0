@@ -17,3 +17,7 @@ func boton_presionado(boton: Button):
 
 func _on_boton_salir_pressed():
 	get_tree().change_scene_to_file("res://SCENES/otros/Torre_Interior.tscn")
+
+
+func _on_boton_help_pressed():
+	TutorialGeneral.mostrar("tabla")

@@ -6,7 +6,7 @@ var index= 0
 var yes: int
 var buttons: Array[Button]
 var success: int
-var timer: int = 10
+var timer: int = 1800
 @onready var question_text: Label = $Questions/PanelContainer/Label
 
 ##Funcion principa
@@ -37,6 +37,7 @@ func load_quiz() -> void:
 
 ##Logica de Botones
 func _button_click(button) -> void:
+	button.release_focus()
 	##Por cada boton clikeado, comprobamos el resource de la respuesta correcta con el texto del boton
 	if quiz_Data[index].question_correct == button.text:
 		button.modulate = color_YES

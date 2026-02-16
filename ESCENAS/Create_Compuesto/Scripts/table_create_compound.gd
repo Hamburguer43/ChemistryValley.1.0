@@ -41,8 +41,9 @@ func _on_button_mezcla_pressed() -> void:
 		
 		animation.play("mezclando")
 		print("Fase 1: Mezclando ingredientes...")
+		$AudioStreamPlayer.autoplay()
 		await animation.animation_finished # Espera a que termine de mezclar
-		
+		$AudioStreamPlayer.stop()
 		animation.play("Cocinando")
 		Aviso.visible = true
 		print("Fase 2: Cocinando el compuesto...")
