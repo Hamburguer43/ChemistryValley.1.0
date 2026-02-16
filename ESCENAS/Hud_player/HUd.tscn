@@ -144,15 +144,21 @@ tint_progress = Color(0.63, 0, 0.9, 1)
 script = ExtResource("3_j2wmg")
 
 [node name="BarraCompuestos" type="Sprite2D" parent="Control/MarginContainer"]
-position = Vector2(245.5, 597.5)
-scale = Vector2(1.59667, 1.54688)
+position = Vector2(187.5, 589.5)
+scale = Vector2(1.21, 1.54688)
 texture = ExtResource("4_4ttks")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/BarraCompuestos"]
-offset_left = -138.1
-offset_top = -20.3636
-offset_right = -138.1
-offset_bottom = -20.3636
-size_flags_horizontal = 0
-size_flags_vertical = 8
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -244.0
+offset_top = -54.0
+offset_right = -56.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
 script = ExtResource("5_gjyx1")

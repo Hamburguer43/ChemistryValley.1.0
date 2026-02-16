@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://xwlmfjrolb40"]
+[gd_scene load_steps=26 format=3 uid="uid://xwlmfjrolb40"]
 
 [ext_resource type="Script" uid="uid://beyxafdq2v5p7" path="res://ESCENAS/Player/Scripts/player.gd" id="1_m1rl0"]
 [ext_resource type="Script" uid="uid://dycaxeavyv8vq" path="res://ESCENAS/Player/Scripts/movement.gd" id="3_q7xc6"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://cuuax25ou70wn" path="res://ESCENAS/StateMachine/Scripts/wallk.gd" id="9_nslrf"]
 [ext_resource type="Texture2D" uid="uid://bfbwxk8k8loui" path="res://ASSETS/Sprites/Player.1.0/Png/Sprite-Player-All-1.png" id="11_nslrf"]
 [ext_resource type="PackedScene" uid="uid://dtakpqqxyk5ro" path="res://ESCENAS/Hud_player/HUd.tscn" id="14_q5t41"]
+[ext_resource type="PackedScene" uid="uid://bfctlqgjansd6" path="res://ESCENAS/Menu_Book/Menu_book.tscn" id="16_sqhi6"]
 
 [sub_resource type="Animation" id="Animation_kctr6"]
 resource_name = "Attack"
@@ -226,3 +227,6 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="HUD" parent="." instance=ExtResource("14_q5t41")]
+
+[node name="Menu_book" parent="." instance=ExtResource("16_sqhi6")]
+visible = false

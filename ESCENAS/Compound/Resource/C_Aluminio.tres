@@ -10,5 +10,4 @@ formula = "Al2O3"
 textura = ExtResource("2_f611y")
 descripcion = "Conocido como Alúmina. Es extremadamente duro (casi como el diamante). Forma gemas como rubíes y zafiros."
 rareza = "Comun"
-efectos = Array[String]([])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"
