@@ -14,15 +14,18 @@ func _ready() -> void:
 func mostrar(mensaje : String):
 	if mensaje == "tabla":
 		tutorialAct = [
-			{"texto": "Esta es la Tabla Periódica. Haz clic en un elemento para ver sus propiedades."},
+			{"texto": "¡Bienvenido a la Tabla Periódica"},
+			{"texto": "La tabla periódica nos presenta un amplio numero de elementos..."},
+			{"texto": "Puedes seleccionar un elemento para conocer mas sobre el."},
 			{"img": "res://RECURSOS/Sprites/Elements/Simbolo/azufre.png"}
 		]
 	if mensaje == "quiz":
 		tutorialAct=[
-			{"texto": "Las preguntas salen en el recuadro principal..."},
-			{"img": "res"},
-			{"texto": "Tienes 10 Minutos para responder, seleccionando alguna de las 4 respuestas"},
-			{"img": "RES"},
+			{"texto": "¡Bienvenido al Quiz!"},
+			{"texto": "Presta mucha atención a las preguntas que se van a realizar..."},
+			{"texto": "Las preguntas puedes visualizarlas en la pagina izquierda del libro."},
+			{"texto": "Contesta correctamente seleccionando alguna de las 4 respuestas disponibles..."},
+			{"texto": "Las respuestas puedes visualizarlas en la pagina derecha del libro."},
 			{"texto": "¡¡Buena Suerte!!"}
 		]
 	if mensaje == "laboratorio":

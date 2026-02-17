@@ -8,13 +8,16 @@ var buttons: Array[Button]
 var success: int
 var timer: int = 1800
 @onready var question_text: Label = $Questions/PanelContainer/Label
+@onready var libro_anim: AnimatedSprite2D = $AnimatedSprite2D
 
 ##Funcion principa
 func _ready() -> void:
+	libro_anim.stop()
+	libro_anim.frame = 5
 	##Preguntas bien respondidas 0
 	success=0
-	##Por cada boton en Hbox
-	for b in $BoxContainer/HBox_Respustas.get_children():
+	##Por cada boton en vBOX
+	for b in $BoxContainer/Vbox_Respuestas.get_children():
 		if b is Button:
 			buttons.append(b)
 	##Hacemos que las preguntas se mezclen para que no se repitan el orden
@@ -25,7 +28,8 @@ func _ready() -> void:
 ##Logica de carga
 func load_quiz() -> void:
 	##Se comprueba primero si el quiz ya termino
-	
+	libro_anim.stop()
+	libro_anim.frame = 5
 	if index > quiz_Data.size()-1:
 		_over()
 		return
@@ -34,10 +38,15 @@ func load_quiz() -> void:
 	for i in buttons.size():
 		buttons[i].text = quiz_Data[index].question_option[i]
 		buttons[i].pressed.connect(_button_click.bind(buttons[i]))
+	$Questions.show()
+	$BoxContainer.show()
+	$Preguntas.show()
+	$Respuestas.show()
 
 ##Logica de Botones
 func _button_click(button) -> void:
-	button.release_focus()
+	for b in buttons:
+		b.release_focus()
 	##Por cada boton clikeado, comprobamos el resource de la respuesta correcta con el texto del boton
 	if quiz_Data[index].question_correct == button.text:
 		button.modulate = color_YES
@@ -47,16 +56,26 @@ func _button_click(button) -> void:
 	else:
 		button.modulate = color_NO
 		$ErrorSFX.play()
+		for b in buttons:
+			if b.text == quiz_Data[index].question_correct:
+				b.modulate = Color.GREEN
 	##Anidamos otra funcion para carga de la siguiente pregunta
 	next_question()
 
 ##Logica de siguiente pregunta
 func next_question() -> void:
+	await get_tree().create_timer(3).timeout
 	##Desconectamos los botones anteriores para que no se encuentre con problemas
 	for b in buttons:
 		b.pressed.disconnect(_button_click)
+	$Questions.hide()
+	$BoxContainer.hide()
+	$Preguntas.hide()
+	$Respuestas.hide()
 	##Espera de 3 segundos para cargar la siguiente
-	await get_tree().create_timer(3).timeout
+	libro_anim.frame = 0
+	libro_anim.play("default")
+	await libro_anim.animation_finished
 	##Reseteamos color
 	for b in buttons:
 		b.modulate = Color.WHITE
@@ -84,9 +103,10 @@ func time_to_string(seconds: int) -> String:
 	return str(minutes) + ":" + str(seconds2).pad_zeros(2)
 	
 	
-func _on_exit_pressed() -> void:
-	pass ##cambio de escena
-
 
 func _on_exit_button_pressed() -> void:
 	pass # Cambio de Escena
+
+
+func _on_option_button_pressed() -> void:
+	TutorialGeneral.mostrar("quiz")

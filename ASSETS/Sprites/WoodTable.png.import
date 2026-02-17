@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://udk5nqyyxumn"
-path="res://.godot/imported/header-1t.png-6bdbca6050b9cbdee6c6e408d336c29b.ctex"
+uid="uid://bx1j3axpewa0e"
+path="res://.godot/imported/WoodTable.png-d5cb35324d16d6cd137f78263654cc3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Elementos-UI/header-1t.png"
-dest_files=["res://.godot/imported/header-1t.png-6bdbca6050b9cbdee6c6e408d336c29b.ctex"]
+source_file="res://ASSETS/Sprites/WoodTable.png"
+dest_files=["res://.godot/imported/WoodTable.png-d5cb35324d16d6cd137f78263654cc3b.ctex"]
 
 [params]
 
