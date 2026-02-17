@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://xwlmfjrolb40"]
+[gd_scene load_steps=28 format=3 uid="uid://xwlmfjrolb40"]
 
 [ext_resource type="Script" uid="uid://beyxafdq2v5p7" path="res://ESCENAS/Player/Scripts/player.gd" id="1_m1rl0"]
 [ext_resource type="Script" uid="uid://dycaxeavyv8vq" path="res://ESCENAS/Player/Scripts/movement.gd" id="3_q7xc6"]
@@ -14,7 +14,10 @@
 [ext_resource type="Script" uid="uid://c6dqainciucrm" path="res://ESCENAS/StateMachine/Scripts/attack.gd" id="8_ovfga"]
 [ext_resource type="Script" uid="uid://cuuax25ou70wn" path="res://ESCENAS/StateMachine/Scripts/wallk.gd" id="9_nslrf"]
 [ext_resource type="Texture2D" uid="uid://bfbwxk8k8loui" path="res://ASSETS/Sprites/Player.1.0/Png/Sprite-Player-All-1.png" id="11_nslrf"]
+[ext_resource type="Script" uid="uid://slq8s01qg8ki" path="res://ESCENAS/StateMachine/Scripts/poder.gd" id="13_nhf4e"]
 [ext_resource type="PackedScene" uid="uid://dtakpqqxyk5ro" path="res://ESCENAS/Hud_player/HUd.tscn" id="14_q5t41"]
+[ext_resource type="PackedScene" uid="uid://bfctlqgjansd6" path="res://ESCENAS/Menu_Book/Menu_book.tscn" id="16_sqhi6"]
+[ext_resource type="Script" uid="uid://c70v7h7ude7o3" path="res://ESCENAS/Player/Scripts/ability_comp.gd" id="17_vd2eb"]
 
 [sub_resource type="Animation" id="Animation_kctr6"]
 resource_name = "Attack"
@@ -202,14 +205,19 @@ script = ExtResource("7_kctr6")
 [node name="AttackState" type="Node2D" parent="StateMachine"]
 script = ExtResource("8_ovfga")
 
+[node name="PoderState" type="Node2D" parent="StateMachine"]
+script = ExtResource("13_nhf4e")
+
 [node name="Movement" type="Node2D" parent="."]
 position = Vector2(0, 28)
 script = ExtResource("3_q7xc6")
-speed = 120.0
 
 [node name="Jump" type="Node2D" parent="."]
 script = ExtResource("4_dju3n")
 jump_velocity = -350.0
+
+[node name="Ability_comp" type="Node2D" parent="."]
+script = ExtResource("17_vd2eb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -22)
@@ -226,3 +234,6 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="HUD" parent="." instance=ExtResource("14_q5t41")]
+
+[node name="Menu_book" parent="." instance=ExtResource("16_sqhi6")]
+visible = false

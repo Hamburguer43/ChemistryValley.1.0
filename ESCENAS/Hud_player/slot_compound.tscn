@@ -1,13 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://gbig0vnyavwq"]
+[gd_scene load_steps=4 format=3 uid="uid://gbig0vnyavwq"]
 
 [ext_resource type="Texture2D" uid="uid://ovoi3hw16plp" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Hud-Player/Slot-3.png" id="1_1op4g"]
 [ext_resource type="Script" uid="uid://d0jaacc63hf3n" path="res://ESCENAS/Hud_player/Scripts/slot_compound.gd" id="2_1op4g"]
+
+[sub_resource type="Theme" id="Theme_gv5st"]
 
 [node name="TextureButton" type="TextureButton"]
 offset_right = 45.0
 offset_bottom = 47.0
 texture_normal = ExtResource("1_1op4g")
 script = ExtResource("2_1op4g")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 20.5
+offset_top = 15.5
+offset_right = 31.5
+offset_bottom = 39.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_gv5st")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+horizontal_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(23, 22)

@@ -9,4 +9,6 @@ class_name Compound_Res
 
 @export_group("Mecánicas de Juego")
 @export_enum("Comun", "Raro", "Epico", "Peligroso") var rareza: String = "Comun"
-@export var efectos: Array[String] = []
+
+func ejecutar_poder(player: CharacterBody2D, ability_comp: Node):
+	pass

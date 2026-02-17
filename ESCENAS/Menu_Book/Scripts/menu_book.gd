@@ -1,15 +1,18 @@
 extends Control
+class_name Script_menu
 
 @onready var AnimatedBook = $Animated_Book
 @onready var Paginas = $Paginas
 @onready var Botones = $Botones
+signal close
 
 func _ready() -> void:
-	Paginas.visible = false
-	Botones.visible = false
 	open_book()
 
 func open_book():
+	
+	Paginas.visible = false
+	Botones.visible = false
 	
 	if AnimatedBook:
 		AnimatedBook.play("open")
@@ -35,7 +38,6 @@ func cambiar_pagina(indice: int):
 	Paginas.visible = true
 	Botones.visible = true
 
-
 #Opciones de paginas --------------------------------------------
 
 func _on_compound_pressed() -> void:
@@ -56,3 +58,4 @@ func _on_salir_pressed() -> void:
 	
 	AnimatedBook.play("Close")
 	await  AnimatedBook.animation_finished
+	close.emit()

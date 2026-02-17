@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bfctlqgjansd6"]
+[gd_scene load_steps=42 format=3 uid="uid://bfctlqgjansd6"]
 
 [ext_resource type="Script" uid="uid://bxykr2423em5x" path="res://ESCENAS/Menu_Book/Scripts/menu_book.gd" id="1_6tntx"]
 [ext_resource type="Texture2D" uid="uid://uvr36cuunff1" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Book-menu.png" id="1_hqtpl"]
@@ -8,7 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://bju0s2bmh5prp" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Elementos-UI/header-2t.png" id="4_6tntx"]
 [ext_resource type="Script" uid="uid://dx313ugbabj21" path="res://ESCENAS/Menu_Book/Scripts/Pagcompuestos.gd" id="4_gwm8a"]
 [ext_resource type="Script" uid="uid://dq8oear64ojo6" path="res://ESCENAS/Menu_Book/Scripts/Pag_elementos.gd" id="6_mekp2"]
+[ext_resource type="Script" uid="uid://cpuxvg385u1qn" path="res://ESCENAS/Menu_Book/Scripts/Pag_poderes.gd" id="7_3x8in"]
 [ext_resource type="Script" uid="uid://cgou0euhu32k8" path="res://ESCENAS/Menu_Book/Scripts/OpcionButton.gd" id="7_pl2kp"]
+[ext_resource type="Texture2D" uid="uid://dwbag5rsk2woc" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Elementos-UI/Card-2.png" id="8_3pp18"]
+[ext_resource type="Texture2D" uid="uid://eepqs656d0kc" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Slot-marco.png" id="9_5cjqc"]
+[ext_resource type="PackedScene" uid="uid://gbig0vnyavwq" path="res://ESCENAS/Hud_player/slot_compound.tscn" id="10_dmifd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3x8in"]
 atlas = ExtResource("1_hqtpl")
@@ -183,10 +187,17 @@ default_font = ExtResource("2_11jhi")
 [sub_resource type="Theme" id="Theme_3x8in"]
 default_font = ExtResource("2_11jhi")
 
+[sub_resource type="Theme" id="Theme_3pp18"]
+default_font = ExtResource("2_11jhi")
+
+[sub_resource type="Theme" id="Theme_5cjqc"]
+default_font = ExtResource("2_11jhi")
+
 [sub_resource type="Theme" id="Theme_6tntx"]
 default_font = ExtResource("2_11jhi")
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="Menu_book" type="CanvasLayer"]
+process_mode = 3
 
 [node name="Menu_Book" type="Control" parent="."]
 layout_mode = 3
@@ -303,6 +314,7 @@ columns = 6
 [node name="Poderes" type="Control" parent="Menu_Book/Paginas"]
 visible = false
 layout_mode = 2
+script = ExtResource("7_3x8in")
 metadata/_tab_index = 2
 
 [node name="Label" type="Label" parent="Menu_Book/Paginas/Poderes"]
@@ -315,9 +327,106 @@ offset_top = 9.0
 offset_right = 47.5
 offset_bottom = 32.0
 grow_horizontal = 2
+theme = SubResource("Theme_3pp18")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Poderes"
 horizontal_alignment = 1
+
+[node name="Elegir_poderes" type="MarginContainer" parent="Menu_Book/Paginas/Poderes"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 36.0
+offset_right = -36.0
+offset_bottom = -215.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu_Book/Paginas/Poderes/Elegir_poderes"]
+layout_mode = 2
+
+[node name="Card" type="Sprite2D" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer"]
+position = Vector2(97.875, 125.125)
+scale = Vector2(0.75, 0.67489)
+texture = ExtResource("8_3pp18")
+
+[node name="Description" type="RichTextLabel" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card"]
+offset_left = -120.0
+offset_top = -55.0
+offset_right = 141.0
+offset_bottom = 151.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Elige un compuesto de los slot para ver su información"
+
+[node name="Marco_compound" type="Sprite2D" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card"]
+position = Vector2(-79.5303, -105.548)
+scale = Vector2(1.90985, 2.22233)
+texture = ExtResource("9_5cjqc")
+
+[node name="Compound" type="Sprite2D" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card/Marco_compound"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card"]
+offset_left = -33.8182
+offset_top = -144.834
+offset_right = 162.182
+offset_bottom = -64.8338
+size_flags_horizontal = 10
+size_flags_vertical = 0
+
+[node name="LabelNombre" type="Label" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "?"
+
+[node name="LabelFormula" type="Label" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "?"
+
+[node name="LabelRareza" type="Label" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "?"
+
+[node name="Slot_poderes" type="VBoxContainer" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+
+[node name="Slot1" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Slot_poderes" instance=ExtResource("10_dmifd")]
+layout_mode = 2
+
+[node name="Slot2" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Slot_poderes" instance=ExtResource("10_dmifd")]
+layout_mode = 2
+
+[node name="Slot3" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Slot_poderes" instance=ExtResource("10_dmifd")]
+layout_mode = 2
+
+[node name="Slot4" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Slot_poderes" instance=ExtResource("10_dmifd")]
+layout_mode = 2
+
+[node name="Compound_disponibles" type="MarginContainer" parent="Menu_Book/Paginas/Poderes"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.109
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 269.149
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_5cjqc")
+
+[node name="VScrollBar" type="ScrollContainer" parent="Menu_Book/Paginas/Poderes/Compound_disponibles"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="GridContainer" type="GridContainer" parent="Menu_Book/Paginas/Poderes/Compound_disponibles/VScrollBar"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+columns = 6
 
 [node name="Opciones" type="Control" parent="Menu_Book/Paginas"]
 visible = false
