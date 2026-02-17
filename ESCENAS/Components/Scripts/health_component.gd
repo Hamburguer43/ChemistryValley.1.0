@@ -2,6 +2,7 @@ extends Area2D
 class_name HealthComponent
 
 ##este componente me controla la vida del body, si recibe dano o se cura etc
+@onready var ability_comp: AbilityComponent = $"../Ability_comp"
 
 signal Ondead
 signal OnBarhealthChange(values: int)
@@ -15,6 +16,10 @@ func _ready() -> void:
 	current_salud = max_salud
 
 func take_damage(damage: int, value_position: Vector2, force: int):
+	
+	if ability_comp and ability_comp.esta_protegido == true:
+		return
+	
 	#Aplicar dano al body (restar)
 	var value = abs(damage)
 	health_controller(-value)

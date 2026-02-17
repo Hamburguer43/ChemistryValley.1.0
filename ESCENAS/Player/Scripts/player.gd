@@ -3,8 +3,6 @@ class_name Player
 
 @onready var movement : Movement = $"Movement" as Movement
 @onready var jump: Jump = $"Jump" as Jump
-@onready var sprite: Sprite2D = $Direction/Sprite2D
-@onready var animation: AnimationPlayer = $Direction/AnimationPlayer
 @onready var health_component = $HealthComponent
 @onready var health_bar = $HUD/Control/MarginContainer/Barra_Interfaz/Sprite2D/HealthBar
 @onready var energy_bar = $HUD/Control/MarginContainer/Barra_Interfaz/Sprite2D/EnergyBar
@@ -13,6 +11,10 @@ class_name Player
 @onready var Direction = $Direction
 @onready var menu_book = $Menu_book
 @onready var script_menu: Script_menu = $Menu_book/Menu_Book
+@onready var ability_comp: AbilityComponent = $Ability_comp
+
+@onready var sprite: Sprite2D = $Direction/Sprite2D
+@onready var animation: AnimationPlayer = $Direction/AnimationPlayer
 
 func _ready() -> void:
 	health_bar.setup_health(health_component)

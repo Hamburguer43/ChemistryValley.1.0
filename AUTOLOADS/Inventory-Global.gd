@@ -3,6 +3,10 @@ var Poderes: Array[Compound_Res] = [null, null, null, null]
 var Elementos: Dictionary = {}
 var Compound: Dictionary = {}
 
+var slot_seleccionado: int = 0 : 
+	set(value):
+		slot_seleccionado = clamp(value, 0, 3)
+		seleccion_cambiada.emit()
 signal  seleccion_cambiada
 signal slot_utilizado
 
@@ -33,3 +37,6 @@ func equipar_compuesto(res: Compound_Res, index: int):
 	#Si no está duplicado, procedemos a equiparlo
 	Poderes[index] = res
 	seleccion_cambiada.emit()
+
+func get_poder_actual() -> Compound_Res:
+	return Poderes[slot_seleccionado]

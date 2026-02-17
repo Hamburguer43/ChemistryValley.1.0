@@ -9,6 +9,5 @@ nombre = "Oxido de calcio"
 formula = "Ca0"
 textura = ExtResource("2_5swgj")
 descripcion = "Conocido como cal viva. Es un material básico en la construcción que reacciona de forma exotérmica (libera calor) al mezclarse con agua."
-rareza = "Comun"
-efectos = Array[String]([])
+rareza = "Raro"
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

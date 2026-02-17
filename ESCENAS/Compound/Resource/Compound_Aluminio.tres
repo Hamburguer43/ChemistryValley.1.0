@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SC_aluminio" load_steps=3 format=3 uid="uid://d3r4cf2ktu6at"]
+
+[ext_resource type="Script" uid="uid://0vlacxlm6fe1" path="res://ESCENAS/Compound/Script/SC_aluminio.gd" id="1_dt5su"]
+[ext_resource type="Texture2D" uid="uid://dy4121qjrftcy" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Background/Icon1.png" id="2_j6g0h"]
+
+[resource]
+script = ExtResource("1_dt5su")
+duracion_escudo = 5.0
+nombre = "Oxido de aluminio"
+formula = "Al2O3"
+textura = ExtResource("2_j6g0h")
+descripcion = "Conocido como Alúmina. Es extremadamente duro (casi como el diamante). Forma gemas como rubíes y zafiros."
+rareza = "Comun"
+metadata/_custom_type_script = "uid://0vlacxlm6fe1"

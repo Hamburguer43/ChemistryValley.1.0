@@ -7,7 +7,7 @@ class_name Pag_Poderes
 
 func _ready() -> void:
 	#esto es de prueba ya que el personaje tendria quec conseguirlos en el world
-	var compound = load("res://ESCENAS/Compound/Resource/C_Aluminio.tres");
+	var compound = load("res://ESCENAS/Compound/Resource/Compound_Aluminio.tres");
 	var compound2 = load("res://ESCENAS/Compound/Resource/C_Calcio.tres");
 	var compound3 = load("res://ESCENAS/Compound/Resource/C_Hierro1.tres");
 	var compound4 = load("res://ESCENAS/Compound/Resource/C_Sodio.tres");
