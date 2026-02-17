@@ -2,14 +2,19 @@ extends Control
 class_name table_create_compound
 
 @onready var Inventory_elements: inventario_elements = $"Inventario-Elements"
-@onready var SpriteElement = $"Slot-Metal/Button/Metal"
 @onready var optionbutton: OptionButton = $VBoxContainer/SelectorValencias
+@onready var Button_mezcla = $VBoxContainer/Button_mezclar/button_mezcla
 @onready var animation = $"Sprite-Table/Sprite2D/AnimatedSprite2D"
 @onready var Aviso = $Aviso
 @onready var label_contador = $Aviso/Contador
 
-@export var metal_actual: Element_Res
+@onready var Sprite_slot1 = $"Slot-1/Button/elemento1"
+@onready var Sprite_slot2 = $"Slot-2/Button/elemento2"
+var slot_seleccionado: int = 0
+@export var elemento_1: Element_Res
+@export var elemento_2: Element_Res
 @export var valencia: int = 0
+
 @export var compound_card_scene: PackedScene
 
 func _ready() -> void:
@@ -17,27 +22,67 @@ func _ready() -> void:
 	#conectamos la signal que emitimos en el inventario_elements y le pasamos el metal que seleccionamos
 	#que seria elemento: Element_Res
 	#Cada vez que se emite esa senal ejecuta el metdodo de metal_elegido
-	Inventory_elements.take_metal.connect(metal_elegido)
+	Inventory_elements.take_element.connect(elemento_elegido)
 	
 
+#Funciones para comprobar y asignar que slot fue elegido y asi no se copien o no copie en ninguno el elemento
+func _on_slot_1_pressed() -> void:
+	slot_seleccionado = 1
+	Inventory_elements._on_button_pressed()
+
+func _on_slot_2_pressed() -> void:
+	slot_seleccionado = 2
+	Inventory_elements._on_button_pressed()
+
 # Guardamos el elemento que elegimos en el inventario y lo guardamos en la var metal_actual
-func metal_elegido(elemento: Element_Res):
-	metal_actual = elemento
-	SpriteElement.texture = metal_actual.icono
+func elemento_elegido(elemento: Element_Res):
 	
+	#Comprobamos que slot fue seleccionado, y comprobamos si el nombre es oxigeno y asi actualizamos las valencias
+	if slot_seleccionado == 1:
+		elemento_1 = elemento
+		Sprite_slot1.texture = elemento_1.icono
+		$"Slot-1/Marco_S1".visible = true
+		$"Slot-1/Marco_S1/Simbolo".texture = elemento_1.simbolo_texture
+		if elemento_1.nombre != "Oxigeno":
+			actualizar_selector_valencias(elemento_1)
+	
+	if slot_seleccionado == 2:
+		elemento_2 = elemento
+		Sprite_slot2.texture = elemento_2.icono
+		$"Slot-2/Marco_S2".visible = true
+		$"Slot-2/Marco_S2/Simbolo".texture = elemento_2.simbolo_texture
+		if elemento_2.nombre != "Oxigeno":
+			actualizar_selector_valencias(elemento_2)
+
+func actualizar_selector_valencias(elemento: Element_Res):
 	optionbutton.clear()
-	
 	for v in elemento.valencias:
 		optionbutton.add_item("Valencia: " + str(v), v)
 
 func _on_button_mezcla_pressed() -> void:
 	
 	#si no hay un metal elegido pues no va a mezclar nada
-	if not metal_actual:
+	if not elemento_1 or not elemento_2:
 		print("elige un metal para realizar el compuesto")
 		return
 	
+	var metal: Element_Res = null
+	
+	# Me va a comprobar que en alguno de los slot haya un elemento = "Oxigeno"
+	# si no hay metal = null y no seguiria con el proceso
+	if elemento_1.nombre == "Oxigeno":
+		metal = elemento_2
+	elif elemento_2.nombre == "Oxigeno":
+		metal = elemento_1
+		
+	if metal == null:
+		print("Mezcla imposible, necesitas un oxigeno para crear un oxido basico")
+		return
+	
+	#animaciones de mezcla y cocinado compound
 	if animation:
+		
+		Button_mezcla.disabled = true
 		
 		animation.play("mezclando")
 		print("Fase 1: Mezclando ingredientes...")
@@ -49,14 +94,16 @@ func _on_button_mezcla_pressed() -> void:
 		print("Fase 2: Cocinando el compuesto...")
 		iniciar_conteo(3)
 		await animation.animation_finished
+		
+		Button_mezcla.disabled = false
+	
 	#Creamos y calculamos la formula utilizando el metodo que está en el script de Logic-create-compound
 	#pasandole el metal_actual y la valencia asignada
-	
 	#creamo un instancia del script dentro de una variable
 	var logic_create_compound = Logic_Create_Compound.new()
 	valencia = optionbutton.get_selected_id();
 	
-	var formula = logic_create_compound.create_formula(metal_actual, valencia)
+	var formula = logic_create_compound.create_formula(metal , valencia)
 	prints("formula calculada", formula)
 	
 	#Ya teniendo la formula le vamos a pasar la formula al metodo del autoload que me verifica si ese compuesto existe o no

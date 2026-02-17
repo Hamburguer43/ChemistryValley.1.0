@@ -1,0 +1,470 @@
+[gd_scene load_steps=36 format=3 uid="uid://bfctlqgjansd6"]
+
+[ext_resource type="Script" uid="uid://bxykr2423em5x" path="res://ESCENAS/Menu_Book/Scripts/menu_book.gd" id="1_6tntx"]
+[ext_resource type="Texture2D" uid="uid://uvr36cuunff1" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Book-menu.png" id="1_hqtpl"]
+[ext_resource type="FontFile" uid="uid://c4u4rlhswm0ap" path="res://ASSETS/Letras/Antiquity/antiquity-print.ttf" id="2_11jhi"]
+[ext_resource type="Texture2D" uid="uid://udk5nqyyxumn" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Elementos-UI/header-1t.png" id="3_h8aun"]
+[ext_resource type="Texture2D" uid="uid://g71ito0vuc8j" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/book-menu-pag.png" id="3_qf6ft"]
+[ext_resource type="Texture2D" uid="uid://bju0s2bmh5prp" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Elementos-UI/header-2t.png" id="4_6tntx"]
+[ext_resource type="Script" uid="uid://dx313ugbabj21" path="res://ESCENAS/Menu_Book/Scripts/Pagcompuestos.gd" id="4_gwm8a"]
+[ext_resource type="Script" uid="uid://dq8oear64ojo6" path="res://ESCENAS/Menu_Book/Scripts/Pag_elementos.gd" id="6_mekp2"]
+[ext_resource type="Script" uid="uid://cgou0euhu32k8" path="res://ESCENAS/Menu_Book/Scripts/OpcionButton.gd" id="7_pl2kp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3x8in"]
+atlas = ExtResource("1_hqtpl")
+region = Rect2(3904, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pp18"]
+atlas = ExtResource("1_hqtpl")
+region = Rect2(4392, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cjqc"]
+atlas = ExtResource("1_hqtpl")
+region = Rect2(4880, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmifd"]
+atlas = ExtResource("1_hqtpl")
+region = Rect2(5368, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55t2a"]
+atlas = ExtResource("1_hqtpl")
+region = Rect2(5856, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gyiy"]
+atlas = ExtResource("1_hqtpl")
+region = Rect2(6344, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xigy5"]
+atlas = ExtResource("1_hqtpl")
+region = Rect2(6832, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbnm8"]
+atlas = ExtResource("3_qf6ft")
+region = Rect2(0, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ussef"]
+atlas = ExtResource("3_qf6ft")
+region = Rect2(488, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wxbm"]
+atlas = ExtResource("3_qf6ft")
+region = Rect2(976, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnh3p"]
+atlas = ExtResource("3_qf6ft")
+region = Rect2(1464, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8quxf"]
+atlas = ExtResource("3_qf6ft")
+region = Rect2(1952, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tn1f7"]
+atlas = ExtResource("3_qf6ft")
+region = Rect2(2440, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w682f"]
+atlas = ExtResource("1_hqtpl")
+region = Rect2(0, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11jhi"]
+atlas = ExtResource("1_hqtpl")
+region = Rect2(488, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8aun"]
+atlas = ExtResource("1_hqtpl")
+region = Rect2(976, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tntx"]
+atlas = ExtResource("1_hqtpl")
+region = Rect2(1464, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qf6ft"]
+atlas = ExtResource("1_hqtpl")
+region = Rect2(1952, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pl2kp"]
+atlas = ExtResource("1_hqtpl")
+region = Rect2(2440, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwm8a"]
+atlas = ExtResource("1_hqtpl")
+region = Rect2(2928, 0, 488, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mekp2"]
+atlas = ExtResource("1_hqtpl")
+region = Rect2(3416, 0, 488, 360)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3x8in"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3x8in")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pp18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cjqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmifd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55t2a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gyiy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xigy5")
+}],
+"loop": false,
+"name": &"Close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbnm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ussef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wxbm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnh3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8quxf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tn1f7")
+}],
+"loop": false,
+"name": &"Pagina",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w682f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11jhi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8aun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tntx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qf6ft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pl2kp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwm8a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mekp2")
+}],
+"loop": false,
+"name": &"open",
+"speed": 8.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hqtpl"]
+
+[sub_resource type="Theme" id="Theme_gwm8a"]
+default_font = ExtResource("2_11jhi")
+
+[sub_resource type="Theme" id="Theme_3x8in"]
+default_font = ExtResource("2_11jhi")
+
+[sub_resource type="Theme" id="Theme_6tntx"]
+default_font = ExtResource("2_11jhi")
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Menu_Book" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_6tntx")
+
+[node name="Animated_Book" type="AnimatedSprite2D" parent="Menu_Book"]
+position = Vector2(561, 286.5)
+scale = Vector2(1.96721, 1.71389)
+sprite_frames = SubResource("SpriteFrames_3x8in")
+animation = &"open"
+autoplay = "open"
+frame = 7
+frame_progress = 1.0
+
+[node name="Paginas" type="TabContainer" parent="Menu_Book"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 178.0
+offset_top = 114.0
+offset_right = 528.0
+offset_bottom = 513.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hqtpl")
+current_tab = 0
+tabs_visible = false
+
+[node name="Compuestos" type="Control" parent="Menu_Book/Paginas"]
+layout_mode = 2
+theme = SubResource("Theme_gwm8a")
+script = ExtResource("4_gwm8a")
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="Menu_Book/Paginas/Compuestos"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -58.0
+offset_top = 14.0
+offset_right = 59.0
+offset_bottom = 38.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Compuestos"
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu_Book/Paginas/Compuestos"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="VScrollBar" type="ScrollContainer" parent="Menu_Book/Paginas/Compuestos/MarginContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="GridContainer" type="GridContainer" parent="Menu_Book/Paginas/Compuestos/MarginContainer/VScrollBar"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+columns = 6
+
+[node name="Elementos" type="Control" parent="Menu_Book/Paginas"]
+visible = false
+layout_mode = 2
+script = ExtResource("6_mekp2")
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="Menu_Book/Paginas/Elementos"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 14.0
+offset_right = 50.0
+offset_bottom = 38.0
+grow_horizontal = 2
+theme = SubResource("Theme_3x8in")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Elementos"
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu_Book/Paginas/Elementos"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="VScrollBar" type="ScrollContainer" parent="Menu_Book/Paginas/Elementos/MarginContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="GridContainer" type="GridContainer" parent="Menu_Book/Paginas/Elementos/MarginContainer/VScrollBar"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+columns = 6
+
+[node name="Poderes" type="Control" parent="Menu_Book/Paginas"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Label" type="Label" parent="Menu_Book/Paginas/Poderes"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -47.5
+offset_top = 9.0
+offset_right = 47.5
+offset_bottom = 32.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Poderes"
+horizontal_alignment = 1
+
+[node name="Opciones" type="Control" parent="Menu_Book/Paginas"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Label" type="Label" parent="Menu_Book/Paginas/Opciones"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -47.5
+offset_top = 9.0
+offset_right = 47.5
+offset_bottom = 32.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Opciones"
+horizontal_alignment = 1
+
+[node name="Botones" type="Control" parent="Menu_Book"]
+anchors_preset = 0
+offset_left = 602.0
+offset_top = 118.0
+offset_right = 987.0
+offset_bottom = 549.0
+theme = SubResource("Theme_6tntx")
+
+[node name="TextureRect" type="TextureRect" parent="Menu_Book/Botones"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -186.0
+offset_right = 186.0
+offset_bottom = 93.0
+grow_horizontal = 2
+texture = ExtResource("3_h8aun")
+
+[node name="Label" type="Label" parent="Menu_Book/Botones/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.5
+offset_top = -12.0
+offset_right = 85.5
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "NAVEGACION"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu_Book/Botones"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -153.0
+offset_top = -134.0
+offset_right = 147.0
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -2
+
+[node name="Compound" type="TextureButton" parent="Menu_Book/Botones/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_6tntx")
+script = ExtResource("7_pl2kp")
+
+[node name="Label" type="Label" parent="Menu_Book/Botones/VBoxContainer/Compound"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 24.0
+offset_right = 210.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Compuestos"
+horizontal_alignment = 1
+
+[node name="Elements" type="TextureButton" parent="Menu_Book/Botones/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_6tntx")
+script = ExtResource("7_pl2kp")
+
+[node name="Label" type="Label" parent="Menu_Book/Botones/VBoxContainer/Elements"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 24.0
+offset_right = 210.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Elementos"
+horizontal_alignment = 1
+
+[node name="Poderes" type="TextureButton" parent="Menu_Book/Botones/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_6tntx")
+script = ExtResource("7_pl2kp")
+
+[node name="Label" type="Label" parent="Menu_Book/Botones/VBoxContainer/Poderes"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 24.0
+offset_right = 210.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Poderes"
+horizontal_alignment = 1
+
+[node name="Opciones" type="TextureButton" parent="Menu_Book/Botones/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_6tntx")
+script = ExtResource("7_pl2kp")
+
+[node name="Label" type="Label" parent="Menu_Book/Botones/VBoxContainer/Opciones"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 24.0
+offset_right = 210.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Opciones"
+horizontal_alignment = 1
+
+[node name="Salir" type="TextureButton" parent="Menu_Book/Botones/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_6tntx")
+script = ExtResource("7_pl2kp")
+
+[node name="Label" type="Label" parent="Menu_Book/Botones/VBoxContainer/Salir"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 24.0
+offset_right = 210.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Salir"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Menu_Book/Botones/VBoxContainer/Compound" to="Menu_Book" method="_on_compound_pressed"]
+[connection signal="pressed" from="Menu_Book/Botones/VBoxContainer/Elements" to="Menu_Book" method="_on_elements_pressed"]
+[connection signal="pressed" from="Menu_Book/Botones/VBoxContainer/Poderes" to="Menu_Book" method="_on_poderes_pressed"]
+[connection signal="pressed" from="Menu_Book/Botones/VBoxContainer/Opciones" to="Menu_Book" method="_on_opciones_pressed"]
+[connection signal="pressed" from="Menu_Book/Botones/VBoxContainer/Salir" to="Menu_Book" method="_on_salir_pressed"]

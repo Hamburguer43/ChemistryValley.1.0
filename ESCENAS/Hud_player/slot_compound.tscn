@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://gbig0vnyavwq"]
 
 [ext_resource type="Texture2D" uid="uid://ovoi3hw16plp" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Hud-Player/Slot-3.png" id="1_1op4g"]
-[ext_resource type="Script" uid="uid://tky63msshm8w" path="res://ESCENAS/Create_Compuesto/Scripts/slot_inventory.gd" id="2_0vv8v"]
+[ext_resource type="Script" uid="uid://d0jaacc63hf3n" path="res://ESCENAS/Hud_player/Scripts/slot_compound.gd" id="2_1op4g"]
 
 [node name="TextureButton" type="TextureButton"]
 offset_right = 45.0
 offset_bottom = 47.0
 texture_normal = ExtResource("1_1op4g")
-script = ExtResource("2_0vv8v")
+script = ExtResource("2_1op4g")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(23, 22)

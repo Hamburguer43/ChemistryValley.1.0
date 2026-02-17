@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://b8ethklo1y1bt"]
+[gd_resource type="Resource" script_class="Element_Res" load_steps=4 format=3 uid="uid://b8ethklo1y1bt"]
 
+[ext_resource type="Texture2D" uid="uid://bgijsdc4vttwe" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon16.png" id="1_3xpws"]
 [ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_iyt3s"]
-[ext_resource type="Texture2D" uid="uid://dk1qi5by2iv8e" path="res://ASSETS/Sprites/Elements/Png/Nometales/Fosforo.png" id="1_mjgjp"]
+[ext_resource type="Texture2D" uid="uid://d1et7evi3m5mp" path="res://ASSETS/Sprites/Elements/Simbolo/Fosforo.png" id="3_ik2is"]
 
 [resource]
 script = ExtResource("1_iyt3s")
@@ -9,5 +10,6 @@ nombre = "Fosforo"
 simbolo = "P"
 valencias = Array[int]([3, 5])
 tipo = "No Metal"
-icono = ExtResource("1_mjgjp")
+icono = ExtResource("1_3xpws")
+simbolo_texture = ExtResource("3_ik2is")
 metadata/_custom_type_script = "uid://dfxkj61cckpm1"

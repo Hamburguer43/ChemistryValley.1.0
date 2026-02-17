@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://cyj6fvg6f6wtl"]
+[gd_scene load_steps=40 format=3 uid="uid://cyj6fvg6f6wtl"]
 
 [ext_resource type="Texture2D" uid="uid://cgfhgq0lfce78" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Table-Creation-Initial.png" id="1_013gn"]
 [ext_resource type="Script" uid="uid://8mabmwiqk2ca" path="res://ESCENAS/Create_Compuesto/Scripts/table_create_compound.gd" id="1_xxhx2"]
@@ -7,7 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dnyght5enbsut" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Table-Creation-Cocinando.png" id="4_exxcr"]
 [ext_resource type="Texture2D" uid="uid://ca4iw5mvanb8v" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Table-Creation-Mezclando.png" id="5_fbjnu"]
 [ext_resource type="PackedScene" uid="uid://dh75cxq0xnugm" path="res://ESCENAS/Create_Compuesto/Card_Compound.tscn" id="6_0eqjr"]
-[ext_resource type="Texture2D" uid="uid://iumht4g1wb71" path="res://ASSETS/Sprites/Elements/Simbolo/oxigeno.png" id="6_exxcr"]
+[ext_resource type="FontFile" uid="uid://c4u4rlhswm0ap" path="res://ASSETS/Letras/Antiquity/antiquity-print.ttf" id="7_lxnxf"]
+[ext_resource type="Texture2D" uid="uid://q17s02yiul2i" path="res://ASSETS/Sprites/Marcos/Marco 4.png" id="8_lxnxf"]
 [ext_resource type="Texture2D" uid="uid://bgtgjuxl48ch6" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Elementos-UI/Button.png" id="9_fbjnu"]
 [ext_resource type="AudioStream" uid="uid://7lbw5jqx3pyb" path="res://ASSETS/Audios/Audio/freesound_community-071695_bubble-bouncewav-88131 (mp3cut.net).mp3" id="10_lxnxf"]
 
@@ -236,6 +237,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Theme" id="Theme_jdcs7"]
+default_font = ExtResource("7_lxnxf")
+
 [node name="Table-Create-Compound" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -265,34 +269,81 @@ autoplay = "inital"
 frame = 11
 frame_progress = 1.0
 
-[node name="Oxigeno" type="Sprite2D" parent="Sprite-Table/Sprite2D"]
-position = Vector2(-59.06, -21.5007)
-scale = Vector2(1.85965, 1.00785)
-texture = ExtResource("6_exxcr")
+[node name="Label" type="Label" parent="Sprite-Table"]
+offset_left = 401.0
+offset_top = 27.0
+offset_right = 748.0
+offset_bottom = 52.0
+theme = SubResource("Theme_jdcs7")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "CREACIÓN DE COMPUESTOS"
 
-[node name="Slot-Metal" type="Control" parent="."]
+[node name="Slot-1" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 616.0
-offset_top = 242.0
-offset_right = 749.0
-offset_bottom = 344.0
+offset_left = 415.0
+offset_top = 246.0
+offset_right = 548.0
+offset_bottom = 348.0
 
-[node name="Button" type="TextureButton" parent="Slot-Metal"]
+[node name="Button" type="TextureButton" parent="Slot-1"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -2.0
-offset_top = -1.0
-offset_right = -2.0
-offset_bottom = 1.0
+offset_left = -5.0
+offset_top = -2.0
+offset_right = -5.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_c8joe")
 
-[node name="Metal" type="Sprite2D" parent="Slot-Metal/Button"]
+[node name="elemento1" type="Sprite2D" parent="Slot-1/Button"]
 position = Vector2(69, 53)
 scale = Vector2(2, 2)
+
+[node name="Marco_S1" type="Sprite2D" parent="Slot-1"]
+visible = false
+position = Vector2(-67, 49)
+scale = Vector2(0.983334, 0.9)
+texture = ExtResource("8_lxnxf")
+
+[node name="Simbolo" type="Sprite2D" parent="Slot-1/Marco_S1"]
+position = Vector2(2.54237, -1.11112)
+scale = Vector2(2.3358, 1.875)
+
+[node name="Slot-2" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 616.0
+offset_top = 240.0
+offset_right = 749.0
+offset_bottom = 342.0
+
+[node name="Button" type="TextureButton" parent="Slot-2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = 3.0
+offset_right = -6.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_c8joe")
+
+[node name="elemento2" type="Sprite2D" parent="Slot-2/Button"]
+position = Vector2(69, 53)
+scale = Vector2(2, 2)
+
+[node name="Marco_S2" type="Sprite2D" parent="Slot-2"]
+visible = false
+position = Vector2(197, 56)
+scale = Vector2(0.983334, 0.9)
+texture = ExtResource("8_lxnxf")
+
+[node name="Simbolo" type="Sprite2D" parent="Slot-2/Marco_S2"]
+position = Vector2(2.54237, -1.11112)
+scale = Vector2(2.3358, 1.875)
 
 [node name="Inventario-Elements" parent="." instance=ExtResource("2_re6kj")]
 visible = false
@@ -379,4 +430,6 @@ volume_db = 6.679
 pitch_scale = 0.89
 
 [connection signal="pressed" from="Slot-Metal/Button" to="Inventario-Elements" method="_on_button_pressed"]
+[connection signal="pressed" from="Slot-1/Button" to="." method="_on_slot_1_pressed"]
+[connection signal="pressed" from="Slot-2/Button" to="." method="_on_slot_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button_mezclar/button_mezcla" to="." method="_on_button_mezcla_pressed"]
