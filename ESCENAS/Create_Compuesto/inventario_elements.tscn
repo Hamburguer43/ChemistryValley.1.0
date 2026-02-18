@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://lmy62ww2kw0o"]
+[gd_scene format=3 uid="uid://lmy62ww2kw0o"]
 
 [ext_resource type="Script" uid="uid://4ui5npn7wi73" path="res://ESCENAS/Create_Compuesto/Scripts/inventario_elements.gd" id="1_lkhd0"]
 [ext_resource type="Texture2D" uid="uid://uvr36cuunff1" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Book-menu.png" id="2_xsxua"]
@@ -45,7 +45,7 @@ _data = {
 [sub_resource type="Theme" id="Theme_uart8"]
 default_font = ExtResource("3_xsxua")
 
-[node name="Inventario-Elements" type="Control"]
+[node name="Inventario-Elements" type="Control" unique_id=565747412]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -54,7 +54,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lkhd0")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=560790191]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -63,7 +63,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.0862745, 0.0862745, 0.0862745, 0.65098)
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="TextureButton" type="TextureButton" parent="." unique_id=774456441]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -72,19 +72,17 @@ offset_top = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Book" type="Sprite2D" parent="."]
+[node name="Book" type="Sprite2D" parent="." unique_id=1511341431]
 position = Vector2(572.25, 297.5)
 scale = Vector2(1.66086, 1.51389)
 texture = ExtResource("2_xsxua")
 hframes = 15
 frame = 7
 
-[node name="AnimatedSprite2D" type="AnimationPlayer" parent="Book"]
-libraries = {
-&"": SubResource("AnimationLibrary_c8joe")
-}
+[node name="AnimatedSprite2D" type="AnimationPlayer" parent="Book" unique_id=1588337903]
+libraries/ = SubResource("AnimationLibrary_c8joe")
 
-[node name="Label" type="Label" parent="Book"]
+[node name="Label" type="Label" parent="Book" unique_id=1102832308]
 offset_left = -146.204
 offset_top = -94.6514
 offset_right = -46.2042
@@ -95,7 +93,7 @@ theme = SubResource("Theme_uart8")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Elementos"
 
-[node name="MarginContainer" type="MarginContainer" parent="Book"]
+[node name="MarginContainer" type="MarginContainer" parent="Book" unique_id=806911370]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -108,17 +106,17 @@ grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="VScrollBar" type="ScrollContainer" parent="Book/MarginContainer"]
+[node name="VScrollBar" type="ScrollContainer" parent="Book/MarginContainer" unique_id=1989868345]
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
 
-[node name="GridContainer" type="GridContainer" parent="Book/MarginContainer/VScrollBar"]
+[node name="GridContainer" type="GridContainer" parent="Book/MarginContainer/VScrollBar" unique_id=728659135]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 2
 columns = 3
 
-[node name="Text" type="Label" parent="Book"]
+[node name="Text" type="Label" parent="Book" unique_id=911307706]
 visible = false
 offset_left = -215.702
 offset_top = -143.67

@@ -9,19 +9,17 @@ func _ready() -> void:
 	
 	var hierro = load("res://ESCENAS/Elements/Resource/Metales/Hierro.tres")
 	var oro = load("res://ESCENAS/Elements/Resource/Metales/Oro.tres")
-	var Magnesio = load("res://ESCENAS/Elements/Resource/Metales/Magnesio.tres")
-	var Titanio = load("res://ESCENAS/Elements/Resource/Metales/Titanio.tres")
+	var cobre = load("res://ESCENAS/Elements/Resource/Metales/Cobre.tres")
+	var oxigeno = load("res://ESCENAS/Elements/Resource/NoMetales/Oxigeno.tres")
 	var aluminio = load("res://ESCENAS/Elements/Resource/Metales/Aluminio.tres")
-	var Calcio = load("res://ESCENAS/Elements/Resource/Metales/Calcio.tres")
-	var Plomo = load("res://ESCENAS/Elements/Resource/NoMetales/Oxigeno.tres")
+	var titanio = load("res://ESCENAS/Elements/Resource/Metales/Titanio.tres")
 	var cantidad = 1
 	Inventory_Global.agregar_element(hierro, cantidad)
 	Inventory_Global.agregar_element(oro, cantidad)
-	Inventory_Global.agregar_element(Magnesio, cantidad)
-	Inventory_Global.agregar_element(Titanio, cantidad)
+	Inventory_Global.agregar_element(cobre, cantidad)
+	Inventory_Global.agregar_element(oxigeno, cantidad)
 	Inventory_Global.agregar_element(aluminio, cantidad)
-	Inventory_Global.agregar_element(Calcio, cantidad)
-	Inventory_Global.agregar_element(Plomo, cantidad)
+	Inventory_Global.agregar_element(titanio, cantidad)
 	
 	create_grid_inventory()
 

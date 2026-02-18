@@ -42,4 +42,4 @@ func health_controller(value: int):
 
 func dead():
 	emit_signal("Ondead")
-	get_parent().queue_free()
+	get_tree().change_scene_to_file("res://ESCENAS/Menu_Muerte/menu.muerte.tscn")

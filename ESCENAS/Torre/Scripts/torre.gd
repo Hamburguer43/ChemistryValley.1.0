@@ -15,3 +15,7 @@ func _on_button_compound_pressed() -> void:
 
 func _on_tutorial_button_pressed() -> void:
 	TutorialGeneral.mostrar("laboratorio")
+
+
+func _on_button_quiz_pressed() -> void:
+	get_tree().change_scene_to_file("res://ESCENAS/Quiz/QuizEscena.tscn")

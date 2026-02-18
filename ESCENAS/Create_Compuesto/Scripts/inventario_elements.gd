@@ -22,7 +22,6 @@ func _on_button_pressed() -> void:
 	tween.parallel().tween_property(self, "scale", Vector2.ONE, 0.4).set_trans(Tween.TRANS_BACK)
 	tween.parallel().tween_property(self, "modulate:a", 1.0, 0.2)
 	
-	
 	animation.play("open")
 	
 func reset_tween():
@@ -56,19 +55,11 @@ func _ready() -> void:
 	
 	var hierro = load("res://ESCENAS/Elements/Resource/Metales/Hierro.tres")
 	var oro = load("res://ESCENAS/Elements/Resource/Metales/Oro.tres")
-	var Magnesio = load("res://ESCENAS/Elements/Resource/Metales/Magnesio.tres")
-	var Titanio = load("res://ESCENAS/Elements/Resource/Metales/Titanio.tres")
-	var aluminio = load("res://ESCENAS/Elements/Resource/Metales/Aluminio.tres")
-	var Calcio = load("res://ESCENAS/Elements/Resource/Metales/Calcio.tres")
-	var Plomo = load("res://ESCENAS/Elements/Resource/NoMetales/Oxigeno.tres")
 	var cantidad = 1
 	Inventory_Global.agregar_element(hierro, cantidad)
 	Inventory_Global.agregar_element(oro, cantidad)
-	Inventory_Global.agregar_element(Magnesio, cantidad)
-	Inventory_Global.agregar_element(Titanio, cantidad)
-	Inventory_Global.agregar_element(aluminio, cantidad)
-	Inventory_Global.agregar_element(Calcio, cantidad)
-	Inventory_Global.agregar_element(Plomo, cantidad)
+	
+	create_grid_inventory()
 
 func create_grid_inventory(): 
 	

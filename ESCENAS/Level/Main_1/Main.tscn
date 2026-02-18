@@ -1,37 +1,221 @@
 [gd_scene format=3 uid="uid://b8lm4ydr65p4k"]
 
-[ext_resource type="PackedScene" uid="uid://dmrr4ob4xb4rv" path="res://ESCENAS/Tilemaps/Level_1/Level_1.tscn" id="1_cpsck"]
+[ext_resource type="PackedScene" uid="uid://cn2oolhes6tqw" path="res://ESCENAS/Tilemaps/Level_0/Level_o.scn" id="1_cwp2n"]
+[ext_resource type="Script" uid="uid://dbfooka55fb2v" path="res://ESCENAS/Level/Main_1/main.gd" id="1_fjd46"]
 [ext_resource type="PackedScene" uid="uid://xwlmfjrolb40" path="res://ESCENAS/Player/Player.tscn" id="2_dkebo"]
 [ext_resource type="PackedScene" uid="uid://brvi154es6nte" path="res://ESCENAS/Enemies/Enemie_1.tscn" id="3_dkebo"]
+[ext_resource type="SpriteFrames" uid="uid://b8jdo5isqwd38" path="res://ESCENAS/Enemies/Resource/Jabali_1.tres" id="4_7qxos"]
 [ext_resource type="PackedScene" uid="uid://cuqhn21yckj88" path="res://ESCENAS/Elements/Elemento.tscn" id="4_njmqx"]
-[ext_resource type="Resource" uid="uid://barje6ile8w64" path="res://ESCENAS/Elements/Resource/Metales/Hierro.tres" id="5_0dnvy"]
 [ext_resource type="Resource" uid="uid://cnlwmr4cwg464" path="res://ESCENAS/Elements/Resource/Metales/Cobre.tres" id="6_cwp2n"]
+[ext_resource type="SpriteFrames" uid="uid://4khipftqy2ho" path="res://ESCENAS/Enemies/Resource/Jabali_3.tres" id="6_j47ay"]
 [ext_resource type="SpriteFrames" uid="uid://cypm6c48ud6h3" path="res://ESCENAS/Enemies/Resource/Jabali_2.tres" id="7_7qxos"]
+[ext_resource type="SpriteFrames" uid="uid://c2ymkgmr1utav" path="res://ESCENAS/Enemies/Resource/Caracol.tres" id="7_j47ay"]
+[ext_resource type="Resource" uid="uid://btqv7ef22rrje" path="res://ESCENAS/Elements/Resource/Metales/Oro.tres" id="9_7g8lx"]
+[ext_resource type="Resource" uid="uid://b6gi2fnyj0l3n" path="res://ESCENAS/Elements/Resource/NoMetales/Oxigeno.tres" id="11_52322"]
+[ext_resource type="Resource" uid="uid://b7w0brai27ktl" path="res://ESCENAS/Elements/Resource/Metales/Aluminio.tres" id="12_fjd46"]
+[ext_resource type="Resource" uid="uid://c3pl5wsabbsjn" path="res://ESCENAS/Elements/Resource/Metales/Titanio.tres" id="13_o5gkj"]
+[ext_resource type="PackedScene" uid="uid://bgq22gjvtrwig" path="res://ESCENAS/p.tscn" id="15_27vsc"]
+[ext_resource type="AudioStream" uid="uid://c2hxr3m2pgjpb" path="res://ASSETS/Audios/Musica/the-faded-rose-dark-fantasy-background-music-109375_nNYwL6wv.mp3" id="15_o5gkj"]
+[ext_resource type="PackedScene" uid="uid://s6yyrpenenn7" path="res://ESCENAS/muerte.tscn" id="16_jkyj1"]
 
 [node name="Main" type="Node2D" unique_id=1495102444]
 position = Vector2(-2, 11)
+script = ExtResource("1_fjd46")
 
-[node name="Player" parent="." unique_id=1566533085 instance=ExtResource("2_dkebo")]
-position = Vector2(53, -153)
+[node name="Level_0" parent="." unique_id=1817912562 instance=ExtResource("1_cwp2n")]
+position = Vector2(1144, -81)
 
-[node name="Elemento" parent="." unique_id=1615808004 instance=ExtResource("4_njmqx")]
-position = Vector2(219, -48)
-resource = ExtResource("5_0dnvy")
+[node name="Player" parent="." unique_id=1795189720 instance=ExtResource("2_dkebo")]
+position = Vector2(1747, 73)
 
-[node name="Level1" parent="." unique_id=281804285 instance=ExtResource("1_cpsck")]
+[node name="Enemie" type="Node2D" parent="." unique_id=1530212496]
+position = Vector2(12, -101)
 
-[node name="Elemento2" parent="." unique_id=727956194 instance=ExtResource("4_njmqx")]
-position = Vector2(803, -295)
-resource = ExtResource("6_cwp2n")
+[node name="Enemies_1" parent="Enemie" unique_id=522459552 instance=ExtResource("3_dkebo")]
+position = Vector2(2691, 239)
+skin_variante = ExtResource("4_7qxos")
 
-[node name="Elemento4" parent="." unique_id=2099244379 instance=ExtResource("4_njmqx")]
-position = Vector2(1130, -301)
-resource = ExtResource("6_cwp2n")
+[node name="Enemies_2" parent="Enemie" unique_id=643231888 instance=ExtResource("3_dkebo")]
+position = Vector2(4125, 221)
+skin_variante = ExtResource("4_7qxos")
 
-[node name="Elemento5" parent="." unique_id=1746552625 instance=ExtResource("4_njmqx")]
-position = Vector2(1302, -249)
-resource = ExtResource("6_cwp2n")
-
-[node name="Enemies_1" parent="." unique_id=522459552 instance=ExtResource("3_dkebo")]
-position = Vector2(713, -86)
+[node name="Enemies_3" parent="Enemie" unique_id=857628110 instance=ExtResource("3_dkebo")]
+position = Vector2(5458, 218)
 skin_variante = ExtResource("7_7qxos")
+
+[node name="Enemies_4" parent="Enemie" unique_id=814777007 instance=ExtResource("3_dkebo")]
+position = Vector2(6659, 231)
+skin_variante = ExtResource("6_j47ay")
+
+[node name="Enemies_5" parent="Enemie" unique_id=1312678212 instance=ExtResource("3_dkebo")]
+position = Vector2(8738, 402)
+skin_variante = ExtResource("6_j47ay")
+
+[node name="Enemies_6" parent="Enemie" unique_id=125217571 instance=ExtResource("3_dkebo")]
+position = Vector2(7409, 404)
+skin_variante = ExtResource("6_j47ay")
+
+[node name="Enemies_7" parent="Enemie" unique_id=423885402 instance=ExtResource("3_dkebo")]
+position = Vector2(9598, 407)
+skin_variante = ExtResource("7_7qxos")
+
+[node name="Enemies_8" parent="Enemie" unique_id=1870590201 instance=ExtResource("3_dkebo")]
+position = Vector2(10915, 374)
+skin_variante = ExtResource("6_j47ay")
+
+[node name="Enemies_9" parent="Enemie" unique_id=1667223865 instance=ExtResource("3_dkebo")]
+position = Vector2(14864, 238)
+skin_variante = ExtResource("7_j47ay")
+
+[node name="Enemies_10" parent="Enemie" unique_id=580083025 instance=ExtResource("3_dkebo")]
+position = Vector2(15251, 238)
+skin_variante = ExtResource("7_j47ay")
+
+[node name="Enemies_11" parent="Enemie" unique_id=2086199899 instance=ExtResource("3_dkebo")]
+position = Vector2(15585, 230)
+skin_variante = ExtResource("7_j47ay")
+
+[node name="Enemies_12" parent="Enemie" unique_id=775354139 instance=ExtResource("3_dkebo")]
+position = Vector2(15904, 233)
+skin_variante = ExtResource("7_j47ay")
+
+[node name="Elementos" type="Node2D" parent="." unique_id=1381222874]
+
+[node name="Oro" type="Node2D" parent="Elementos" unique_id=945554325]
+
+[node name="Elemento" parent="Elementos/Oro" unique_id=2098431238 instance=ExtResource("4_njmqx")]
+position = Vector2(3147, 143)
+resource = ExtResource("9_7g8lx")
+
+[node name="Elemento2" parent="Elementos/Oro" unique_id=1981626752 instance=ExtResource("4_njmqx")]
+position = Vector2(3194, 143)
+resource = ExtResource("9_7g8lx")
+
+[node name="Elemento3" parent="Elementos/Oro" unique_id=18451843 instance=ExtResource("4_njmqx")]
+position = Vector2(3256, 145)
+resource = ExtResource("9_7g8lx")
+
+[node name="Cobre" type="Node2D" parent="Elementos" unique_id=1172948470]
+
+[node name="Elemento4" parent="Elementos/Cobre" unique_id=1507901683 instance=ExtResource("4_njmqx")]
+position = Vector2(4932, 122)
+resource = ExtResource("6_cwp2n")
+
+[node name="Elemento5" parent="Elementos/Cobre" unique_id=1981814738 instance=ExtResource("4_njmqx")]
+position = Vector2(5016, 118)
+resource = ExtResource("6_cwp2n")
+
+[node name="Elemento6" parent="Elementos/Cobre" unique_id=1803154300 instance=ExtResource("4_njmqx")]
+position = Vector2(5111, 122)
+resource = ExtResource("6_cwp2n")
+
+[node name="Elemento7" parent="Elementos/Cobre" unique_id=1139750682 instance=ExtResource("4_njmqx")]
+position = Vector2(5225, 102)
+resource = ExtResource("6_cwp2n")
+
+[node name="Oxigeno" type="Node2D" parent="Elementos" unique_id=701769379]
+position = Vector2(2371, 48)
+
+[node name="Elemento" parent="Elementos/Oxigeno" unique_id=553336572 instance=ExtResource("4_njmqx")]
+position = Vector2(3807, 82)
+resource = ExtResource("11_52322")
+
+[node name="Elemento2" parent="Elementos/Oxigeno" unique_id=878169556 instance=ExtResource("4_njmqx")]
+position = Vector2(5495, 272)
+resource = ExtResource("11_52322")
+
+[node name="Elemento3" parent="Elementos/Oxigeno" unique_id=1000331262 instance=ExtResource("4_njmqx")]
+position = Vector2(5725, 263)
+resource = ExtResource("11_52322")
+
+[node name="Elemento4" parent="Elementos/Oxigeno" unique_id=1542228407 instance=ExtResource("4_njmqx")]
+position = Vector2(5923, 254)
+resource = ExtResource("11_52322")
+
+[node name="Elemento5" parent="Elementos/Oxigeno" unique_id=185501104 instance=ExtResource("4_njmqx")]
+position = Vector2(7528, 260)
+resource = ExtResource("11_52322")
+
+[node name="Elemento6" parent="Elementos/Oxigeno" unique_id=1537157232 instance=ExtResource("4_njmqx")]
+position = Vector2(7709, 254)
+resource = ExtResource("11_52322")
+
+[node name="Oxigeno2" type="Node2D" parent="Elementos" unique_id=1627219776]
+position = Vector2(5227, -410)
+
+[node name="Elemento" parent="Elementos/Oxigeno2" unique_id=1191512577 instance=ExtResource("4_njmqx")]
+position = Vector2(3807, 82)
+resource = ExtResource("11_52322")
+
+[node name="Elemento2" parent="Elementos/Oxigeno2" unique_id=111487725 instance=ExtResource("4_njmqx")]
+position = Vector2(5495, 272)
+resource = ExtResource("11_52322")
+
+[node name="Elemento3" parent="Elementos/Oxigeno2" unique_id=499016472 instance=ExtResource("4_njmqx")]
+position = Vector2(5725, 263)
+resource = ExtResource("11_52322")
+
+[node name="Elemento4" parent="Elementos/Oxigeno2" unique_id=473290943 instance=ExtResource("4_njmqx")]
+position = Vector2(5923, 254)
+resource = ExtResource("11_52322")
+
+[node name="Elemento5" parent="Elementos/Oxigeno2" unique_id=1246024905 instance=ExtResource("4_njmqx")]
+position = Vector2(7528, 260)
+resource = ExtResource("11_52322")
+
+[node name="Elemento6" parent="Elementos/Oxigeno2" unique_id=586947141 instance=ExtResource("4_njmqx")]
+position = Vector2(7709, 254)
+resource = ExtResource("11_52322")
+
+[node name="Aluminio" type="Node2D" parent="Elementos" unique_id=1791896042]
+
+[node name="Elemento" parent="Elementos/Aluminio" unique_id=875910297 instance=ExtResource("4_njmqx")]
+position = Vector2(9142, 627)
+resource = ExtResource("12_fjd46")
+
+[node name="Elemento2" parent="Elementos/Aluminio" unique_id=1547149011 instance=ExtResource("4_njmqx")]
+position = Vector2(9453, 671)
+resource = ExtResource("12_fjd46")
+
+[node name="Titanio" type="Node2D" parent="Elementos" unique_id=1198526114]
+
+[node name="Elemento" parent="Elementos/Titanio" unique_id=889060697 instance=ExtResource("4_njmqx")]
+position = Vector2(12985, 163)
+resource = ExtResource("13_o5gkj")
+
+[node name="Elemento2" parent="Elementos/Titanio" unique_id=1313463476 instance=ExtResource("4_njmqx")]
+position = Vector2(13099, 90)
+resource = ExtResource("13_o5gkj")
+
+[node name="Elemento3" parent="Elementos/Titanio" unique_id=1264568092 instance=ExtResource("4_njmqx")]
+position = Vector2(13097, -62)
+resource = ExtResource("13_o5gkj")
+
+[node name="Otros" type="Node2D" parent="." unique_id=1260902992]
+
+[node name="Area2D" parent="Otros" unique_id=381754262 instance=ExtResource("15_27vsc")]
+position = Vector2(1769, 159)
+
+[node name="Area2D2" parent="Otros" unique_id=1698255777 instance=ExtResource("16_jkyj1")]
+position = Vector2(4688, 375)
+
+[node name="Area2D3" parent="Otros" unique_id=1481544482 instance=ExtResource("16_jkyj1")]
+position = Vector2(6435, 575)
+
+[node name="Area2D4" parent="Otros" unique_id=1669429955 instance=ExtResource("16_jkyj1")]
+position = Vector2(8609, 982)
+
+[node name="Area2D5" parent="Otros" unique_id=994418693 instance=ExtResource("16_jkyj1")]
+position = Vector2(10069, 967)
+
+[node name="Area2D6" parent="Otros" unique_id=1166493980 instance=ExtResource("16_jkyj1")]
+position = Vector2(10827, 518)
+
+[node name="Area2D7" parent="Otros" unique_id=763941154 instance=ExtResource("16_jkyj1")]
+position = Vector2(12943, 547)
+
+[node name="Area2D8" parent="Otros" unique_id=706857906 instance=ExtResource("16_jkyj1")]
+position = Vector2(16758, 270)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2034230762]
+stream = ExtResource("15_o5gkj")

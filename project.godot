@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="ChemestryValley.1.0"
-run/main_scene="uid://b8lm4ydr65p4k"
+run/main_scene="uid://dkcjr3otn30sj"
 config/features=PackedStringArray("4.6", "Mobile")
 
 [autoload]
@@ -24,9 +24,11 @@ Compoud_Global="*res://AUTOLOADS/Compoud-Global.gd"
 Inventory_Global="*res://AUTOLOADS/Inventory-Global.gd"
 TutorialGeneral="*res://ESCENAS/tutoriales/tutorialGeneral.tscn"
 AudioManager_Global="*uid://bkxevh7v38sti"
+Trasition_Global="*uid://fynqobo37dq8"
 
 [display]
 
+window/size/mode=3
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
@@ -81,6 +83,11 @@ poder_3={
 poder_4={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":52,"key_label":0,"unicode":52,"location":0,"echo":false,"script":null)
+]
+}
+Entrar={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
 ]
 }
 

@@ -13,7 +13,7 @@ func _ready() -> void:
 	var compound4 = load("res://ESCENAS/Compound/Resource/C_Sodio.tres");
 	var compound5 = load("res://ESCENAS/Compound/Resource/C_Titanio1.tres");
 	var compound6 = load("res://ESCENAS/Compound/Resource/C_Cobre2.tres");
-	var cantidad = 2
+	var cantidad = 1
 	Inventory_Global.agregar_compound(compound, cantidad);
 	Inventory_Global.agregar_compound(compound2,cantidad);
 	Inventory_Global.agregar_compound(compound3,cantidad);

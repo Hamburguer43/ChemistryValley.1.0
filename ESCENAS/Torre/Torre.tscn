@@ -124,6 +124,14 @@ offset_bottom = 382.0
 mouse_default_cursor_shape = 2
 flat = true
 
+[node name="Button_quiz" type="Button" parent="Botones" unique_id=1897470332]
+offset_left = 951.0
+offset_top = 132.0
+offset_right = 1137.0
+offset_bottom = 493.0
+mouse_default_cursor_shape = 2
+flat = true
+
 [node name="TutorialButton" type="Button" parent="." unique_id=1744568106]
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 0
@@ -139,4 +147,5 @@ expand_icon = true
 [connection signal="pressed" from="Botones/Button_Salir" to="." method="_on_button_salir_pressed"]
 [connection signal="pressed" from="Botones/Button_Tabla" to="." method="_on_button_tabla_pressed"]
 [connection signal="pressed" from="Botones/Button_Compound" to="." method="_on_button_compound_pressed"]
+[connection signal="pressed" from="Botones/Button_quiz" to="." method="_on_button_quiz_pressed"]
 [connection signal="pressed" from="TutorialButton" to="." method="_on_tutorial_button_pressed"]

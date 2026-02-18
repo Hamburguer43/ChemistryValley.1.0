@@ -178,3 +178,7 @@ func iniciar_conteo(segundos: int):
 #	que busca en el diccionario si existe ese recurso, es decir, utiliza la formula ej: FeO como id para buscar dentro del diccionario los compuestos
 # existentes
 # Devuelve 2 respuestas, la formula obtenida "oxido ferrico" o null si no existe algun compuesto con los elementos elegidos
+
+
+func _on_boton_salir_pressed() -> void:
+	get_tree().change_scene_to_file("res://ESCENAS/Torre/Torre.tscn")

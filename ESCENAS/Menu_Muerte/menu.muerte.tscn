@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://47fbmj3taerf"]
+
+[ext_resource type="Script" uid="uid://hj0x052yk1t2" path="res://ESCENAS/Menu_Muerte/menu.muerte.gd" id="1_y3w5a"]
+[ext_resource type="AudioStream" uid="uid://bsj484u8enicv" path="res://ASSETS/Audios/Audio/808522__licht2003__error.mp3" id="3_p7hnn"]
+
+[node name="Node2D" type="Node2D" unique_id=1118889477]
+position = Vector2(1, 0)
+script = ExtResource("1_y3w5a")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=38160211]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.103744, 0.103744, 0.103744, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1245159061]
+offset_left = 189.0
+offset_top = 174.0
+offset_right = 989.0
+offset_bottom = 294.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 120
+text = "HAS MUERTO"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=433125566]
+offset_left = 423.0
+offset_top = 426.0
+offset_right = 704.0
+offset_bottom = 595.0
+theme_override_constants/separation = 20
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=574885248]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 40
+text = "Continuar"
+flat = true
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1764262093]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 35
+text = "Rendirse"
+flat = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=822103580]
+stream = ExtResource("3_p7hnn")
+volume_db = 7.596
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

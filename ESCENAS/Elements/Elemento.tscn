@@ -1,18 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://cuqhn21yckj88"]
+[gd_scene format=3 uid="uid://cuqhn21yckj88"]
 
 [ext_resource type="Script" uid="uid://c44gvhoke5kdl" path="res://ESCENAS/Elements/Scripts/Elemento.gd" id="1_r0ksr"]
 [ext_resource type="Script" uid="uid://bbaphkrq8qc41" path="res://ESCENAS/Elements/Scripts/Hitbox.gd" id="2_d8q6k"]
+[ext_resource type="AudioStream" uid="uid://d2ps7plf37dwk" path="res://ASSETS/Audios/Audio/collectcoin-6075.mp3" id="3_tbywx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r0ksr"]
 
-[node name="Elemento" type="Sprite2D"]
+[node name="Elemento" type="Sprite2D" unique_id=66467518]
 script = ExtResource("1_r0ksr")
+cantidad = null
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="." unique_id=1151452086]
 collision_layer = 0
 script = ExtResource("2_d8q6k")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1457629939]
 shape = SubResource("CircleShape2D_r0ksr")
+
+[node name="Audio" type="AudioStreamPlayer" parent="." unique_id=207859832]
+stream = ExtResource("3_tbywx")
 
 [connection signal="body_entered" from="Hitbox" to="Hitbox" method="_on_body_entered"]

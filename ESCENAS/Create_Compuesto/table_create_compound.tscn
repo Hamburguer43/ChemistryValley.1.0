@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://q17s02yiul2i" path="res://ASSETS/Sprites/Marcos/Marco 4.png" id="8_lxnxf"]
 [ext_resource type="Texture2D" uid="uid://bgtgjuxl48ch6" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Elementos-UI/Button.png" id="9_fbjnu"]
 [ext_resource type="AudioStream" uid="uid://7lbw5jqx3pyb" path="res://ASSETS/Audios/Audio/freesound_community-071695_bubble-bouncewav-88131 (mp3cut.net).mp3" id="10_lxnxf"]
+[ext_resource type="Texture2D" uid="uid://b2yaqnr3sg7ac" path="res://ASSETS/Sprites/X Square Button.png" id="12_aiw7s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aiw7s"]
 atlas = ExtResource("4_exxcr")
@@ -429,6 +430,18 @@ stream = ExtResource("10_lxnxf")
 volume_db = 6.679
 pitch_scale = 0.89
 
+[node name="Boton_Salir" type="Button" parent="." unique_id=1530197368]
+layout_mode = 0
+offset_left = 1.0000019
+offset_right = 409.32996
+offset_bottom = 366.667
+scale = Vector2(0.12, 0.12)
+icon = ExtResource("12_aiw7s")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
 [connection signal="pressed" from="Slot-1/Button" to="." method="_on_slot_1_pressed"]
 [connection signal="pressed" from="Slot-2/Button" to="." method="_on_slot_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button_mezclar/button_mezcla" to="." method="_on_button_mezcla_pressed"]
+[connection signal="pressed" from="Boton_Salir" to="." method="_on_boton_salir_pressed"]

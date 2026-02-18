@@ -15,6 +15,7 @@ class_name Player
 
 @onready var sprite: Sprite2D = $Direction/Sprite2D
 @onready var animation: AnimationPlayer = $Direction/AnimationPlayer
+var entrar: bool = false
 
 func _ready() -> void:
 	health_bar.setup_health(health_component)
@@ -23,6 +24,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	fase_sprite()
+	open_door()
 
 func fase_sprite():
 	
@@ -45,7 +47,6 @@ func toggle_book():
 		# CERRAMOS EL LIBRO
 		menu_book.hide()
 		get_tree().paused = false # El mundo vuelve a moverse
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED # El mouse desaparece para jugar
 	
 	else:
 		# ABRIMOS EL LIBRO
@@ -53,3 +54,7 @@ func toggle_book():
 		script_menu.open_book()
 		get_tree().paused = true # Pausamos el mundo para que no nos maten mientras leemos
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE # El mouse aparece para el Drag and Drop
+
+func open_door():
+	if entrar == true and Input.is_action_just_pressed("Entrar"):
+		get_tree().change_scene_to_file("res://ESCENAS/Torre/Torre.tscn") 

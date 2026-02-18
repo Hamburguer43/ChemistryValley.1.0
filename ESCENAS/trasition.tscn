@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c4gb0r40ra21v"]
+
+[ext_resource type="Script" uid="uid://fynqobo37dq8" path="res://AUTOLOADS/trasition.gd" id="1_4fjas"]
+
+[node name="Trasition" type="Node2D" unique_id=587033497]
+script = ExtResource("1_4fjas")
