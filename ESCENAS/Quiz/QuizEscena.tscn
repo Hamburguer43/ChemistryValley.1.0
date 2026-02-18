@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://ckk5he413v12t"]
+[gd_scene format=3 uid="uid://ckk5he413v12t"]
 
 [ext_resource type="Script" uid="uid://cnwcyamknfvfo" path="res://ESCENAS/Quiz/Scripts/quiz_escena.gd" id="1_tqyif"]
 [ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="2_ft7jj"]
@@ -87,7 +87,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yrive"]
@@ -104,7 +104,7 @@ bg_color = Color(1, 1, 0.63529414, 0.078431375)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_twig1"]
 bg_color = Color(1, 1, 0.63529414, 0.078431375)
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=285637305]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -118,20 +118,20 @@ color_YES = Color(0, 1, 0, 1)
 color_NO = Color(1, 0, 0, 1)
 metadata/_edit_lock_ = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=476034397]
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 688.0
 texture = ExtResource("32_yrive")
 
-[node name="TextureRect2" type="TextureRect" parent="."]
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=2021537693]
 layout_mode = 0
 offset_left = 1016.0
 offset_right = 1152.0
 offset_bottom = 88.0
 texture = ExtResource("33_yrive")
 
-[node name="ExitButton" type="Button" parent="."]
+[node name="ExitButton" type="Button" parent="." unique_id=520370881]
 layout_mode = 0
 offset_left = 33.0
 offset_top = 27.0
@@ -142,7 +142,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="OptionButton" type="Button" parent="."]
+[node name="OptionButton" type="Button" parent="." unique_id=1595462345]
 layout_mode = 0
 offset_left = 109.0
 offset_top = 27.0
@@ -153,7 +153,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="TimerTxt" type="Label" parent="."]
+[node name="TimerTxt" type="Label" parent="." unique_id=174105630]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -167,7 +167,7 @@ theme_override_fonts/font = ExtResource("19_ju7yy")
 theme_override_font_sizes/font_size = 60
 text = "30:00"
 
-[node name="Titulo" type="Label" parent="."]
+[node name="Titulo" type="Label" parent="." unique_id=234315962]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -186,14 +186,14 @@ text = "QUIZ"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1122139901]
 position = Vector2(568, 312.00003)
 scale = Vector2(2.0098689, 1.8186756)
 sprite_frames = SubResource("SpriteFrames_ktjol")
 frame = 5
 frame_progress = 1.0
 
-[node name="Preguntas" type="Label" parent="."]
+[node name="Preguntas" type="Label" parent="." unique_id=242908220]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -212,14 +212,14 @@ text = "Preguntas"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Questions" type="BoxContainer" parent="."]
+[node name="Questions" type="BoxContainer" parent="." unique_id=1035770092]
 layout_mode = 0
 offset_left = 208.0
 offset_top = 152.0
 offset_right = 552.0
 offset_bottom = 576.0
 
-[node name="PanelContainer" type="PanelContainer" parent="Questions"]
+[node name="PanelContainer" type="PanelContainer" parent="Questions" unique_id=1585106713]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -227,7 +227,7 @@ size_flags_vertical = 4
 size_flags_stretch_ratio = 9.9
 theme_override_styles/panel = SubResource("StyleBoxEmpty_yrive")
 
-[node name="Label" type="Label" parent="Questions/PanelContainer"]
+[node name="Label" type="Label" parent="Questions/PanelContainer" unique_id=2066791430]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
@@ -238,7 +238,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Respuestas" type="Label" parent="."]
+[node name="Respuestas" type="Label" parent="." unique_id=1070255794]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -257,7 +257,7 @@ text = "Respuestas"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="BoxContainer" type="BoxContainer" parent="."]
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=67365617]
 layout_mode = 0
 offset_left = 632.0
 offset_top = 224.0
@@ -265,13 +265,13 @@ offset_right = 992.0
 offset_bottom = 496.0
 alignment = 1
 
-[node name="Vbox_Respuestas" type="VBoxContainer" parent="BoxContainer"]
+[node name="Vbox_Respuestas" type="VBoxContainer" parent="BoxContainer" unique_id=1457183806]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 alignment = 1
 
-[node name="Button" type="Button" parent="BoxContainer/Vbox_Respuestas"]
+[node name="Button" type="Button" parent="BoxContainer/Vbox_Respuestas" unique_id=1398448871]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -281,7 +281,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_u1o3b")
 autowrap_mode = 3
 
-[node name="Button2" type="Button" parent="BoxContainer/Vbox_Respuestas"]
+[node name="Button2" type="Button" parent="BoxContainer/Vbox_Respuestas" unique_id=1755062234]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -291,7 +291,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_rovev")
 autowrap_mode = 3
 
-[node name="Button3" type="Button" parent="BoxContainer/Vbox_Respuestas"]
+[node name="Button3" type="Button" parent="BoxContainer/Vbox_Respuestas" unique_id=782926773]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -301,7 +301,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_jobji")
 autowrap_mode = 3
 
-[node name="Button4" type="Button" parent="BoxContainer/Vbox_Respuestas"]
+[node name="Button4" type="Button" parent="BoxContainer/Vbox_Respuestas" unique_id=1891612044]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -311,7 +311,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_twig1")
 autowrap_mode = 3
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2002769232]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -321,7 +321,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.458824, 0.458824, 0.458824, 0.870588)
 
-[node name="Label" type="Label" parent="ColorRect"]
+[node name="Label" type="Label" parent="ColorRect" unique_id=1657324866]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -336,7 +336,7 @@ text = "ACERTASTE LA SIGUIENTE CANTIDAD DE PREGUNTAS:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Score" type="Label" parent="ColorRect"]
+[node name="Score" type="Label" parent="ColorRect" unique_id=1217823123]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -354,7 +354,7 @@ text = "0/0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Exit" type="Button" parent="ColorRect"]
+[node name="Exit" type="Button" parent="ColorRect" unique_id=1801733189]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -369,14 +369,14 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Salir"
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=987206850]
 autostart = true
 
-[node name="SuccesSFX" type="AudioStreamPlayer" parent="."]
+[node name="SuccesSFX" type="AudioStreamPlayer" parent="." unique_id=399215444]
 stream = ExtResource("36_4c4p7")
 max_polyphony = 3
 
-[node name="ErrorSFX" type="AudioStreamPlayer" parent="."]
+[node name="ErrorSFX" type="AudioStreamPlayer" parent="." unique_id=316620901]
 stream = ExtResource("18_xcs45")
 volume_db = -4.238
 pitch_scale = 0.77

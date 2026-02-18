@@ -1,7 +1,7 @@
 extends Node
 class_name State
 
-var character: Player
+var character: CharacterBody2D
 var animation: AnimationPlayer
 var state_machine: StateMachine
 

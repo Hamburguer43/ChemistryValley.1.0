@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cyj6fvg6f6wtl"]
+[gd_scene format=3 uid="uid://cyj6fvg6f6wtl"]
 
 [ext_resource type="Texture2D" uid="uid://cgfhgq0lfce78" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Table-Creation-Initial.png" id="1_013gn"]
 [ext_resource type="Script" uid="uid://8mabmwiqk2ca" path="res://ESCENAS/Create_Compuesto/Scripts/table_create_compound.gd" id="1_xxhx2"]
@@ -240,7 +240,7 @@ animations = [{
 [sub_resource type="Theme" id="Theme_jdcs7"]
 default_font = ExtResource("7_lxnxf")
 
-[node name="Table-Create-Compound" type="Control"]
+[node name="Table-Create-Compound" type="Control" unique_id=1375621449]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -252,15 +252,15 @@ size_flags_vertical = 8
 script = ExtResource("1_xxhx2")
 compound_card_scene = ExtResource("6_0eqjr")
 
-[node name="Sprite-Table" type="Node2D" parent="."]
+[node name="Sprite-Table" type="Node2D" parent="." unique_id=255871667]
 
-[node name="Sprite2D" type="Sprite2D" parent="Sprite-Table"]
+[node name="Sprite2D" type="Sprite2D" parent="Sprite-Table" unique_id=1832667240]
 position = Vector2(570.31, 321.5)
 scale = Vector2(1.53759, 1.16275)
 texture = ExtResource("1_013gn")
 hframes = 12
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite-Table/Sprite2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite-Table/Sprite2D" unique_id=1516741934]
 position = Vector2(12.0154, 3.87014)
 scale = Vector2(0.974659, 1)
 sprite_frames = SubResource("SpriteFrames_qehsn")
@@ -269,7 +269,7 @@ autoplay = "inital"
 frame = 11
 frame_progress = 1.0
 
-[node name="Label" type="Label" parent="Sprite-Table"]
+[node name="Label" type="Label" parent="Sprite-Table" unique_id=1673271877]
 offset_left = 401.0
 offset_top = 27.0
 offset_right = 748.0
@@ -278,14 +278,14 @@ theme = SubResource("Theme_jdcs7")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "CREACIÓN DE COMPUESTOS"
 
-[node name="Slot-1" type="Control" parent="."]
+[node name="Slot-1" type="Control" parent="." unique_id=1505625916]
 anchors_preset = 0
 offset_left = 415.0
 offset_top = 246.0
 offset_right = 548.0
 offset_bottom = 348.0
 
-[node name="Button" type="TextureButton" parent="Slot-1"]
+[node name="Button" type="TextureButton" parent="Slot-1" unique_id=21778014]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -297,28 +297,28 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_c8joe")
 
-[node name="elemento1" type="Sprite2D" parent="Slot-1/Button"]
+[node name="elemento1" type="Sprite2D" parent="Slot-1/Button" unique_id=947308396]
 position = Vector2(69, 53)
 scale = Vector2(2, 2)
 
-[node name="Marco_S1" type="Sprite2D" parent="Slot-1"]
+[node name="Marco_S1" type="Sprite2D" parent="Slot-1" unique_id=1149855888]
 visible = false
 position = Vector2(-67, 49)
 scale = Vector2(0.983334, 0.9)
 texture = ExtResource("8_lxnxf")
 
-[node name="Simbolo" type="Sprite2D" parent="Slot-1/Marco_S1"]
+[node name="Simbolo" type="Sprite2D" parent="Slot-1/Marco_S1" unique_id=1446565726]
 position = Vector2(2.54237, -1.11112)
 scale = Vector2(2.3358, 1.875)
 
-[node name="Slot-2" type="Control" parent="."]
+[node name="Slot-2" type="Control" parent="." unique_id=1734380201]
 anchors_preset = 0
 offset_left = 616.0
 offset_top = 240.0
 offset_right = 749.0
 offset_bottom = 342.0
 
-[node name="Button" type="TextureButton" parent="Slot-2"]
+[node name="Button" type="TextureButton" parent="Slot-2" unique_id=2087166530]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -331,21 +331,21 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_c8joe")
 
-[node name="elemento2" type="Sprite2D" parent="Slot-2/Button"]
+[node name="elemento2" type="Sprite2D" parent="Slot-2/Button" unique_id=280924692]
 position = Vector2(69, 53)
 scale = Vector2(2, 2)
 
-[node name="Marco_S2" type="Sprite2D" parent="Slot-2"]
+[node name="Marco_S2" type="Sprite2D" parent="Slot-2" unique_id=967770045]
 visible = false
 position = Vector2(197, 56)
 scale = Vector2(0.983334, 0.9)
 texture = ExtResource("8_lxnxf")
 
-[node name="Simbolo" type="Sprite2D" parent="Slot-2/Marco_S2"]
+[node name="Simbolo" type="Sprite2D" parent="Slot-2/Marco_S2" unique_id=2005050520]
 position = Vector2(2.54237, -1.11112)
 scale = Vector2(2.3358, 1.875)
 
-[node name="Inventario-Elements" parent="." instance=ExtResource("2_re6kj")]
+[node name="Inventario-Elements" parent="." unique_id=1327048842 instance=ExtResource("2_re6kj")]
 visible = false
 z_index = 1
 layout_mode = 1
@@ -354,7 +354,7 @@ offset_top = 1.0
 offset_right = 2.0
 offset_bottom = 1.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=878770818]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -368,13 +368,13 @@ offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="SelectorValencias" type="OptionButton" parent="VBoxContainer"]
+[node name="SelectorValencias" type="OptionButton" parent="VBoxContainer" unique_id=905003489]
 layout_mode = 2
 
-[node name="Button_mezclar" type="Control" parent="VBoxContainer"]
+[node name="Button_mezclar" type="Control" parent="VBoxContainer" unique_id=2135291338]
 layout_mode = 2
 
-[node name="button_mezcla" type="Button" parent="VBoxContainer/Button_mezclar"]
+[node name="button_mezcla" type="Button" parent="VBoxContainer/Button_mezclar" unique_id=257589167]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -387,10 +387,10 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "mezclar"
 
-[node name="Card_compound" parent="." instance=ExtResource("6_0eqjr")]
+[node name="Card_compound" parent="." unique_id=1093967166 instance=ExtResource("6_0eqjr")]
 visible = false
 
-[node name="Aviso" type="Control" parent="."]
+[node name="Aviso" type="Control" parent="." unique_id=1101433754]
 visible = false
 layout_mode = 1
 anchor_left = 0.148
@@ -402,12 +402,12 @@ offset_top = -240.728
 offset_right = -21.472
 offset_bottom = -206.088
 
-[node name="Text" type="Sprite2D" parent="Aviso"]
+[node name="Text" type="Sprite2D" parent="Aviso" unique_id=1622553533]
 position = Vector2(306, 77)
 scale = Vector2(4.05882, 1.875)
 texture = ExtResource("9_fbjnu")
 
-[node name="Label" type="Label" parent="Aviso"]
+[node name="Label" type="Label" parent="Aviso" unique_id=1259488689]
 layout_mode = 0
 offset_left = 65.0
 offset_top = 54.0
@@ -416,7 +416,7 @@ offset_bottom = 144.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "se está cocinando el compuesto, espera unos segundos"
 
-[node name="Contador" type="Label" parent="Aviso"]
+[node name="Contador" type="Label" parent="Aviso" unique_id=1658546242]
 layout_mode = 0
 offset_left = 270.0
 offset_top = 87.0
@@ -424,12 +424,11 @@ offset_right = 311.0
 offset_bottom = 113.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=335869334]
 stream = ExtResource("10_lxnxf")
 volume_db = 6.679
 pitch_scale = 0.89
 
-[connection signal="pressed" from="Slot-Metal/Button" to="Inventario-Elements" method="_on_button_pressed"]
 [connection signal="pressed" from="Slot-1/Button" to="." method="_on_slot_1_pressed"]
 [connection signal="pressed" from="Slot-2/Button" to="." method="_on_slot_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button_mezclar/button_mezcla" to="." method="_on_button_mezcla_pressed"]

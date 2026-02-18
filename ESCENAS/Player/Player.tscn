@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://xwlmfjrolb40"]
+[gd_scene format=3 uid="uid://xwlmfjrolb40"]
 
 [ext_resource type="Script" uid="uid://beyxafdq2v5p7" path="res://ESCENAS/Player/Scripts/player.gd" id="1_m1rl0"]
 [ext_resource type="Script" uid="uid://dycaxeavyv8vq" path="res://ESCENAS/Player/Scripts/movement.gd" id="3_q7xc6"]
@@ -149,82 +149,80 @@ _data = {
 radius = 18.0
 height = 69.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=1795189720]
 collision_mask = 2
 script = ExtResource("1_m1rl0")
 metadata/_edit_vertical_guides_ = [17.0, -47.0]
 
-[node name="Direction" type="Node2D" parent="."]
+[node name="Direction" type="Node2D" parent="." unique_id=507265280]
 position = Vector2(2, 1)
 
-[node name="HitboxComponent" parent="Direction" instance=ExtResource("4_nyric")]
+[node name="HitboxComponent" parent="Direction" unique_id=1380011598 instance=ExtResource("4_nyric")]
 position = Vector2(36, -13)
 scale = Vector2(2, 2)
 collision_mask = 20
 
-[node name="Sprite2D" type="Sprite2D" parent="Direction"]
+[node name="Sprite2D" type="Sprite2D" parent="Direction" unique_id=1554668826]
 position = Vector2(-4, -21)
 texture = ExtResource("11_nslrf")
 hframes = 38
 frame = 36
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Direction"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Direction" unique_id=1033068154]
 root_node = NodePath("../..")
-libraries = {
-&"": SubResource("AnimationLibrary_efxxx")
-}
+libraries/ = SubResource("AnimationLibrary_efxxx")
 
-[node name="HealthComponent" parent="." instance=ExtResource("6_msxca")]
+[node name="HealthComponent" parent="." unique_id=900628679 instance=ExtResource("6_msxca")]
 position = Vector2(4, -13)
 collision_layer = 1
 
-[node name="EnergyComponent" type="Node2D" parent="."]
+[node name="EnergyComponent" type="Node2D" parent="." unique_id=1804476656]
 script = ExtResource("5_brxfi")
 
-[node name="StateMachine" type="Node2D" parent="." node_paths=PackedStringArray("State", "character", "animation")]
+[node name="StateMachine" type="Node2D" parent="." unique_id=889353825 node_paths=PackedStringArray("Initial_State", "character", "animation")]
 script = ExtResource("7_ra4do")
-State = NodePath("IdleState")
+Initial_State = NodePath("IdleState")
 character = NodePath("..")
 animation = NodePath("../Direction/AnimationPlayer")
 
-[node name="IdleState" type="Node2D" parent="StateMachine"]
+[node name="IdleState" type="Node2D" parent="StateMachine" unique_id=795667388]
 script = ExtResource("8_62p1g")
 
-[node name="WalkState" type="Node2D" parent="StateMachine"]
+[node name="WalkState" type="Node2D" parent="StateMachine" unique_id=662044453]
 script = ExtResource("9_nslrf")
 
-[node name="JumpState" type="Node2D" parent="StateMachine"]
+[node name="JumpState" type="Node2D" parent="StateMachine" unique_id=1909575483]
 script = ExtResource("5_62p1g")
 
-[node name="Wall_slideState" type="Node2D" parent="StateMachine"]
+[node name="Wall_slideState" type="Node2D" parent="StateMachine" unique_id=932197287]
 script = ExtResource("6_nslrf")
 
-[node name="FallState" type="Node2D" parent="StateMachine"]
+[node name="FallState" type="Node2D" parent="StateMachine" unique_id=932440899]
 script = ExtResource("7_kctr6")
 
-[node name="AttackState" type="Node2D" parent="StateMachine"]
+[node name="AttackState" type="Node2D" parent="StateMachine" unique_id=1855686228]
 script = ExtResource("8_ovfga")
 
-[node name="PoderState" type="Node2D" parent="StateMachine"]
+[node name="PoderState" type="Node2D" parent="StateMachine" unique_id=25127285]
 script = ExtResource("13_nhf4e")
 
-[node name="Movement" type="Node2D" parent="."]
+[node name="Movement" type="Node2D" parent="." unique_id=1858679854]
 position = Vector2(0, 28)
 script = ExtResource("3_q7xc6")
 
-[node name="Jump" type="Node2D" parent="."]
+[node name="Jump" type="Node2D" parent="." unique_id=1166982214]
 script = ExtResource("4_dju3n")
 jump_velocity = -350.0
 
-[node name="Ability_comp" type="Node2D" parent="."]
+[node name="Ability_comp" type="Node2D" parent="." unique_id=1997491120]
 script = ExtResource("17_vd2eb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=178641513]
 position = Vector2(0, -22)
 shape = SubResource("CapsuleShape2D_dju3n")
 one_way_collision_margin = 0.0
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1141225751]
 position_smoothing_enabled = true
 drag_left_margin = 0.15
 drag_top_margin = 0.3
@@ -233,7 +231,7 @@ drag_bottom_margin = 0.15
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
-[node name="HUD" parent="." instance=ExtResource("14_q5t41")]
+[node name="HUD" parent="." unique_id=205926049 instance=ExtResource("14_q5t41")]
 
-[node name="Menu_book" parent="." instance=ExtResource("16_sqhi6")]
+[node name="Menu_book" parent="." unique_id=1524942260 instance=ExtResource("16_sqhi6")]
 visible = false

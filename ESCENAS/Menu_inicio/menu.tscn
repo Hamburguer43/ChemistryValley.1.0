@@ -1,0 +1,194 @@
+[gd_scene format=3 uid="uid://dkcjr3otn30sj"]
+
+[ext_resource type="FontFile" uid="uid://c4u4rlhswm0ap" path="res://ASSETS/Letras/Antiquity/antiquity-print.ttf" id="1_b4qba"]
+[ext_resource type="Script" uid="uid://v80hq8pg4mof" path="res://ESCENAS/Menu_inicio/Scripts/funcMenu.gd" id="1_oiy3f"]
+[ext_resource type="PackedScene" uid="uid://drw3gm4vpljd6" path="res://ESCENAS/Menu_inicio/fondomenu.tscn" id="2_3mq4s"]
+[ext_resource type="Texture2D" uid="uid://lo65rldm0ajx" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Logo/Logo-ChemistryValley.png" id="5_rqljr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxf5f"]
+atlas = ExtResource("5_rqljr")
+region = Rect2(0, 0, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owvhy"]
+atlas = ExtResource("5_rqljr")
+region = Rect2(300, 0, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4u18"]
+atlas = ExtResource("5_rqljr")
+region = Rect2(600, 0, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyu0e"]
+atlas = ExtResource("5_rqljr")
+region = Rect2(900, 0, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skb48"]
+atlas = ExtResource("5_rqljr")
+region = Rect2(1200, 0, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38142"]
+atlas = ExtResource("5_rqljr")
+region = Rect2(1500, 0, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tovkf"]
+atlas = ExtResource("5_rqljr")
+region = Rect2(1800, 0, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vg7y"]
+atlas = ExtResource("5_rqljr")
+region = Rect2(2100, 0, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ve4sw"]
+atlas = ExtResource("5_rqljr")
+region = Rect2(2400, 0, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqkom"]
+atlas = ExtResource("5_rqljr")
+region = Rect2(2700, 0, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0x63q"]
+atlas = ExtResource("5_rqljr")
+region = Rect2(3000, 0, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h54nm"]
+atlas = ExtResource("5_rqljr")
+region = Rect2(3300, 0, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hv3da"]
+atlas = ExtResource("5_rqljr")
+region = Rect2(3600, 0, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vu5f"]
+atlas = ExtResource("5_rqljr")
+region = Rect2(3900, 0, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_np6w4"]
+atlas = ExtResource("5_rqljr")
+region = Rect2(4200, 0, 300, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6xvd"]
+atlas = ExtResource("5_rqljr")
+region = Rect2(4500, 0, 300, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fxf6k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxf5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owvhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4u18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jyu0e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skb48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38142")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tovkf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vg7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ve4sw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqkom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0x63q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h54nm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hv3da")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vu5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_np6w4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6xvd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Menu" type="Control" unique_id=300094684]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oiy3f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=429857663]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.537
+anchor_right = 0.5
+anchor_bottom = 0.537
+offset_left = -126.0
+offset_top = 55.023987
+offset_right = 113.0
+offset_bottom = 239.02399
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Jugar" type="Button" parent="VBoxContainer" unique_id=1931883909]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.968627, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_b4qba")
+theme_override_font_sizes/font_size = 50
+text = "Jugar"
+flat = true
+
+[node name="Salir" type="Button" parent="VBoxContainer" unique_id=1082141825]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_b4qba")
+theme_override_font_sizes/font_size = 50
+text = "Salir"
+flat = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=205235378]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 3.0
+offset_right = 715.0
+offset_bottom = 205.0
+
+[node name="Logo" type="Sprite2D" parent="HBoxContainer" unique_id=1458860851]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HBoxContainer/Logo" unique_id=1797893621]
+position = Vector2(150, 195.5)
+scale = Vector2(1.7733333, 1.8055556)
+sprite_frames = SubResource("SpriteFrames_fxf6k")
+autoplay = "default"
+
+[node name="ParallaxBackground" parent="." unique_id=1814286437 instance=ExtResource("2_3mq4s")]
+
+[connection signal="pressed" from="VBoxContainer/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]

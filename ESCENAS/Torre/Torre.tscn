@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://h8glistof8rr"]
+
+[ext_resource type="Texture2D" uid="uid://bkljh8cdthsut" path="res://ASSETS/Sprites/Menu_Quimica/MENU_ORIGINAL_SOMBREADO1-Sheet.png" id="1_pws3o"]
+[ext_resource type="Script" uid="uid://da4owyh0vedqt" path="res://ESCENAS/Torre/Scripts/torre.gd" id="1_xkps2"]
+[ext_resource type="Texture2D" uid="uid://cituovjvfcath" path="res://ASSETS/Sprites/Menu_Quimica/Periodic_Table/tablaPequeña.png" id="2_gnwlv"]
+[ext_resource type="Script" uid="uid://dgmklbcaa5ogy" path="res://ESCENAS/Torre/Scripts/button_tabla.gd" id="5_88co7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gnwlv"]
+atlas = ExtResource("1_pws3o")
+region = Rect2(0, 0, 384, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkps2"]
+atlas = ExtResource("1_pws3o")
+region = Rect2(384, 0, 384, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5evy"]
+atlas = ExtResource("1_pws3o")
+region = Rect2(768, 0, 384, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88co7"]
+atlas = ExtResource("1_pws3o")
+region = Rect2(1152, 0, 384, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dr2e"]
+atlas = ExtResource("1_pws3o")
+region = Rect2(1536, 0, 384, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ho5yk"]
+atlas = ExtResource("1_pws3o")
+region = Rect2(1920, 0, 384, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8s0s"]
+atlas = ExtResource("1_pws3o")
+region = Rect2(2304, 0, 384, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbnhd"]
+atlas = ExtResource("1_pws3o")
+region = Rect2(2688, 0, 384, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7glce"]
+atlas = ExtResource("1_pws3o")
+region = Rect2(3072, 0, 384, 216)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gfw0s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gnwlv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xkps2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5evy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88co7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dr2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ho5yk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8s0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbnhd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7glce")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Torre" type="Control" unique_id=1560715468]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xkps2")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1605132783]
+position = Vector2(190, 116)
+centered = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite" unique_id=1591497828]
+position = Vector2(385.5, 208.49998)
+scale = Vector2(3.0078125, 2.9953701)
+sprite_frames = SubResource("SpriteFrames_gfw0s")
+autoplay = "default"
+frame_progress = 0.58806264
+
+[node name="Botones" type="Node2D" parent="." unique_id=665063331]
+
+[node name="Button_Salir" type="Button" parent="Botones" unique_id=91028140]
+offset_left = 1.0
+offset_top = 201.0
+offset_right = 93.0
+offset_bottom = 458.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="Button_Tabla" type="TextureButton" parent="Botones" unique_id=419585004]
+offset_left = 347.0
+offset_top = 239.0
+offset_right = 467.0
+offset_bottom = 311.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_gnwlv")
+script = ExtResource("5_88co7")
+
+[node name="Button_Compound" type="Button" parent="Botones" unique_id=917023739]
+offset_left = 507.0
+offset_top = 341.0
+offset_right = 800.0
+offset_bottom = 382.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[connection signal="pressed" from="Botones/Button_Salir" to="." method="_on_button_salir_pressed"]
+[connection signal="pressed" from="Botones/Button_Tabla" to="." method="_on_button_tabla_pressed"]
+[connection signal="pressed" from="Botones/Button_Compound" to="." method="_on_button_compound_pressed"]

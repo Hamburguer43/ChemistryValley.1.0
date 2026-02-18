@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://brvi154es6nte"]
+
+[ext_resource type="Script" uid="uid://xnlxdrrtx053" path="res://ESCENAS/Enemies/enemie.gd" id="1_aj5sh"]
+[ext_resource type="Script" uid="uid://dycaxeavyv8vq" path="res://ESCENAS/Player/Scripts/movement.gd" id="2_l3eiy"]
+[ext_resource type="PackedScene" uid="uid://c01qe055ua4od" path="res://ESCENAS/Components/hitbox_component.tscn" id="2_reo8f"]
+[ext_resource type="PackedScene" uid="uid://dhbitao04ex5s" path="res://ESCENAS/Components/HealthComponent.tscn" id="4_l3eiy"]
+[ext_resource type="Script" uid="uid://boar45r0h4lh" path="res://ESCENAS/StateMachine/Scripts/state_machine.gd" id="5_ev2gw"]
+[ext_resource type="Script" uid="uid://d2bepn3l8k4y8" path="res://ESCENAS/StateMachine/Scripts_enemie/patrol_state.gd" id="6_k6mw7"]
+[ext_resource type="PackedScene" uid="uid://dw0k4rkx1owu3" path="res://ESCENAS/Components/SensorComponent.tscn" id="6_u8cy3"]
+[ext_resource type="Script" uid="uid://dqvm7g8t631wp" path="res://ESCENAS/Enemies/scripts/health_bar.gd" id="7_7mcgd"]
+[ext_resource type="Script" uid="uid://dcd6fvwus8h3m" path="res://ESCENAS/StateMachine/Scripts_enemie/follow_state.gd" id="7_k6mw7"]
+[ext_resource type="Script" uid="uid://8co81fdpuu5u" path="res://ESCENAS/StateMachine/Scripts_enemie/hit_state.gd" id="10_h5y1s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_reo8f"]
+radius = 16.0312
+
+[sub_resource type="Gradient" id="Gradient_7mcgd"]
+colors = PackedColorArray(0.243137, 0.243137, 0.243137, 1, 0.243137, 0.243137, 0.243137, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7mcgd"]
+gradient = SubResource("Gradient_7mcgd")
+width = 40
+height = 6
+
+[sub_resource type="Gradient" id="Gradient_1e8lb"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ev2gw"]
+gradient = SubResource("Gradient_1e8lb")
+width = 40
+height = 6
+
+[node name="Enemies_1" type="CharacterBody2D" unique_id=522459552]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_aj5sh")
+
+[node name="Direction" type="Node2D" parent="." unique_id=1913668758]
+
+[node name="Sprite2D" type="Sprite2D" parent="Direction" unique_id=301846112]
+hframes = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Direction/Sprite2D" unique_id=1665740612]
+
+[node name="HitbosComponent" parent="Direction" unique_id=1646010539 instance=ExtResource("2_reo8f")]
+position = Vector2(-9, 6)
+collision_mask = 1
+
+[node name="Movement" type="Node2D" parent="." unique_id=571108444]
+position = Vector2(-2, 34)
+script = ExtResource("2_l3eiy")
+speed = 100.0
+
+[node name="StateMachine" type="Node2D" parent="." unique_id=1757614853 node_paths=PackedStringArray("Initial_State", "character", "animation2")]
+script = ExtResource("5_ev2gw")
+Initial_State = NodePath("PatrolState")
+character = NodePath("..")
+animation2 = NodePath("../Direction/Sprite2D/AnimatedSprite2D")
+
+[node name="PatrolState" type="Node2D" parent="StateMachine" unique_id=1809910283]
+script = ExtResource("6_k6mw7")
+
+[node name="FollowState" type="Node2D" parent="StateMachine" unique_id=304861531]
+script = ExtResource("7_k6mw7")
+
+[node name="HitState" type="Node2D" parent="StateMachine" unique_id=1934655454]
+script = ExtResource("10_h5y1s")
+
+[node name="HealthComponent" parent="." unique_id=578463191 instance=ExtResource("4_l3eiy")]
+position = Vector2(0, 0)
+collision_layer = 4
+
+[node name="SensorComponent" parent="." unique_id=698544173 instance=ExtResource("6_u8cy3")]
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=596188073]
+position = Vector2(12, 14)
+scale = Vector2(0.535954, 0.863079)
+target_position = Vector2(0, 26)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2126259927]
+light_mask = 4
+visibility_layer = 0
+shape = SubResource("CircleShape2D_reo8f")
+
+[node name="HealthBar" type="TextureProgressBar" parent="." unique_id=1158845771]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+texture_under = SubResource("GradientTexture2D_7mcgd")
+texture_progress = SubResource("GradientTexture2D_ev2gw")
+tint_progress = Color(0.883679, 0, 0.0514797, 1)
+script = ExtResource("7_7mcgd")
+
+[connection signal="body_entered" from="SensorComponent" to="." method="_on_sensor_component_body_entered"]
+[connection signal="body_exited" from="SensorComponent" to="." method="_on_sensor_component_body_exited"]

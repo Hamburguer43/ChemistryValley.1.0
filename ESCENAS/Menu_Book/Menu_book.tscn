@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://bfctlqgjansd6"]
+[gd_scene format=3 uid="uid://bfctlqgjansd6"]
 
 [ext_resource type="Script" uid="uid://bxykr2423em5x" path="res://ESCENAS/Menu_Book/Scripts/menu_book.gd" id="1_6tntx"]
 [ext_resource type="Texture2D" uid="uid://uvr36cuunff1" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Book-menu.png" id="1_hqtpl"]
@@ -196,17 +196,17 @@ default_font = ExtResource("2_11jhi")
 [sub_resource type="Theme" id="Theme_6tntx"]
 default_font = ExtResource("2_11jhi")
 
-[node name="Menu_book" type="CanvasLayer"]
+[node name="Menu_book" type="CanvasLayer" unique_id=139748945]
 process_mode = 3
 
-[node name="Menu_Book" type="Control" parent="."]
+[node name="Menu_Book" type="Control" parent="." unique_id=1506170415]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_6tntx")
 
-[node name="Animated_Book" type="AnimatedSprite2D" parent="Menu_Book"]
+[node name="Animated_Book" type="AnimatedSprite2D" parent="Menu_Book" unique_id=2028136241]
 position = Vector2(561, 286.5)
 scale = Vector2(1.96721, 1.71389)
 sprite_frames = SubResource("SpriteFrames_3x8in")
@@ -215,7 +215,7 @@ autoplay = "open"
 frame = 7
 frame_progress = 1.0
 
-[node name="Paginas" type="TabContainer" parent="Menu_Book"]
+[node name="Paginas" type="TabContainer" parent="Menu_Book" unique_id=741736611]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -230,13 +230,13 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_hqtpl")
 current_tab = 0
 tabs_visible = false
 
-[node name="Compuestos" type="Control" parent="Menu_Book/Paginas"]
+[node name="Compuestos" type="Control" parent="Menu_Book/Paginas" unique_id=2117814850]
 layout_mode = 2
 theme = SubResource("Theme_gwm8a")
 script = ExtResource("4_gwm8a")
 metadata/_tab_index = 0
 
-[node name="Label" type="Label" parent="Menu_Book/Paginas/Compuestos"]
+[node name="Label" type="Label" parent="Menu_Book/Paginas/Compuestos" unique_id=1227626921]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -249,7 +249,7 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Compuestos"
 
-[node name="MarginContainer" type="MarginContainer" parent="Menu_Book/Paginas/Compuestos"]
+[node name="MarginContainer" type="MarginContainer" parent="Menu_Book/Paginas/Compuestos" unique_id=1619338575]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -260,23 +260,23 @@ grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="VScrollBar" type="ScrollContainer" parent="Menu_Book/Paginas/Compuestos/MarginContainer"]
+[node name="VScrollBar" type="ScrollContainer" parent="Menu_Book/Paginas/Compuestos/MarginContainer" unique_id=1444108503]
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
 
-[node name="GridContainer" type="GridContainer" parent="Menu_Book/Paginas/Compuestos/MarginContainer/VScrollBar"]
+[node name="GridContainer" type="GridContainer" parent="Menu_Book/Paginas/Compuestos/MarginContainer/VScrollBar" unique_id=1316192814]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 2
 columns = 6
 
-[node name="Elementos" type="Control" parent="Menu_Book/Paginas"]
+[node name="Elementos" type="Control" parent="Menu_Book/Paginas" unique_id=465421425]
 visible = false
 layout_mode = 2
 script = ExtResource("6_mekp2")
 metadata/_tab_index = 1
 
-[node name="Label" type="Label" parent="Menu_Book/Paginas/Elementos"]
+[node name="Label" type="Label" parent="Menu_Book/Paginas/Elementos" unique_id=916633107]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -290,7 +290,7 @@ theme = SubResource("Theme_3x8in")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Elementos"
 
-[node name="MarginContainer" type="MarginContainer" parent="Menu_Book/Paginas/Elementos"]
+[node name="MarginContainer" type="MarginContainer" parent="Menu_Book/Paginas/Elementos" unique_id=6066449]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -301,23 +301,23 @@ grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="VScrollBar" type="ScrollContainer" parent="Menu_Book/Paginas/Elementos/MarginContainer"]
+[node name="VScrollBar" type="ScrollContainer" parent="Menu_Book/Paginas/Elementos/MarginContainer" unique_id=918909318]
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
 
-[node name="GridContainer" type="GridContainer" parent="Menu_Book/Paginas/Elementos/MarginContainer/VScrollBar"]
+[node name="GridContainer" type="GridContainer" parent="Menu_Book/Paginas/Elementos/MarginContainer/VScrollBar" unique_id=591166398]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 2
 columns = 6
 
-[node name="Poderes" type="Control" parent="Menu_Book/Paginas"]
+[node name="Poderes" type="Control" parent="Menu_Book/Paginas" unique_id=432779672]
 visible = false
 layout_mode = 2
 script = ExtResource("7_3x8in")
 metadata/_tab_index = 2
 
-[node name="Label" type="Label" parent="Menu_Book/Paginas/Poderes"]
+[node name="Label" type="Label" parent="Menu_Book/Paginas/Poderes" unique_id=1954304363]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -332,7 +332,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Poderes"
 horizontal_alignment = 1
 
-[node name="Elegir_poderes" type="MarginContainer" parent="Menu_Book/Paginas/Poderes"]
+[node name="Elegir_poderes" type="MarginContainer" parent="Menu_Book/Paginas/Poderes" unique_id=736619181]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -343,15 +343,15 @@ offset_bottom = -215.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Menu_Book/Paginas/Poderes/Elegir_poderes"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu_Book/Paginas/Poderes/Elegir_poderes" unique_id=340584191]
 layout_mode = 2
 
-[node name="Card" type="Sprite2D" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer"]
+[node name="Card" type="Sprite2D" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer" unique_id=1801843550]
 position = Vector2(97.875, 125.125)
 scale = Vector2(0.75, 0.67489)
 texture = ExtResource("8_3pp18")
 
-[node name="Description" type="RichTextLabel" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card"]
+[node name="Description" type="RichTextLabel" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card" unique_id=1619743482]
 offset_left = -120.0
 offset_top = -55.0
 offset_right = 141.0
@@ -359,14 +359,14 @@ offset_bottom = 151.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "Elige un compuesto de los slot para ver su información"
 
-[node name="Marco_compound" type="Sprite2D" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card"]
+[node name="Marco_compound" type="Sprite2D" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card" unique_id=1269842384]
 position = Vector2(-79.5303, -105.548)
 scale = Vector2(1.90985, 2.22233)
 texture = ExtResource("9_5cjqc")
 
-[node name="Compound" type="Sprite2D" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card/Marco_compound"]
+[node name="Compound" type="Sprite2D" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card/Marco_compound" unique_id=132294998]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card" unique_id=1432098670]
 offset_left = -33.8182
 offset_top = -144.834
 offset_right = 162.182
@@ -374,39 +374,39 @@ offset_bottom = -64.8338
 size_flags_horizontal = 10
 size_flags_vertical = 0
 
-[node name="LabelNombre" type="Label" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card/VBoxContainer"]
+[node name="LabelNombre" type="Label" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card/VBoxContainer" unique_id=982561355]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "?"
 
-[node name="LabelFormula" type="Label" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card/VBoxContainer"]
+[node name="LabelFormula" type="Label" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card/VBoxContainer" unique_id=1060427885]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "?"
 
-[node name="LabelRareza" type="Label" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card/VBoxContainer"]
+[node name="LabelRareza" type="Label" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Card/VBoxContainer" unique_id=1331582209]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "?"
 
-[node name="Slot_poderes" type="VBoxContainer" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer"]
+[node name="Slot_poderes" type="VBoxContainer" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer" unique_id=259436570]
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 4
 
-[node name="Slot1" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Slot_poderes" instance=ExtResource("10_dmifd")]
+[node name="Slot1" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Slot_poderes" unique_id=832316736 instance=ExtResource("10_dmifd")]
 layout_mode = 2
 
-[node name="Slot2" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Slot_poderes" instance=ExtResource("10_dmifd")]
+[node name="Slot2" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Slot_poderes" unique_id=677655972 instance=ExtResource("10_dmifd")]
 layout_mode = 2
 
-[node name="Slot3" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Slot_poderes" instance=ExtResource("10_dmifd")]
+[node name="Slot3" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Slot_poderes" unique_id=1922978507 instance=ExtResource("10_dmifd")]
 layout_mode = 2
 
-[node name="Slot4" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Slot_poderes" instance=ExtResource("10_dmifd")]
+[node name="Slot4" parent="Menu_Book/Paginas/Poderes/Elegir_poderes/HBoxContainer/Slot_poderes" unique_id=93248933 instance=ExtResource("10_dmifd")]
 layout_mode = 2
 
-[node name="Compound_disponibles" type="MarginContainer" parent="Menu_Book/Paginas/Poderes"]
+[node name="Compound_disponibles" type="MarginContainer" parent="Menu_Book/Paginas/Poderes" unique_id=959344992]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.109
@@ -417,23 +417,23 @@ grow_horizontal = 2
 grow_vertical = 0
 theme = SubResource("Theme_5cjqc")
 
-[node name="VScrollBar" type="ScrollContainer" parent="Menu_Book/Paginas/Poderes/Compound_disponibles"]
+[node name="VScrollBar" type="ScrollContainer" parent="Menu_Book/Paginas/Poderes/Compound_disponibles" unique_id=1921757958]
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
 
-[node name="GridContainer" type="GridContainer" parent="Menu_Book/Paginas/Poderes/Compound_disponibles/VScrollBar"]
+[node name="GridContainer" type="GridContainer" parent="Menu_Book/Paginas/Poderes/Compound_disponibles/VScrollBar" unique_id=769680014]
 clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 3
 columns = 6
 
-[node name="Opciones" type="Control" parent="Menu_Book/Paginas"]
+[node name="Opciones" type="Control" parent="Menu_Book/Paginas" unique_id=257475126]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 3
 
-[node name="Label" type="Label" parent="Menu_Book/Paginas/Opciones"]
+[node name="Label" type="Label" parent="Menu_Book/Paginas/Opciones" unique_id=1667949806]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -447,7 +447,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Opciones"
 horizontal_alignment = 1
 
-[node name="Botones" type="Control" parent="Menu_Book"]
+[node name="Botones" type="Control" parent="Menu_Book" unique_id=714440223]
 anchors_preset = 0
 offset_left = 602.0
 offset_top = 118.0
@@ -455,7 +455,7 @@ offset_right = 987.0
 offset_bottom = 549.0
 theme = SubResource("Theme_6tntx")
 
-[node name="TextureRect" type="TextureRect" parent="Menu_Book/Botones"]
+[node name="TextureRect" type="TextureRect" parent="Menu_Book/Botones" unique_id=722060173]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -466,7 +466,7 @@ offset_bottom = 93.0
 grow_horizontal = 2
 texture = ExtResource("3_h8aun")
 
-[node name="Label" type="Label" parent="Menu_Book/Botones/TextureRect"]
+[node name="Label" type="Label" parent="Menu_Book/Botones/TextureRect" unique_id=38969886]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -482,7 +482,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "NAVEGACION"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu_Book/Botones"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu_Book/Botones" unique_id=343343005]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -497,12 +497,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = -2
 
-[node name="Compound" type="TextureButton" parent="Menu_Book/Botones/VBoxContainer"]
+[node name="Compound" type="TextureButton" parent="Menu_Book/Botones/VBoxContainer" unique_id=1559229692]
 layout_mode = 2
 texture_normal = ExtResource("4_6tntx")
 script = ExtResource("7_pl2kp")
 
-[node name="Label" type="Label" parent="Menu_Book/Botones/VBoxContainer/Compound"]
+[node name="Label" type="Label" parent="Menu_Book/Botones/VBoxContainer/Compound" unique_id=116185516]
 layout_mode = 0
 offset_left = 100.0
 offset_top = 24.0
@@ -512,12 +512,12 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Compuestos"
 horizontal_alignment = 1
 
-[node name="Elements" type="TextureButton" parent="Menu_Book/Botones/VBoxContainer"]
+[node name="Elements" type="TextureButton" parent="Menu_Book/Botones/VBoxContainer" unique_id=816514017]
 layout_mode = 2
 texture_normal = ExtResource("4_6tntx")
 script = ExtResource("7_pl2kp")
 
-[node name="Label" type="Label" parent="Menu_Book/Botones/VBoxContainer/Elements"]
+[node name="Label" type="Label" parent="Menu_Book/Botones/VBoxContainer/Elements" unique_id=1351703504]
 layout_mode = 0
 offset_left = 100.0
 offset_top = 24.0
@@ -527,12 +527,12 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Elementos"
 horizontal_alignment = 1
 
-[node name="Poderes" type="TextureButton" parent="Menu_Book/Botones/VBoxContainer"]
+[node name="Poderes" type="TextureButton" parent="Menu_Book/Botones/VBoxContainer" unique_id=122102271]
 layout_mode = 2
 texture_normal = ExtResource("4_6tntx")
 script = ExtResource("7_pl2kp")
 
-[node name="Label" type="Label" parent="Menu_Book/Botones/VBoxContainer/Poderes"]
+[node name="Label" type="Label" parent="Menu_Book/Botones/VBoxContainer/Poderes" unique_id=1918125765]
 layout_mode = 0
 offset_left = 100.0
 offset_top = 24.0
@@ -542,12 +542,12 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Poderes"
 horizontal_alignment = 1
 
-[node name="Opciones" type="TextureButton" parent="Menu_Book/Botones/VBoxContainer"]
+[node name="Opciones" type="TextureButton" parent="Menu_Book/Botones/VBoxContainer" unique_id=23418626]
 layout_mode = 2
 texture_normal = ExtResource("4_6tntx")
 script = ExtResource("7_pl2kp")
 
-[node name="Label" type="Label" parent="Menu_Book/Botones/VBoxContainer/Opciones"]
+[node name="Label" type="Label" parent="Menu_Book/Botones/VBoxContainer/Opciones" unique_id=529369299]
 layout_mode = 0
 offset_left = 100.0
 offset_top = 24.0
@@ -557,12 +557,12 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Opciones"
 horizontal_alignment = 1
 
-[node name="Salir" type="TextureButton" parent="Menu_Book/Botones/VBoxContainer"]
+[node name="Salir" type="TextureButton" parent="Menu_Book/Botones/VBoxContainer" unique_id=892072497]
 layout_mode = 2
 texture_normal = ExtResource("4_6tntx")
 script = ExtResource("7_pl2kp")
 
-[node name="Label" type="Label" parent="Menu_Book/Botones/VBoxContainer/Salir"]
+[node name="Label" type="Label" parent="Menu_Book/Botones/VBoxContainer/Salir" unique_id=763609123]
 layout_mode = 0
 offset_left = 100.0
 offset_top = 24.0

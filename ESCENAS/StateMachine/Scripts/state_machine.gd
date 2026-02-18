@@ -1,9 +1,10 @@
 extends Node2D
 class_name StateMachine
 
-@export var State: State
+@export var Initial_State: State
 @export var character: CharacterBody2D
 @export var animation: AnimationPlayer
+@export var animation2: AnimatedSprite2D
 
 var current_state: State
 var arrayStates: Array[State]
@@ -19,7 +20,7 @@ func _ready() -> void:
 			arrayStates.append(child)
 		
 	if State:
-		current_state = State
+		current_state = Initial_State
 		current_state.enter()
 
 func _physics_process(delta: float) -> void:

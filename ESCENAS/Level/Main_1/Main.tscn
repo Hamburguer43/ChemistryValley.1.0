@@ -1,38 +1,37 @@
-[gd_scene load_steps=7 format=3 uid="uid://b8lm4ydr65p4k"]
+[gd_scene format=3 uid="uid://b8lm4ydr65p4k"]
 
 [ext_resource type="PackedScene" uid="uid://dmrr4ob4xb4rv" path="res://ESCENAS/Tilemaps/Level_1/Level_1.tscn" id="1_cpsck"]
 [ext_resource type="PackedScene" uid="uid://xwlmfjrolb40" path="res://ESCENAS/Player/Player.tscn" id="2_dkebo"]
-[ext_resource type="PackedScene" uid="uid://brvi154es6nte" path="res://ESCENAS/Enemies/Enemie.tscn" id="3_dkebo"]
+[ext_resource type="PackedScene" uid="uid://brvi154es6nte" path="res://ESCENAS/Enemies/Enemie_1.tscn" id="3_dkebo"]
 [ext_resource type="PackedScene" uid="uid://cuqhn21yckj88" path="res://ESCENAS/Elements/Elemento.tscn" id="4_njmqx"]
 [ext_resource type="Resource" uid="uid://barje6ile8w64" path="res://ESCENAS/Elements/Resource/Metales/Hierro.tres" id="5_0dnvy"]
 [ext_resource type="Resource" uid="uid://cnlwmr4cwg464" path="res://ESCENAS/Elements/Resource/Metales/Cobre.tres" id="6_cwp2n"]
+[ext_resource type="SpriteFrames" uid="uid://cypm6c48ud6h3" path="res://ESCENAS/Enemies/Resource/Jabali_2.tres" id="7_7qxos"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1495102444]
 position = Vector2(-2, 11)
 
-[node name="Player" parent="." instance=ExtResource("2_dkebo")]
+[node name="Player" parent="." unique_id=1566533085 instance=ExtResource("2_dkebo")]
 position = Vector2(53, -153)
 
-[node name="Enemie" parent="." instance=ExtResource("3_dkebo")]
-position = Vector2(502, -108)
-
-[node name="Enemie2" parent="." instance=ExtResource("3_dkebo")]
-position = Vector2(461, -108)
-
-[node name="Elemento" parent="." instance=ExtResource("4_njmqx")]
+[node name="Elemento" parent="." unique_id=1615808004 instance=ExtResource("4_njmqx")]
 position = Vector2(219, -48)
 resource = ExtResource("5_0dnvy")
 
-[node name="Level1" parent="." instance=ExtResource("1_cpsck")]
+[node name="Level1" parent="." unique_id=281804285 instance=ExtResource("1_cpsck")]
 
-[node name="Elemento2" parent="." instance=ExtResource("4_njmqx")]
+[node name="Elemento2" parent="." unique_id=727956194 instance=ExtResource("4_njmqx")]
 position = Vector2(803, -295)
 resource = ExtResource("6_cwp2n")
 
-[node name="Elemento4" parent="." instance=ExtResource("4_njmqx")]
+[node name="Elemento4" parent="." unique_id=2099244379 instance=ExtResource("4_njmqx")]
 position = Vector2(1130, -301)
 resource = ExtResource("6_cwp2n")
 
-[node name="Elemento5" parent="." instance=ExtResource("4_njmqx")]
+[node name="Elemento5" parent="." unique_id=1746552625 instance=ExtResource("4_njmqx")]
 position = Vector2(1302, -249)
 resource = ExtResource("6_cwp2n")
+
+[node name="Enemies_1" parent="." unique_id=522459552 instance=ExtResource("3_dkebo")]
+position = Vector2(713, -86)
+skin_variante = ExtResource("7_7qxos")

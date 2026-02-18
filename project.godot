@@ -8,17 +8,22 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="ChemestryValley.1.0"
 run/main_scene="uid://b8lm4ydr65p4k"
-config/features=PackedStringArray("4.5", "Mobile")
+config/features=PackedStringArray("4.6", "Mobile")
 
 [autoload]
 
 Compoud_Global="*res://AUTOLOADS/Compoud-Global.gd"
 Inventory_Global="*res://AUTOLOADS/Inventory-Global.gd"
 TutorialGeneral="*res://ESCENAS/tutoriales/tutorialGeneral.tscn"
+AudioManager_Global="*uid://bkxevh7v38sti"
 
 [display]
 

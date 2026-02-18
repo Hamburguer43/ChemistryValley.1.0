@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://drw3gm4vpljd6"]
+
+[ext_resource type="Script" uid="uid://bmj5sj2e6penl" path="res://ESCENAS/Menu_inicio/Scripts/fondomenu.gd" id="1_g3h5w"]
+[ext_resource type="AudioStream" uid="uid://c2hxr3m2pgjpb" path="res://ASSETS/Audios/Musica/the-faded-rose-dark-fantasy-background-music-109375_nNYwL6wv.mp3" id="2_gtq2l"]
+[ext_resource type="Texture2D" uid="uid://d2ncd7kkgkhlv" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Backgrounds/Mountain/sky.png" id="2_whxa2"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" unique_id=937669093]
+script = ExtResource("1_g3h5w")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="." unique_id=661061532]
+motion_mirroring = Vector2(1926, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer" unique_id=454702137]
+position = Vector2(797, 333.958)
+scale = Vector2(2.8, 3.2)
+texture = ExtResource("2_whxa2")
+region_rect = Rect2(0, 210.222, 928, 565.212)
+
+[node name="Pianito" type="AudioStreamPlayer" parent="." unique_id=1555510986]
+stream = ExtResource("2_gtq2l")
+pitch_scale = 0.89
