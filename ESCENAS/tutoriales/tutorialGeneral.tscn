@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bow5t4cluud5p"]
+[gd_scene format=3 uid="uid://bow5t4cluud5p"]
 
 [ext_resource type="Script" uid="uid://ck7mpig63xm42" path="res://ESCENAS/tutoriales/tutorial_general.gd" id="1_ql7um"]
 [ext_resource type="Texture2D" uid="uid://dkhdfagb303bi" path="res://ASSETS/Sprites/Player.1.0/Png/Mago.png" id="2_oi1ew"]
 [ext_resource type="Texture2D" uid="uid://bwr5bq622hnpc" path="res://ASSETS/Sprites/Chat-1.png" id="3_wjdyy"]
+[ext_resource type="AudioStream" uid="uid://dc23ge4io886j" path="res://ASSETS/Audios/Audio/freesound_community-sfx_jump_07-80241 (mp3cut.net).mp3" id="4_wjdyy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sfnk4"]
 bg_color = Color(0.16565639, 0.16565642, 0.1656563, 0.60784316)
@@ -11,24 +12,24 @@ bg_color = Color(0.16565639, 0.16565642, 0.1656563, 0.60784316)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8oks5"]
 
-[node name="TutorialGeneral" type="CanvasLayer"]
+[node name="TutorialGeneral" type="CanvasLayer" unique_id=1330686982]
 script = ExtResource("1_ql7um")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=804630309]
 top_level = true
 offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_sfnk4")
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Panel"]
+[node name="Sprite2D" type="Sprite2D" parent="Panel" unique_id=1965999799]
 position = Vector2(498.1875, 316.48676)
 scale = Vector2(3.1816406, 3.1269186)
 texture = ExtResource("2_oi1ew")
 region_enabled = true
 region_rect = Rect2(0.72335815, 0.34953308, 64.00018, 79.421906)
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="Panel" unique_id=193262238]
 layout_mode = 0
 offset_left = 288.0
 offset_top = 448.0
@@ -37,7 +38,7 @@ offset_bottom = 497.0
 theme_override_font_sizes/font_size = 35
 text = "Presiona la pantalla para continuar..."
 
-[node name="Chat1" type="Sprite2D" parent="Panel"]
+[node name="Chat1" type="Sprite2D" parent="Panel" unique_id=1962810208]
 position = Vector2(671.6587, 152)
 scale = Vector2(1.6170292, 0.79668045)
 texture = ExtResource("3_wjdyy")
@@ -45,7 +46,7 @@ flip_h = true
 region_enabled = true
 region_rect = Rect2(14, 4.5, 228, 241)
 
-[node name="Label" type="RichTextLabel" parent="Panel/Chat1"]
+[node name="Label" type="RichTextLabel" parent="Panel/Chat1" unique_id=773510113]
 offset_left = -85.130615
 offset_top = -100.41667
 offset_right = 79.36859
@@ -58,11 +59,11 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_8oks5")
 scroll_active = false
 scroll_following_visible_characters = true
 
-[node name="Cambio" type="Sprite2D" parent="Panel"]
+[node name="Cambio" type="Sprite2D" parent="Panel" unique_id=830658029]
 position = Vector2(680, 152)
 scale = Vector2(4.312501, 2.8437502)
 
-[node name="Cerrar" type="Button" parent="Panel"]
+[node name="Cerrar" type="Button" parent="Panel" unique_id=1633394212]
 process_mode = 3
 layout_mode = 1
 anchors_preset = 15
@@ -75,8 +76,9 @@ size_flags_vertical = 3
 flat = true
 metadata/_edit_lock_ = true
 
-[node name="SFX" type="AudioStreamPlayer" parent="."]
-volume_db = -14.0
-pitch_scale = 0.8
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=1953143716]
+stream = ExtResource("4_wjdyy")
+volume_db = -2.862
+pitch_scale = 0.63
 
 [connection signal="pressed" from="Panel/Cerrar" to="." method="_on_cerrar_pressed"]

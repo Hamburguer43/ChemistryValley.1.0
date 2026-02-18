@@ -12,3 +12,6 @@ func _on_button_tabla_pressed() -> void:
 
 func _on_button_compound_pressed() -> void:
 	get_tree().change_scene_to_file("res://ESCENAS/Create_Compuesto/table_create_compound.tscn")
+
+func _on_tutorial_button_pressed() -> void:
+	TutorialGeneral.mostrar("laboratorio")

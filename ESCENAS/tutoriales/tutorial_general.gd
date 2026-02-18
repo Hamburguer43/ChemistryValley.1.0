@@ -30,8 +30,13 @@ func mostrar(mensaje : String):
 		]
 	if mensaje == "laboratorio":
 		tutorialAct=[
-			{"texto": ""},
-			{"texto": ""}
+			{"texto": "¡Oh Bienvenido al area de trabajo!"},
+			{"texto": "Nuestro laboratorio, donde toda la magia surge..."},
+			{"texto": "Aqui podras visualizar informacion sobre los elementos."},
+			{"texto": "Presiona sobre la tabla periódica ubicada en la parte izquierda del laboratiorio..."},
+			{"texto": "Tambien podras crear compuestos vitales para la aventura."},
+			{"texto": "Presiona sobre el pergamino ubicado encima de la mesa..."},
+			{"texto": "¡Diviertete aprendiendo y creando!"}
 		]
 	if mensaje == "principal":
 		tutorialAct=[

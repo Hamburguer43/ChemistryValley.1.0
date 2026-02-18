@@ -12,6 +12,8 @@ var timer: int = 1800
 
 ##Funcion principa
 func _ready() -> void:
+	$Timer.stop()
+	$TicTacMbappe.stop()
 	libro_anim.stop()
 	libro_anim.frame = 5
 	##Preguntas bien respondidas 0
@@ -88,12 +90,15 @@ func _over() -> void:
 	$ColorRect.show()
 	$ColorRect/Score.text = str(success, "/", quiz_Data.size())
 	$Timer.stop()
+	$TicTacMbappe.stop()
 
 func _on_timer_timeout() -> void:
 	if timer > 0:
 		timer -= 1
 		$TimerTxt.text = time_to_string(timer)
+		$TicTacMbappe.play()
 	else:
+		$TicTacMbappe.stop()
 		$Timer.stop()
 		_over()
 
@@ -105,8 +110,16 @@ func time_to_string(seconds: int) -> String:
 	
 
 func _on_exit_button_pressed() -> void:
-	pass # Cambio de Escena
-
+	get_tree().change_scene_to_file("res://ESCENAS/Torre/Torre.tscn")
 
 func _on_option_button_pressed() -> void:
 	TutorialGeneral.mostrar("quiz")
+
+func _on_exit_lab_pressed() -> void:
+	get_tree().change_scene_to_file("res://ESCENAS/Torre/Torre.tscn")
+
+
+func _on_continuar_pressed() -> void:
+	$ColorRect2.hide()
+	$Timer.start()
+	$TicTacMbappe.play()

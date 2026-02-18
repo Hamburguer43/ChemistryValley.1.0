@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bkljh8cdthsut" path="res://ASSETS/Sprites/Menu_Quimica/MENU_ORIGINAL_SOMBREADO1-Sheet.png" id="1_pws3o"]
 [ext_resource type="Script" uid="uid://da4owyh0vedqt" path="res://ESCENAS/Torre/Scripts/torre.gd" id="1_xkps2"]
 [ext_resource type="Texture2D" uid="uid://cituovjvfcath" path="res://ASSETS/Sprites/Menu_Quimica/Periodic_Table/tablaPequeña.png" id="2_gnwlv"]
+[ext_resource type="Texture2D" uid="uid://cushew3t5l6a1" path="res://ASSETS/Sprites/Questionmark Square Button.png" id="5_5dr2e"]
 [ext_resource type="Script" uid="uid://dgmklbcaa5ogy" path="res://ESCENAS/Torre/Scripts/button_tabla.gd" id="5_88co7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gnwlv"]
@@ -123,6 +124,19 @@ offset_bottom = 382.0
 mouse_default_cursor_shape = 2
 flat = true
 
+[node name="TutorialButton" type="Button" parent="." unique_id=1744568106]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 98.0
+offset_bottom = 71.0
+icon = ExtResource("5_5dr2e")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
 [connection signal="pressed" from="Botones/Button_Salir" to="." method="_on_button_salir_pressed"]
 [connection signal="pressed" from="Botones/Button_Tabla" to="." method="_on_button_tabla_pressed"]
 [connection signal="pressed" from="Botones/Button_Compound" to="." method="_on_button_compound_pressed"]
+[connection signal="pressed" from="TutorialButton" to="." method="_on_tutorial_button_pressed"]

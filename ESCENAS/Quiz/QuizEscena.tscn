@@ -10,35 +10,15 @@
 [ext_resource type="Resource" uid="uid://cl5s4be1ektkb" path="res://ESCENAS/Quiz/Resource/Pregunta6.tres" id="8_u1o3b"]
 [ext_resource type="Resource" uid="uid://bvdlw5mg4d0td" path="res://ESCENAS/Quiz/Resource/Pregunta7.tres" id="9_rovev"]
 [ext_resource type="Resource" uid="uid://cvho3ixemavjx" path="res://ESCENAS/Quiz/Resource/Pregunta8.tres" id="10_jobji"]
-[ext_resource type="Resource" uid="uid://dd5uig3v5i5lt" path="res://ESCENAS/Quiz/Resource/Pregunta9.tres" id="11_irir1"]
-[ext_resource type="Resource" uid="uid://c64ojnyabt8cp" path="res://ESCENAS/Quiz/Resource/Pregunta10.tres" id="12_gcgrw"]
-[ext_resource type="Resource" uid="uid://cuyrkfeeo22x8" path="res://ESCENAS/Quiz/Resource/Pregunta11.tres" id="13_g57kk"]
-[ext_resource type="Resource" uid="uid://d3blg4ua4w05r" path="res://ESCENAS/Quiz/Resource/Pregunta12.tres" id="14_ktjol"]
-[ext_resource type="Resource" uid="uid://cq00qnailx8x2" path="res://ESCENAS/Quiz/Resource/Pregunta13.tres" id="15_d5wdp"]
-[ext_resource type="Resource" uid="uid://dvc542h2p6wb2" path="res://ESCENAS/Quiz/Resource/Pregunta14.tres" id="16_vp36h"]
-[ext_resource type="Resource" uid="uid://cqnkpmucpjmmm" path="res://ESCENAS/Quiz/Resource/Pregunta15.tres" id="17_hncuc"]
 [ext_resource type="Texture2D" uid="uid://b2yaqnr3sg7ac" path="res://ASSETS/Sprites/X Square Button.png" id="17_mgpl5"]
-[ext_resource type="Resource" uid="uid://dyp3ia0iv8tn" path="res://ESCENAS/Quiz/Resource/Pregunta16.tres" id="18_14kkm"]
 [ext_resource type="Texture2D" uid="uid://cushew3t5l6a1" path="res://ASSETS/Sprites/Questionmark Square Button.png" id="18_ju7yy"]
 [ext_resource type="AudioStream" uid="uid://bsj484u8enicv" path="res://ASSETS/Audios/Audio/808522__licht2003__error.mp3" id="18_xcs45"]
 [ext_resource type="FontFile" uid="uid://dikplhd3wbrh5" path="res://ASSETS/Letras/Kenney pixel/Kenney Pixel.ttf" id="19_ju7yy"]
-[ext_resource type="Resource" uid="uid://c4lqgck2s0p5k" path="res://ESCENAS/Quiz/Resource/Pregunta17.tres" id="19_rqs43"]
-[ext_resource type="Resource" uid="uid://bvj41sqccni4a" path="res://ESCENAS/Quiz/Resource/Pregunta18.tres" id="20_spfu0"]
-[ext_resource type="Resource" uid="uid://c8xmmxjdwvcdn" path="res://ESCENAS/Quiz/Resource/Pregunta19.tres" id="21_nwq80"]
-[ext_resource type="Resource" uid="uid://3qg57bl1325y" path="res://ESCENAS/Quiz/Resource/Pregunta20.tres" id="22_iq2l6"]
-[ext_resource type="Resource" uid="uid://bv5ck7xqr7404" path="res://ESCENAS/Quiz/Resource/Pregunta21.tres" id="23_qmr45"]
-[ext_resource type="Resource" uid="uid://1fjalub66vld" path="res://ESCENAS/Quiz/Resource/Pregunta22.tres" id="24_aejqw"]
-[ext_resource type="Resource" uid="uid://btjh34i4eqlfh" path="res://ESCENAS/Quiz/Resource/Pregunta23.tres" id="25_jj1cy"]
-[ext_resource type="Resource" uid="uid://u126iulrpqo7" path="res://ESCENAS/Quiz/Resource/Pregunta24.tres" id="26_mskbx"]
-[ext_resource type="Resource" uid="uid://bybbbnok8jbeh" path="res://ESCENAS/Quiz/Resource/Pregunta25.tres" id="27_3e3gj"]
-[ext_resource type="Resource" uid="uid://pju7tgrvs1vp" path="res://ESCENAS/Quiz/Resource/Pregunta26.tres" id="28_ceix3"]
-[ext_resource type="Resource" uid="uid://b5tff0epabcjx" path="res://ESCENAS/Quiz/Resource/Pregunta27.tres" id="29_7567o"]
-[ext_resource type="Resource" uid="uid://dlkusclu0m3ou" path="res://ESCENAS/Quiz/Resource/Pregunta28.tres" id="30_gndkn"]
-[ext_resource type="Resource" uid="uid://c27nbyd27jpy5" path="res://ESCENAS/Quiz/Resource/Pregunta29.tres" id="31_u76x3"]
 [ext_resource type="Texture2D" uid="uid://bx1j3axpewa0e" path="res://ASSETS/Sprites/WoodTable.png" id="32_yrive"]
 [ext_resource type="Texture2D" uid="uid://c37oovjg4qerk" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Elementos-UI/woodenBorder.png" id="33_yrive"]
 [ext_resource type="AudioStream" uid="uid://xrwixcj05gma" path="res://ASSETS/Audios/Audio/404359__kagateni__success2 (mp3cut.net)(1).wav" id="36_4c4p7"]
 [ext_resource type="Texture2D" uid="uid://g71ito0vuc8j" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/book-menu-pag.png" id="37_twig1"]
+[ext_resource type="AudioStream" uid="uid://bxkori3x40jwq" path="res://ASSETS/Audios/Audio/freesound_community-ticking-clock_1-27477(1).mp3" id="40_u1o3b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u1o3b"]
 atlas = ExtResource("37_twig1")
@@ -113,7 +93,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 script = ExtResource("1_tqyif")
-quiz_Data = Array[ExtResource("2_ft7jj")]([ExtResource("3_1o46k"), ExtResource("4_vtyew"), ExtResource("5_4c4p7"), ExtResource("6_yrive"), ExtResource("7_twig1"), ExtResource("8_u1o3b"), ExtResource("9_rovev"), ExtResource("10_jobji"), ExtResource("11_irir1"), ExtResource("12_gcgrw"), ExtResource("13_g57kk"), ExtResource("14_ktjol"), ExtResource("15_d5wdp"), ExtResource("16_vp36h"), ExtResource("17_hncuc"), ExtResource("18_14kkm"), ExtResource("19_rqs43"), ExtResource("20_spfu0"), ExtResource("21_nwq80"), ExtResource("22_iq2l6"), ExtResource("23_qmr45"), ExtResource("24_aejqw"), ExtResource("25_jj1cy"), ExtResource("26_mskbx"), ExtResource("27_3e3gj"), ExtResource("28_ceix3"), ExtResource("29_7567o"), ExtResource("30_gndkn"), ExtResource("31_u76x3")])
+quiz_Data = Array[ExtResource("2_ft7jj")]([ExtResource("3_1o46k"), ExtResource("4_vtyew"), ExtResource("5_4c4p7"), ExtResource("6_yrive"), ExtResource("7_twig1"), ExtResource("8_u1o3b"), ExtResource("9_rovev"), ExtResource("10_jobji")])
 color_YES = Color(0, 1, 0, 1)
 color_NO = Color(1, 0, 0, 1)
 metadata/_edit_lock_ = true
@@ -319,20 +299,37 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.458824, 0.458824, 0.458824, 0.870588)
+color = Color(0, 0, 0, 0.6156863)
 
 [node name="Label" type="Label" parent="ColorRect" unique_id=1657324866]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -200.0
-offset_top = 208.0
-offset_right = 208.0
-offset_bottom = 231.0
+offset_left = -344.0
+offset_top = 168.0
+offset_right = 413.0
+offset_bottom = 210.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 30
-text = "ACERTASTE LA SIGUIENTE CANTIDAD DE PREGUNTAS:"
+theme_override_fonts/font = ExtResource("19_ju7yy")
+theme_override_font_sizes/font_size = 60
+text = "ACERTASTE LA SIGUIENTE CANTIDAD DE PREGUNTAS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ColorRect" unique_id=825558865]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -360.0
+offset_top = 104.0
+offset_right = 405.0
+offset_bottom = 146.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("19_ju7yy")
+theme_override_font_sizes/font_size = 60
+text = "¡Felicidades por culminar el Quiz!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -343,31 +340,110 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -12.5
-offset_top = -11.5
-offset_right = 12.5
-offset_bottom = 11.5
+offset_left = -136.0
+offset_top = -148.0
+offset_right = 171.0
+offset_bottom = 125.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("19_ju7yy")
+theme_override_font_sizes/font_size = 200
 text = "0/0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Exit" type="Button" parent="ColorRect" unique_id=1801733189]
+[node name="ExitLab" type="Button" parent="ColorRect" unique_id=1801733189]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -180.0
-offset_top = -179.0
-offset_right = 214.0
-offset_bottom = -117.0
+offset_left = -176.0
+offset_top = -184.0
+offset_right = 218.0
+offset_bottom = -122.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Salir"
+theme_override_fonts/font = ExtResource("19_ju7yy")
+theme_override_font_sizes/font_size = 50
+text = "Volver al laboratorio"
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=363113355]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6156863)
+
+[node name="Label" type="Label" parent="ColorRect2" unique_id=713252754]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -352.0
+offset_top = 224.0
+offset_right = 368.0
+offset_bottom = 328.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("19_ju7yy")
+theme_override_font_sizes/font_size = 60
+text = "Estas a punto de iniciar el Quiz
+¿Deseas Continuar?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ColorRect2" unique_id=752586434]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -360.0
+offset_top = 88.0
+offset_right = 405.0
+offset_bottom = 164.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("19_ju7yy")
+theme_override_font_sizes/font_size = 100
+text = "CUIDADO..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitLab" type="Button" parent="ColorRect2" unique_id=543900888]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -368.0
+offset_top = -264.0
+offset_right = -16.0
+offset_bottom = -202.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("19_ju7yy")
+theme_override_font_sizes/font_size = 50
+text = "Tengo miedo..."
+
+[node name="Continuar" type="Button" parent="ColorRect2" unique_id=119645798]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = -264.0
+offset_right = 400.0
+offset_bottom = -202.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("19_ju7yy")
+theme_override_font_sizes/font_size = 50
+text = "Continuar..."
 
 [node name="Timer" type="Timer" parent="." unique_id=987206850]
 autostart = true
@@ -381,7 +457,14 @@ stream = ExtResource("18_xcs45")
 volume_db = -4.238
 pitch_scale = 0.77
 
+[node name="TicTacMbappe" type="AudioStreamPlayer" parent="." unique_id=212542407]
+stream = ExtResource("40_u1o3b")
+volume_db = -5.725
+pitch_scale = 1.07
+
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="OptionButton" to="." method="_on_option_button_pressed"]
-[connection signal="pressed" from="ColorRect/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="ColorRect/ExitLab" to="." method="_on_exit_lab_pressed"]
+[connection signal="pressed" from="ColorRect2/ExitLab" to="." method="_on_exit_lab_pressed"]
+[connection signal="pressed" from="ColorRect2/Continuar" to="." method="_on_continuar_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
