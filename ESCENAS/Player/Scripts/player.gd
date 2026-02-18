@@ -21,6 +21,7 @@ func _ready() -> void:
 	health_bar.setup_health(health_component)
 	energy_bar.setup_energy(energy_component)
 	script_menu.close.connect(toggle_book)
+	health_component.Ondead.connect(muerto)
 
 func _process(_delta: float) -> void:
 	fase_sprite()
@@ -58,3 +59,6 @@ func toggle_book():
 func open_door():
 	if entrar == true and Input.is_action_just_pressed("Entrar"):
 		get_tree().change_scene_to_file("res://ESCENAS/Torre/Torre.tscn") 
+
+func muerto():
+	get_tree().change_scene_to_file("res://ESCENAS/Menu_Muerte/menu.muerte.tscn")
