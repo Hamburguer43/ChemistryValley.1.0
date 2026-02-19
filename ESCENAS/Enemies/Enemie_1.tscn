@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://dqvm7g8t631wp" path="res://ESCENAS/Enemies/scripts/health_bar.gd" id="7_7mcgd"]
 [ext_resource type="Script" uid="uid://dcd6fvwus8h3m" path="res://ESCENAS/StateMachine/Scripts_enemie/follow_state.gd" id="7_k6mw7"]
 [ext_resource type="Script" uid="uid://8co81fdpuu5u" path="res://ESCENAS/StateMachine/Scripts_enemie/hit_state.gd" id="10_h5y1s"]
+[ext_resource type="AudioStream" uid="uid://dglm0drhk5pay" path="res://ASSETS/Audios/Monsters SFX Vol.1/Monsters/Monster_Roar4.mp3" id="11_kxuat"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_reo8f"]
 radius = 16.0312
@@ -60,8 +61,9 @@ animation2 = NodePath("../Direction/Sprite2D/AnimatedSprite2D")
 [node name="PatrolState" type="Node2D" parent="StateMachine" unique_id=1809910283]
 script = ExtResource("6_k6mw7")
 
-[node name="FollowState" type="Node2D" parent="StateMachine" unique_id=304861531]
+[node name="FollowState" type="Node2D" parent="StateMachine" unique_id=304861531 node_paths=PackedStringArray("detected_audio")]
 script = ExtResource("7_k6mw7")
+detected_audio = NodePath("../../Audios/Detected")
 
 [node name="HitState" type="Node2D" parent="StateMachine" unique_id=1934655454]
 script = ExtResource("10_h5y1s")
@@ -92,6 +94,12 @@ texture_under = SubResource("GradientTexture2D_7mcgd")
 texture_progress = SubResource("GradientTexture2D_ev2gw")
 tint_progress = Color(0.883679, 0, 0.0514797, 1)
 script = ExtResource("7_7mcgd")
+
+[node name="Audios" type="Node2D" parent="." unique_id=1595605153]
+
+[node name="Detected" type="AudioStreamPlayer2D" parent="Audios" unique_id=1343449011]
+stream = ExtResource("11_kxuat")
+volume_db = -10.759
 
 [connection signal="body_entered" from="SensorComponent" to="." method="_on_sensor_component_body_entered"]
 [connection signal="body_exited" from="SensorComponent" to="." method="_on_sensor_component_body_exited"]

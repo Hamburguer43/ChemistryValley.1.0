@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Compound_Res" load_steps=3 format=3 uid="uid://14brjdqmigjo"]
+[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://14brjdqmigjo"]
 
 [ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_vackp"]
 [ext_resource type="Texture2D" uid="uid://dnr5nurp5pp44" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Background/Icon4.png" id="2_0xdqw"]
@@ -9,6 +9,5 @@ nombre = "Oxido de Potasio"
 formula = "K2O"
 textura = ExtResource("2_0xdqw")
 descripcion = "Sólido de color gris amarillento. Es una de las fuentes principales de potasio para la fabricación de fertilizantes agrícolas de alta calidad."
-rareza = "Comun"
-efectos = Array[String]([])
+poder_descripcion = "El jugador libera una onda de choque de color lila que inflige daño de \"quemadura química\" a todos los enemigos cercanos y los empuja hacia atrás (knockback)."
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

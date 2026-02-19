@@ -1,13 +1,14 @@
-[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://cnlwmr4cwg464"]
+[gd_resource type="Resource" script_class="Element_Res" format=3 uid="uid://cnlwmr4cwg464"]
 
 [ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_1gmwh"]
 [ext_resource type="Texture2D" uid="uid://vc1xg4ui5mc0" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon34.png" id="1_86d6v"]
+[ext_resource type="Texture2D" uid="uid://beq8nsfyhmfga" path="res://ASSETS/Sprites/Elements/Simbolo/Cobre.png" id="3_nd1k0"]
 
 [resource]
 script = ExtResource("1_1gmwh")
 nombre = "Cobre"
 simbolo = "Cu"
 valencias = Array[int]([1, 2])
-tipo = "Metal"
 icono = ExtResource("1_86d6v")
+simbolo_texture = ExtResource("3_nd1k0")
 metadata/_custom_type_script = "uid://dfxkj61cckpm1"

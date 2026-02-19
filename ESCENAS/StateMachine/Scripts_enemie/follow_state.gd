@@ -1,7 +1,13 @@
 extends State
 
+@export var detected_audio: AudioStreamPlayer2D
+
 func enter():
 	character.sprite.play("Run")
+	
+	if detected_audio:
+		detected_audio.pitch_scale = randf_range(0.9, 1.1)
+		detected_audio.play()
 
 func update_state(delta: float):
 	

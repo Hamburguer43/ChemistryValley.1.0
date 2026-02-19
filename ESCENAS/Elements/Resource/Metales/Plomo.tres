@@ -1,13 +1,14 @@
-[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://du4y5u2lirffn"]
+[gd_resource type="Resource" script_class="Element_Res" format=3 uid="uid://du4y5u2lirffn"]
 
 [ext_resource type="Texture2D" uid="uid://d0k6vq1w0186g" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/_edited_48_Minerals_Pixel_Art_Icons_Pack(15).png" id="1_0fohm"]
 [ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_oo4kd"]
+[ext_resource type="Texture2D" uid="uid://dml57rbkuudnr" path="res://ASSETS/Sprites/Elements/Simbolo/Plomo Pb.png" id="3_fohsr"]
 
 [resource]
 script = ExtResource("1_oo4kd")
 nombre = "Plomo"
 simbolo = "Pb"
 valencias = Array[int]([2, 4])
-tipo = "Metal"
 icono = ExtResource("1_0fohm")
+simbolo_texture = ExtResource("3_fohsr")
 metadata/_custom_type_script = "uid://dfxkj61cckpm1"

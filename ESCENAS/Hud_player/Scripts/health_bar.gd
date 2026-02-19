@@ -21,5 +21,5 @@ func update_bar_health(nueva_salud: int) -> void:
 	tween.tween_property(self, "value", nueva_salud, 0.3).set_trans(Tween.TRANS_SINE)
 	checked_visibility_bar(nueva_salud)
 
-func checked_visibility_bar(nueva_salud):
+func checked_visibility_bar(_nueva_salud):
 		show()

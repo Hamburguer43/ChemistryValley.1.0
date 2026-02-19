@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SC_Azufre" format=3 uid="uid://f56fviwoem1f"]
+
+[ext_resource type="Script" uid="uid://bh5yebmttwopt" path="res://ESCENAS/Compound/Script/SC_Azufre.gd" id="1_0dpx6"]
+[ext_resource type="Texture2D" uid="uid://bgrscg221giey" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon46.png" id="2_2lq7y"]
+
+[resource]
+script = ExtResource("1_0dpx6")
+nombre = "Anhídrido Hiposulfuroso"
+formula = "SO"
+textura = ExtResource("2_2lq7y")
+descripcion = "Un compuesto altamente inestable y difícil de aislar en estado puro. Es un gas transitorio que se descompone rápidamente."
+poder_descripcion = "Otorga dano corrosivo a los enemigos"
+metadata/_custom_type_script = "uid://bh5yebmttwopt"

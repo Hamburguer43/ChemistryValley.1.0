@@ -10,16 +10,16 @@ func _ready() -> void:
 	var compound = load("res://ESCENAS/Compound/Resource/Compound_Aluminio.tres");
 	var compound2 = load("res://ESCENAS/Compound/Resource/C_Calcio.tres");
 	var compound3 = load("res://ESCENAS/Compound/Resource/C_Hierro1.tres");
-	var compound4 = load("res://ESCENAS/Compound/Resource/C_Sodio.tres");
-	var compound5 = load("res://ESCENAS/Compound/Resource/C_Titanio1.tres");
-	var compound6 = load("res://ESCENAS/Compound/Resource/C_Cobre2.tres");
+	var compound4 = load("res://ESCENAS/Compound/Resource/C_Magnesio.tres");
+	var compound5 = load("res://ESCENAS/Compound/Resource/C_Azufre.tres");
+	#var compound6 = load("res://ESCENAS/Compound/Resource/C_Cobre2.tres");
 	var cantidad = 1
 	Inventory_Global.agregar_compound(compound, cantidad);
 	Inventory_Global.agregar_compound(compound2,cantidad);
 	Inventory_Global.agregar_compound(compound3,cantidad);
 	Inventory_Global.agregar_compound(compound4,cantidad);
 	Inventory_Global.agregar_compound(compound5,cantidad);
-	Inventory_Global.agregar_compound(compound6,cantidad);
+	#Inventory_Global.agregar_compound(compound6,cantidad);
 	
 	Inventory_Global.seleccion_cambiada.connect(actualizar_uix)
 	create_grid_inventory()
@@ -39,7 +39,7 @@ func create_grid_inventory():
 		var cantidad = Inventory_Global.Compound[compound]
 		var new_slot = slot.instantiate()
 		grid.add_child(new_slot)
-		new_slot.set_datos(compound, 1)
+		new_slot.set_datos(compound, cantidad)
 
 func slot_poderes():
 	

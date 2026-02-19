@@ -1,5 +1,7 @@
 extends State
 
+@export var attack_audio: AudioStreamPlayer
+
 func enter():
 	
 	if not character.is_on_floor():
@@ -8,6 +10,11 @@ func enter():
 	
 	character.velocity.x = 0
 	animation.play("Attack")
+	
+	if attack_audio:
+		attack_audio.pitch_scale = randf_range(0.9, 1.1) # Variedad sonora
+		attack_audio.play()
+	
 	await character.get_tree().create_timer(0.1).timeout
 	character.hitbox_component.set_hitbox_active(true)
 	

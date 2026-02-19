@@ -4,6 +4,9 @@ class_name Script_menu
 @onready var AnimatedBook = $Animated_Book
 @onready var Paginas = $Paginas
 @onready var Botones = $Botones
+@export var open_sound: AudioStreamPlayer
+@export var close_sound: AudioStreamPlayer
+@export var pag_sound: AudioStreamPlayer
 signal close
 
 func _ready() -> void:
@@ -16,6 +19,10 @@ func open_book():
 	
 	if AnimatedBook:
 		AnimatedBook.play("open")
+		
+		if open_sound:
+			open_sound.play()
+		
 		await AnimatedBook.animation_finished
 		Paginas.visible = true
 		Botones.visible = true
@@ -32,6 +39,8 @@ func cambiar_pagina(indice: int):
 	
 	if AnimatedBook:
 		AnimatedBook.play("Pagina")
+		if pag_sound:
+			pag_sound.play()
 		await AnimatedBook.animation_finished
 	
 	Paginas.current_tab = indice
@@ -57,5 +66,7 @@ func _on_salir_pressed() -> void:
 	Botones.visible = false
 	
 	AnimatedBook.play("Close")
+	if close_sound:
+		close_sound.play()
 	await  AnimatedBook.animation_finished
 	close.emit()

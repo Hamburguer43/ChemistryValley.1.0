@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SC_Azufre" format=3 uid="uid://beir2srdplx7s"]
+
+[ext_resource type="Script" uid="uid://bh5yebmttwopt" path="res://ESCENAS/Compound/Script/SC_Azufre.gd" id="1_pp1s2"]
+[ext_resource type="Texture2D" uid="uid://h1n6xjkxg4vm" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Background/Icon3.png" id="2_qkpxs"]
+
+[resource]
+script = ExtResource("1_pp1s2")
+nombre = "Anhídrido Sulfúrico"
+formula = "SO3"
+textura = ExtResource("2_qkpxs")
+descripcion = "Sólido cristalino o líquido aceitoso que reacciona de forma explosiva con el agua para formar ácido sulfúrico concentrado. Es un agente deshidratante extremadamente agresivo."
+poder_descripcion = "Otorga dano corrosivo a los enemigos"
+metadata/_custom_type_script = "uid://bh5yebmttwopt"

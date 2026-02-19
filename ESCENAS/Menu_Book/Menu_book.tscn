@@ -13,6 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://dwbag5rsk2woc" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Elementos-UI/Card-2.png" id="8_3pp18"]
 [ext_resource type="Texture2D" uid="uid://eepqs656d0kc" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Slot-marco.png" id="9_5cjqc"]
 [ext_resource type="PackedScene" uid="uid://gbig0vnyavwq" path="res://ESCENAS/Hud_player/slot_compound.tscn" id="10_dmifd"]
+[ext_resource type="AudioStream" uid="uid://cl40d08t5mpn2" path="res://ASSETS/Audios/Audio/freesound_community-libro-abierto-46311.mp3" id="14_5gyiy"]
+[ext_resource type="AudioStream" uid="uid://d3bxl1bbcxbvd" path="res://ASSETS/Audios/Audio/freesound_community-book-closing-48311.mp3" id="15_xigy5"]
+[ext_resource type="AudioStream" uid="uid://c7yfluqx22cd0" path="res://ASSETS/Audios/Audio/freesounds123-book-opening-345808.mp3" id="16_xigy5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3x8in"]
 atlas = ExtResource("1_hqtpl")
@@ -199,12 +202,15 @@ default_font = ExtResource("2_11jhi")
 [node name="Menu_book" type="CanvasLayer" unique_id=139748945]
 process_mode = 3
 
-[node name="Menu_Book" type="Control" parent="." unique_id=1506170415]
+[node name="Menu_Book" type="Control" parent="." unique_id=1506170415 node_paths=PackedStringArray("open_sound", "close_sound", "pag_sound")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_6tntx")
+open_sound = NodePath("Audios/Open")
+close_sound = NodePath("Audios/Close")
+pag_sound = NodePath("Audios/Pagina")
 
 [node name="Animated_Book" type="AnimatedSprite2D" parent="Menu_Book" unique_id=2028136241]
 position = Vector2(561, 286.5)
@@ -571,6 +577,17 @@ offset_bottom = 48.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Salir"
 horizontal_alignment = 1
+
+[node name="Audios" type="Node2D" parent="Menu_Book" unique_id=594594741]
+
+[node name="Open" type="AudioStreamPlayer" parent="Menu_Book/Audios" unique_id=517159650]
+stream = ExtResource("14_5gyiy")
+
+[node name="Close" type="AudioStreamPlayer" parent="Menu_Book/Audios" unique_id=1594793056]
+stream = ExtResource("15_xigy5")
+
+[node name="Pagina" type="AudioStreamPlayer" parent="Menu_Book/Audios" unique_id=357619791]
+stream = ExtResource("16_xigy5")
 
 [connection signal="pressed" from="Menu_Book/Botones/VBoxContainer/Compound" to="Menu_Book" method="_on_compound_pressed"]
 [connection signal="pressed" from="Menu_Book/Botones/VBoxContainer/Elements" to="Menu_Book" method="_on_elements_pressed"]

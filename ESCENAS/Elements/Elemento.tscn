@@ -6,9 +6,9 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r0ksr"]
 
-[node name="Elemento" type="Sprite2D" unique_id=66467518]
+[node name="Elemento" type="Sprite2D" unique_id=66467518 node_paths=PackedStringArray("coin")]
 script = ExtResource("1_r0ksr")
-cantidad = null
+coin = NodePath("Audio")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1151452086]
 collision_layer = 0

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Compound_Res" load_steps=3 format=3 uid="uid://cpm1v60lluwpm"]
+[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://cpm1v60lluwpm"]
 
 [ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_dlrt8"]
 [ext_resource type="Texture2D" uid="uid://dey1gbfw7yalh" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Background/Icon35.png" id="2_46f11"]
@@ -8,7 +8,6 @@ script = ExtResource("1_dlrt8")
 nombre = "Oxido Aurico"
 formula = "Au2O3"
 textura = ExtResource("2_46f11")
-descripcion = ""
-rareza = "Comun"
-efectos = Array[String]([])
+descripcion = "El óxido más estable del oro. Es un polvo hidrofóbico que se descompone térmicamente a 160 °C, volviendo a su estado de oro puro."
+poder_descripcion = "Durante 10 segundos, todos los enemigos derrotados dan el triple de puntos"
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

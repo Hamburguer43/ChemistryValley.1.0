@@ -3,9 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://cn2oolhes6tqw" path="res://ESCENAS/Tilemaps/Level_0/Level_o.scn" id="1_cwp2n"]
 [ext_resource type="Script" uid="uid://dbfooka55fb2v" path="res://ESCENAS/Level/Main_1/main.gd" id="1_fjd46"]
 [ext_resource type="PackedScene" uid="uid://xwlmfjrolb40" path="res://ESCENAS/Player/Player.tscn" id="2_dkebo"]
+[ext_resource type="Texture2D" uid="uid://c6vi1s8t83tps" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Backgrounds/Mountain/sky_lightened.png" id="2_g2ibf"]
+[ext_resource type="Texture2D" uid="uid://ousav4gpqapl" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Backgrounds/Mountain/clouds_bg.png" id="3_57yt3"]
 [ext_resource type="PackedScene" uid="uid://brvi154es6nte" path="res://ESCENAS/Enemies/Enemie_1.tscn" id="3_dkebo"]
+[ext_resource type="Texture2D" uid="uid://c4tthxurdt65u" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Backgrounds/Forest/mountain2.png" id="3_rf5e8"]
 [ext_resource type="SpriteFrames" uid="uid://b8jdo5isqwd38" path="res://ESCENAS/Enemies/Resource/Jabali_1.tres" id="4_7qxos"]
+[ext_resource type="Texture2D" uid="uid://bradmcgfmudo8" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Backgrounds/Forest/pine1.png" id="4_57yt3"]
 [ext_resource type="PackedScene" uid="uid://cuqhn21yckj88" path="res://ESCENAS/Elements/Elemento.tscn" id="4_njmqx"]
+[ext_resource type="Texture2D" uid="uid://bqcgf6ovclmf" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Backgrounds/Forest/pine3.png" id="5_0620s"]
 [ext_resource type="Resource" uid="uid://cnlwmr4cwg464" path="res://ESCENAS/Elements/Resource/Metales/Cobre.tres" id="6_cwp2n"]
 [ext_resource type="SpriteFrames" uid="uid://4khipftqy2ho" path="res://ESCENAS/Enemies/Resource/Jabali_3.tres" id="6_j47ay"]
 [ext_resource type="SpriteFrames" uid="uid://cypm6c48ud6h3" path="res://ESCENAS/Enemies/Resource/Jabali_2.tres" id="7_7qxos"]
@@ -14,19 +19,83 @@
 [ext_resource type="Resource" uid="uid://b6gi2fnyj0l3n" path="res://ESCENAS/Elements/Resource/NoMetales/Oxigeno.tres" id="11_52322"]
 [ext_resource type="Resource" uid="uid://b7w0brai27ktl" path="res://ESCENAS/Elements/Resource/Metales/Aluminio.tres" id="12_fjd46"]
 [ext_resource type="Resource" uid="uid://c3pl5wsabbsjn" path="res://ESCENAS/Elements/Resource/Metales/Titanio.tres" id="13_o5gkj"]
+[ext_resource type="Resource" uid="uid://br04as65awrts" path="res://ESCENAS/Elements/Resource/NoMetales/Azufre.tres" id="15_8juvb"]
 [ext_resource type="PackedScene" uid="uid://bgq22gjvtrwig" path="res://ESCENAS/p.tscn" id="15_27vsc"]
-[ext_resource type="AudioStream" uid="uid://c2hxr3m2pgjpb" path="res://ASSETS/Audios/Musica/the-faded-rose-dark-fantasy-background-music-109375_nNYwL6wv.mp3" id="15_o5gkj"]
 [ext_resource type="PackedScene" uid="uid://s6yyrpenenn7" path="res://ESCENAS/muerte.tscn" id="16_jkyj1"]
+[ext_resource type="AudioStream" uid="uid://bkxrvb24jui4h" path="res://ASSETS/Audios/Audio/bird-whistling-in-the-forest-215441.mp3" id="17_jkyj1"]
 
 [node name="Main" type="Node2D" unique_id=1495102444]
 position = Vector2(-2, 11)
 script = ExtResource("1_fjd46")
 
+[node name="Node2D" type="Node2D" parent="." unique_id=1527971258]
+position = Vector2(35, -32)
+
+[node name="Sky" type="Parallax2D" parent="Node2D" unique_id=428011367]
+scroll_scale = Vector2(0.1, 0.1)
+scroll_offset = Vector2(-61, 399)
+repeat_size = Vector2(1305.6, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Sky" unique_id=456628172]
+position = Vector2(475, -212)
+scale = Vector2(3.4739583, 2.9629629)
+texture = ExtResource("2_g2ibf")
+
+[node name="Sky3" type="Parallax2D" parent="Node2D" unique_id=458521703]
+scroll_scale = Vector2(0.1, 0.1)
+scroll_offset = Vector2(-61, 399)
+repeat_size = Vector2(1305.6, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Sky3" unique_id=878615557]
+position = Vector2(475, -278)
+scale = Vector2(3.4739583, 2.9629629)
+texture = ExtResource("3_57yt3")
+
+[node name="Sky2" type="Parallax2D" parent="Node2D" unique_id=1166617395]
+scroll_scale = Vector2(0.1, 0.1)
+scroll_offset = Vector2(-61, 1039)
+repeat_size = Vector2(1305.6, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Sky2" unique_id=1209751153]
+position = Vector2(475, -212)
+scale = Vector2(3.4739583, 2.9629629)
+texture = ExtResource("2_g2ibf")
+
+[node name="Mountain" type="Parallax2D" parent="Node2D" unique_id=1568950358]
+scroll_scale = Vector2(0.5, 0.5)
+scroll_offset = Vector2(-61, 967)
+repeat_size = Vector2(1032, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Mountain" unique_id=1924504561]
+position = Vector2(548, -787)
+scale = Vector2(1.5494186, 2.6141732)
+texture = ExtResource("3_rf5e8")
+
+[node name="Trees" type="Parallax2D" parent="Node2D" unique_id=1121174132]
+scroll_scale = Vector2(0.8, 0.8)
+scroll_offset = Vector2(-61, 1085)
+repeat_size = Vector2(1032, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Trees" unique_id=1659382612]
+position = Vector2(548, -787)
+scale = Vector2(1.5494186, 2.6141732)
+texture = ExtResource("4_57yt3")
+
+[node name="Dirt" type="Parallax2D" parent="Node2D" unique_id=1429878551]
+scroll_scale = Vector2(0.8, 0.8)
+scroll_offset = Vector2(-61, 1085)
+repeat_size = Vector2(1032, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Dirt" unique_id=602961666]
+position = Vector2(548, -319)
+scale = Vector2(1.5494186, 2.6141732)
+texture = ExtResource("5_0620s")
+
 [node name="Level_0" parent="." unique_id=1817912562 instance=ExtResource("1_cwp2n")]
 position = Vector2(1144, -81)
 
 [node name="Player" parent="." unique_id=1795189720 instance=ExtResource("2_dkebo")]
-position = Vector2(1747, 73)
+position = Vector2(1747, 74)
 
 [node name="Enemie" type="Node2D" parent="." unique_id=1530212496]
 position = Vector2(12, -101)
@@ -191,6 +260,16 @@ resource = ExtResource("13_o5gkj")
 position = Vector2(13097, -62)
 resource = ExtResource("13_o5gkj")
 
+[node name="Azufre" type="Node2D" parent="Elementos" unique_id=468265356]
+
+[node name="Elemento" parent="Elementos/Azufre" unique_id=66467518 instance=ExtResource("4_njmqx")]
+position = Vector2(2119, 138)
+resource = ExtResource("15_8juvb")
+
+[node name="Elemento2" parent="Elementos/Azufre" unique_id=363482252 instance=ExtResource("4_njmqx")]
+position = Vector2(2191, 138)
+resource = ExtResource("11_52322")
+
 [node name="Otros" type="Node2D" parent="." unique_id=1260902992]
 
 [node name="Area2D" parent="Otros" unique_id=381754262 instance=ExtResource("15_27vsc")]
@@ -217,5 +296,8 @@ position = Vector2(12943, 547)
 [node name="Area2D8" parent="Otros" unique_id=706857906 instance=ExtResource("16_jkyj1")]
 position = Vector2(16758, 270)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2034230762]
-stream = ExtResource("15_o5gkj")
+[node name="Audios" type="Node2D" parent="." unique_id=1843505761]
+
+[node name="Bird" type="AudioStreamPlayer" parent="Audios" unique_id=520120177]
+stream = ExtResource("17_jkyj1")
+parameters/looping = true

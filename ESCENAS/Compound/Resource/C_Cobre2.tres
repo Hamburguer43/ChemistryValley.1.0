@@ -1,16 +1,14 @@
-[gd_resource type="Resource" script_class="SC_Cobre1" load_steps=3 format=3 uid="uid://cmdmlmtpqar83"]
+[gd_resource type="Resource" script_class="SC_Cobre1" format=3 uid="uid://cmdmlmtpqar83"]
 
-[ext_resource type="Script" uid="uid://qlgfsatlpeh" path="res://ESCENAS/Compound/Script/SC_Cobre1.gd" id="1_qtuow"]
-[ext_resource type="Texture2D" uid="uid://gqwug2hmipj8" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Background/Icon7.png" id="2_ptkvw"]
+[ext_resource type="Script" uid="uid://b64216minv4w0" path="res://ESCENAS/Compound/Script/SC_Cobre2.gd" id="1_qtuow"]
+[ext_resource type="Texture2D" uid="uid://bisa4tyoqv3g7" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon27.png" id="2_ptkvw"]
 
 [resource]
 script = ExtResource("1_qtuow")
-boost_velocidad = 80.0
-tiempo = 4.0
 color_cobre = Color(1, 0.270588, 0, 1)
 nombre = "Oxido cúprico"
 formula = "CuO"
 textura = ExtResource("2_ptkvw")
 descripcion = "Polvo negro fino. Se usa en la fabricación de semiconductores y para dar color azul o verde a vidrios y cerámicas."
-rareza = "Comun"
+poder_descripcion = "Otorga Velocidad II"
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

@@ -18,6 +18,10 @@
 [ext_resource type="PackedScene" uid="uid://dtakpqqxyk5ro" path="res://ESCENAS/Hud_player/HUd.tscn" id="14_q5t41"]
 [ext_resource type="PackedScene" uid="uid://bfctlqgjansd6" path="res://ESCENAS/Menu_Book/Menu_book.tscn" id="16_sqhi6"]
 [ext_resource type="Script" uid="uid://c70v7h7ude7o3" path="res://ESCENAS/Player/Scripts/ability_comp.gd" id="17_vd2eb"]
+[ext_resource type="AudioStream" uid="uid://dgc3yd57vdia0" path="res://ASSETS/Audios/Audio/walking-through-grass-80308.mp3" id="19_tw4ay"]
+[ext_resource type="AudioStream" uid="uid://drvx5h2xhg25k" path="res://ASSETS/Audios/Audio/knife-slice-41231.mp3" id="20_0inbb"]
+[ext_resource type="AudioStream" uid="uid://dc23ge4io886j" path="res://ASSETS/Audios/Audio/freesound_community-sfx_jump_07-80241 (mp3cut.net).mp3" id="21_h8k5s"]
+[ext_resource type="AudioStream" uid="uid://cu6dw1hdit6l7" path="res://ASSETS/Audios/Audio/yodguard-level-up-skill-upgrade-2-387908.mp3" id="22_dce38"]
 
 [sub_resource type="Animation" id="Animation_kctr6"]
 resource_name = "Attack"
@@ -189,11 +193,13 @@ animation = NodePath("../Direction/AnimationPlayer")
 [node name="IdleState" type="Node2D" parent="StateMachine" unique_id=795667388]
 script = ExtResource("8_62p1g")
 
-[node name="WalkState" type="Node2D" parent="StateMachine" unique_id=662044453]
+[node name="WalkState" type="Node2D" parent="StateMachine" unique_id=662044453 node_paths=PackedStringArray("step_audio")]
 script = ExtResource("9_nslrf")
+step_audio = NodePath("../../Audios/Pasos")
 
-[node name="JumpState" type="Node2D" parent="StateMachine" unique_id=1909575483]
+[node name="JumpState" type="Node2D" parent="StateMachine" unique_id=1909575483 node_paths=PackedStringArray("jump_sound")]
 script = ExtResource("5_62p1g")
+jump_sound = NodePath("../../Audios/Jump")
 
 [node name="Wall_slideState" type="Node2D" parent="StateMachine" unique_id=932197287]
 script = ExtResource("6_nslrf")
@@ -201,11 +207,13 @@ script = ExtResource("6_nslrf")
 [node name="FallState" type="Node2D" parent="StateMachine" unique_id=932440899]
 script = ExtResource("7_kctr6")
 
-[node name="AttackState" type="Node2D" parent="StateMachine" unique_id=1855686228]
+[node name="AttackState" type="Node2D" parent="StateMachine" unique_id=1855686228 node_paths=PackedStringArray("attack_audio")]
 script = ExtResource("8_ovfga")
+attack_audio = NodePath("../../Audios/Ataque")
 
-[node name="PoderState" type="Node2D" parent="StateMachine" unique_id=25127285]
+[node name="PoderState" type="Node2D" parent="StateMachine" unique_id=25127285 node_paths=PackedStringArray("poder_audio")]
 script = ExtResource("13_nhf4e")
+poder_audio = NodePath("../../Audios/Poder")
 
 [node name="Movement" type="Node2D" parent="." unique_id=1858679854]
 position = Vector2(0, 28)
@@ -238,3 +246,22 @@ editor_draw_drag_margin = true
 
 [node name="Menu_book" parent="." unique_id=1524942260 instance=ExtResource("16_sqhi6")]
 visible = false
+
+[node name="Audios" type="Node2D" parent="." unique_id=1978429120]
+
+[node name="Pasos" type="AudioStreamPlayer" parent="Audios" unique_id=1875557698]
+stream = ExtResource("19_tw4ay")
+volume_db = -15.241
+pitch_scale = 2.0
+
+[node name="Ataque" type="AudioStreamPlayer" parent="Audios" unique_id=529536641]
+stream = ExtResource("20_0inbb")
+pitch_scale = 2.0
+
+[node name="Jump" type="AudioStreamPlayer" parent="Audios" unique_id=755885971]
+stream = ExtResource("21_h8k5s")
+
+[node name="Poder" type="AudioStreamPlayer" parent="Audios" unique_id=1195031550]
+stream = ExtResource("22_dce38")
+volume_db = -9.862
+pitch_scale = 2.0

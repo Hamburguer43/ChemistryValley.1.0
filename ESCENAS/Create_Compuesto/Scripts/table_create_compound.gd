@@ -5,8 +5,9 @@ class_name table_create_compound
 @onready var optionbutton: OptionButton = $VBoxContainer/SelectorValencias
 @onready var Button_mezcla = $VBoxContainer/Button_mezclar/button_mezcla
 @onready var animation = $"Sprite-Table/Sprite2D/AnimatedSprite2D"
-@onready var Aviso = $Aviso
-@onready var label_contador = $Aviso/Contador
+@onready var Aviso_cooking = $Avisos/Aviso_cooking
+@onready var Aviso_error = $Avisos/Aviso_error
+@onready var label_contador = $Avisos/Aviso_cooking/Contador
 
 @onready var Sprite_slot1 = $"Slot-1/Button/elemento1"
 @onready var Sprite_slot2 = $"Slot-2/Button/elemento2"
@@ -16,6 +17,10 @@ var slot_seleccionado: int = 0
 @export var valencia: int = 0
 
 @export var compound_card_scene: PackedScene
+@export var mensaje_error: TextEdit
+@export var burbuja_audio: AudioStreamPlayer
+@export var cooking_audio: AudioStreamPlayer
+@export var error_audio: AudioStreamPlayer
 
 func _ready() -> void:
 	
@@ -63,7 +68,8 @@ func _on_button_mezcla_pressed() -> void:
 	
 	#si no hay un metal elegido pues no va a mezclar nada
 	if not elemento_1 or not elemento_2:
-		print("elige un metal para realizar el compuesto")
+		error_audio.play()
+		mostrar_aviso_error("Escoge 2 elementos para empezar la mezcla.")
 		return
 	
 	var metal: Element_Res = null
@@ -76,7 +82,8 @@ func _on_button_mezcla_pressed() -> void:
 		metal = elemento_1
 		
 	if metal == null:
-		print("Mezcla imposible, necesitas un oxigeno para crear un oxido basico")
+		error_audio.play()
+		mostrar_aviso_error("Imposible de mezclar. Recuerda que para hacer un oxido necesitas un oxigeno y un metal. Ej: O + FE / Oxigeno + Hierro")
 		return
 	
 	#animaciones de mezcla y cocinado compound
@@ -85,13 +92,16 @@ func _on_button_mezcla_pressed() -> void:
 		Button_mezcla.disabled = true
 		
 		animation.play("mezclando")
-		print("Fase 1: Mezclando ingredientes...")
+		if burbuja_audio:
+			burbuja_audio.play()
 		await animation.animation_finished # Espera a que termine de mezclar
+		
 		animation.play("Cocinando")
-		Aviso.visible = true
-		print("Fase 2: Cocinando el compuesto...")
+		Aviso_cooking.visible = true
 		iniciar_conteo(3)
 		await animation.animation_finished
+		if cooking_audio:
+			cooking_audio.play()
 		
 		Button_mezcla.disabled = false
 	
@@ -111,7 +121,7 @@ func _on_button_mezcla_pressed() -> void:
 	
 	if compound:
 		show_card_compound(compound)
-		Aviso.visible = false
+		Aviso_cooking.visible = false
 		print("creado con exito el compuesto:", compound.formula, "/", compound.nombre)
 		animation.play("inital")
 	else:
@@ -155,6 +165,14 @@ func iniciar_conteo(segundos: int):
 	label_contador.text = "¡Hecho!"
 	label_contador.modulate = Color.GREEN # Feedback visual de éxito
 	await get_tree().create_timer(0.5).timeout
+
+func mostrar_aviso_error(mensaje: String):
+	Aviso_error.get_node("Label").text = mensaje
+	Aviso_error.visible = true
+	var t = create_tween()
+	t.tween_interval(2)
+	t.tween_callback(func(): Aviso_error.visible = false)
+	
 #RUTA DEL FUNCIONAMIENTO DE TABLE-CREATE-COMPOUND -------------------------------------
 
 #1) El slot-metal es un boton que emite una senal cuando es presionado, esa senal es conectada al script de inventario-elements

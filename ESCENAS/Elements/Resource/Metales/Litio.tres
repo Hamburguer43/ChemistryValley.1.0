@@ -1,13 +1,14 @@
-[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://cb4nfxb6yrlaj"]
+[gd_resource type="Resource" script_class="Element_Res" format=3 uid="uid://cb4nfxb6yrlaj"]
 
 [ext_resource type="Texture2D" uid="uid://jtf8ldc3bibp" path="res://ASSETS/Sprites/48 Free Minerals Pixel Art Icons Pack (1)/PNG/Transperent/Icon37.png" id="1_a3whp"]
 [ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_pr2cl"]
+[ext_resource type="Texture2D" uid="uid://dj7iyf7smyrlr" path="res://ASSETS/Sprites/Elements/Simbolo/Litio.png" id="3_8iw4b"]
 
 [resource]
 script = ExtResource("1_pr2cl")
 nombre = "Litio"
 simbolo = "Li"
 valencias = Array[int]([1])
-tipo = "Metal"
 icono = ExtResource("1_a3whp")
+simbolo_texture = ExtResource("3_8iw4b")
 metadata/_custom_type_script = "uid://dfxkj61cckpm1"

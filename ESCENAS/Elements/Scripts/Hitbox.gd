@@ -17,4 +17,3 @@ func _on_body_entered(body: Node2D) -> void:
 			
 			Inventory_Global.agregar_element(elemento, cantidad)
 			
-			node_padre.queue_free()

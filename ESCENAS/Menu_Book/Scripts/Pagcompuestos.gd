@@ -6,11 +6,11 @@ class_name PagCompound
 
 func _ready() -> void:
 	#esto es de prueba ya que el personaje tendria quec conseguirlos en el world
-	var compound = load("res://ESCENAS/Compound/Resource/Compound_Aluminio.tres");
-	var compound2 = load("res://ESCENAS/Compound/Resource/C_Cobre2.tres");
-	var cantidad = 2
-	Inventory_Global.agregar_compound(compound, cantidad);
-	Inventory_Global.agregar_compound(compound2,cantidad);
+	#var compound = load("res://ESCENAS/Compound/Resource/Compound_Aluminio.tres");
+	#var compound2 = load("res://ESCENAS/Compound/Resource/C_Cobre2.tres");
+	#var cantidad = 2
+	#Inventory_Global.agregar_compound(compound, cantidad);
+	#Inventory_Global.agregar_compound(compound2,cantidad);
 	
 	create_grid_inventory()
 

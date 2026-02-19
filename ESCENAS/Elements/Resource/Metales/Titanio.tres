@@ -1,13 +1,14 @@
-[gd_resource type="Resource" script_class="Element_Res" load_steps=3 format=3 uid="uid://c3pl5wsabbsjn"]
+[gd_resource type="Resource" script_class="Element_Res" format=3 uid="uid://c3pl5wsabbsjn"]
 
 [ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_3jkk8"]
 [ext_resource type="Texture2D" uid="uid://bfoyweh6la72a" path="res://ASSETS/Sprites/Elements/Png/Metales/titanio.png" id="1_bdeef"]
+[ext_resource type="Texture2D" uid="uid://bidsh3a7s0l6" path="res://ASSETS/Sprites/Elements/Simbolo/titanio.png" id="3_73yh4"]
 
 [resource]
 script = ExtResource("1_3jkk8")
 nombre = "Titanio"
 simbolo = "Ti"
 valencias = Array[int]([2, 3, 4])
-tipo = "Metal"
 icono = ExtResource("1_bdeef")
+simbolo_texture = ExtResource("3_73yh4")
 metadata/_custom_type_script = "uid://dfxkj61cckpm1"

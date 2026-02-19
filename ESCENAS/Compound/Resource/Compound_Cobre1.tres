@@ -1,16 +1,14 @@
-[gd_resource type="Resource" script_class="SC_Cobre1" load_steps=3 format=3 uid="uid://dsh0io6cpbg7x"]
+[gd_resource type="Resource" script_class="SC_Cobre1" format=3 uid="uid://dsh0io6cpbg7x"]
 
 [ext_resource type="Script" uid="uid://qlgfsatlpeh" path="res://ESCENAS/Compound/Script/SC_Cobre1.gd" id="1_cyuba"]
-[ext_resource type="Texture2D" uid="uid://rinxr6kaosaq" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Background/Icon27.png" id="2_s7rfv"]
+[ext_resource type="Texture2D" uid="uid://dvk5hxai3jy1x" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon4.png" id="2_s7rfv"]
 
 [resource]
 script = ExtResource("1_cyuba")
-boost_velocidad = 80.0
-tiempo = 4.0
 color_cobre = Color(1, 0.270588, 0, 1)
 nombre = "Oxido cuproso"
 formula = "Cu2O"
 textura = ExtResource("2_s7rfv")
 descripcion = "Sólido de color rojo intenso. Se utiliza en pinturas marinas para evitar que algas y moluscos se peguen a los barcos."
-rareza = "Comun"
+poder_descripcion = "Otorga velocidad I"
 metadata/_custom_type_script = "uid://qlgfsatlpeh"

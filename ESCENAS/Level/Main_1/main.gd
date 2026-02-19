@@ -1,4 +1,6 @@
 extends Node2D
 
+@onready var bird_audio: AudioStreamPlayer = $Audios/Bird
+
 func _ready() -> void:
-	$AudioStreamPlayer2D.play()
+	bird_audio.play()

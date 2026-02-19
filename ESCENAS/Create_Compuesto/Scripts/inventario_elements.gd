@@ -6,24 +6,35 @@ class_name inventario_elements
 @onready var animation: AnimationPlayer = $Book/AnimatedSprite2D
 @onready var text = $Book/Text
 var tween: Tween
+@export var open_sound: AudioStreamPlayer
+@export var close_sound: AudioStreamPlayer
 
 signal take_element(element: Element_Res)
 
-# -- animaciones de tween para el inventario -------
+# -- animaciones de open para el inventario -------
 func _on_button_pressed() -> void:
-	
+	grid.visible = false # Escondemos el grid para que no se vea antes de tiempo
+	$Book/Label.visible = false
+	$Book/MarginText/RichTextLabel.visible = false
 	self.pivot_offset = size/2
 	self.scale = Vector2.ZERO
 	self.modulate.a = 0.0
 	self.show()
 	
 	reset_tween()
-	
 	tween.parallel().tween_property(self, "scale", Vector2.ONE, 0.4).set_trans(Tween.TRANS_BACK)
 	tween.parallel().tween_property(self, "modulate:a", 1.0, 0.2)
-	
 	animation.play("open")
 	
+	if open_sound:
+		open_sound.play()
+	
+	await animation.animation_finished 
+	create_grid_inventory()
+	grid.visible = true
+	$Book/Label.visible = true
+	$Book/MarginText/RichTextLabel.visible = true
+
 func reset_tween():
 	if tween:
 		tween.kill()
@@ -36,14 +47,18 @@ func _on_texture_button_pressed() -> void:
 	for children in grid.get_children():
 		children.queue_free()
 		$Book/Label.visible = false
+		$Book/MarginText/RichTextLabel.visible = false
 	
 	animation.play("close")
+	
+	if close_sound:
+		close_sound.play()
+	
 	await animation.animation_finished
 	
 	tween.set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
 	tween.parallel().tween_property(self, "scale", Vector2.ZERO, 0.4)
 	tween.parallel().tween_property(self, "modulate:a", 0.0, 0.2)
-	
 
 func close_nodo():
 	self.hide()
@@ -53,31 +68,30 @@ func close_nodo():
 func _ready() -> void:
 	#esto es de prueba ya que el personaje tendria quec conseguirlos en el world
 	
-	var hierro = load("res://ESCENAS/Elements/Resource/Metales/Hierro.tres")
-	var oro = load("res://ESCENAS/Elements/Resource/Metales/Oro.tres")
-	var cantidad = 1
-	Inventory_Global.agregar_element(hierro, cantidad)
-	Inventory_Global.agregar_element(oro, cantidad)
+	#var hierro = load("res://ESCENAS/Elements/Resource/Metales/Hierro.tres")
+	#var oro = load("res://ESCENAS/Elements/Resource/Metales/Oro.tres")
+	#var oxigeno = load("res://ESCENAS/Elements/Resource/NoMetales/Oxigeno.tres")
+	#var cantidad = 1
+	#Inventory_Global.agregar_element(hierro, cantidad)
+	#Inventory_Global.agregar_element(oro, cantidad)
+	#Inventory_Global.agregar_element(oxigeno, cantidad)
 	
 	create_grid_inventory()
 
 func create_grid_inventory(): 
-	
-	#Comprobamos de que hay elementos en el inventario, si no muestra un mensaje
-	if Inventory_Global.Elementos.size() == 0:
-		text.visible = true
-	else :
-		text.visible = false
-	
-	#limpiamos para evitar duplicados
+	# Limpiamos (Responsabilidad: Limpieza)
 	for children in grid.get_children():
 		children.queue_free()
-		
+	
+	# Comprobamos elementos (Responsabilidad: Validación)
+	text.visible = Inventory_Global.Elementos.size() == 0
+	
+	# Llenamos (Responsabilidad: Poblar datos)
 	for elemento in Inventory_Global.Elementos:
+		var cantidad = Inventory_Global.Elementos[elemento]
 		var new_slot = slot.instantiate()
 		grid.add_child(new_slot)
-		new_slot.set_datos(elemento)
-		
+		new_slot.set_datos(elemento, cantidad)
 		new_slot.pressed.connect(elemento_elegido.bind(elemento))
 
 func elemento_elegido(elemento: Element_Res):

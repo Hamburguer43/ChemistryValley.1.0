@@ -1,14 +1,13 @@
-[gd_resource type="Resource" script_class="Compound_Res" load_steps=3 format=3 uid="uid://cb1t3t8j7kjy"]
+[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://cb1t3t8j7kjy"]
 
 [ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_h1bra"]
-[ext_resource type="Texture2D" uid="uid://d3ad8ema2yxj8" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Background/Icon34.png" id="2_odxms"]
+[ext_resource type="Texture2D" uid="uid://msnwrq01ro1s" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon34.png" id="2_odxms"]
 
 [resource]
 script = ExtResource("1_h1bra")
 nombre = "Oxido Auroso"
 formula = "Au2O"
 textura = ExtResource("2_odxms")
-descripcion = "Un compuesto de un color violeta oscuro, casi negro, extremadamente inestable y raro. En el mundo de la alquimia, se considera un estado transitorio del oro, ya que tiende a descomponerse espontáneamente para recuperar su forma metálica pura. Es altamente valorado por su dificultad de obtención."
-rareza = "Comun"
-efectos = Array[String]([])
+descripcion = "El óxido más estable del oro. Es un polvo hidrofóbico que se descompone fácilmente, liberando oro puro. Representa la riqueza y la conductividad suprema."
+poder_descripcion = "Durante 10 segundos, todos los enemigos derrotados dan el doble de puntos"
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

@@ -1,10 +1,20 @@
 extends State
 
+@export var step_audio: AudioStreamPlayer
+
 func update_state(delta: float):
 	
 	var input_axis = Input.get_axis("left_move", "right_move")
 	character.movement.handle_movement(character, input_axis, delta)
 	animation.play("Walk")
+	
+	if input_axis != 0 and character.is_on_floor():
+		if not step_audio.playing:
+			# Variamos el pitch ligeramente para que no sea monótono (Opcional)
+			step_audio.pitch_scale = randf_range(0.9, 1.1)
+			step_audio.play()
+	else:
+		step_audio.stop()
 	
 	character.move_and_slide()
 	

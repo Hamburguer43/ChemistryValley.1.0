@@ -1,9 +1,12 @@
 extends State
 
+@export var jump_sound: AudioStreamPlayer
+
 func enter():
 	# Primer salto al entrar al estado
 	character.jump.handle_jump(character, true)
 	animation.play("Jump")
+	jump_sound.play()
 
 func update_state(delta: float):
 	
@@ -17,6 +20,7 @@ func update_state(delta: float):
 		if jump_doble:
 			animation.stop()
 			animation.play("Jump")
+			jump_sound.play()
 		
 	if character.is_on_floor():
 		if character.velocity.x != 0:

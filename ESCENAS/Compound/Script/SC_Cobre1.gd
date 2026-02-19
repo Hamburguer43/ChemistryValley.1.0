@@ -1,7 +1,7 @@
 extends Compound_Res
 class_name SC_Cobre1
 
-@export var boost_velocidad: float = 80 # Multiplicador de velocidad
+@export var boost_velocidad: float = 60 # Multiplicador de velocidad
 @export var tiempo: float = 4.0        # Cuánto dura el efecto
 @export var color_cobre: Color = Color.ORANGE_RED
 

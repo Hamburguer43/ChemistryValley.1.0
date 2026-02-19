@@ -9,6 +9,7 @@ var slot_seleccionado: int = 0 :
 		seleccion_cambiada.emit()
 signal  seleccion_cambiada
 signal slot_utilizado
+signal actualizar_inventory
 
 func agregar_element(elemento: Element_Res, cantidad: int):
 	
@@ -23,6 +24,8 @@ func agregar_compound(compound: Compound_Res, cantidad: int = 1):
 		Compound[compound] += cantidad
 	else:
 		Compound[compound] = cantidad 
+	
+	actualizar_inventory.emit()
 
 func equipar_compuesto(res: Compound_Res, index: int):
 	# Verificar si el compuesto ya está en algún otro slot

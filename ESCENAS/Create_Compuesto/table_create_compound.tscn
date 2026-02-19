@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://bgtgjuxl48ch6" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Elementos-UI/Button.png" id="9_fbjnu"]
 [ext_resource type="AudioStream" uid="uid://7lbw5jqx3pyb" path="res://ASSETS/Audios/Audio/freesound_community-071695_bubble-bouncewav-88131 (mp3cut.net).mp3" id="10_lxnxf"]
 [ext_resource type="Texture2D" uid="uid://b2yaqnr3sg7ac" path="res://ASSETS/Sprites/X Square Button.png" id="12_aiw7s"]
+[ext_resource type="AudioStream" uid="uid://bsj484u8enicv" path="res://ASSETS/Audios/Audio/808522__licht2003__error.mp3" id="12_ht626"]
+[ext_resource type="AudioStream" uid="uid://d2ps7plf37dwk" path="res://ASSETS/Audios/Audio/collectcoin-6075.mp3" id="12_qehsn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aiw7s"]
 atlas = ExtResource("4_exxcr")
@@ -241,7 +243,7 @@ animations = [{
 [sub_resource type="Theme" id="Theme_jdcs7"]
 default_font = ExtResource("7_lxnxf")
 
-[node name="Table-Create-Compound" type="Control" unique_id=1375621449]
+[node name="Table-Create-Compound" type="Control" unique_id=1375621449 node_paths=PackedStringArray("burbuja_audio", "cooking_audio", "error_audio")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -252,6 +254,9 @@ size_flags_horizontal = 2
 size_flags_vertical = 8
 script = ExtResource("1_xxhx2")
 compound_card_scene = ExtResource("6_0eqjr")
+burbuja_audio = NodePath("Audios/Burbujas")
+cooking_audio = NodePath("Audios/Cocinado")
+error_audio = NodePath("Audios/Error")
 
 [node name="Sprite-Table" type="Node2D" parent="." unique_id=255871667]
 
@@ -391,47 +396,20 @@ text = "mezclar"
 [node name="Card_compound" parent="." unique_id=1093967166 instance=ExtResource("6_0eqjr")]
 visible = false
 
-[node name="Aviso" type="Control" parent="." unique_id=1101433754]
-visible = false
-layout_mode = 1
-anchor_left = 0.148
-anchor_top = 0.711
-anchor_right = 0.786
-anchor_bottom = 0.906
-offset_left = 92.504
-offset_top = -240.728
-offset_right = -21.472
-offset_bottom = -206.088
+[node name="Audios" type="Node2D" parent="." unique_id=766694457]
 
-[node name="Text" type="Sprite2D" parent="Aviso" unique_id=1622553533]
-position = Vector2(306, 77)
-scale = Vector2(4.05882, 1.875)
-texture = ExtResource("9_fbjnu")
-
-[node name="Label" type="Label" parent="Aviso" unique_id=1259488689]
-layout_mode = 0
-offset_left = 65.0
-offset_top = 54.0
-offset_right = 577.0
-offset_bottom = 144.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "se está cocinando el compuesto, espera unos segundos"
-
-[node name="Contador" type="Label" parent="Aviso" unique_id=1658546242]
-layout_mode = 0
-offset_left = 270.0
-offset_top = 87.0
-offset_right = 311.0
-offset_bottom = 113.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=335869334]
+[node name="Burbujas" type="AudioStreamPlayer" parent="Audios" unique_id=134465213]
 stream = ExtResource("10_lxnxf")
-volume_db = 6.679
-pitch_scale = 0.89
 
-[node name="Boton_Salir" type="Button" parent="." unique_id=1530197368]
-layout_mode = 0
+[node name="Cocinado" type="AudioStreamPlayer" parent="Audios" unique_id=248428640]
+stream = ExtResource("12_qehsn")
+
+[node name="Error" type="AudioStreamPlayer" parent="Audios" unique_id=679537409]
+stream = ExtResource("12_ht626")
+
+[node name="Botones" type="Node2D" parent="." unique_id=1647087759]
+
+[node name="Boton_Salir" type="Button" parent="Botones" unique_id=1530197368]
 offset_left = 1.0000019
 offset_right = 409.32996
 offset_bottom = 366.667
@@ -441,7 +419,68 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
+[node name="Avisos" type="Node2D" parent="." unique_id=1267579836]
+
+[node name="Aviso_cooking" type="Control" parent="Avisos" unique_id=1101433754]
+visible = false
+layout_mode = 3
+anchor_left = 0.148
+anchor_top = 0.711
+anchor_right = 0.786
+anchor_bottom = 0.906
+offset_left = 263.0
+offset_top = 220.00003
+offset_right = 263.0
+offset_bottom = 254.64003
+
+[node name="Text" type="Sprite2D" parent="Avisos/Aviso_cooking" unique_id=1622553533]
+position = Vector2(306, 77)
+scale = Vector2(4.05882, 1.875)
+texture = ExtResource("9_fbjnu")
+
+[node name="Label" type="Label" parent="Avisos/Aviso_cooking" unique_id=1259488689]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 54.0
+offset_right = 577.0
+offset_bottom = 144.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "se está cocinando el compuesto, espera unos segundos"
+
+[node name="Contador" type="Label" parent="Avisos/Aviso_cooking" unique_id=1658546242]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 87.0
+offset_right = 311.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Aviso_error" type="Control" parent="Avisos" unique_id=1562309921]
+visible = false
+layout_mode = 3
+anchor_left = 0.148
+anchor_top = 0.711
+anchor_right = 0.786
+anchor_bottom = 0.906
+offset_left = 263.0
+offset_top = 220.00003
+offset_right = 263.0
+offset_bottom = 254.64003
+
+[node name="Text" type="Sprite2D" parent="Avisos/Aviso_error" unique_id=977225861]
+position = Vector2(306, 77)
+scale = Vector2(4.05882, 1.875)
+texture = ExtResource("9_fbjnu")
+
+[node name="Label" type="RichTextLabel" parent="Avisos/Aviso_error" unique_id=96424364]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 58.99997
+offset_right = 611.0
+offset_bottom = 129.99994
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+
 [connection signal="pressed" from="Slot-1/Button" to="." method="_on_slot_1_pressed"]
 [connection signal="pressed" from="Slot-2/Button" to="." method="_on_slot_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button_mezclar/button_mezcla" to="." method="_on_button_mezcla_pressed"]
-[connection signal="pressed" from="Boton_Salir" to="." method="_on_boton_salir_pressed"]
+[connection signal="pressed" from="Botones/Boton_Salir" to="." method="_on_boton_salir_pressed"]

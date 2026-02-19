@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://4ui5npn7wi73" path="res://ESCENAS/Create_Compuesto/Scripts/inventario_elements.gd" id="1_lkhd0"]
 [ext_resource type="Texture2D" uid="uid://uvr36cuunff1" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Book-menu.png" id="2_xsxua"]
 [ext_resource type="FontFile" uid="uid://c4u4rlhswm0ap" path="res://ASSETS/Letras/Antiquity/antiquity-print.ttf" id="3_xsxua"]
+[ext_resource type="AudioStream" uid="uid://cl40d08t5mpn2" path="res://ASSETS/Audios/Audio/freesound_community-libro-abierto-46311.mp3" id="4_g2dtu"]
+[ext_resource type="AudioStream" uid="uid://d3bxl1bbcxbvd" path="res://ASSETS/Audios/Audio/freesound_community-book-closing-48311.mp3" id="5_lgxw1"]
 
 [sub_resource type="Animation" id="Animation_xxhx2"]
 resource_name = "close"
@@ -45,7 +47,10 @@ _data = {
 [sub_resource type="Theme" id="Theme_uart8"]
 default_font = ExtResource("3_xsxua")
 
-[node name="Inventario-Elements" type="Control" unique_id=565747412]
+[sub_resource type="Theme" id="Theme_g2dtu"]
+default_font = ExtResource("3_xsxua")
+
+[node name="Inventario-Elements" type="Control" unique_id=565747412 node_paths=PackedStringArray("open_sound", "close_sound")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -53,6 +58,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lkhd0")
+open_sound = NodePath("Audios/Open")
+close_sound = NodePath("Audios/Close")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=560790191]
 layout_mode = 1
@@ -83,6 +90,7 @@ frame = 7
 libraries/ = SubResource("AnimationLibrary_c8joe")
 
 [node name="Label" type="Label" parent="Book" unique_id=1102832308]
+visible = false
 offset_left = -146.204
 offset_top = -94.6514
 offset_right = -46.2042
@@ -116,6 +124,28 @@ size_flags_horizontal = 6
 size_flags_vertical = 2
 columns = 3
 
+[node name="MarginText" type="MarginContainer" parent="Book" unique_id=193247844]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 26.943893
+offset_top = -88.1834
+offset_right = -282.23315
+offset_bottom = -221.6148
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Book/MarginText" unique_id=2090536784]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_g2dtu")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "Tu cuaderno de notas contiene los elementos recolectados. Toca uno para extraer una muestra y comenzar la creación del compuesto."
+horizontal_alignment = 3
+
 [node name="Text" type="Label" parent="Book" unique_id=911307706]
 visible = false
 offset_left = -215.702
@@ -123,6 +153,14 @@ offset_top = -143.67
 offset_right = 257.298
 offset_bottom = -119.67
 text = "No tienes elementos, explora el mundo y recolecta"
+
+[node name="Audios" type="Node2D" parent="." unique_id=1878510460]
+
+[node name="Open" type="AudioStreamPlayer" parent="Audios" unique_id=543945014]
+stream = ExtResource("4_g2dtu")
+
+[node name="Close" type="AudioStreamPlayer" parent="Audios" unique_id=1168928217]
+stream = ExtResource("5_lgxw1")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="animation_finished" from="Book/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

@@ -1,8 +1,13 @@
 extends State
 
 var esta_activando: bool = false
+@export var poder_audio: AudioStreamPlayer
 
 func enter():
+	
+	if poder_audio:
+		poder_audio.play()
+	
 	esta_activando = true
 	state_machine.change_state("IdleState")
 	# 1. Ejecutar la lógica (cambio de color, etc.)
@@ -17,7 +22,7 @@ func enter():
 	if Input.get_axis("left_move", "right_move") == 0:
 		state_machine.change_state("IdleState")
 
-func update_state(delta: float):
+func update_state(_delta: float):
 	# Si todavía está en el proceso de "activación", no dejamos que se mueva
 	if esta_activando:
 		return

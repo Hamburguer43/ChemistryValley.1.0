@@ -6,6 +6,7 @@ class_name Card_compound
 @onready var LabelFormula = $CenterContainer/Control/VBoxContainer/LabelFormula
 @onready var LabelRareza = $CenterContainer/Control/VBoxContainer/LabelRareza
 @onready var Description = $CenterContainer/Control/Description
+@onready var Description2 = $CenterContainer/Control/Description2
 @onready var boton = $CenterContainer/Control/Guardar
 
 var compound_actual = Compound_Res
@@ -20,6 +21,7 @@ func show_card_compound(compound_res):
 	LabelFormula.text = compound_res.formula
 	LabelRareza.text = compound_res.rareza
 	Description.text = compound_res.descripcion
+	Description2.text = compound_res.poder_descripcion
 	
 	match compound_res.rareza:
 		"Comun":

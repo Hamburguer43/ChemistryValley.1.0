@@ -23,12 +23,12 @@ config/features=PackedStringArray("4.6", "Mobile")
 Compoud_Global="*res://AUTOLOADS/Compoud-Global.gd"
 Inventory_Global="*res://AUTOLOADS/Inventory-Global.gd"
 TutorialGeneral="*res://ESCENAS/tutoriales/tutorialGeneral.tscn"
-AudioManager_Global="*uid://bkxevh7v38sti"
 Trasition_Global="*uid://fynqobo37dq8"
+AudioManager_Global="*uid://b1we7tbm1y3wg"
+BdGlobal="*uid://g7kv1dgndem"
 
 [display]
 
-window/size/mode=3
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"

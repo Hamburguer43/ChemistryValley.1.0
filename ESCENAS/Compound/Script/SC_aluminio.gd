@@ -4,6 +4,6 @@ class_name SC_aluminio
 @export var duracion_escudo: float = 5
 @export var color_darkblue: Color = Color.DARK_BLUE
 
-func ejecutar_poder(player: CharacterBody2D, ability_comp: Node):
+func ejecutar_poder(_player: CharacterBody2D, ability_comp: Node):
 	# El script le da la orden al componente ability_comp de ejecutar la función correspondiente
 	ability_comp.activar_invulnerabilidad(duracion_escudo, color_darkblue)

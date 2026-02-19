@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SC_Azufre" format=3 uid="uid://ddygyuxmhbfkw"]
+
+[ext_resource type="Script" uid="uid://bh5yebmttwopt" path="res://ESCENAS/Compound/Script/SC_Azufre.gd" id="1_6hvcl"]
+[ext_resource type="Texture2D" uid="uid://vrr84ajf6l4y" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon45.png" id="2_yptar"]
+
+[resource]
+script = ExtResource("1_6hvcl")
+nombre = "Anhídrido Sulfuroso"
+formula = "SO2"
+textura = ExtResource("2_yptar")
+descripcion = "Gas incoloro de olor picante y sofocante (típico de los volcanes). Es un potente agente reductor y el principal responsable de la lluvia ácida al mezclarse con agua."
+poder_descripcion = "Otorga dano corrosivo a los enemigos"
+metadata/_custom_type_script = "uid://bh5yebmttwopt"
