@@ -124,6 +124,11 @@ func _on_button_mezcla_pressed() -> void:
 		Aviso_cooking.visible = false
 		print("creado con exito el compuesto:", compound.formula, "/", compound.nombre)
 		animation.play("inital")
+		
+		BdGlobal.registrar_compuesto(compound.formula)
+		var nuevos_puntos = BdGlobal.game_data.high_score + 100
+		BdGlobal.actualizar_puntaje(nuevos_puntos)
+		
 	else:
 		print("compuesto no existente o imposible de mezclar")
 		
@@ -143,8 +148,15 @@ func show_card_compound(compound: Compound_Res):
 func send_compound(res: Compound_Res):
 	var compound = res
 	var cantidad = 1
+	
 	Inventory_Global.agregar_compound(compound, cantidad)
 	
+	if not BdGlobal.game_data.has("inventory_compounds"):
+		BdGlobal.game_data["inventory_compounds"] = {}
+	
+	BdGlobal.game_data.inventory_compounds[res.formula] = Inventory_Global.Compound[res]
+	
+	BdGlobal.guardar_partida()
 
 func iniciar_conteo(segundos: int):
 	var tiempo_restante = segundos
