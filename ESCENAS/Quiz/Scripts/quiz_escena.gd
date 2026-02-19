@@ -120,6 +120,12 @@ func _on_exit_lab_pressed() -> void:
 
 
 func _on_continuar_pressed() -> void:
-	$ColorRect2.hide()
+	$Inicio.hide()
 	$Timer.start()
 	$TicTacMbappe.play()
+
+func _on_exit_ayuda_pressed() -> void:
+	$Ayuda.hide()
+
+func _on_ayuda_button_pressed() -> void:
+	$Ayuda.show()

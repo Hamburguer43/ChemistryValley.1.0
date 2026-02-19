@@ -10,6 +10,8 @@
 [ext_resource type="Resource" uid="uid://cl5s4be1ektkb" path="res://ESCENAS/Quiz/Resource/Pregunta6.tres" id="8_u1o3b"]
 [ext_resource type="Resource" uid="uid://bvdlw5mg4d0td" path="res://ESCENAS/Quiz/Resource/Pregunta7.tres" id="9_rovev"]
 [ext_resource type="Resource" uid="uid://cvho3ixemavjx" path="res://ESCENAS/Quiz/Resource/Pregunta8.tres" id="10_jobji"]
+[ext_resource type="Texture2D" uid="uid://cituovjvfcath" path="res://ASSETS/Sprites/Menu_Quimica/Periodic_Table/tablaPequeña.png" id="15_8vkml"]
+[ext_resource type="Texture2D" uid="uid://dli0rwpdva628" path="res://ASSETS/Sprites/Menu_Quimica/Periodic_Table/TablaPeriodica.png" id="17_3s5pe"]
 [ext_resource type="Texture2D" uid="uid://b2yaqnr3sg7ac" path="res://ASSETS/Sprites/X Square Button.png" id="17_mgpl5"]
 [ext_resource type="Texture2D" uid="uid://cushew3t5l6a1" path="res://ASSETS/Sprites/Questionmark Square Button.png" id="18_ju7yy"]
 [ext_resource type="AudioStream" uid="uid://bsj484u8enicv" path="res://ASSETS/Audios/Audio/808522__licht2003__error.mp3" id="18_xcs45"]
@@ -117,6 +119,7 @@ offset_left = 33.0
 offset_top = 27.0
 offset_right = 102.0
 offset_bottom = 84.0
+mouse_default_cursor_shape = 2
 icon = ExtResource("17_mgpl5")
 flat = true
 icon_alignment = 1
@@ -128,7 +131,20 @@ offset_left = 109.0
 offset_top = 27.0
 offset_right = 203.0
 offset_bottom = 83.0
+mouse_default_cursor_shape = 2
 icon = ExtResource("18_ju7yy")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="AyudaButton" type="Button" parent="." unique_id=1195573635]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 160.0
+offset_right = 152.0
+offset_bottom = 240.0
+mouse_default_cursor_shape = 2
+icon = ExtResource("15_8vkml")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -291,7 +307,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_twig1")
 autowrap_mode = 3
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2002769232]
+[node name="Final" type="ColorRect" parent="." unique_id=2002769232]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -301,7 +317,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.6156863)
 
-[node name="Label" type="Label" parent="ColorRect" unique_id=1657324866]
+[node name="Label" type="Label" parent="Final" unique_id=1657324866]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -317,7 +333,7 @@ text = "ACERTASTE LA SIGUIENTE CANTIDAD DE PREGUNTAS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="ColorRect" unique_id=825558865]
+[node name="Label2" type="Label" parent="Final" unique_id=825558865]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -333,7 +349,7 @@ text = "¡Felicidades por culminar el Quiz!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Score" type="Label" parent="ColorRect" unique_id=1217823123]
+[node name="Score" type="Label" parent="Final" unique_id=1217823123]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -352,7 +368,7 @@ text = "0/0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ExitLab" type="Button" parent="ColorRect" unique_id=1801733189]
+[node name="ExitLab" type="Button" parent="Final" unique_id=1801733189]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -369,7 +385,7 @@ theme_override_fonts/font = ExtResource("19_ju7yy")
 theme_override_font_sizes/font_size = 50
 text = "Volver al laboratorio"
 
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=363113355]
+[node name="Inicio" type="ColorRect" parent="." unique_id=363113355]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -378,7 +394,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.6156863)
 
-[node name="Label" type="Label" parent="ColorRect2" unique_id=713252754]
+[node name="Label" type="Label" parent="Inicio" unique_id=713252754]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -395,7 +411,7 @@ text = "Estas a punto de iniciar el Quiz
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="ColorRect2" unique_id=752586434]
+[node name="Label2" type="Label" parent="Inicio" unique_id=752586434]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -411,7 +427,7 @@ text = "CUIDADO..."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ExitLab" type="Button" parent="ColorRect2" unique_id=543900888]
+[node name="ExitLab" type="Button" parent="Inicio" unique_id=543900888]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -424,11 +440,12 @@ offset_right = -16.0
 offset_bottom = -202.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("19_ju7yy")
 theme_override_font_sizes/font_size = 50
 text = "Tengo miedo..."
 
-[node name="Continuar" type="Button" parent="ColorRect2" unique_id=119645798]
+[node name="Continuar" type="Button" parent="Inicio" unique_id=119645798]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -441,9 +458,37 @@ offset_right = 400.0
 offset_bottom = -202.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("19_ju7yy")
 theme_override_font_sizes/font_size = 50
 text = "Continuar..."
+
+[node name="Ayuda" type="ColorRect" parent="." unique_id=563461712]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6156863)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ayuda" unique_id=810772175]
+position = Vector2(592.00006, 328)
+scale = Vector2(1.349375, 1.39)
+texture = ExtResource("17_3s5pe")
+
+[node name="exitAyuda" type="Button" parent="Ayuda" unique_id=567645624]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 48.0
+offset_right = 224.0
+offset_bottom = 96.0
+mouse_default_cursor_shape = 2
+icon = ExtResource("17_mgpl5")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="Timer" type="Timer" parent="." unique_id=987206850]
 autostart = true
@@ -464,7 +509,9 @@ pitch_scale = 1.07
 
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="OptionButton" to="." method="_on_option_button_pressed"]
-[connection signal="pressed" from="ColorRect/ExitLab" to="." method="_on_exit_lab_pressed"]
-[connection signal="pressed" from="ColorRect2/ExitLab" to="." method="_on_exit_lab_pressed"]
-[connection signal="pressed" from="ColorRect2/Continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="AyudaButton" to="." method="_on_ayuda_button_pressed"]
+[connection signal="pressed" from="Final/ExitLab" to="." method="_on_exit_lab_pressed"]
+[connection signal="pressed" from="Inicio/ExitLab" to="." method="_on_exit_lab_pressed"]
+[connection signal="pressed" from="Inicio/Continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="Ayuda/exitAyuda" to="." method="_on_exit_ayuda_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

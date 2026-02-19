@@ -38,10 +38,13 @@ func mostrar(mensaje : String):
 			{"texto": "Presiona sobre el pergamino ubicado encima de la mesa..."},
 			{"texto": "¡Diviertete aprendiendo y creando!"}
 		]
-	if mensaje == "principal":
+	if mensaje == "compuestos":
 		tutorialAct=[
-			{"texto": ""},
-			{"texto": ""}
+			{"texto": "¿Necesitas mejoras para la Aventura?"},
+			{"texto": "En esta area podras crear compuestos que mejoran tu personaje..."},
+			{"texto": "Presiona sobre alguno de los recuadros en medio de tu pantalla para seleccionar elementos."},
+			{"texto": "Una vez seleccionado los elementos a combinar recuerda cambiar sus valencias..."},
+			{"texto": "¡Ha Crear!"}
 		]
 	ind= 0
 	self.show()
