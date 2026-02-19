@@ -12,8 +12,8 @@ var timer: int = 1800
 
 ##Funcion principa
 func _ready() -> void:
-	$Timer.stop()
-	$TicTacMbappe.stop()
+	$nPregunta.text = "1"
+	$Timer.stop(); $TicTacMbappe.stop()
 	libro_anim.stop()
 	libro_anim.frame = 5
 	##Preguntas bien respondidas 0
@@ -24,12 +24,10 @@ func _ready() -> void:
 			buttons.append(b)
 	##Hacemos que las preguntas se mezclen para que no se repitan el orden
 	quiz_Data.shuffle()
-	##Cargamos Quiz
 	load_quiz()
 
 ##Logica de carga
 func load_quiz() -> void:
-	##Se comprueba primero si el quiz ya termino
 	libro_anim.stop()
 	libro_anim.frame = 5
 	if index > quiz_Data.size()-1:
@@ -40,16 +38,13 @@ func load_quiz() -> void:
 	for i in buttons.size():
 		buttons[i].text = quiz_Data[index].question_option[i]
 		buttons[i].pressed.connect(_button_click.bind(buttons[i]))
-	$Questions.show()
-	$BoxContainer.show()
-	$Preguntas.show()
-	$Respuestas.show()
+	$Questions.show(); $BoxContainer.show(); $Preguntas.show(); $Respuestas.show(); $nPregunta.show()
 
 ##Logica de Botones
 func _button_click(button) -> void:
 	for b in buttons:
 		b.release_focus()
-	##Por cada boton clikeado, comprobamos el resource de la respuesta correcta con el texto del boton
+	##Por cada boton clikeado
 	if quiz_Data[index].question_correct == button.text:
 		button.modulate = color_YES
 		$SuccesSFX.play()
@@ -67,30 +62,26 @@ func _button_click(button) -> void:
 ##Logica de siguiente pregunta
 func next_question() -> void:
 	await get_tree().create_timer(3).timeout
-	##Desconectamos los botones anteriores para que no se encuentre con problemas
+	##Desconectamos los botones 
 	for b in buttons:
 		b.pressed.disconnect(_button_click)
-	$Questions.hide()
-	$BoxContainer.hide()
-	$Preguntas.hide()
-	$Respuestas.hide()
-	##Espera de 3 segundos para cargar la siguiente
+	$Questions.hide();$BoxContainer.hide();$Preguntas.hide();$Respuestas.hide(); $nPregunta.hide()
 	libro_anim.frame = 0
 	libro_anim.play("default")
 	await libro_anim.animation_finished
 	##Reseteamos color
 	for b in buttons:
 		b.modulate = Color.WHITE
-	##Mandamos otro resource (siguiente pregunta) y volvemos a cargar el quiz
+	##Mandamos otro resource (siguiente pregunta)
 	index=index+1
+	$nPregunta.text = str(index+1)
 	load_quiz()
 
 ##Pantalla Final
 func _over() -> void:
 	$ColorRect.show()
 	$ColorRect/Score.text = str(success, "/", quiz_Data.size())
-	$Timer.stop()
-	$TicTacMbappe.stop()
+	$Timer.stop(); $TicTacMbappe.stop()
 
 func _on_timer_timeout() -> void:
 	if timer > 0:
@@ -98,8 +89,7 @@ func _on_timer_timeout() -> void:
 		$TimerTxt.text = time_to_string(timer)
 		$TicTacMbappe.play()
 	else:
-		$TicTacMbappe.stop()
-		$Timer.stop()
+		$TicTacMbappe.stop(); $Timer.stop()
 		_over()
 
 func time_to_string(seconds: int) -> String:
@@ -120,9 +110,7 @@ func _on_exit_lab_pressed() -> void:
 
 
 func _on_continuar_pressed() -> void:
-	$Inicio.hide()
-	$Timer.start()
-	$TicTacMbappe.play()
+	$Inicio.hide(); $Timer.start(); $TicTacMbappe.play()
 
 func _on_exit_ayuda_pressed() -> void:
 	$Ayuda.hide()

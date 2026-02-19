@@ -21,8 +21,11 @@
 [ext_resource type="Resource" uid="uid://c3pl5wsabbsjn" path="res://ESCENAS/Elements/Resource/Metales/Titanio.tres" id="13_o5gkj"]
 [ext_resource type="Resource" uid="uid://br04as65awrts" path="res://ESCENAS/Elements/Resource/NoMetales/Azufre.tres" id="15_8juvb"]
 [ext_resource type="PackedScene" uid="uid://bgq22gjvtrwig" path="res://ESCENAS/p.tscn" id="15_27vsc"]
+[ext_resource type="Resource" uid="uid://c3jv4co8gno4v" path="res://ESCENAS/Elements/Resource/Metales/Magnesio.tres" id="15_57yt3"]
 [ext_resource type="PackedScene" uid="uid://s6yyrpenenn7" path="res://ESCENAS/muerte.tscn" id="16_jkyj1"]
 [ext_resource type="AudioStream" uid="uid://bkxrvb24jui4h" path="res://ASSETS/Audios/Audio/bird-whistling-in-the-forest-215441.mp3" id="17_jkyj1"]
+[ext_resource type="Resource" uid="uid://barje6ile8w64" path="res://ESCENAS/Elements/Resource/Metales/Hierro.tres" id="22_w5g7x"]
+[ext_resource type="Resource" uid="uid://h3kdkr4s6wq7" path="res://ESCENAS/Elements/Resource/Metales/Calcio.tres" id="23_4yv4d"]
 
 [node name="Main" type="Node2D" unique_id=1495102444]
 position = Vector2(-2, 11)
@@ -118,11 +121,11 @@ skin_variante = ExtResource("6_j47ay")
 
 [node name="Enemies_5" parent="Enemie" unique_id=1312678212 instance=ExtResource("3_dkebo")]
 position = Vector2(8738, 402)
-skin_variante = ExtResource("6_j47ay")
+skin_variante = ExtResource("7_j47ay")
 
 [node name="Enemies_6" parent="Enemie" unique_id=125217571 instance=ExtResource("3_dkebo")]
 position = Vector2(7409, 404)
-skin_variante = ExtResource("6_j47ay")
+skin_variante = ExtResource("7_j47ay")
 
 [node name="Enemies_7" parent="Enemie" unique_id=423885402 instance=ExtResource("3_dkebo")]
 position = Vector2(9598, 407)
@@ -150,17 +153,32 @@ skin_variante = ExtResource("7_j47ay")
 
 [node name="Elementos" type="Node2D" parent="." unique_id=1381222874]
 
-[node name="Oro" type="Node2D" parent="Elementos" unique_id=945554325]
+[node name="magnesio" type="Node2D" parent="Elementos" unique_id=945554325]
 
-[node name="Elemento" parent="Elementos/Oro" unique_id=2098431238 instance=ExtResource("4_njmqx")]
+[node name="Elemento" parent="Elementos/magnesio" unique_id=2098431238 instance=ExtResource("4_njmqx")]
+position = Vector2(3147, 143)
+resource = ExtResource("15_57yt3")
+
+[node name="Elemento2" parent="Elementos/magnesio" unique_id=1981626752 instance=ExtResource("4_njmqx")]
+position = Vector2(3194, 143)
+resource = ExtResource("15_57yt3")
+
+[node name="Elemento3" parent="Elementos/magnesio" unique_id=18451843 instance=ExtResource("4_njmqx")]
+position = Vector2(3256, 145)
+resource = ExtResource("15_57yt3")
+
+[node name="oro" type="Node2D" parent="Elementos" unique_id=1162589570]
+position = Vector2(530, 5)
+
+[node name="Elemento" parent="Elementos/oro" unique_id=66467518 instance=ExtResource("4_njmqx")]
 position = Vector2(3147, 143)
 resource = ExtResource("9_7g8lx")
 
-[node name="Elemento2" parent="Elementos/Oro" unique_id=1981626752 instance=ExtResource("4_njmqx")]
+[node name="Elemento2" parent="Elementos/oro" unique_id=1569562497 instance=ExtResource("4_njmqx")]
 position = Vector2(3194, 143)
 resource = ExtResource("9_7g8lx")
 
-[node name="Elemento3" parent="Elementos/Oro" unique_id=18451843 instance=ExtResource("4_njmqx")]
+[node name="Elemento3" parent="Elementos/oro" unique_id=927186108 instance=ExtResource("4_njmqx")]
 position = Vector2(3256, 145)
 resource = ExtResource("9_7g8lx")
 
@@ -246,6 +264,14 @@ resource = ExtResource("12_fjd46")
 position = Vector2(9453, 671)
 resource = ExtResource("12_fjd46")
 
+[node name="Elemento3" parent="Elementos/Aluminio" unique_id=1876560827 instance=ExtResource("4_njmqx")]
+position = Vector2(9410, 437)
+resource = ExtResource("12_fjd46")
+
+[node name="Elemento4" parent="Elementos/Aluminio" unique_id=1249786241 instance=ExtResource("4_njmqx")]
+position = Vector2(9154, 437)
+resource = ExtResource("12_fjd46")
+
 [node name="Titanio" type="Node2D" parent="Elementos" unique_id=1198526114]
 
 [node name="Elemento" parent="Elementos/Titanio" unique_id=889060697 instance=ExtResource("4_njmqx")]
@@ -262,13 +288,43 @@ resource = ExtResource("13_o5gkj")
 
 [node name="Azufre" type="Node2D" parent="Elementos" unique_id=468265356]
 
-[node name="Elemento" parent="Elementos/Azufre" unique_id=66467518 instance=ExtResource("4_njmqx")]
+[node name="Elemento" parent="Elementos/Azufre" unique_id=110504588 instance=ExtResource("4_njmqx")]
 position = Vector2(2119, 138)
 resource = ExtResource("15_8juvb")
 
 [node name="Elemento2" parent="Elementos/Azufre" unique_id=363482252 instance=ExtResource("4_njmqx")]
 position = Vector2(2191, 138)
 resource = ExtResource("11_52322")
+
+[node name="hierro" type="Node2D" parent="Elementos" unique_id=159021316]
+position = Vector2(-950, -3)
+
+[node name="Elemento" parent="Elementos/hierro" unique_id=1329257302 instance=ExtResource("4_njmqx")]
+position = Vector2(2119, 138)
+resource = ExtResource("22_w5g7x")
+
+[node name="Elemento2" parent="Elementos/hierro" unique_id=554341668 instance=ExtResource("4_njmqx")]
+position = Vector2(2191, 138)
+resource = ExtResource("22_w5g7x")
+
+[node name="calcio" type="Node2D" parent="Elementos" unique_id=254114061]
+position = Vector2(9266, 165)
+
+[node name="Elemento" parent="Elementos/calcio" unique_id=495664462 instance=ExtResource("4_njmqx")]
+position = Vector2(2120, 136)
+resource = ExtResource("23_4yv4d")
+
+[node name="Elemento2" parent="Elementos/calcio" unique_id=1009231288 instance=ExtResource("4_njmqx")]
+position = Vector2(2312, 96)
+resource = ExtResource("23_4yv4d")
+
+[node name="Elemento3" parent="Elementos/calcio" unique_id=83500157 instance=ExtResource("4_njmqx")]
+position = Vector2(1856, 256)
+resource = ExtResource("23_4yv4d")
+
+[node name="Elemento4" parent="Elementos/calcio" unique_id=492466312 instance=ExtResource("4_njmqx")]
+position = Vector2(2520, 256)
+resource = ExtResource("23_4yv4d")
 
 [node name="Otros" type="Node2D" parent="." unique_id=1260902992]
 

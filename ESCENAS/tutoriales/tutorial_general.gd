@@ -15,9 +15,9 @@ func mostrar(mensaje : String):
 	if mensaje == "tabla":
 		tutorialAct = [
 			{"texto": "¡Bienvenido a la Tabla Periódica"},
-			{"texto": "La tabla periódica nos presenta un amplio numero de elementos..."},
+			{"texto": "La tabla periódica nos presenta un amplio número de elementos..."},
 			{"texto": "Puedes seleccionar un elemento para conocer mas sobre el."},
-			{"img": "res://RECURSOS/Sprites/Elements/Simbolo/azufre.png"}
+			{"texto": "¡Conoce mas sobre la quimica!"}
 		]
 	if mensaje == "quiz":
 		tutorialAct=[
@@ -25,7 +25,7 @@ func mostrar(mensaje : String):
 			{"texto": "Presta mucha atención a las preguntas que se van a realizar..."},
 			{"texto": "Las preguntas puedes visualizarlas en la pagina izquierda del libro."},
 			{"texto": "Contesta correctamente seleccionando alguna de las 4 respuestas disponibles..."},
-			{"texto": "Las respuestas puedes visualizarlas en la pagina derecha del libro."},
+			{"texto": "Las respuestas puedes visualizarlas en la página derecha del libro."},
 			{"texto": "¡¡Buena Suerte!!"}
 		]
 	if mensaje == "laboratorio":
@@ -36,7 +36,8 @@ func mostrar(mensaje : String):
 			{"texto": "Presiona sobre la tabla periódica ubicada en la parte izquierda del laboratiorio..."},
 			{"texto": "Tambien podras crear compuestos vitales para la aventura."},
 			{"texto": "Presiona sobre el pergamino ubicado encima de la mesa..."},
-			{"texto": "¡Diviertete aprendiendo y creando!"}
+			{"texto": "Si presionas sobre la libreria a la derecha del laboratorio, tendras una sorpresa..."},
+			{"texto": "¡Diviertete aprendiendo!"}
 		]
 	if mensaje == "compuestos":
 		tutorialAct=[

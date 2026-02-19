@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" uid="uid://cnwcyamknfvfo" path="res://ESCENAS/Quiz/Scripts/quiz_escena.gd" id="1_tqyif"]
 [ext_resource type="Script" uid="uid://cjn6e4rbmgwc1" path="res://ESCENAS/Quiz/Scripts/Question.gd" id="2_ft7jj"]
-[ext_resource type="Resource" uid="uid://o7mmubebxa3p" path="res://ESCENAS/Quiz/Resource/Pregunta1.tres" id="3_1o46k"]
-[ext_resource type="Resource" uid="uid://bm3ngqchxvl3o" path="res://ESCENAS/Quiz/Resource/Pregunta2.tres" id="4_vtyew"]
-[ext_resource type="Resource" uid="uid://1yxhr8qe0uxs" path="res://ESCENAS/Quiz/Resource/Pregunta3.tres" id="5_4c4p7"]
-[ext_resource type="Resource" uid="uid://duxd6hxghb056" path="res://ESCENAS/Quiz/Resource/Pregunta4.tres" id="6_yrive"]
-[ext_resource type="Resource" uid="uid://h8ehfdpi3otw" path="res://ESCENAS/Quiz/Resource/Pregunta5.tres" id="7_twig1"]
-[ext_resource type="Resource" uid="uid://cl5s4be1ektkb" path="res://ESCENAS/Quiz/Resource/Pregunta6.tres" id="8_u1o3b"]
-[ext_resource type="Resource" uid="uid://bvdlw5mg4d0td" path="res://ESCENAS/Quiz/Resource/Pregunta7.tres" id="9_rovev"]
-[ext_resource type="Resource" uid="uid://cvho3ixemavjx" path="res://ESCENAS/Quiz/Resource/Pregunta8.tres" id="10_jobji"]
+[ext_resource type="Resource" uid="uid://dlkusclu0m3ou" path="res://ESCENAS/Quiz/Resource/Pregunta28.tres" id="3_8vkml"]
+[ext_resource type="Resource" uid="uid://b5tff0epabcjx" path="res://ESCENAS/Quiz/Resource/Pregunta27.tres" id="4_ki6v3"]
+[ext_resource type="Resource" uid="uid://pju7tgrvs1vp" path="res://ESCENAS/Quiz/Resource/Pregunta26.tres" id="5_0tl42"]
+[ext_resource type="Resource" uid="uid://bybbbnok8jbeh" path="res://ESCENAS/Quiz/Resource/Pregunta25.tres" id="6_l8ibo"]
+[ext_resource type="Resource" uid="uid://u126iulrpqo7" path="res://ESCENAS/Quiz/Resource/Pregunta24.tres" id="7_mwgg6"]
+[ext_resource type="Resource" uid="uid://btjh34i4eqlfh" path="res://ESCENAS/Quiz/Resource/Pregunta23.tres" id="8_cqhsh"]
+[ext_resource type="Resource" uid="uid://1fjalub66vld" path="res://ESCENAS/Quiz/Resource/Pregunta22.tres" id="9_113at"]
+[ext_resource type="Resource" uid="uid://bv5ck7xqr7404" path="res://ESCENAS/Quiz/Resource/Pregunta21.tres" id="10_b0w2j"]
 [ext_resource type="Texture2D" uid="uid://cituovjvfcath" path="res://ASSETS/Sprites/Menu_Quimica/Periodic_Table/tablaPequeña.png" id="15_8vkml"]
 [ext_resource type="Texture2D" uid="uid://dli0rwpdva628" path="res://ASSETS/Sprites/Menu_Quimica/Periodic_Table/TablaPeriodica.png" id="17_3s5pe"]
 [ext_resource type="Texture2D" uid="uid://b2yaqnr3sg7ac" path="res://ASSETS/Sprites/X Square Button.png" id="17_mgpl5"]
@@ -95,7 +95,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 script = ExtResource("1_tqyif")
-quiz_Data = Array[ExtResource("2_ft7jj")]([ExtResource("3_1o46k"), ExtResource("4_vtyew"), ExtResource("5_4c4p7"), ExtResource("6_yrive"), ExtResource("7_twig1"), ExtResource("8_u1o3b"), ExtResource("9_rovev"), ExtResource("10_jobji")])
+quiz_Data = Array[ExtResource("2_ft7jj")]([ExtResource("3_8vkml"), ExtResource("4_ki6v3"), ExtResource("5_0tl42"), ExtResource("6_l8ibo"), ExtResource("7_mwgg6"), ExtResource("8_cqhsh"), ExtResource("9_113at"), ExtResource("10_b0w2j")])
 color_YES = Color(0, 1, 0, 1)
 color_NO = Color(1, 0, 0, 1)
 metadata/_edit_lock_ = true
@@ -204,7 +204,26 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("19_ju7yy")
 theme_override_font_sizes/font_size = 60
-text = "Preguntas"
+text = "Pregunta: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="nPregunta" type="Label" parent="." unique_id=962513778]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -176.0
+offset_top = 136.0
+offset_right = -152.0
+offset_bottom = 182.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("19_ju7yy")
+theme_override_font_sizes/font_size = 60
+text = "N"
 horizontal_alignment = 1
 vertical_alignment = 1
 
