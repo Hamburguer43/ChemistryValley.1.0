@@ -45,6 +45,7 @@ func _ready() -> void:
 
 	health_component.OnDirectionChange.connect(direction_change_body)
 	hitbox_component.set_hitbox_active(true)
+	health_component.Ondead.connect(sumar_puntaje)
 	
 #Modifica el valor hacia donde este mirando el Sprite2d
 func fase_sprite():
@@ -72,3 +73,11 @@ func direction_change_body(value_position, force):
 	force_hit = force
 	
 	statemachine.change_state("HitState")
+
+func sumar_puntaje():
+	var puntos_enemigo = 100
+	# Sumamos los puntos actuales + los nuevos
+	var nuevo_total = BdGlobal.game_data.high_score + puntos_enemigo
+	
+	BdGlobal.actualizar_puntaje(nuevo_total)
+	print("Puntaje total guardado: ", nuevo_total)

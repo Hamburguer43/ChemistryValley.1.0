@@ -1,10 +1,12 @@
-[gd_scene load_steps=19 format=3 uid="uid://dtakpqqxyk5ro"]
+[gd_scene format=3 uid="uid://dtakpqqxyk5ro"]
 
 [ext_resource type="Texture2D" uid="uid://dw5gm7xsrta7a" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Hud-Player/Bar-interfaz.png" id="1_dlc7i"]
 [ext_resource type="Script" uid="uid://d3ohhv21du0f5" path="res://ESCENAS/Hud_player/Scripts/health_bar.gd" id="2_i4yrx"]
 [ext_resource type="Script" uid="uid://icue1ejt68e5" path="res://ESCENAS/Hud_player/Scripts/energy_bar.gd" id="3_j2wmg"]
 [ext_resource type="Texture2D" uid="uid://d0ptsvfhixwnv" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Hud-Player/Bar-poderes.png" id="4_4ttks"]
 [ext_resource type="Script" uid="uid://botpiktwv063i" path="res://ESCENAS/Hud_player/Scripts/Barra_compound.gd" id="5_gjyx1"]
+[ext_resource type="FontFile" uid="uid://c4u4rlhswm0ap" path="res://ASSETS/Letras/Antiquity/antiquity-print.ttf" id="6_dl04b"]
+[ext_resource type="Script" uid="uid://6p1f4xtxieq8" path="res://ESCENAS/Hud_player/Scripts/puntaje.gd" id="7_60730"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i4yrx"]
 atlas = ExtResource("1_dlc7i")
@@ -88,9 +90,12 @@ width = 40
 height = 6
 fill_from = Vector2(0, 1)
 
-[node name="HUD" type="CanvasLayer"]
+[sub_resource type="Theme" id="Theme_60730"]
+default_font = ExtResource("6_dl04b")
 
-[node name="Control" type="Control" parent="."]
+[node name="HUD" type="CanvasLayer" unique_id=1153511817]
+
+[node name="Control" type="Control" parent="." unique_id=214145202]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -98,7 +103,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Control"]
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=1207767020]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -106,14 +111,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Barra_Interfaz" type="HBoxContainer" parent="Control/MarginContainer"]
+[node name="Barra_Interfaz" type="HBoxContainer" parent="Control/MarginContainer" unique_id=535441022]
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/MarginContainer/Barra_Interfaz"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/MarginContainer/Barra_Interfaz" unique_id=508195857]
 position = Vector2(71, 34)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/MarginContainer/Barra_Interfaz/Sprite2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/MarginContainer/Barra_Interfaz/Sprite2D" unique_id=1901257869]
 position = Vector2(46, 21)
 scale = Vector2(1.65714, 1.65625)
 sprite_frames = SubResource("SpriteFrames_mvbtk")
@@ -121,7 +126,7 @@ autoplay = "default"
 frame = 5
 frame_progress = 0.502369
 
-[node name="HealthBar" type="TextureProgressBar" parent="Control/MarginContainer/Barra_Interfaz/Sprite2D"]
+[node name="HealthBar" type="TextureProgressBar" parent="Control/MarginContainer/Barra_Interfaz/Sprite2D" unique_id=444936091]
 offset_left = 33.0
 offset_top = 3.0
 offset_right = 73.0
@@ -132,7 +137,7 @@ texture_progress = SubResource("GradientTexture2D_60730")
 tint_progress = Color(0, 0.898039, 0.160784, 1)
 script = ExtResource("2_i4yrx")
 
-[node name="EnergyBar" type="TextureProgressBar" parent="Control/MarginContainer/Barra_Interfaz/Sprite2D"]
+[node name="EnergyBar" type="TextureProgressBar" parent="Control/MarginContainer/Barra_Interfaz/Sprite2D" unique_id=1287917668]
 offset_left = 33.0
 offset_top = 28.0
 offset_right = 73.0
@@ -143,12 +148,12 @@ texture_progress = SubResource("GradientTexture2D_60730")
 tint_progress = Color(0.63, 0, 0.9, 1)
 script = ExtResource("3_j2wmg")
 
-[node name="BarraCompuestos" type="Sprite2D" parent="Control/MarginContainer"]
+[node name="BarraCompuestos" type="Sprite2D" parent="Control/MarginContainer" unique_id=1885261754]
 position = Vector2(187.5, 589.5)
 scale = Vector2(1.21, 1.54688)
 texture = ExtResource("4_4ttks")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/BarraCompuestos"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/BarraCompuestos" unique_id=1841882843]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -162,3 +167,15 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 script = ExtResource("5_gjyx1")
+
+[node name="Puntaje" type="Label" parent="Control" unique_id=1815141252]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 41.0
+offset_right = 52.0
+offset_bottom = 78.0
+theme = SubResource("Theme_60730")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "0"
+script = ExtResource("7_60730")

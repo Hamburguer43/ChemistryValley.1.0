@@ -1,6 +1,7 @@
 extends Node
 
 const SAVE_PATH = "user://database.json"
+signal puntaje_actualizado(nuevo_valor) # Definimos la señal
 
 var game_data: Dictionary = {
 	"high_score": 0,
@@ -49,6 +50,7 @@ func actualizar_puntaje(puntos: int):
 	if puntos > game_data.high_score:
 		game_data.high_score = puntos
 		guardar_partida()
+		puntaje_actualizado.emit(game_data.high_score)
 
 func abrir_carpeta_de_guardado():
 	OS.shell_open(ProjectSettings.globalize_path("user://"))
