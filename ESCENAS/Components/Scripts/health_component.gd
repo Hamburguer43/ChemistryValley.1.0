@@ -25,7 +25,7 @@ func take_damage(damage: int, value_position: Vector2, force: int):
 	var value = abs(damage)
 	health_controller(-value)
 	
-	#Emitimos signal para que el enemie la capte y ejecute el empuje
+	#Emitimos signal para que el body la capte y ejecute el empuje
 	OnDirectionChange.emit(value_position, force)
 
 func health_controller(value: int):

@@ -112,7 +112,6 @@ func _on_button_mezcla_pressed() -> void:
 	valencia = optionbutton.get_selected_id();
 	
 	var formula = logic_create_compound.create_formula(metal , valencia)
-	prints("formula calculada", formula)
 	
 	#Ya teniendo la formula le vamos a pasar la formula al metodo del autoload que me verifica si ese compuesto existe o no
 	#y me devuelve una respuesta null o la formula
@@ -149,6 +148,16 @@ func send_compound(res: Compound_Res):
 	var compound = res
 	var cantidad = 1
 	
+	Sprite_slot1.texture = null
+	$"Slot-1/Marco_S1".visible = false
+	$"Slot-1/Marco_S1/Simbolo".texture = null
+	
+	Sprite_slot2.texture = null
+	$"Slot-2/Marco_S2".visible = false
+	$"Slot-2/Marco_S2/Simbolo".texture = null
+	
+	Inventory_Global.agregar_element(elemento_1, -1)
+	Inventory_Global.agregar_element(elemento_2, -1)
 	Inventory_Global.agregar_compound(compound, cantidad)
 	
 	if not BdGlobal.game_data.has("inventory_compounds"):
