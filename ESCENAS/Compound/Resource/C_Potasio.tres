@@ -10,4 +10,5 @@ formula = "K2O"
 textura = ExtResource("2_0xdqw")
 descripcion = "Sólido de color gris amarillento. Es una de las fuentes principales de potasio para la fabricación de fertilizantes agrícolas de alta calidad."
 poder_descripcion = "El jugador libera una onda de choque de color lila que inflige daño de \"quemadura química\" a todos los enemigos cercanos y los empuja hacia atrás (knockback)."
+formulas = Array[String](["K2O5", "K2O4"])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

@@ -290,6 +290,7 @@ offset_left = 415.0
 offset_top = 246.0
 offset_right = 548.0
 offset_bottom = 348.0
+mouse_default_cursor_shape = 2
 
 [node name="Button" type="TextureButton" parent="Slot-1" unique_id=21778014]
 layout_mode = 1
@@ -301,6 +302,7 @@ offset_top = -2.0
 offset_right = -5.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_default_cursor_shape = 2
 script = ExtResource("3_c8joe")
 
 [node name="elemento1" type="Sprite2D" parent="Slot-1/Button" unique_id=947308396]
@@ -323,6 +325,7 @@ offset_left = 616.0
 offset_top = 240.0
 offset_right = 749.0
 offset_bottom = 342.0
+mouse_default_cursor_shape = 2
 
 [node name="Button" type="TextureButton" parent="Slot-2" unique_id=2087166530]
 layout_mode = 1
@@ -335,6 +338,7 @@ offset_right = -6.0
 offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_default_cursor_shape = 2
 script = ExtResource("3_c8joe")
 
 [node name="elemento2" type="Sprite2D" parent="Slot-2/Button" unique_id=280924692]

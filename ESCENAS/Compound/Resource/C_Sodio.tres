@@ -10,4 +10,5 @@ formula = "Na2O"
 textura = ExtResource("2_xhmn6")
 descripcion = "Componente esencial en la industria del vidrio. Actúa como fundente para reducir la temperatura a la que se funde la arena de sílice."
 poder_descripcion = "aumenta la velocidad en un 30%"
+formulas = Array[String](["Na2O4", "NaO"])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

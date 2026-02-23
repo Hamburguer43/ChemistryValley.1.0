@@ -5,10 +5,11 @@
 
 [resource]
 script = ExtResource("1_4v83e")
-nombre = "Óxido Titanioso"
+nombre = "Oxido Titanioso"
 formula = "Ti2O3"
 textura = ExtResource("2_5wvqd")
 descripcion = "Este sólido de color púrpura oscuro actúa como un semiconductor exótico. Su estructura cambia drásticamente ante variaciones de temperatura y campos magnéticos, lo que lo convierte en un material muy codiciado por los alquimistas tecnológicos para crear sensores avanzados."
 poder_descripcion = "El jugador se recubre de una capa metálica blanca que reduce todo el daño recibido en un 80% durante 10 segundos"
 rareza = "Epico"
+formulas = Array[String](["Ti2O6", "Ti2O2"])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

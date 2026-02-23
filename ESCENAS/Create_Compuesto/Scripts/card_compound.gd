@@ -35,6 +35,7 @@ func show_card_compound(compound_res, elemento_res):
 	
 	nodo_compound.visible = false
 	nodo_reto.visible = true
+	Aviso_error.visible = false
 	
 	configurar_hoja_reto()
 	
@@ -115,31 +116,63 @@ func _on_cancelar_pressed() -> void:
 	queue_free()
 
 # -- funciones extras -------------------------------------------
-# --- TUTORIAL PARA LA FORMULA (Botones) ---
 func mostrar_tutorial_formula():
-	var txt = "--- REGLA DEL CRUCE ---\n\n"
-	txt += "1. El " + elemento.nombre + " le da su valencia al Oxigeno.\n"
-	txt += "2. El Oxigeno siempre le da un 2 al " + elemento.nombre + ".\n\n"
-	txt += "DATO: Si ambos numeros son pares (ej: 2 y 2), la alquimia los simplifica a 1 y 1."
+	var txt = "--- REGLA DEL CRUCE (ASPA) ---\n\n"
+	txt += "Ejemplo Real: Hierro (III) + Oxigeno (II)\n\n"
+	
+	txt += "1. INTERCAMBIO:\n"
+	txt += "El Hierro le da su 3 al Oxigeno.\n"
+	txt += "El Oxigeno le da su 2 al Hierro.\n"
+	txt += "RESULTADO: Fe2O3\n\n"
+	
+	txt += "2. SIMPLIFICACION (Muy importante):\n"
+	txt += "Si los numeros son pares o divisibles, sacamos la mitad:\n"
+	txt += "- Caso 1: Ca2O2 (iguales) -> CaO\n"
+	txt += "- Caso 2: Fe2O4 (divisibles) -> FeO2\n\n"
+	
+	txt += "Basicamente: ¡Cruza y reduce si es posible!"
 	
 	mostrar_aviso_error(txt)
 
-# --- TUTORIAL PARA EL NOMBRE (Escritura) ---
 func mostrar_tutorial_nomenclatura():
-	var tipo = "OXIDO" if elemento.tipo == "Metal" else "ANHIDRIDO"
+	var es_metal = elemento.tipo == "Metal"
+	var nombre_base = "OXIDO" if es_metal else "ANHIDRIDO"
 	
-	var txt = "--- REGLA DE NOMENCLATURA ---\n\n"
-	txt += "TIPO: Como es un " + elemento.tipo + ", usa la palabra " + tipo + ".\n\n"
-	txt += "SUFIJOS:\n"
-	txt += "- Si usas la valencia MENOR: termina en OSO.\n"
-	txt += "- Si usas la valencia MAYOR: termina en ICO.\n\n"
-	txt += "Ejemplo: Hierro(2) = Ferroso | Hierro(3) = Ferrico."
+	var txt = "--- REGLA DE LOS NOMBRES ---\n\n"
+	
+	# 1. Definición del tipo
+	txt += "1. CLASIFICACION:\n"
+	txt += "El " + elemento.nombre + " es un " + elemento.tipo.to_upper() + ".\n"
+	txt += "Por eso usamos la palabra: " + nombre_base + ".\n\n"
+	
+	# 2. Explicación de Sufijos
+	txt += "2. SUFIJOS (OSO / ICO):\n"
+	if es_metal:
+		txt += "Ejemplo del Hierro (Fe):\n"
+		txt += "- Valencia menor (2): " + nombre_base + " FERROSO\n"
+		txt += "- Valencia mayor (3): " + nombre_base + " FERRICO\n\n"
+	else:
+		txt += "Ejemplo del Azufre (S):\n"
+		txt += "- Valencia menor (4): " + nombre_base + " SULFUROSO\n"
+		txt += "- Valencia mayor (6): " + nombre_base + " SULFURICO\n\n"
+	
+	# 3. Resumen pedagógico
+	txt += "RESUMEN:\n"
+	if es_metal:
+		txt += "Hierro (III) + Oxigeno (II) = " + nombre_base + " FERRICO.\n"
+		txt += "(Usa '" + nombre_base + "' por ser Metal e '-ICO' por ser la mayor valencia)."
+	else:
+		txt += "Azufre (VI) + Oxigeno (II) = " + nombre_base + " SULFURICO.\n"
+		txt += "(Usa '" + nombre_base + "' por ser No Metal e '-ICO' por ser la mayor)."
+
+	txt += "\n\nCONSEJO: ¡Si tiene 3 o 4 valencias, busca HIPO o PER!"
 	
 	mostrar_aviso_error(txt)
 
 func mostrar_aviso_error(mensaje: String):
 	Aviso_error.get_node("ColorRect/Label").text = mensaje
 	Aviso_error.visible = true
-	var t = create_tween()
-	t.tween_interval(10)
-	t.tween_callback(func(): Aviso_error.visible = false)
+
+
+func _on_salir_pressed() -> void:
+	Aviso_error.visible = false

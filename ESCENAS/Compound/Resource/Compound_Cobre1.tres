@@ -11,4 +11,5 @@ formula = "Cu2O"
 textura = ExtResource("2_s7rfv")
 descripcion = "Sólido de color rojo intenso. Se utiliza en pinturas marinas para evitar que algas y moluscos se peguen a los barcos."
 poder_descripcion = "Otorga velocidad I"
+formulas = Array[String](["Cu4O", "CuO2"])
 metadata/_custom_type_script = "uid://qlgfsatlpeh"

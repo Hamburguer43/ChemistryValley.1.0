@@ -1,13 +1,14 @@
-[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://c2xa1vy58hb8k"]
+[gd_resource type="Resource" script_class="SC_Hierro2" format=3 uid="uid://c2xa1vy58hb8k"]
 
 [ext_resource type="Script" uid="uid://chdc00oecvjsj" path="res://ESCENAS/Compound/Script/SC_Hierro2.gd" id="1_6o7bs"]
 [ext_resource type="Texture2D" uid="uid://csgnppmyrnsb2" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon31.png" id="2_ltqun"]
 
 [resource]
 script = ExtResource("1_6o7bs")
-nombre = "Óxido férrico"
+nombre = "Oxido ferrico"
 formula = "Fe2O3"
 textura = ExtResource("2_ltqun")
 descripcion = "El óxido rojo común; esencial para pigmentos y acero."
 poder_descripcion = "Otorga protección contra el dano de los enemigos por 10sg"
+formulas = Array[String](["Fe2O6", "FeO"])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

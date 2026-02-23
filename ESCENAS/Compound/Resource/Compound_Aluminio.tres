@@ -10,5 +10,5 @@ formula = "Al2O3"
 textura = ExtResource("2_j6g0h")
 descripcion = "Conocido como Alúmina. Es extremadamente duro (casi como el diamante). Forma gemas como rubíes y zafiros."
 poder_descripcion = "Otorga Proteccion por 5 sg"
-formulas_distractoras = Array[String](["", "", ""])
+formulas = Array[String](["AlO", "Al6O2"])
 metadata/_custom_type_script = "uid://0vlacxlm6fe1"

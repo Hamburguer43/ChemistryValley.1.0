@@ -10,4 +10,5 @@ formula = "Au2O3"
 textura = ExtResource("2_46f11")
 descripcion = "El óxido más estable del oro. Es un polvo hidrofóbico que se descompone térmicamente a 160 °C, volviendo a su estado de oro puro."
 poder_descripcion = "Durante 10 segundos, todos los enemigos derrotados dan el triple de puntos"
+formulas = Array[String](["Au2O5", "AuO3"])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

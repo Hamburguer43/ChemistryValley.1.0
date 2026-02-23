@@ -92,6 +92,7 @@ func _on_button_mezcla_pressed() -> void:
 	if animation:
 		
 		Button_mezcla.disabled = true
+		optionbutton.disabled = true
 		
 		animation.play("mezclando")
 		if burbuja_audio:
@@ -106,7 +107,7 @@ func _on_button_mezcla_pressed() -> void:
 			cooking_audio.play()
 		
 		Button_mezcla.disabled = false
-	
+		optionbutton.disabled = false
 	#Creamos y calculamos la formula utilizando el metodo que está en el script de Logic-create-compound
 	#pasandole el metal_actual y la valencia asignada
 	#creamo un instancia del script dentro de una variable
@@ -197,7 +198,7 @@ func mostrar_aviso_error(mensaje: String):
 	Aviso_error.get_node("Label").text = mensaje
 	Aviso_error.visible = true
 	var t = create_tween()
-	t.tween_interval(2)
+	t.tween_interval(5)
 	t.tween_callback(func(): Aviso_error.visible = false)
 	
 #RUTA DEL FUNCIONAMIENTO DE TABLE-CREATE-COMPOUND -------------------------------------

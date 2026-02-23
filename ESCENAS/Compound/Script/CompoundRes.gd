@@ -10,7 +10,7 @@ class_name Compound_Res
 @export_enum("Comun", "Raro", "Epico", "Peligroso") var rareza: String = "Comun"
 
 @export_group("Reto")
-@export var formulas: Array[String] = ["", "", ""]
+@export var formulas: Array[String] = ["", ""]
 
 func ejecutar_poder(_player: CharacterBody2D, _ability_comp: Node):
 	pass
