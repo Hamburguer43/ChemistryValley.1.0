@@ -12,16 +12,21 @@ class_name Player
 @onready var menu_book = $Menu_book
 @onready var script_menu: Script_menu = $Menu_book/Menu_Book
 @onready var ability_comp: AbilityComponent = $Ability_comp
+@onready var statemachine: StateMachine = $StateMachine
 
 @onready var sprite: Sprite2D = $Direction/Sprite2D
 @onready var animation: AnimationPlayer = $Direction/AnimationPlayer
 var entrar: bool = false
+var is_stunned: bool = false
+var position_hit: Vector2
+var force_hit: int = 0
 
 func _ready() -> void:
 	health_bar.setup_health(health_component)
 	energy_bar.setup_energy(energy_component)
 	script_menu.close.connect(toggle_book)
 	health_component.Ondead.connect(muerto)
+	health_component.OnDirectionChange.connect(direction_change_body)
 
 func _process(_delta: float) -> void:
 	fase_sprite()
@@ -62,3 +67,10 @@ func open_door():
 
 func muerto():
 	get_tree().change_scene_to_file("res://ESCENAS/Menu_Muerte/menu.muerte.tscn")
+
+func direction_change_body(value_position, force):
+	
+	position_hit = value_position
+	force_hit = force
+	
+	statemachine.change_state("HitState")

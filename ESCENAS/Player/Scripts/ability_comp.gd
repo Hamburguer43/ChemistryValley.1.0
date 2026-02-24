@@ -103,8 +103,6 @@ func activar_super_salto(boost_fuerza: float, tiempo: float, color: Color):
 	else:
 		print("Error: No se encontró el componente Jump en el Player")
 
-
-
 func activar_golpe_corrosivo(extra_damage: int, extra_force: int, tiempo_activo: float, color: Color):
 	
 	var hitbox = player.get_node_or_null("Direction/HitboxComponent")
