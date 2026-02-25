@@ -9,8 +9,30 @@
 [ext_resource type="PackedScene" uid="uid://dw0k4rkx1owu3" path="res://ESCENAS/Components/SensorComponent.tscn" id="6_u8cy3"]
 [ext_resource type="Script" uid="uid://dqvm7g8t631wp" path="res://ESCENAS/Enemies/scripts/health_bar.gd" id="7_7mcgd"]
 [ext_resource type="Script" uid="uid://dcd6fvwus8h3m" path="res://ESCENAS/StateMachine/Scripts_enemie/follow_state.gd" id="7_k6mw7"]
+[ext_resource type="Script" uid="uid://dicvsvmaqjx1w" path="res://ESCENAS/Enemies/scripts/loot_component.gd" id="8_23ewi"]
+[ext_resource type="Script" uid="uid://b7ddme1q8mh6f" path="res://ESCENAS/Elements/Scripts/PesoElement.gd" id="9_6qcn1"]
+[ext_resource type="Resource" uid="uid://b6gi2fnyj0l3n" path="res://ESCENAS/Elements/Resource/NoMetales/Oxigeno.tres" id="10_2hsx0"]
 [ext_resource type="Script" uid="uid://8co81fdpuu5u" path="res://ESCENAS/StateMachine/Scripts_enemie/hit_state.gd" id="10_h5y1s"]
+[ext_resource type="Resource" uid="uid://barje6ile8w64" path="res://ESCENAS/Elements/Resource/Metales/Hierro.tres" id="11_7uges"]
 [ext_resource type="AudioStream" uid="uid://dglm0drhk5pay" path="res://ASSETS/Audios/Monsters SFX Vol.1/Monsters/Monster_Roar4.mp3" id="11_kxuat"]
+[ext_resource type="Resource" uid="uid://b8ethklo1y1bt" path="res://ESCENAS/Elements/Resource/NoMetales/Fosforo.tres" id="12_6qcn1"]
+
+[sub_resource type="Resource" id="Resource_6k06y"]
+script = ExtResource("9_6qcn1")
+elemento = ExtResource("10_2hsx0")
+peso = 60.0
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
+
+[sub_resource type="Resource" id="Resource_6qcn1"]
+script = ExtResource("9_6qcn1")
+elemento = ExtResource("11_7uges")
+peso = 40.0
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
+
+[sub_resource type="Resource" id="Resource_2hsx0"]
+script = ExtResource("9_6qcn1")
+elemento = ExtResource("12_6qcn1")
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_reo8f"]
 radius = 16.0312
@@ -46,6 +68,7 @@ hframes = 4
 [node name="HitbosComponent" parent="Direction" unique_id=1646010539 instance=ExtResource("2_reo8f")]
 position = Vector2(-9, 6)
 collision_mask = 1
+force = 500
 
 [node name="Movement" type="Node2D" parent="." unique_id=571108444]
 position = Vector2(-2, 34)
@@ -68,22 +91,32 @@ detected_audio = NodePath("../../Audios/Detected")
 [node name="HitState" type="Node2D" parent="StateMachine" unique_id=1934655454]
 script = ExtResource("10_h5y1s")
 
+[node name="LootComponent" type="Node2D" parent="." unique_id=424646649]
+script = ExtResource("8_23ewi")
+tabla_loot = Array[ExtResource("9_6qcn1")]([SubResource("Resource_6k06y"), SubResource("Resource_6qcn1"), SubResource("Resource_2hsx0")])
+
+[node name="Audios" type="Node2D" parent="." unique_id=1595605153]
+
+[node name="Detected" type="AudioStreamPlayer2D" parent="Audios" unique_id=1343449011]
+stream = ExtResource("11_kxuat")
+volume_db = -10.759
+
 [node name="HealthComponent" parent="." unique_id=578463191 instance=ExtResource("4_l3eiy")]
 position = Vector2(0, 0)
 collision_layer = 4
 
 [node name="SensorComponent" parent="." unique_id=698544173 instance=ExtResource("6_u8cy3")]
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2126259927]
+light_mask = 4
+visibility_layer = 0
+shape = SubResource("CircleShape2D_reo8f")
+
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=596188073]
 position = Vector2(12, 14)
 scale = Vector2(0.535954, 0.863079)
 target_position = Vector2(0, 26)
 collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2126259927]
-light_mask = 4
-visibility_layer = 0
-shape = SubResource("CircleShape2D_reo8f")
 
 [node name="HealthBar" type="TextureProgressBar" parent="." unique_id=1158845771]
 offset_left = -20.0
@@ -94,12 +127,6 @@ texture_under = SubResource("GradientTexture2D_7mcgd")
 texture_progress = SubResource("GradientTexture2D_ev2gw")
 tint_progress = Color(0.883679, 0, 0.0514797, 1)
 script = ExtResource("7_7mcgd")
-
-[node name="Audios" type="Node2D" parent="." unique_id=1595605153]
-
-[node name="Detected" type="AudioStreamPlayer2D" parent="Audios" unique_id=1343449011]
-stream = ExtResource("11_kxuat")
-volume_db = -10.759
 
 [connection signal="body_entered" from="SensorComponent" to="." method="_on_sensor_component_body_entered"]
 [connection signal="body_exited" from="SensorComponent" to="." method="_on_sensor_component_body_exited"]

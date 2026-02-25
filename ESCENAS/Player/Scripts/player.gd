@@ -46,6 +46,9 @@ func _input(event):
 	# Usamos una acción configurada en el Input Map (ej: "abrir_inventario")
 	if event.is_action_pressed("Menu_book"): 
 		toggle_book()
+		
+	if event.is_action_pressed("salirse"):
+		get_tree().quit()
 
 func toggle_book():
 	

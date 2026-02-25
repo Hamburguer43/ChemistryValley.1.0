@@ -9,6 +9,7 @@ class_name Enemy
 @onready var health_component : HealthComponent = $HealthComponent
 @onready var hitbox_component: HitboxComponent = $Direction/HitbosComponent
 @onready var statemachine: StateMachine = $StateMachine
+@onready var loot_component: Loot_component = $LootComponent
 
 @export_group("Visual Skin")
 @export var skin_variante : SpriteFrames 
@@ -26,6 +27,10 @@ var position_hit: Vector2
 var force_hit: int = 0
 
 func _process(_delta: float) -> void:
+	
+	if is_stunned == true:
+		return
+	
 	fase_sprite()
 	
 func _ready() -> void:
@@ -45,7 +50,7 @@ func _ready() -> void:
 
 	health_component.OnDirectionChange.connect(direction_change_body)
 	hitbox_component.set_hitbox_active(true)
-	health_component.Ondead.connect(sumar_puntaje)
+	health_component.Ondead.connect(logic_botin)
 	
 #Modifica el valor hacia donde este mirando el Sprite2d
 func fase_sprite():
@@ -74,10 +79,18 @@ func direction_change_body(value_position, force):
 	
 	statemachine.change_state("HitState")
 
-func sumar_puntaje():
-	var puntos_enemigo = 100
+func logic_botin():
+	
+	var puntos_enemigo = 0
 	# Sumamos los puntos actuales + los nuevos
 	var nuevo_total = BdGlobal.game_data.high_score + puntos_enemigo
 	
 	BdGlobal.actualizar_puntaje(nuevo_total)
-	print("Puntaje total guardado: ", nuevo_total)
+	
+	if  is_instance_valid(loot_component):
+		loot_component.soltar_botin()
+		print("se instanció")
+	
+	await get_tree().create_timer(0.1).timeout
+	
+	queue_free()

@@ -10,7 +10,7 @@ func enter():
 	
 	# Aplicamos el impacto
 	character.velocity = Empujon * character.force_hit
-	character.velocity.y -= 300
+	character.velocity.y -= 200
 	character.sprite.modulate = Color.RED
 
 func update_state(delta: float):

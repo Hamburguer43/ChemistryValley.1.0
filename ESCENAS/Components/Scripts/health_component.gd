@@ -42,4 +42,3 @@ func health_controller(value: int):
 
 func dead():
 	emit_signal("Ondead")
-	get_parent().queue_free()
