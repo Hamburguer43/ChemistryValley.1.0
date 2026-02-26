@@ -4,9 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://0c2wa5nhwxp4" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Objects/CartelSign.png" id="1_vapnb"]
 [ext_resource type="Texture2D" uid="uid://ck6iqo5qnbear" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Paper-menu.png" id="2_abjyt"]
 [ext_resource type="Texture2D" uid="uid://b7j0vl4h4524w" path="res://ASSETS/Sprites/Botones/Cut_Version/Buttons/tile015.png" id="4_cvr8c"]
+[ext_resource type="Script" uid="uid://dnxacgaxvxigx" path="res://ESCENAS/Carteles/Script/interaction.gd" id="5_lr38d"]
+[ext_resource type="AudioStream" uid="uid://d2ps7plf37dwk" path="res://ASSETS/Audios/Audio/collectcoin-6075.mp3" id="6_lybwc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_abjyt"]
-size = Vector2(31, 20)
+[sub_resource type="Theme" id="Theme_gxjx4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvr8c"]
+size = Vector2(53, 69)
 
 [node name="Cartel" type="Node2D" unique_id=1692344881]
 script = ExtResource("1_abjyt")
@@ -40,31 +44,41 @@ offset_top = 32.0
 offset_right = 223.0
 offset_bottom = 60.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
 text = "Titulo"
+horizontal_alignment = 1
 
-[node name="Cotenido" type="Label" parent="Aviso" unique_id=1045845432]
+[node name="Cotenido" type="RichTextLabel" parent="Aviso" unique_id=1688603333]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 96.0
-offset_right = 224.0
+offset_left = 47.0
+offset_top = 65.0
+offset_right = 217.0
 offset_bottom = 189.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme = SubResource("Theme_gxjx4")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 10
 text = "Texto"
 
 [node name="Boton" type="TextureRect" parent="." unique_id=182135558]
 visible = false
-offset_left = 435.0
-offset_top = 250.0
-offset_right = 475.0
-offset_bottom = 290.0
+offset_left = 434.0
+offset_top = 228.0
+offset_right = 474.0
+offset_bottom = 268.0
 texture = ExtResource("4_cvr8c")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=131540095]
-position = Vector2(456, 317)
+[node name="Interaction" type="Area2D" parent="." unique_id=1352217005]
+collision_layer = 8
+script = ExtResource("5_lr38d")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=826588350]
-position = Vector2(1.5, 1)
-shape = SubResource("RectangleShape2D_abjyt")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction" unique_id=830412392]
+position = Vector2(457, 315.5)
+shape = SubResource("RectangleShape2D_cvr8c")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[node name="Audios" type="Node2D" parent="." unique_id=1244480267]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="Audios" unique_id=281666871]
+stream = ExtResource("6_lybwc")
+
+[connection signal="body_entered" from="Interaction" to="." method="_on_interaction_body_entered"]
+[connection signal="body_exited" from="Interaction" to="." method="_on_interaction_body_exited"]

@@ -14,24 +14,130 @@
 [ext_resource type="Resource" uid="uid://b6gi2fnyj0l3n" path="res://ESCENAS/Elements/Resource/NoMetales/Oxigeno.tres" id="10_2hsx0"]
 [ext_resource type="Script" uid="uid://8co81fdpuu5u" path="res://ESCENAS/StateMachine/Scripts_enemie/hit_state.gd" id="10_h5y1s"]
 [ext_resource type="Resource" uid="uid://barje6ile8w64" path="res://ESCENAS/Elements/Resource/Metales/Hierro.tres" id="11_7uges"]
+[ext_resource type="Resource" uid="uid://b7w0brai27ktl" path="res://ESCENAS/Elements/Resource/Metales/Aluminio.tres" id="11_gydrb"]
 [ext_resource type="AudioStream" uid="uid://dglm0drhk5pay" path="res://ASSETS/Audios/Monsters SFX Vol.1/Monsters/Monster_Roar4.mp3" id="11_kxuat"]
 [ext_resource type="Resource" uid="uid://b8ethklo1y1bt" path="res://ESCENAS/Elements/Resource/NoMetales/Fosforo.tres" id="12_6qcn1"]
+[ext_resource type="Resource" uid="uid://h3kdkr4s6wq7" path="res://ESCENAS/Elements/Resource/Metales/Calcio.tres" id="12_iknt8"]
+[ext_resource type="Resource" uid="uid://br04as65awrts" path="res://ESCENAS/Elements/Resource/NoMetales/Azufre.tres" id="14_55hc1"]
+[ext_resource type="Resource" uid="uid://cb4nfxb6yrlaj" path="res://ESCENAS/Elements/Resource/Metales/Litio.tres" id="14_jk2cg"]
+[ext_resource type="Resource" uid="uid://c3pl5wsabbsjn" path="res://ESCENAS/Elements/Resource/Metales/Titanio.tres" id="15_55hc1"]
+[ext_resource type="Resource" uid="uid://si8g55srdwul" path="res://ESCENAS/Elements/Resource/Metales/Sodio.tres" id="16_kp5yv"]
+[ext_resource type="Resource" uid="uid://c3jv4co8gno4v" path="res://ESCENAS/Elements/Resource/Metales/Magnesio.tres" id="17_lrl6s"]
+[ext_resource type="Resource" uid="uid://btqv7ef22rrje" path="res://ESCENAS/Elements/Resource/Metales/Oro.tres" id="17_nsc2w"]
+[ext_resource type="Resource" uid="uid://du4y5u2lirffn" path="res://ESCENAS/Elements/Resource/Metales/Plomo.tres" id="18_gydrb"]
+[ext_resource type="Resource" uid="uid://fywg8c5fscvp" path="res://ESCENAS/Elements/Resource/Metales/Potasio.tres" id="19_8sxl4"]
+[ext_resource type="Resource" uid="uid://dh7qh6lfy0xm8" path="res://ESCENAS/Elements/Resource/Metales/Niquel.tres" id="19_iknt8"]
+[ext_resource type="Resource" uid="uid://kvo2pvsitcdi" path="res://ESCENAS/Elements/Resource/NoMetales/Carbono.tres" id="20_jk2cg"]
+[ext_resource type="Resource" uid="uid://dfdx2fgr1s2sl" path="res://ESCENAS/Elements/Resource/NoMetales/Bromo.tres" id="23_o0r3w"]
+[ext_resource type="Resource" uid="uid://b2nv8y1gri4s" path="res://ESCENAS/Elements/Resource/NoMetales/Nitrogeno.tres" id="26_2t050"]
+[ext_resource type="Resource" uid="uid://cnlwmr4cwg464" path="res://ESCENAS/Elements/Resource/Metales/Cobre.tres" id="27_2t050"]
 
 [sub_resource type="Resource" id="Resource_6k06y"]
 script = ExtResource("9_6qcn1")
 elemento = ExtResource("10_2hsx0")
-peso = 60.0
+peso = 80.0
 metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
 
 [sub_resource type="Resource" id="Resource_6qcn1"]
 script = ExtResource("9_6qcn1")
-elemento = ExtResource("11_7uges")
-peso = 40.0
+elemento = ExtResource("11_gydrb")
+peso = 70.0
 metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
 
 [sub_resource type="Resource" id="Resource_2hsx0"]
 script = ExtResource("9_6qcn1")
+elemento = ExtResource("12_iknt8")
+peso = 72.0
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
+
+[sub_resource type="Resource" id="Resource_kp5yv"]
+script = ExtResource("9_6qcn1")
+elemento = ExtResource("11_7uges")
+peso = 77.0
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
+
+[sub_resource type="Resource" id="Resource_qy1hi"]
+script = ExtResource("9_6qcn1")
+elemento = ExtResource("14_jk2cg")
+peso = 25.0
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
+
+[sub_resource type="Resource" id="Resource_mcbxi"]
+script = ExtResource("9_6qcn1")
+elemento = ExtResource("17_lrl6s")
+peso = 74.0
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
+
+[sub_resource type="Resource" id="Resource_57b8m"]
+script = ExtResource("9_6qcn1")
+elemento = ExtResource("19_iknt8")
+peso = 18.0
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
+
+[sub_resource type="Resource" id="Resource_nsc2w"]
+script = ExtResource("9_6qcn1")
+elemento = ExtResource("17_nsc2w")
+peso = 15.0
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
+
+[sub_resource type="Resource" id="Resource_8sxl4"]
+script = ExtResource("9_6qcn1")
+elemento = ExtResource("18_gydrb")
+peso = 23.0
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
+
+[sub_resource type="Resource" id="Resource_o0r3w"]
+script = ExtResource("9_6qcn1")
+elemento = ExtResource("19_8sxl4")
+peso = 12.0
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
+
+[sub_resource type="Resource" id="Resource_2t050"]
+script = ExtResource("9_6qcn1")
+elemento = ExtResource("16_kp5yv")
+peso = 25.0
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
+
+[sub_resource type="Resource" id="Resource_0e8a6"]
+script = ExtResource("9_6qcn1")
+elemento = ExtResource("15_55hc1")
+peso = 12.0
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
+
+[sub_resource type="Resource" id="Resource_f7gvm"]
+script = ExtResource("9_6qcn1")
+elemento = ExtResource("14_55hc1")
+peso = 78.0
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
+
+[sub_resource type="Resource" id="Resource_0qhn2"]
+script = ExtResource("9_6qcn1")
+elemento = ExtResource("23_o0r3w")
+peso = 12.0
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
+
+[sub_resource type="Resource" id="Resource_clws0"]
+script = ExtResource("9_6qcn1")
+elemento = ExtResource("20_jk2cg")
+peso = 13.0
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
+
+[sub_resource type="Resource" id="Resource_3e5kw"]
+script = ExtResource("9_6qcn1")
 elemento = ExtResource("12_6qcn1")
+peso = 14.0
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
+
+[sub_resource type="Resource" id="Resource_7x8kg"]
+script = ExtResource("9_6qcn1")
+elemento = ExtResource("26_2t050")
+peso = 5.0
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
+
+[sub_resource type="Resource" id="Resource_cp3pi"]
+script = ExtResource("9_6qcn1")
+elemento = ExtResource("27_2t050")
+peso = 90.0
 metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_reo8f"]
@@ -93,7 +199,7 @@ script = ExtResource("10_h5y1s")
 
 [node name="LootComponent" type="Node2D" parent="." unique_id=424646649]
 script = ExtResource("8_23ewi")
-tabla_loot = Array[ExtResource("9_6qcn1")]([SubResource("Resource_6k06y"), SubResource("Resource_6qcn1"), SubResource("Resource_2hsx0")])
+tabla_loot = Array[ExtResource("9_6qcn1")]([SubResource("Resource_6k06y"), SubResource("Resource_6qcn1"), SubResource("Resource_2hsx0"), SubResource("Resource_kp5yv"), SubResource("Resource_qy1hi"), SubResource("Resource_mcbxi"), SubResource("Resource_57b8m"), SubResource("Resource_nsc2w"), SubResource("Resource_8sxl4"), SubResource("Resource_o0r3w"), SubResource("Resource_2t050"), SubResource("Resource_0e8a6"), SubResource("Resource_f7gvm"), SubResource("Resource_0qhn2"), SubResource("Resource_clws0"), SubResource("Resource_3e5kw"), SubResource("Resource_7x8kg"), SubResource("Resource_cp3pi")])
 
 [node name="Audios" type="Node2D" parent="." unique_id=1595605153]
 
@@ -104,6 +210,7 @@ volume_db = -10.759
 [node name="HealthComponent" parent="." unique_id=578463191 instance=ExtResource("4_l3eiy")]
 position = Vector2(0, 0)
 collision_layer = 4
+max_salud = 4
 
 [node name="SensorComponent" parent="." unique_id=698544173 instance=ExtResource("6_u8cy3")]
 

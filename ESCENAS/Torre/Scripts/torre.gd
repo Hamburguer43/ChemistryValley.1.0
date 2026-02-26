@@ -8,7 +8,7 @@ func _ready() -> void:
 
 func _on_button_salir_pressed() -> void:
 	AudioManager_Global.stop_music()
-	get_tree().change_scene_to_file("res://ESCENAS/Level/Main_1/Main.tscn")
+	get_tree().change_scene_to_file("res://ESCENAS/Level/Level_0/Level_Main.tscn")
 
 func _on_button_tabla_pressed() -> void:
 	get_tree().change_scene_to_file("res://ESCENAS/Table_periodic/tabla_periodica.tscn")

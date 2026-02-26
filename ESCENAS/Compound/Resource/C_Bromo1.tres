@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://cfsu0cvrw272y"]
+
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_cf78r"]
+[ext_resource type="Texture2D" uid="uid://cky5ec4kto1lk" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon30.png" id="2_6pnrh"]
+
+[resource]
+script = ExtResource("1_cf78r")
+nombre = "Anhidrido Hipobromoso"
+formula = "Br2O"
+textura = ExtResource("2_6pnrh")
+descripcion = "Un gas inestable y reactivo. Representa el primer peldaño de la oxidacion del bromo."
+poder_descripcion = "\"Nube Irritante\": Crea una pequeña zona de gas que ralentiza a los enemigos por 5sg"
+formulas = Array[String](["BrO", "Br4O5"])
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"

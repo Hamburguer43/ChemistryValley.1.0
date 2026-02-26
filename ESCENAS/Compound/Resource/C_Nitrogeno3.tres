@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://xjm171640ay5"]
+
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_0t84j"]
+[ext_resource type="Texture2D" uid="uid://cw4c0dftdioj0" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon9.png" id="2_udgy5"]
+
+[resource]
+script = ExtResource("1_0t84j")
+nombre = "Anhidrido Nitrico"
+formula = "N2O5"
+textura = ExtResource("2_udgy5")
+descripcion = "Un solido blanco que es un agente oxidante extremadamente poderoso. Es el precursor del acido nitrico."
+poder_descripcion = "\"Congelacion de Nitrogeno\": Lanza un proyectil criogenico que ralentiza la velocidad de movimiento del enemigo por 8sg"
+formulas = Array[String](["NO5", "NO"])
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"

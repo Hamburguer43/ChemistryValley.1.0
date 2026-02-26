@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://dh60g3keswyng"]
+
+[ext_resource type="Script" uid="uid://cuye3ft87khit" path="res://ESCENAS/Cofres/Scripts/cofre.gd" id="1_43man"]
+[ext_resource type="Texture2D" uid="uid://b7j0vl4h4524w" path="res://ASSETS/Sprites/Botones/Cut_Version/Buttons/tile015.png" id="2_5wduq"]
+[ext_resource type="Texture2D" uid="uid://b1xseuno0essw" path="res://ASSETS/Sprites/Cofres/Chest_normal-Sheet.png" id="2_44wig"]
+[ext_resource type="AudioStream" uid="uid://huemlafaowih" path="res://ASSETS/Audios/Audio/universfield-magic-03-278824.mp3" id="3_hnjvh"]
+[ext_resource type="Script" uid="uid://b7ddme1q8mh6f" path="res://ESCENAS/Elements/Scripts/PesoElement.gd" id="3_os4vl"]
+[ext_resource type="Script" uid="uid://bsb4g3t370knt" path="res://ESCENAS/Cofres/Scripts/loot_botin.gd" id="5_02811"]
+[ext_resource type="Script" uid="uid://dnxacgaxvxigx" path="res://ESCENAS/Carteles/Script/interaction.gd" id="10_hnjvh"]
+[ext_resource type="Resource" uid="uid://b2nv8y1gri4s" path="res://ESCENAS/Elements/Resource/NoMetales/Nitrogeno.tres" id="16_txfy8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0v0nw"]
+atlas = ExtResource("2_44wig")
+region = Rect2(0, 0, 512, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wx1l4"]
+atlas = ExtResource("2_44wig")
+region = Rect2(512, 0, 512, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcsua"]
+atlas = ExtResource("2_44wig")
+region = Rect2(1024, 0, 512, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txfy8"]
+atlas = ExtResource("2_44wig")
+region = Rect2(1536, 0, 512, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_boque"]
+atlas = ExtResource("2_44wig")
+region = Rect2(2048, 0, 512, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yh0c0"]
+atlas = ExtResource("2_44wig")
+region = Rect2(2560, 0, 512, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3kn8"]
+atlas = ExtResource("2_44wig")
+region = Rect2(3072, 0, 512, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tw5dr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0v0nw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wx1l4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcsua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txfy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_boque")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yh0c0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3kn8")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_cie6n"]
+script = ExtResource("3_os4vl")
+elemento = ExtResource("16_txfy8")
+peso = 10.0
+metadata/_custom_type_script = "uid://b7ddme1q8mh6f"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5nio4"]
+size = Vector2(53, 69)
+
+[node name="Cofre" type="Node2D" unique_id=2022410926]
+script = ExtResource("1_43man")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=766414271]
+position = Vector2(457, 320)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite" unique_id=2124154414]
+position = Vector2(210, -1)
+sprite_frames = SubResource("SpriteFrames_tw5dr")
+
+[node name="Boton" type="TextureRect" parent="." unique_id=346262815]
+visible = false
+offset_left = 437.0
+offset_top = 228.0
+offset_right = 477.0
+offset_bottom = 268.0
+texture = ExtResource("2_5wduq")
+
+[node name="Audios" type="Node2D" parent="." unique_id=984703878]
+
+[node name="Open" type="AudioStreamPlayer2D" parent="Audios" unique_id=1201509349]
+stream = ExtResource("3_hnjvh")
+
+[node name="LootComponent" type="Node2D" parent="." unique_id=1318589617]
+script = ExtResource("5_02811")
+tabla_loot = Array[ExtResource("3_os4vl")]([SubResource("Resource_cie6n")])
+
+[node name="Interaction" type="Area2D" parent="." unique_id=280201497]
+collision_layer = 8
+script = ExtResource("10_hnjvh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction" unique_id=1575617388]
+position = Vector2(457, 315.5)
+shape = SubResource("RectangleShape2D_5nio4")
+
+[connection signal="body_entered" from="Interaction" to="." method="_on_interaction_body_entered"]
+[connection signal="body_exited" from="Interaction" to="." method="_on_interaction_body_exited"]

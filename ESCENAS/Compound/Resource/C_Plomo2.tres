@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://fekos0e4gox6"]
+
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_x78ep"]
+[ext_resource type="Texture2D" uid="uid://dfuf12ot7gk5" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon23.png" id="2_py0wt"]
+
+[resource]
+script = ExtResource("1_x78ep")
+nombre = "Oxido Plumbico"
+formula = "PbO2"
+textura = ExtResource("2_py0wt")
+descripcion = "Un polvo marron oscuro. Es un oxidante muy fuerte y denso, utilizado en alquimia para experimentos de alta energia."
+rareza = "Raro"
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"

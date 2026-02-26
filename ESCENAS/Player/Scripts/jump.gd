@@ -6,7 +6,7 @@ class_name Jump
 @export var max_jumps: int = 2
 @export var wall_slide_friction: float = 0.7
 @export var wall_fast_slide_multiplier: float = 1.5
-@export var wall_jump_push = 300
+@export var wall_jump_push = 200
 
 var jumps_made: int = 0 
 
@@ -28,7 +28,7 @@ func handle_jump(body: CharacterBody2D, input_jump: bool) -> bool:
 
 func handle_wall_slide(body: CharacterBody2D, input_axis: float, _delta: float) -> void:
 	
-	if not body.is_on_wall() or body.is_on_floor():
+	if not body.is_on_wall_only():
 		return
 
 	# Verificar si el jugador está presionando hacia la pared
@@ -43,7 +43,7 @@ func handle_wall_slide(body: CharacterBody2D, input_axis: float, _delta: float) 
 		if Input.is_action_just_pressed("jump"):
 			body.velocity.x = wall_normal.x * wall_jump_push
 			body.velocity.y = -400
-			jumps_made = 1
+			jumps_made = 0
 			return
 		
 		#si la velocidad en y es > a 0 está cayendo, y le aplica fricción solo si el input_axis está apuntando a la direccion de la pared

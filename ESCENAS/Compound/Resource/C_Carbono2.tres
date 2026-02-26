@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://b5bh214dmgdbf"]
+
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_kw0ns"]
+[ext_resource type="Texture2D" uid="uid://bisa4tyoqv3g7" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon27.png" id="2_dsavg"]
+
+[resource]
+script = ExtResource("1_kw0ns")
+nombre = "Anhidrido Carbonico"
+formula = "CO2"
+textura = ExtResource("2_dsavg")
+descripcion = "El famoso dioxido de carbono. Es un gas denso que las plantas respiran y que en altas concentraciones puede sofocar llamas."
+formulas = Array[String](["C4O4", "C4O2"])
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"

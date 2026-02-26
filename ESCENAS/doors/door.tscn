@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dpym6agofp0oe"]
+
+[ext_resource type="Script" uid="uid://dgudn5kwlifv4" path="res://ESCENAS/doors/scripts/door.gd" id="1_r1qpd"]
+[ext_resource type="Texture2D" uid="uid://b7j0vl4h4524w" path="res://ASSETS/Sprites/Botones/Cut_Version/Buttons/tile015.png" id="2_murdm"]
+[ext_resource type="SpriteFrames" uid="uid://drfj4qw6rywdy" path="res://ESCENAS/doors/Resource/DoorTower.tres" id="2_ogbs5"]
+[ext_resource type="Script" uid="uid://dnxacgaxvxigx" path="res://ESCENAS/Carteles/Script/interaction.gd" id="3_ogbs5"]
+[ext_resource type="AudioStream" uid="uid://cesjqyi1rt7mn" path="res://ASSETS/Audios/Audio/dragon-studio-door-opening-454242.mp3" id="5_ogbs5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tei4c"]
+size = Vector2(53, 69)
+
+[node name="Door" type="Node2D" unique_id=1902341173]
+script = ExtResource("1_r1qpd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=417593650]
+position = Vector2(456, 314)
+sprite_frames = ExtResource("2_ogbs5")
+animation = &"open"
+
+[node name="Boton" type="TextureRect" parent="." unique_id=640960349]
+visible = false
+offset_left = 434.0
+offset_top = 228.0
+offset_right = 474.0
+offset_bottom = 268.0
+texture = ExtResource("2_murdm")
+
+[node name="Interaction" type="Area2D" parent="." unique_id=958039612]
+collision_layer = 8
+script = ExtResource("3_ogbs5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction" unique_id=798569116]
+position = Vector2(457, 315.5)
+shape = SubResource("RectangleShape2D_tei4c")
+
+[node name="Audios" type="Node2D" parent="." unique_id=1524891449]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="Audios" unique_id=2105493910]
+stream = ExtResource("5_ogbs5")
+
+[connection signal="body_entered" from="Interaction" to="." method="_on_interaction_body_entered"]
+[connection signal="body_exited" from="Interaction" to="." method="_on_interaction_body_exited"]

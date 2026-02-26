@@ -10,22 +10,31 @@ class_name Movement
 @export var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var terminal_velocity: float = 980.0
 
-#Funcion que maneja el movimiento del Player (calcula los valores)
 func handle_movement(body: CharacterBody2D, direction: float, delta: float) -> void:
 	# 1. Gravedad 
 	_apply_gravity(body, delta)
 	
-	# 2. Movimiento Horizontal
+	# 2. Movimiento Horizontal (Lógica mejorada)
 	if direction != 0:
-		body.velocity.x = move_toward(body.velocity.x, direction * speed, acceleration * delta)
+		# Si estamos en el aire y yendo más rápido que la velocidad máxima (Wall Jump)
+		# bajamos la aceleración para que el impulso dure más tiempo
+		var current_accel = acceleration
+		if not body.is_on_floor() and abs(body.velocity.x) > speed:
+			current_accel = acceleration * 0.1 # Solo aplicamos el 10% de control
+		
+		body.velocity.x = move_toward(body.velocity.x, direction * speed, current_accel * delta)
 	else:
-		body.velocity.x = move_toward(body.velocity.x, 0.0, friction * delta)
+		# Si no hay input, aplicamos fricción
+		# En el aire la fricción debería ser menor para no frenar en seco el salto
+		var current_friction = friction
+		if not body.is_on_floor():
+			current_friction = friction * 0.2
+			
+		body.velocity.x = move_toward(body.velocity.x, 0.0, current_friction * delta)
 	
 	body.move_and_slide()
 
-#func gravity -----------------------------------------------------
 func _apply_gravity(body: CharacterBody2D, delta: float) -> void:
-	
 	if not body.is_on_floor():
 		body.velocity.y += gravity * delta
 		body.velocity.y = min(body.velocity.y, terminal_velocity)

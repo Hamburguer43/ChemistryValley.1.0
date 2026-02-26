@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Cartelito_Res" format=3 uid="uid://75twnrp07n2w"]
+
+[ext_resource type="Script" uid="uid://bakkm4aqkgf7p" path="res://ESCENAS/Carteles/Script/Cartel_Res.gd" id="1_h1as1"]
+
+[resource]
+script = ExtResource("1_h1as1")
+title = "Impulso Alquimico"
+content = "Presiona [Espacio] para saltar. Mientras estés en el aire, vuelve a presionar [Espacio] para realizar un segundo impulso. Úsalo para alcanzar repisas lejanas."
+metadata/_custom_type_script = "uid://bakkm4aqkgf7p"

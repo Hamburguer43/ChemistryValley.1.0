@@ -2,6 +2,7 @@ extends State
 
 # Obtenemos la gravedad del proyecto para que sea igual a la del Player
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+@export var step_audio: AudioStreamPlayer
 
 func enter():
 	
@@ -11,6 +12,11 @@ func enter():
 	# Aplicamos el impacto
 	character.velocity = Empujon * character.force_hit
 	character.velocity.y -= 200
+	
+	if not step_audio.playing:
+			# Variamos el pitch ligeramente para que no sea monótono (Opcional)
+			step_audio.pitch_scale = randf_range(0.9, 1.1)
+			step_audio.play()
 
 func update_state(delta: float):
 	

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Element_Res" load_steps=4 format=3 uid="uid://dfdx2fgr1s2sl"]
+[gd_resource type="Resource" script_class="Element_Res" format=3 uid="uid://dfdx2fgr1s2sl"]
 
 [ext_resource type="Texture2D" uid="uid://d3rmpo7jybi05" path="res://ASSETS/Sprites/Elements/Png/Nometales/bromo.png" id="1_i4i50"]
 [ext_resource type="Script" uid="uid://dfxkj61cckpm1" path="res://ESCENAS/Elements/Scripts/Element_Res.gd" id="1_k571p"]

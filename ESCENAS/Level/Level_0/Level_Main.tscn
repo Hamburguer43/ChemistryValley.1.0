@@ -16,6 +16,17 @@
 [ext_resource type="SpriteFrames" uid="uid://cypm6c48ud6h3" path="res://ESCENAS/Enemies/Resource/Jabali_2.tres" id="10_g2c6o"]
 [ext_resource type="SpriteFrames" uid="uid://4khipftqy2ho" path="res://ESCENAS/Enemies/Resource/Jabali_3.tres" id="11_bx5r7"]
 [ext_resource type="PackedScene" uid="uid://cmfx8w3xl1trs" path="res://ESCENAS/Carteles/Cartel.tscn" id="15_bx5r7"]
+[ext_resource type="Resource" uid="uid://75twnrp07n2w" path="res://ESCENAS/Carteles/Resources/Tutorial_1.tres" id="16_c5v1p"]
+[ext_resource type="Resource" uid="uid://hturf4key2ed" path="res://ESCENAS/Carteles/Resources/Tutorial_golpe.tres" id="16_e6ewa"]
+[ext_resource type="Resource" uid="uid://do1240itwxlp" path="res://ESCENAS/Carteles/Resources/CondicionVelocidad.tres" id="16_qrixv"]
+[ext_resource type="Resource" uid="uid://fb8y012vkqbe" path="res://ESCENAS/Carteles/Resources/Tutorial_p.tres" id="19_3mto0"]
+[ext_resource type="Resource" uid="uid://dy114peqikbr1" path="res://ESCENAS/Carteles/Resources/Tutorial_wallSlide.tres" id="19_txqi5"]
+[ext_resource type="PackedScene" uid="uid://cuqhn21yckj88" path="res://ESCENAS/Elements/Elemento.tscn" id="20_qevb3"]
+[ext_resource type="PackedScene" uid="uid://dpym6agofp0oe" path="res://ESCENAS/doors/door.tscn" id="21_1sof0"]
+[ext_resource type="Resource" uid="uid://c3jv4co8gno4v" path="res://ESCENAS/Elements/Resource/Metales/Magnesio.tres" id="21_wm3x1"]
+[ext_resource type="SpriteFrames" uid="uid://drfj4qw6rywdy" path="res://ESCENAS/doors/Resource/DoorTower.tres" id="22_4npww"]
+[ext_resource type="Resource" uid="uid://btqv7ef22rrje" path="res://ESCENAS/Elements/Resource/Metales/Oro.tres" id="22_wm3x1"]
+[ext_resource type="Resource" uid="uid://b6gi2fnyj0l3n" path="res://ESCENAS/Elements/Resource/NoMetales/Oxigeno.tres" id="26_y50d5"]
 
 [node name="Level" type="Node2D" unique_id=1416783529]
 script = ExtResource("1_0sbgg")
@@ -159,8 +170,6 @@ volume_db = 7.752
 
 [node name="Objects" type="Node2D" parent="." unique_id=1424493455]
 
-[node name="Cofres" type="Node2D" parent="Objects" unique_id=1563662433]
-
 [node name="Pinchos" type="Node2D" parent="Objects" unique_id=1744639200]
 
 [node name="DangerZone" parent="Objects/Pinchos" unique_id=519141519 instance=ExtResource("4_vgl73")]
@@ -217,6 +226,69 @@ datos = ExtResource("5_ihb8h")
 
 [node name="Cartel" parent="Objects/Carteles" unique_id=1692344881 instance=ExtResource("15_bx5r7")]
 position = Vector2(9482, 232)
+datos = ExtResource("16_qrixv")
+
+[node name="Cartel2" parent="Objects/Carteles" unique_id=292659906 instance=ExtResource("15_bx5r7")]
+position = Vector2(2442, 54)
+datos = ExtResource("16_c5v1p")
+
+[node name="Cartel3" parent="Objects/Carteles" unique_id=1280059692 instance=ExtResource("15_bx5r7")]
+position = Vector2(3142, 58)
+datos = ExtResource("16_e6ewa")
+
+[node name="Cartel5" parent="Objects/Carteles" unique_id=1846701102 instance=ExtResource("15_bx5r7")]
+position = Vector2(1473, 59)
+datos = ExtResource("19_3mto0")
+
+[node name="Cartel4" parent="Objects/Carteles" unique_id=1467103714 instance=ExtResource("15_bx5r7")]
+position = Vector2(7590, 537)
+datos = ExtResource("19_txqi5")
+
+[node name="Doors" type="Node2D" parent="Objects" unique_id=1789127389]
+
+[node name="Door" parent="Objects/Doors" unique_id=1902341173 instance=ExtResource("21_1sof0")]
+position = Vector2(1016, 52)
+animaciones_especificas = ExtResource("22_4npww")
+escena_destino = "uid://h8glistof8rr"
+
+[node name="Elementos" type="Node2D" parent="." unique_id=1349663198]
+position = Vector2(0, -1)
+
+[node name="Elemento" parent="Elementos" unique_id=66467518 instance=ExtResource("20_qevb3")]
+position = Vector2(8054, 687)
+resource = ExtResource("21_wm3x1")
+
+[node name="Elemento2" parent="Elementos" unique_id=922173291 instance=ExtResource("20_qevb3")]
+position = Vector2(8053.9995, 735)
+resource = ExtResource("21_wm3x1")
+
+[node name="Elemento3" parent="Elementos" unique_id=755122973 instance=ExtResource("20_qevb3")]
+position = Vector2(8053.9995, 785.00006)
+resource = ExtResource("21_wm3x1")
+
+[node name="Elemento4" parent="Elementos" unique_id=734348406 instance=ExtResource("20_qevb3")]
+position = Vector2(8149, 830.99994)
+resource = ExtResource("22_wm3x1")
+
+[node name="Elemento5" parent="Elementos" unique_id=248561877 instance=ExtResource("20_qevb3")]
+position = Vector2(8224, 790)
+resource = ExtResource("22_wm3x1")
+
+[node name="Elemento6" parent="Elementos" unique_id=234036982 instance=ExtResource("20_qevb3")]
+position = Vector2(8300, 830)
+resource = ExtResource("22_wm3x1")
+
+[node name="Elemento7" parent="Elementos" unique_id=250074047 instance=ExtResource("20_qevb3")]
+position = Vector2(3967, 63)
+resource = ExtResource("26_y50d5")
+
+[node name="Elemento8" parent="Elementos" unique_id=900550996 instance=ExtResource("20_qevb3")]
+position = Vector2(4146, 65)
+resource = ExtResource("26_y50d5")
+
+[node name="Elemento9" parent="Elementos" unique_id=1843191385 instance=ExtResource("20_qevb3")]
+position = Vector2(4323, 65)
+resource = ExtResource("26_y50d5")
 
 [node name="Player" parent="." unique_id=1795189720 instance=ExtResource("4_qe2ma")]
-position = Vector2(9773, 543)
+position = Vector2(4493, 91)

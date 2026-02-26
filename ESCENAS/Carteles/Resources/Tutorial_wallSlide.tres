@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Cartelito_Res" format=3 uid="uid://dy114peqikbr1"]
+
+[ext_resource type="Script" uid="uid://bakkm4aqkgf7p" path="res://ESCENAS/Carteles/Script/Cartel_Res.gd" id="1_vtkq1"]
+
+[resource]
+script = ExtResource("1_vtkq1")
+title = "Adherencia"
+content = "Si saltas hacia una pared, mantén presionada la dirección hacia ella para deslizarte suavemente. Desde esta posición, puedes saltar de nuevo para escalar superficies verticales"
+metadata/_custom_type_script = "uid://bakkm4aqkgf7p"

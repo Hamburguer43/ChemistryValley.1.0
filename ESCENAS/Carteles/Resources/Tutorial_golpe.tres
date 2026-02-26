@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Cartelito_Res" format=3 uid="uid://hturf4key2ed"]
+
+[ext_resource type="Script" uid="uid://bakkm4aqkgf7p" path="res://ESCENAS/Carteles/Script/Cartel_Res.gd" id="1_372y4"]
+
+[resource]
+script = ExtResource("1_372y4")
+title = "Defensa Básica"
+content = "Utiliza la tecla [K] para canalizar tu energía en un golpe frontal. Ten cuidado! si dejas que los jabalies te toquen recibes daño"
+metadata/_custom_type_script = "uid://bakkm4aqkgf7p"

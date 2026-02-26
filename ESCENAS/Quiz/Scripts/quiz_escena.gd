@@ -79,8 +79,8 @@ func next_question() -> void:
 
 ##Pantalla Final
 func _over() -> void:
-	$ColorRect.show()
-	$ColorRect/Score.text = str(success, "/", quiz_Data.size())
+	$Final.show()
+	$Final/Score.text = str(success, "/", quiz_Data.size())
 	$Timer.stop(); $TicTacMbappe.stop()
 
 func _on_timer_timeout() -> void:

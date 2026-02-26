@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://do5mxf85siah6"]
+
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_7oegp"]
+[ext_resource type="Texture2D" uid="uid://d2ewu7rcnexq1" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Background/Icon19.png" id="2_1bnm6"]
+
+[resource]
+script = ExtResource("1_7oegp")
+nombre = "Oxido Niqueloso"
+formula = "NiO"
+textura = ExtResource("2_1bnm6")
+descripcion = "Un óxido metálico de color verde amarillento. En la alquimia, representa la resistencia y la dureza del metal base."
+poder_descripcion = "\"Piel de Níquel\": Endurece la túnica del mago, reduciendo el daño físico recibido durante 10 segundos."
+formulas = Array[String](["Ni2O5", "NiO6"])
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"

@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_0dpx6")
+dano = 4
 nombre = "Anhidrido Hiposulfuroso"
 formula = "SO"
 textura = ExtResource("2_2lq7y")

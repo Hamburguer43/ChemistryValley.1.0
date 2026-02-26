@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://cf2btshkotqx6"]
+
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_t3fws"]
+[ext_resource type="Texture2D" uid="uid://bcop5in1nfovh" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon15.png" id="2_7rceb"]
+
+[resource]
+script = ExtResource("1_t3fws")
+nombre = "Anhidrido Hipofosforoso"
+formula = "P2O"
+textura = ExtResource("2_7rceb")
+descripcion = "Un oxido de fosforo poco comun y altamente inestable. Representa la forma mas debil y volatil de la combustion del fosforo."
+poder_descripcion = "\"Fuego Fatuo\": Crea pequeñas luces que distraen a los enemigos, reduciendo su velocidad de ataque."
+formulas = Array[String](["P3O", "PO3"])
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"

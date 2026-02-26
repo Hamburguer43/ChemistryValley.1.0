@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://u4ig4he6mc1h"]
+
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_we43d"]
+[ext_resource type="Texture2D" uid="uid://cky5ec4kto1lk" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon30.png" id="2_tajaw"]
+
+[resource]
+script = ExtResource("1_we43d")
+nombre = "Anhidrido Bromico"
+formula = "Br2O5"
+textura = ExtResource("2_tajaw")
+descripcion = "Un potente agente oxidante. En la alquimia, se utiliza para potenciar reacciones explosivas."
+poder_descripcion = "\"Nube Irritante\": Crea una pequeña zona de gas que ralentiza a los enemigos por 9sg"
+rareza = "Epico"
+formulas = Array[String](["Br4O4", "Br5"])
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"

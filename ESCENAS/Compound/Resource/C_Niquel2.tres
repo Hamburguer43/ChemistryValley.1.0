@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://cm47c8whao0k0"]
+
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_d0kf7"]
+[ext_resource type="Texture2D" uid="uid://h1lg3t7einvr" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon32.png" id="2_2jr2t"]
+
+[resource]
+script = ExtResource("1_d0kf7")
+nombre = "Oxido Niquelico"
+formula = "NiO3"
+textura = ExtResource("2_2jr2t")
+descripcion = "Un polvo gris oscuro o negro. Es más inestable y energético que su versión niquelosa, cargado con una mayor densidad de partículas de oxígeno."
+rareza = "Raro"
+formulas = Array[String](["NiO", "Ni7"])
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"

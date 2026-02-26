@@ -148,6 +148,7 @@
 [ext_resource type="Texture2D" uid="uid://bggnnrv7jc0n1" path="res://ASSETS/Sprites/Elements/Simbolo/Uuh.png" id="143_fpmf4"]
 [ext_resource type="Texture2D" uid="uid://4p1vrfgq7dcq" path="res://ASSETS/Sprites/Elements/Simbolo/Uus.png" id="144_dafwc"]
 [ext_resource type="Texture2D" uid="uid://cap5vawu8ddih" path="res://ASSETS/Sprites/Elements/Simbolo/Uuo.png" id="145_rjhjw"]
+[ext_resource type="Texture2D" uid="uid://b7j0vl4h4524w" path="res://ASSETS/Sprites/Botones/Cut_Version/Buttons/tile015.png" id="147_2q077"]
 
 [sub_resource type="Theme" id="Theme_2q077"]
 default_font = ExtResource("3_untkr")
@@ -4415,6 +4416,34 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
+[node name="Boton_Salir2" type="Button" parent="." unique_id=1197233829]
+offset_left = 1.0000019
+offset_right = 409.32996
+offset_bottom = 366.667
+scale = Vector2(0.12, 0.12)
+icon = ExtResource("26_btwtx")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Boton" type="TextureRect" parent="Boton_Salir2" unique_id=1096059387]
+visible = false
+layout_mode = 0
+offset_left = 434.0
+offset_top = 228.0
+offset_right = 474.0
+offset_bottom = 268.0
+texture = ExtResource("147_2q077")
+
+[node name="Boton2" type="TextureRect" parent="Boton_Salir2" unique_id=2015837328]
+visible = false
+layout_mode = 0
+offset_left = 434.0
+offset_top = 228.0
+offset_right = 474.0
+offset_bottom = 268.0
+texture = ExtResource("147_2q077")
+
 [node name="Boton_Help" type="Button" parent="." unique_id=1233679797]
 offset_left = 1107.0001
 offset_right = 1515.332
@@ -4431,4 +4460,5 @@ volume_db = -7.913
 pitch_scale = 2.08
 
 [connection signal="pressed" from="Boton_Salir" to="." method="_on_boton_salir_pressed"]
+[connection signal="pressed" from="Boton_Salir2" to="." method="_on_boton_salir_pressed"]
 [connection signal="pressed" from="Boton_Help" to="." method="_on_boton_help_pressed"]

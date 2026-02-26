@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://cxfct14ulfqrw"]
+
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_hllmv"]
+[ext_resource type="Texture2D" uid="uid://cky5ec4kto1lk" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon30.png" id="2_bwwsu"]
+
+[resource]
+script = ExtResource("1_hllmv")
+nombre = "Anhidrido Perbromico"
+formula = "Br2O7"
+textura = ExtResource("2_bwwsu")
+descripcion = "La forma mas extrema y poderosa de oxido de bromo. Es altamente inestable y contiene una energia destructiva inmensa."
+poder_descripcion = "\"Nube Irritante\": Crea una pequeña zona de gas que ralentiza a los enemigos por 12sg"
+rareza = "Peligroso"
+formulas = Array[String](["BrOO", "pBr4"])
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"

@@ -51,7 +51,7 @@ func instanciar_item(recurso: Element_Res):
 	# Usamos global_position del componente (que estará pegado al enemigo)
 	nuevo_item.global_position = global_position
 	
-	# Lo añadimos al nivel (fuera del enemigo para que no se borre con él)
+	# Lo añadimos al nivel hhh
 	get_tree().current_scene.add_child(nuevo_item)
 	
 	# Aplicamos un salto al instanciar

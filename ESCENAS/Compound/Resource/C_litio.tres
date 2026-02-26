@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://cd4tobkv66tdk"]
+
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_g1efk"]
+[ext_resource type="Texture2D" uid="uid://c86loqdw7ib22" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon44.png" id="2_bqu2v"]
+
+[resource]
+script = ExtResource("1_g1efk")
+nombre = "Oxido de Litio"
+formula = "Li2O"
+textura = ExtResource("2_bqu2v")
+descripcion = "Un polvo blanco que se forma cuando el metal litio se quema en el aire. Es la base fundamental para cualquier pócima de energía alcalina."
+formulas = Array[String](["Li3O4", "Li"])
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"

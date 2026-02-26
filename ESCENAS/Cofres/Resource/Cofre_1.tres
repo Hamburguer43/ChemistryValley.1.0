@@ -1,0 +1,60 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cgvdwuadyvi1a"]
+
+[ext_resource type="Texture2D" uid="uid://b1xseuno0essw" path="res://ASSETS/Sprites/Cofres/Chest_normal-Sheet.png" id="1_a0uon"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2whs"]
+atlas = ExtResource("1_a0uon")
+region = Rect2(0, 0, 512, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stam4"]
+atlas = ExtResource("1_a0uon")
+region = Rect2(512, 0, 512, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67mjd"]
+atlas = ExtResource("1_a0uon")
+region = Rect2(1024, 0, 512, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqk4c"]
+atlas = ExtResource("1_a0uon")
+region = Rect2(1536, 0, 512, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vg55c"]
+atlas = ExtResource("1_a0uon")
+region = Rect2(2048, 0, 512, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydncu"]
+atlas = ExtResource("1_a0uon")
+region = Rect2(2560, 0, 512, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kg8ea"]
+atlas = ExtResource("1_a0uon")
+region = Rect2(3072, 0, 512, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2whs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stam4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67mjd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqk4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vg55c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydncu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kg8ea")
+}],
+"loop": false,
+"name": &"Open",
+"speed": 5.0
+}]

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://hrsi3lhvwedy"]
+
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_fe4if"]
+[ext_resource type="Texture2D" uid="uid://fbmlu0opcs3x" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Background/Icon9.png" id="2_cem5d"]
+
+[resource]
+script = ExtResource("1_fe4if")
+nombre = "Anhidrido Hiponitroso"
+formula = "N2O"
+textura = ExtResource("2_cem5d")
+descripcion = "Conocido comunmente como gas de la risa. Es un gas incoloro con un olor dulce."
+poder_descripcion = "\"Congelacion de Nitrogeno\": Lanza un proyectil criogenico que ralentiza la velocidad de movimiento del enemigo por 4sg"
+formulas = Array[String](["NO", "NO5"])
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"

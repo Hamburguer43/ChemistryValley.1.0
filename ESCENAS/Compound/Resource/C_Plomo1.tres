@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://blwi32aimm0qc"]
+
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_w7b3q"]
+[ext_resource type="Texture2D" uid="uid://2bmlni3136ys" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon20.png" id="2_do6kh"]
+
+[resource]
+script = ExtResource("1_w7b3q")
+nombre = "1. Oxido Plumboso"
+formula = "PbO"
+textura = ExtResource("2_do6kh")
+descripcion = "Tambien conocido como litargirio. Es un solido pesado de color amarillento o rojizo, muy estable y denso."
+formulas = Array[String](["Pb3O", "Pb6O6"])
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"

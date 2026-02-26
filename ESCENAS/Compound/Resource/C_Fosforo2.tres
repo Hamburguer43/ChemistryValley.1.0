@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://dw0p0l3oekonr"]
+
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_oqblv"]
+[ext_resource type="Texture2D" uid="uid://bcop5in1nfovh" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon15.png" id="2_nllid"]
+
+[resource]
+script = ExtResource("1_oqblv")
+nombre = "Anhidrido Fosforico"
+formula = "P2O5"
+textura = ExtResource("2_nllid")
+descripcion = "Un solido blanco cristalino con un fuerte olor a ajo. Es altamente toxico y reacciona lentamente con el aire."
+poder_descripcion = "\"Veneno Fosforico\": Lanza una nube toxica que inflige daño magico persistente a los enemigos en el area."
+formulas = Array[String](["PO", "P2O6"])
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"

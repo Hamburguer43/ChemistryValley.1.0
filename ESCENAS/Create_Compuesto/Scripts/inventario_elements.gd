@@ -69,19 +69,19 @@ func _ready() -> void:
 	create_grid_inventory()
 
 func create_grid_inventory(): 
-	# Limpiamos (Responsabilidad: Limpieza)
+	# Limpiamos
 	for children in grid.get_children():
 		children.queue_free()
 	
-	# Comprobamos elementos (Responsabilidad: Validación)
 	text.visible = Inventory_Global.Elementos.size() == 0
 	
-	# Llenamos (Responsabilidad: Poblar datos)
+	# Llenamos
 	for elemento in Inventory_Global.Elementos:
 		var cantidad = Inventory_Global.Elementos[elemento]
 		
+		# Cambiamos return por continue
 		if cantidad <= 0: 
-			return
+			continue 
 		
 		var new_slot = slot.instantiate()
 		grid.add_child(new_slot)

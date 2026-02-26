@@ -89,7 +89,6 @@ func logic_botin():
 	
 	if  is_instance_valid(loot_component):
 		loot_component.soltar_botin()
-		print("se instanció")
 	
 	await get_tree().create_timer(0.1).timeout
 	

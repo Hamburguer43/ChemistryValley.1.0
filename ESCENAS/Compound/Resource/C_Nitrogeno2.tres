@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://cx4uosyf6xn6k"]
+
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_nexwh"]
+[ext_resource type="Texture2D" uid="uid://fbmlu0opcs3x" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Background/Icon9.png" id="2_qnvtb"]
+
+[resource]
+script = ExtResource("1_nexwh")
+nombre = "Anhidrido Nitroso"
+formula = "N2O3"
+textura = ExtResource("2_qnvtb")
+descripcion = "Un liquido azul oscuro a bajas temperaturas. Es muy inestable y se disocia facilmente a temperatura ambiente."
+poder_descripcion = "\"Congelacion de Nitrogeno\": Lanza un proyectil criogenico que ralentiza la velocidad de movimiento del enemigo 6sg"
+formulas = Array[String](["NO4", "N2O2"])
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"

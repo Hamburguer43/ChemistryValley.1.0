@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://cwgtv5kusdfyl"]
+
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="1_s1j5m"]
+[ext_resource type="Texture2D" uid="uid://bisa4tyoqv3g7" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon27.png" id="2_0xbnw"]
+
+[resource]
+script = ExtResource("1_s1j5m")
+nombre = "Anhidrido Carbonoso"
+formula = "CO"
+textura = ExtResource("2_0xbnw")
+descripcion = "Conocido comunmente como monoxido de carbono. Es un gas incoloro y altamente toxico que desplaza el oxigeno."
+poder_descripcion = "\"Asfixia Silenciosa\": Crea una nube de gas invisible que drena lentamente la vida de los enemigos sin que se den cuenta de inmediato."
+formulas = Array[String](["CO22", "C3O2"])
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"
