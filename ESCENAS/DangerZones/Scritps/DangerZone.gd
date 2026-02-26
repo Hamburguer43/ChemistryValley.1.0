@@ -10,6 +10,7 @@ func _ready():
 	# Daño
 	hitbox.damage = datos.daño
 	hitbox.set_hitbox_active(true)
+	
 	# Animacion
 	if datos.frames:
 		visual.sprite_frames = datos.frames

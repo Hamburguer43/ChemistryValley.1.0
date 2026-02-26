@@ -1,0 +1,222 @@
+[gd_scene format=3 uid="uid://bldnfntcvi6v2"]
+
+[ext_resource type="Script" uid="uid://bls7a84xc78al" path="res://ESCENAS/Level/Level_0/script/level_main.gd" id="1_0sbgg"]
+[ext_resource type="PackedScene" uid="uid://cn2oolhes6tqw" path="res://ESCENAS/Tilemaps/Level_0/Level_0.scn" id="1_nuxp4"]
+[ext_resource type="Texture2D" uid="uid://c6vi1s8t83tps" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Backgrounds/Mountain/sky_lightened.png" id="2_vsc1p"]
+[ext_resource type="AudioStream" uid="uid://bkxrvb24jui4h" path="res://ASSETS/Audios/Audio/bird-whistling-in-the-forest-215441.mp3" id="3_qe2ma"]
+[ext_resource type="Texture2D" uid="uid://c4tthxurdt65u" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Backgrounds/Forest/mountain2.png" id="4_f44po"]
+[ext_resource type="Texture2D" uid="uid://b63iprctg18o2" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Backgrounds/Forest/cloud.png" id="4_m5xtl"]
+[ext_resource type="PackedScene" uid="uid://xwlmfjrolb40" path="res://ESCENAS/Player/Player.tscn" id="4_qe2ma"]
+[ext_resource type="PackedScene" uid="uid://c05fo6y81kcni" path="res://ESCENAS/DangerZones/DangerZones.tscn" id="4_vgl73"]
+[ext_resource type="Texture2D" uid="uid://bradmcgfmudo8" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Backgrounds/Forest/pine1.png" id="5_h42ft"]
+[ext_resource type="Resource" uid="uid://b4o1tlyodn3hm" path="res://ESCENAS/DangerZones/Resources/Espinas.tres" id="5_ihb8h"]
+[ext_resource type="Texture2D" uid="uid://bqcgf6ovclmf" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Backgrounds/Forest/pine3.png" id="6_m5xtl"]
+[ext_resource type="PackedScene" uid="uid://brvi154es6nte" path="res://ESCENAS/Enemies/Enemie_1.tscn" id="8_x7wro"]
+[ext_resource type="SpriteFrames" uid="uid://b8jdo5isqwd38" path="res://ESCENAS/Enemies/Resource/Jabali_1.tres" id="9_m3qa5"]
+[ext_resource type="SpriteFrames" uid="uid://cypm6c48ud6h3" path="res://ESCENAS/Enemies/Resource/Jabali_2.tres" id="10_g2c6o"]
+[ext_resource type="SpriteFrames" uid="uid://4khipftqy2ho" path="res://ESCENAS/Enemies/Resource/Jabali_3.tres" id="11_bx5r7"]
+[ext_resource type="PackedScene" uid="uid://cmfx8w3xl1trs" path="res://ESCENAS/Carteles/Cartel.tscn" id="15_bx5r7"]
+
+[node name="Level" type="Node2D" unique_id=1416783529]
+script = ExtResource("1_0sbgg")
+
+[node name="Paralax" type="Node2D" parent="." unique_id=1591178781]
+position = Vector2(0, 35)
+
+[node name="1" type="Parallax2D" parent="Paralax" unique_id=1232016228]
+scroll_scale = Vector2(0, 0)
+scroll_offset = Vector2(0, 365)
+repeat_size = Vector2(2353.92, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Paralax/1" unique_id=1354347694]
+position = Vector2(984.9999, -204.49995)
+scale = Vector2(6.1302075, 5.875)
+texture = ExtResource("2_vsc1p")
+
+[node name="3" type="Parallax2D" parent="Paralax" unique_id=355819490]
+scroll_scale = Vector2(0.2, 0.2)
+scroll_offset = Vector2(0, 254)
+repeat_size = Vector2(634, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Paralax/3" unique_id=551890702]
+position = Vector2(132, -133)
+texture = ExtResource("4_m5xtl")
+
+[node name="4" type="Parallax2D" parent="Paralax" unique_id=1549424502]
+scroll_scale = Vector2(0.5, 0.5)
+scroll_offset = Vector2(-97, 315)
+repeat_size = Vector2(688, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Paralax/4" unique_id=1152584292]
+position = Vector2(497, -76)
+scale = Vector2(2, 2)
+texture = ExtResource("4_f44po")
+
+[node name="5" type="Parallax2D" parent="Paralax" unique_id=497485229]
+scroll_scale = Vector2(0.8, 0.8)
+scroll_offset = Vector2(-2348.92, 322)
+repeat_size = Vector2(688, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Paralax/5" unique_id=1842040802]
+position = Vector2(491, 13)
+scale = Vector2(2, 2)
+texture = ExtResource("5_h42ft")
+
+[node name="6" type="Parallax2D" parent="Paralax" unique_id=625590331]
+scroll_scale = Vector2(0.8, 0.8)
+scroll_offset = Vector2(-2349.92, 282)
+repeat_size = Vector2(688, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Paralax/6" unique_id=267728092]
+position = Vector2(491, 370)
+scale = Vector2(2, 2)
+texture = ExtResource("6_m5xtl")
+
+[node name="Level_0" parent="." unique_id=1817912562 instance=ExtResource("1_nuxp4")]
+position = Vector2(49, 130)
+
+[node name="Enemies" type="Node2D" parent="." unique_id=1066944501]
+
+[node name="Jabalies_1" type="Node2D" parent="Enemies" unique_id=1071499538]
+
+[node name="Enemies_1" parent="Enemies/Jabalies_1" unique_id=522459552 instance=ExtResource("8_x7wro")]
+position = Vector2(6352, 543)
+skin_variante = ExtResource("9_m3qa5")
+
+[node name="Enemies_2" parent="Enemies/Jabalies_1" unique_id=1532714447 instance=ExtResource("8_x7wro")]
+position = Vector2(6674, 543)
+skin_variante = ExtResource("9_m3qa5")
+
+[node name="Enemies_3" parent="Enemies/Jabalies_1" unique_id=1251022800 instance=ExtResource("8_x7wro")]
+position = Vector2(7014, 539)
+skin_variante = ExtResource("9_m3qa5")
+
+[node name="Enemies_4" parent="Enemies/Jabalies_1" unique_id=703281021 instance=ExtResource("8_x7wro")]
+position = Vector2(7347, 530)
+skin_variante = ExtResource("9_m3qa5")
+
+[node name="Enemies_5" parent="Enemies/Jabalies_1" unique_id=1708253196 instance=ExtResource("8_x7wro")]
+position = Vector2(5145, 326)
+skin_variante = ExtResource("9_m3qa5")
+
+[node name="Jabalies_2" type="Node2D" parent="Enemies" unique_id=338623179]
+
+[node name="Enemies_1" parent="Enemies/Jabalies_2" unique_id=1534116932 instance=ExtResource("8_x7wro")]
+position = Vector2(8533, 527)
+skin_variante = ExtResource("10_g2c6o")
+
+[node name="Enemies_2" parent="Enemies/Jabalies_2" unique_id=297902122 instance=ExtResource("8_x7wro")]
+position = Vector2(9083, 524)
+skin_variante = ExtResource("10_g2c6o")
+
+[node name="Enemies_3" parent="Enemies/Jabalies_2" unique_id=547398661 instance=ExtResource("8_x7wro")]
+position = Vector2(9582, 513)
+skin_variante = ExtResource("10_g2c6o")
+
+[node name="Enemies_4" parent="Enemies/Jabalies_2" unique_id=259439507 instance=ExtResource("8_x7wro")]
+position = Vector2(10877, 474)
+skin_variante = ExtResource("10_g2c6o")
+
+[node name="Enemies_5" parent="Enemies/Jabalies_2" unique_id=404402979 instance=ExtResource("8_x7wro")]
+position = Vector2(11336, 477)
+skin_variante = ExtResource("10_g2c6o")
+
+[node name="Enemies_6" parent="Enemies/Jabalies_2" unique_id=915481993 instance=ExtResource("8_x7wro")]
+position = Vector2(11757, 469)
+skin_variante = ExtResource("10_g2c6o")
+
+[node name="Enemies_7" parent="Enemies/Jabalies_2" unique_id=1022968903 instance=ExtResource("8_x7wro")]
+position = Vector2(12211, 455)
+skin_variante = ExtResource("10_g2c6o")
+
+[node name="Jablies_3" type="Node2D" parent="Enemies" unique_id=392941480]
+
+[node name="Enemies_1" parent="Enemies/Jablies_3" unique_id=1736984802 instance=ExtResource("8_x7wro")]
+position = Vector2(8723, 264)
+skin_variante = ExtResource("11_bx5r7")
+
+[node name="Enemies_2" parent="Enemies/Jablies_3" unique_id=768451273 instance=ExtResource("8_x7wro")]
+position = Vector2(9254, 266)
+skin_variante = ExtResource("11_bx5r7")
+
+[node name="Enemies_3" parent="Enemies/Jablies_3" unique_id=1029556944 instance=ExtResource("8_x7wro")]
+position = Vector2(10055, 113)
+skin_variante = ExtResource("11_bx5r7")
+
+[node name="Enemies_4" parent="Enemies/Jablies_3" unique_id=1933706152 instance=ExtResource("8_x7wro")]
+position = Vector2(10651, 107)
+skin_variante = ExtResource("11_bx5r7")
+
+[node name="Enemies_5" parent="Enemies/Jablies_3" unique_id=837833018 instance=ExtResource("8_x7wro")]
+position = Vector2(11373, 99)
+skin_variante = ExtResource("11_bx5r7")
+
+[node name="Audios" type="Node2D" parent="." unique_id=397847719]
+
+[node name="Bird" type="AudioStreamPlayer" parent="Audios" unique_id=2100584758]
+stream = ExtResource("3_qe2ma")
+volume_db = 7.752
+
+[node name="Objects" type="Node2D" parent="." unique_id=1424493455]
+
+[node name="Cofres" type="Node2D" parent="Objects" unique_id=1563662433]
+
+[node name="Pinchos" type="Node2D" parent="Objects" unique_id=1744639200]
+
+[node name="DangerZone" parent="Objects/Pinchos" unique_id=519141519 instance=ExtResource("4_vgl73")]
+position = Vector2(8152, 613)
+datos = ExtResource("5_ihb8h")
+
+[node name="DangerZone2" parent="Objects/Pinchos" unique_id=1435363907 instance=ExtResource("4_vgl73")]
+position = Vector2(7963, 614)
+datos = ExtResource("5_ihb8h")
+
+[node name="DangerZone3" parent="Objects/Pinchos" unique_id=1589159791 instance=ExtResource("4_vgl73")]
+position = Vector2(8790, 419)
+datos = ExtResource("5_ihb8h")
+
+[node name="DangerZone4" parent="Objects/Pinchos" unique_id=565362488 instance=ExtResource("4_vgl73")]
+position = Vector2(8568, 333)
+datos = ExtResource("5_ihb8h")
+
+[node name="DangerZone5" parent="Objects/Pinchos" unique_id=1778522141 instance=ExtResource("4_vgl73")]
+position = Vector2(8601, 333)
+datos = ExtResource("5_ihb8h")
+
+[node name="DangerZone6" parent="Objects/Pinchos" unique_id=181197914 instance=ExtResource("4_vgl73")]
+position = Vector2(8633, 333)
+datos = ExtResource("5_ihb8h")
+
+[node name="DangerZone7" parent="Objects/Pinchos" unique_id=2143946903 instance=ExtResource("4_vgl73")]
+position = Vector2(10739, 531)
+datos = ExtResource("5_ihb8h")
+
+[node name="DangerZone8" parent="Objects/Pinchos" unique_id=1524191636 instance=ExtResource("4_vgl73")]
+position = Vector2(10771, 531)
+datos = ExtResource("5_ihb8h")
+
+[node name="DangerZone9" parent="Objects/Pinchos" unique_id=226153743 instance=ExtResource("4_vgl73")]
+position = Vector2(12872, 517)
+datos = ExtResource("5_ihb8h")
+
+[node name="DangerZone10" parent="Objects/Pinchos" unique_id=1336972768 instance=ExtResource("4_vgl73")]
+position = Vector2(12904, 517)
+datos = ExtResource("5_ihb8h")
+
+[node name="DangerZone11" parent="Objects/Pinchos" unique_id=87790361 instance=ExtResource("4_vgl73")]
+position = Vector2(12936, 517)
+datos = ExtResource("5_ihb8h")
+
+[node name="DangerZone12" parent="Objects/Pinchos" unique_id=1634576271 instance=ExtResource("4_vgl73")]
+position = Vector2(12968, 517)
+datos = ExtResource("5_ihb8h")
+
+[node name="Checkpoint" type="Node2D" parent="Objects" unique_id=85438359]
+
+[node name="Carteles" type="Node2D" parent="Objects" unique_id=1672929922]
+
+[node name="Cartel" parent="Objects/Carteles" unique_id=1692344881 instance=ExtResource("15_bx5r7")]
+position = Vector2(9482, 232)
+
+[node name="Player" parent="." unique_id=1795189720 instance=ExtResource("4_qe2ma")]
+position = Vector2(9773, 543)

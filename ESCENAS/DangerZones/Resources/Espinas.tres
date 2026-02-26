@@ -41,6 +41,6 @@ animations = [{
 
 [resource]
 script = ExtResource("1_bxgvp")
-"daño" = 5
+"daño" = 1
 frames = SubResource("SpriteFrames_5eejo")
 metadata/_custom_type_script = "uid://cor42s6ji3xfe"

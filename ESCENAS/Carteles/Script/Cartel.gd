@@ -1,19 +1,24 @@
 extends Node2D
 
 @export var datos: Cartelito_Res
-
-
-@onready var button = $Sprite2D/Button
-@onready var sprite = $Sprite2D
+@onready var sprite = $Cartel
 
 func _ready():
+	
 	if datos:
-		$TextureRect/Titulo.text = datos.title
-		$TextureRect/Cotenido.text = datos.content
-	$TextureRect.visible = false
-	$Area2D.input_event.connect(_on_area_input)
+		$Aviso/Titulo.text = datos.title
+		$Aviso/Cotenido.text = datos.content
+
+	$Aviso.visible = false
+	$Boton.visible = false
 
 
-func _on_area_input(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		$TextureRect.visible = !$TextureRect.visible
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	
+	if body is Player:
+		$Boton.visible = true
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	
+	if body is Player:
+		$Boton.visible = false

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bggxsyvtcrq45" path="res://ESCENAS/Components/Scripts/hitbox_component.gd" id="2_j3qw8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a77h0"]
-size = Vector2(32, 8)
+size = Vector2(32, 12)
 
 [node name="DangerZone" type="Node2D" unique_id=519141519]
 script = ExtResource("1_a77h0")
@@ -12,9 +12,10 @@ script = ExtResource("1_a77h0")
 [node name="Visual" type="AnimatedSprite2D" parent="." unique_id=2046965587]
 
 [node name="HitboxComponent" type="Area2D" parent="." unique_id=1447439917]
+collision_layer = 32
 script = ExtResource("2_j3qw8")
 metadata/_custom_type_script = "uid://bggxsyvtcrq45"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" unique_id=1137416754]
-position = Vector2(0, -4)
+position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_a77h0")

@@ -2,7 +2,7 @@ extends Node
 class_name Movement
 
 @export_group("Horizontal Movement")
-@export var speed: float = 300
+@export var speed: float = 160
 @export var acceleration: float = 1200.0
 @export var friction: float = 1200.0
 
