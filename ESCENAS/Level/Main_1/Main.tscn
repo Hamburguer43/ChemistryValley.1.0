@@ -26,6 +26,10 @@
 [ext_resource type="AudioStream" uid="uid://bkxrvb24jui4h" path="res://ASSETS/Audios/Audio/bird-whistling-in-the-forest-215441.mp3" id="17_jkyj1"]
 [ext_resource type="Resource" uid="uid://barje6ile8w64" path="res://ESCENAS/Elements/Resource/Metales/Hierro.tres" id="22_w5g7x"]
 [ext_resource type="Resource" uid="uid://h3kdkr4s6wq7" path="res://ESCENAS/Elements/Resource/Metales/Calcio.tres" id="23_4yv4d"]
+[ext_resource type="PackedScene" uid="uid://c05fo6y81kcni" path="res://ESCENAS/DangerZones/DangerZones.tscn" id="24_5i540"]
+[ext_resource type="Resource" uid="uid://b4o1tlyodn3hm" path="res://ESCENAS/DangerZones/Resources/Espinas.tres" id="25_6qtpi"]
+[ext_resource type="PackedScene" uid="uid://cmfx8w3xl1trs" path="res://ESCENAS/Carteles/Cartel.tscn" id="26_dcq3i"]
+[ext_resource type="Resource" uid="uid://do1240itwxlp" path="res://ESCENAS/Carteles/Resources/CondicionVelocidad.tres" id="27_obrst"]
 
 [node name="Main" type="Node2D" unique_id=1495102444]
 position = Vector2(-2, 11)
@@ -325,6 +329,20 @@ resource = ExtResource("23_4yv4d")
 [node name="Elemento4" parent="Elementos/calcio" unique_id=492466312 instance=ExtResource("4_njmqx")]
 position = Vector2(2520, 256)
 resource = ExtResource("23_4yv4d")
+
+[node name="DangerZones" type="Node2D" parent="." unique_id=1483709915]
+
+[node name="Espinas" type="Node2D" parent="DangerZones" unique_id=2120567640]
+
+[node name="Espinas1" parent="DangerZones/Espinas" unique_id=177772129 instance=ExtResource("24_5i540")]
+position = Vector2(3106, 189)
+datos = ExtResource("25_6qtpi")
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1423617913]
+
+[node name="Cartel" parent="Carteles" unique_id=1692344881 instance=ExtResource("26_dcq3i")]
+position = Vector2(2914, -155)
+datos = ExtResource("27_obrst")
 
 [node name="Otros" type="Node2D" parent="." unique_id=1260902992]
 

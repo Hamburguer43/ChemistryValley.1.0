@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="DangerZone_Res" format=3 uid="uid://b4o1tlyodn3hm"]
+
+[ext_resource type="Script" uid="uid://cor42s6ji3xfe" path="res://ESCENAS/DangerZones/Scritps/DangerZone_Res.gd" id="1_bxgvp"]
+[ext_resource type="Texture2D" uid="uid://vmvfiwp3151d" path="res://ASSETS/TileSets/TileSet-ChemestryValley/DangerZones/pinchos-Sheet.png" id="1_dlfk3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlfk3"]
+atlas = ExtResource("1_dlfk3")
+region = Rect2(0, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sll3c"]
+atlas = ExtResource("1_dlfk3")
+region = Rect2(80, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljjbj"]
+atlas = ExtResource("1_dlfk3")
+region = Rect2(160, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wmnin"]
+atlas = ExtResource("1_dlfk3")
+region = Rect2(240, 0, 80, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5eejo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dlfk3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sll3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljjbj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wmnin")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_bxgvp")
+"daño" = 5
+frames = SubResource("SpriteFrames_5eejo")
+metadata/_custom_type_script = "uid://cor42s6ji3xfe"

@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cmfx8w3xl1trs"]
+
+[ext_resource type="Script" uid="uid://bib1ve44jnvp1" path="res://ESCENAS/Carteles/Script/Cartel.gd" id="1_abjyt"]
+[ext_resource type="Texture2D" uid="uid://0c2wa5nhwxp4" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Objects/CartelSign.png" id="1_vapnb"]
+[ext_resource type="Texture2D" uid="uid://ck6iqo5qnbear" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Paper-menu.png" id="2_abjyt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abjyt"]
+size = Vector2(31, 20)
+
+[node name="Cartel" type="Node2D" unique_id=1692344881]
+script = ExtResource("1_abjyt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2110264382]
+position = Vector2(458, 327)
+texture = ExtResource("1_vapnb")
+region_enabled = true
+region_rect = Rect2(23.278015, 0, 38.542114, 49)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D" unique_id=365140622]
+position = Vector2(0, -8)
+scale = Vector2(1.3, 0.7083334)
+texture = ExtResource("1_vapnb")
+region_enabled = true
+region_rect = Rect2(0.42223358, 18.39517, 20.827103, 24.657381)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1065137755]
+visible = false
+offset_left = 476.0
+offset_top = 101.0
+offset_right = 744.0
+offset_bottom = 323.0
+texture = ExtResource("2_abjyt")
+expand_mode = 1
+
+[node name="Titulo" type="Label" parent="TextureRect" unique_id=2006367191]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 32.0
+offset_right = 223.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Titulo"
+
+[node name="Cotenido" type="Label" parent="TextureRect" unique_id=1045845432]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 96.0
+offset_right = 224.0
+offset_bottom = 189.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Texto"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=131540095]
+position = Vector2(456, 317)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=826588350]
+position = Vector2(1.5, 1)
+shape = SubResource("RectangleShape2D_abjyt")

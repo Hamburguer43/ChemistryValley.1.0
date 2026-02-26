@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c05fo6y81kcni"]
+
+[ext_resource type="Script" uid="uid://chn0nw4mblbaf" path="res://ESCENAS/DangerZones/Scritps/DangerZone.gd" id="1_a77h0"]
+[ext_resource type="Script" uid="uid://bggxsyvtcrq45" path="res://ESCENAS/Components/Scripts/hitbox_component.gd" id="2_j3qw8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a77h0"]
+size = Vector2(32, 8)
+
+[node name="DangerZone" type="Node2D" unique_id=519141519]
+script = ExtResource("1_a77h0")
+
+[node name="Visual" type="AnimatedSprite2D" parent="." unique_id=2046965587]
+
+[node name="HitboxComponent" type="Area2D" parent="." unique_id=1447439917]
+script = ExtResource("2_j3qw8")
+metadata/_custom_type_script = "uid://bggxsyvtcrq45"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" unique_id=1137416754]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_a77h0")
