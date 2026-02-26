@@ -1,14 +1,15 @@
-[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://dgo7rm73ft746"]
+[gd_resource type="Resource" script_class="SC_Hierro1" format=3 uid="uid://dgo7rm73ft746"]
 
 [ext_resource type="Script" uid="uid://bejea5mhobrc3" path="res://ESCENAS/Compound/Script/SC_Hierro1.gd" id="1_5g2rt"]
 [ext_resource type="Texture2D" uid="uid://bg1jf1ov5vbn3" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon6.png" id="2_ol6at"]
 
 [resource]
 script = ExtResource("1_5g2rt")
-nombre = "Óxido ferroso"
+nombre = "Oxido ferroso"
 formula = "FeO"
 textura = ExtResource("2_ol6at")
 descripcion = "Polvo negro usado en metalurgia y vidrios especiales."
 poder_descripcion = "Aumenta la masa del jugador. Esto lo hace inmune al retroceso (knockback) de los enemigos y reduce el daño recibido "
 rareza = "Raro"
+formulas = Array[String](["FeO6", "Fe2O5"])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

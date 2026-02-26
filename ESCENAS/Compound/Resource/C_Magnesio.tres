@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Compound_Res" format=3 uid="uid://c0fw6cbjtevsp"]
+[gd_resource type="Resource" format=3 uid="uid://c0fw6cbjtevsp"]
 
 [ext_resource type="Script" uid="uid://c33f584vbrb0u" path="res://ESCENAS/Compound/Script/SC_Magnesio.gd" id="1_srrc5"]
 [ext_resource type="Texture2D" uid="uid://cxttq0m2qu1ml" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon3.png" id="2_2p0sw"]
@@ -10,4 +10,5 @@ formula = "MgO"
 textura = ExtResource("2_2p0sw")
 descripcion = "Un excelente aislante térmico. Se utiliza para fabricar ladrillos refractarios en hornos donde se funden otros metales."
 poder_descripcion = "El jugador puede saltar mas alto por 7sg"
+formulas = Array[String](["MgO4", "Mg2O2"])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

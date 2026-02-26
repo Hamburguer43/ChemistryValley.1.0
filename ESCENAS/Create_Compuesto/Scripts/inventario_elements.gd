@@ -66,16 +66,6 @@ func close_nodo():
 # -----------------------------------------------------
 
 func _ready() -> void:
-	#esto es de prueba ya que el personaje tendria quec conseguirlos en el world
-	
-	#var hierro = load("res://ESCENAS/Elements/Resource/Metales/Hierro.tres")
-	#var oro = load("res://ESCENAS/Elements/Resource/Metales/Oro.tres")
-	#var oxigeno = load("res://ESCENAS/Elements/Resource/NoMetales/Oxigeno.tres")
-	#var cantidad = 1
-	#Inventory_Global.agregar_element(hierro, cantidad)
-	#Inventory_Global.agregar_element(oro, cantidad)
-	#Inventory_Global.agregar_element(oxigeno, cantidad)
-	
 	create_grid_inventory()
 
 func create_grid_inventory(): 
@@ -89,6 +79,10 @@ func create_grid_inventory():
 	# Llenamos (Responsabilidad: Poblar datos)
 	for elemento in Inventory_Global.Elementos:
 		var cantidad = Inventory_Global.Elementos[elemento]
+		
+		if cantidad <= 0: 
+			return
+		
 		var new_slot = slot.instantiate()
 		grid.add_child(new_slot)
 		new_slot.set_datos(elemento, cantidad)

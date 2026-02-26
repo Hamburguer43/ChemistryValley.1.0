@@ -5,9 +5,10 @@
 
 [resource]
 script = ExtResource("1_lv0j0")
-nombre = "Óxido Titánico"
+nombre = "Oxido Titanico"
 formula = "TiO2"
 textura = ExtResource("2_42x2k")
 descripcion = "La forma más estable y pura de la oxidación del titanio. Es un polvo blanco de un brillo y opacidad inigualables. Debido a su capacidad para reflejar la luz y su extrema resistencia a la corrosión, es el pigmento base por excelencia en todo el mundo."
 poder_descripcion = "El jugador se recubre de una capa metálica blanca que reduce todo el daño recibido en un 80% durante 15 segundos"
+formulas = Array[String](["TiO6", "Ti4O2"])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

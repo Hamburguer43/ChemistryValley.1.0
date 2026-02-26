@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bfbwxk8k8loui" path="res://ASSETS/Sprites/Player.1.0/Png/Sprite-Player-All-1.png" id="11_nslrf"]
 [ext_resource type="Script" uid="uid://slq8s01qg8ki" path="res://ESCENAS/StateMachine/Scripts/poder.gd" id="13_nhf4e"]
 [ext_resource type="PackedScene" uid="uid://dtakpqqxyk5ro" path="res://ESCENAS/Hud_player/HUd.tscn" id="14_q5t41"]
+[ext_resource type="Script" uid="uid://cmp6v2k7x8ver" path="res://ESCENAS/StateMachine/Scripts/hit_state.gd" id="14_t23ln"]
 [ext_resource type="PackedScene" uid="uid://bfctlqgjansd6" path="res://ESCENAS/Menu_Book/Menu_book.tscn" id="16_sqhi6"]
 [ext_resource type="Script" uid="uid://c70v7h7ude7o3" path="res://ESCENAS/Player/Scripts/ability_comp.gd" id="17_vd2eb"]
 [ext_resource type="AudioStream" uid="uid://dgc3yd57vdia0" path="res://ASSETS/Audios/Audio/walking-through-grass-80308.mp3" id="19_tw4ay"]
@@ -165,6 +166,7 @@ position = Vector2(2, 1)
 position = Vector2(36, -13)
 scale = Vector2(2, 2)
 collision_mask = 20
+force = 400
 
 [node name="Sprite2D" type="Sprite2D" parent="Direction" unique_id=1554668826]
 position = Vector2(-4, -21)
@@ -215,6 +217,9 @@ attack_audio = NodePath("../../Audios/Ataque")
 script = ExtResource("13_nhf4e")
 poder_audio = NodePath("../../Audios/Poder")
 
+[node name="HitState" type="Node2D" parent="StateMachine" unique_id=1926627942]
+script = ExtResource("14_t23ln")
+
 [node name="Movement" type="Node2D" parent="." unique_id=1858679854]
 position = Vector2(0, 28)
 script = ExtResource("3_q7xc6")
@@ -244,9 +249,6 @@ editor_draw_drag_margin = true
 
 [node name="HUD" parent="." unique_id=205926049 instance=ExtResource("14_q5t41")]
 
-[node name="Menu_book" parent="." unique_id=1524942260 instance=ExtResource("16_sqhi6")]
-visible = false
-
 [node name="Audios" type="Node2D" parent="." unique_id=1978429120]
 
 [node name="Pasos" type="AudioStreamPlayer" parent="Audios" unique_id=1875557698]
@@ -265,3 +267,6 @@ stream = ExtResource("21_h8k5s")
 stream = ExtResource("22_dce38")
 volume_db = -9.862
 pitch_scale = 2.0
+
+[node name="Menu_book" parent="." unique_id=139748945 instance=ExtResource("16_sqhi6")]
+visible = false

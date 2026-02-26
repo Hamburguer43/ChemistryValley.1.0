@@ -5,9 +5,10 @@
 
 [resource]
 script = ExtResource("1_6hvcl")
-nombre = "Anhídrido Sulfuroso"
+nombre = "Anhidrido Sulfuroso"
 formula = "SO2"
 textura = ExtResource("2_yptar")
 descripcion = "Gas incoloro de olor picante y sofocante (típico de los volcanes). Es un potente agente reductor y el principal responsable de la lluvia ácida al mezclarse con agua."
 poder_descripcion = "Otorga dano corrosivo a los enemigos"
+formulas = Array[String](["S2O2", "SO4"])
 metadata/_custom_type_script = "uid://bh5yebmttwopt"

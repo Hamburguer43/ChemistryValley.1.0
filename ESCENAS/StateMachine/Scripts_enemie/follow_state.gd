@@ -3,6 +3,7 @@ extends State
 @export var detected_audio: AudioStreamPlayer2D
 
 func enter():
+	
 	character.sprite.play("Run")
 	
 	if detected_audio:
@@ -16,7 +17,6 @@ func update_state(delta: float):
 		return
 	
 	var directionPlayer = sign(character.player.global_position.x - character.global_position.x)
-	print(directionPlayer)
 	var distance = character.global_position.distance_to(character.player.global_position)
 	
 	if distance > 20: 

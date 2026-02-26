@@ -5,9 +5,10 @@
 
 [resource]
 script = ExtResource("1_0dpx6")
-nombre = "Anhídrido Hiposulfuroso"
+nombre = "Anhidrido Hiposulfuroso"
 formula = "SO"
 textura = ExtResource("2_2lq7y")
 descripcion = "Un compuesto altamente inestable y difícil de aislar en estado puro. Es un gas transitorio que se descompone rápidamente."
 poder_descripcion = "Otorga dano corrosivo a los enemigos"
+formulas = Array[String](["S2O4", "S3O"])
 metadata/_custom_type_script = "uid://bh5yebmttwopt"

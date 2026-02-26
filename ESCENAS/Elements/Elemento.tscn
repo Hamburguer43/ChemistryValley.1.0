@@ -7,6 +7,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_r0ksr"]
 
 [node name="Elemento" type="Sprite2D" unique_id=66467518 node_paths=PackedStringArray("coin")]
+position = Vector2(-0.49999952, 0.49999905)
+scale = Vector2(0.84375006, 0.78124994)
 script = ExtResource("1_r0ksr")
 coin = NodePath("Audio")
 

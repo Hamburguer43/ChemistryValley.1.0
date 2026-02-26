@@ -1,12 +1,9 @@
 [gd_scene format=3 uid="uid://dh75cxq0xnugm"]
 
-[ext_resource type="FontFile" uid="uid://c4u4rlhswm0ap" path="res://ASSETS/Letras/Antiquity/antiquity-print.ttf" id="1_5lshy"]
 [ext_resource type="Texture2D" uid="uid://ctq152swjwec4" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Elementos-UI/Card-1.png" id="1_i14ut"]
 [ext_resource type="Script" uid="uid://df34r33wvttk7" path="res://ESCENAS/Create_Compuesto/Scripts/card_compound.gd" id="1_oft3l"]
 [ext_resource type="Texture2D" uid="uid://eepqs656d0kc" path="res://ASSETS/Sprites/Menu_Quimica/Create_table/Slot-marco.png" id="2_5lshy"]
-
-[sub_resource type="Theme" id="Theme_oft3l"]
-default_font = ExtResource("1_5lshy")
+[ext_resource type="Texture2D" uid="uid://dwbag5rsk2woc" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Hud/Elementos-UI/Card-2.png" id="5_7hj3r"]
 
 [node name="Card_compound" type="CanvasLayer" unique_id=1635889482]
 script = ExtResource("1_oft3l")
@@ -26,11 +23,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Control" type="Control" parent="CenterContainer" unique_id=2066827583]
+[node name="Compound-info" type="Control" parent="CenterContainer" unique_id=2066827583]
+visible = false
 layout_mode = 2
-theme = SubResource("Theme_oft3l")
 
-[node name="Paper" type="TextureRect" parent="CenterContainer/Control" unique_id=2009864525]
+[node name="Paper" type="TextureRect" parent="CenterContainer/Compound-info" unique_id=2009864525]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -46,14 +43,14 @@ grow_vertical = 2
 texture = ExtResource("1_i14ut")
 stretch_mode = 4
 
-[node name="Marco_compound" type="Sprite2D" parent="CenterContainer/Control" unique_id=2041786871]
+[node name="Marco_compound" type="Sprite2D" parent="CenterContainer/Compound-info" unique_id=2041786871]
 position = Vector2(-175, -145)
 scale = Vector2(3.35, 3.2)
 texture = ExtResource("2_5lshy")
 
-[node name="Compound" type="Sprite2D" parent="CenterContainer/Control/Marco_compound" unique_id=85688670]
+[node name="Compound" type="Sprite2D" parent="CenterContainer/Compound-info/Marco_compound" unique_id=85688670]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/Control" unique_id=1675675497]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/Compound-info" unique_id=1675675497]
 layout_mode = 0
 offset_left = -93.0
 offset_top = -202.0
@@ -62,21 +59,21 @@ offset_bottom = -122.0
 size_flags_horizontal = 10
 size_flags_vertical = 0
 
-[node name="LabelNombre" type="Label" parent="CenterContainer/Control/VBoxContainer" unique_id=1899030463]
+[node name="LabelNombre" type="Label" parent="CenterContainer/Compound-info/VBoxContainer" unique_id=1899030463]
 layout_mode = 2
 text = "fdstyugij;lmnhvyuiop"
 
-[node name="LabelFormula" type="Label" parent="CenterContainer/Control/VBoxContainer" unique_id=239184487]
+[node name="LabelFormula" type="Label" parent="CenterContainer/Compound-info/VBoxContainer" unique_id=239184487]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "vvyuio"
 
-[node name="LabelRareza" type="Label" parent="CenterContainer/Control/VBoxContainer" unique_id=1907136185]
+[node name="LabelRareza" type="Label" parent="CenterContainer/Compound-info/VBoxContainer" unique_id=1907136185]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "jyuijbiojk"
 
-[node name="Compound" type="HBoxContainer" parent="CenterContainer/Control" unique_id=1234816915]
+[node name="Compound" type="HBoxContainer" parent="CenterContainer/Compound-info" unique_id=1234816915]
 layout_mode = 1
 offset_left = -273.0
 offset_top = -203.0
@@ -84,36 +81,174 @@ offset_right = 257.0
 offset_bottom = -53.0
 alignment = 1
 
-[node name="Description" type="RichTextLabel" parent="CenterContainer/Control" unique_id=1865530139]
+[node name="Description" type="RichTextLabel" parent="CenterContainer/Compound-info" unique_id=1865530139]
 layout_mode = 0
-offset_left = 31.0
-offset_top = -55.0
-offset_right = 258.0
-offset_bottom = 148.0
+offset_left = -275.0
+offset_top = -76.0
+offset_right = 280.0
+offset_bottom = 35.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 
-[node name="Description2" type="RichTextLabel" parent="CenterContainer/Control" unique_id=313817585]
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/Compound-info" unique_id=799587511]
 layout_mode = 0
-offset_left = -247.0
-offset_top = -54.0
-offset_right = 1.0
-offset_bottom = 152.0
+offset_left = -272.0
+offset_top = 23.0
+offset_right = 279.0
+offset_bottom = 46.0
+
+[node name="Description2" type="RichTextLabel" parent="CenterContainer/Compound-info" unique_id=313817585]
+layout_mode = 0
+offset_left = -274.0
+offset_top = 39.0
+offset_right = 278.0
+offset_bottom = 165.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/Control" unique_id=946863353]
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/Compound-info" unique_id=946863353]
 layout_mode = 0
 offset_left = -96.0
 offset_top = 171.0
 offset_right = 98.0
 offset_bottom = 211.0
 
-[node name="Guardar" type="Button" parent="CenterContainer/Control/HBoxContainer" unique_id=551563172]
+[node name="Guardar" type="Button" parent="CenterContainer/Compound-info/HBoxContainer" unique_id=551563172]
 layout_mode = 2
 text = "Guardar"
 
-[node name="Cancelar" type="Button" parent="CenterContainer/Control/HBoxContainer" unique_id=975917147]
+[node name="Cancelar" type="Button" parent="CenterContainer/Compound-info/HBoxContainer" unique_id=975917147]
 layout_mode = 2
 text = "Cancelar"
 
-[connection signal="pressed" from="CenterContainer/Control/HBoxContainer/Guardar" to="." method="_on_guardar_pressed"]
-[connection signal="pressed" from="CenterContainer/Control/HBoxContainer/Cancelar" to="." method="_on_cancelar_pressed"]
+[node name="Reto" type="Control" parent="CenterContainer" unique_id=871651257]
+layout_mode = 2
+
+[node name="Paper" type="TextureRect" parent="CenterContainer/Reto" unique_id=1101562483]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -321.0
+offset_top = -294.0
+offset_right = 322.0
+offset_bottom = 295.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_i14ut")
+stretch_mode = 4
+
+[node name="Ttile" type="Label" parent="CenterContainer/Reto/Paper" unique_id=1457745663]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -26.5
+offset_top = 96.0
+offset_right = 26.5
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "RETO"
+
+[node name="Contenedor" type="VBoxContainer" parent="CenterContainer/Reto" unique_id=1571074530]
+layout_mode = 0
+offset_left = -267.0
+offset_top = -170.0
+offset_right = 275.0
+offset_bottom = 209.0
+theme_override_constants/separation = 30
+
+[node name="Formulas" type="VBoxContainer" parent="CenterContainer/Reto/Contenedor" unique_id=984467752]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="LabelPregunta" type="Label" parent="CenterContainer/Reto/Contenedor/Formulas" unique_id=72626310]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Elige la formula correcta "
+
+[node name="Opciones" type="VBoxContainer" parent="CenterContainer/Reto/Contenedor/Formulas" unique_id=1978192484]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 15
+
+[node name="Nomenclatura" type="VBoxContainer" parent="CenterContainer/Reto/Contenedor" unique_id=444103957]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 15
+
+[node name="LabelPregunta" type="Label" parent="CenterContainer/Reto/Contenedor/Nomenclatura" unique_id=1250652981]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Escribe el nombre de la formula: "
+
+[node name="Nombre" type="LineEdit" parent="CenterContainer/Reto/Contenedor/Nomenclatura" unique_id=1712552700]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Cancelar" type="Button" parent="CenterContainer/Reto" unique_id=655792370]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -231.0
+offset_top = 174.0
+offset_right = 232.0
+offset_bottom = 206.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Cancelar"
+
+[node name="Aviso_error" type="Control" parent="CenterContainer" unique_id=2063942180]
+visible = false
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/Aviso_error" unique_id=361235032]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -572.0
+offset_top = -325.0
+offset_right = 572.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7137255)
+
+[node name="Text" type="Sprite2D" parent="CenterContainer/Aviso_error/ColorRect" unique_id=1182931560]
+position = Vector2(553.00006, 299.99997)
+scale = Vector2(1.4491316, 1.3464911)
+texture = ExtResource("5_7hj3r")
+
+[node name="Label" type="RichTextLabel" parent="CenterContainer/Aviso_error/ColorRect" unique_id=1833155948]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 105.0
+offset_right = 761.0
+offset_bottom = 431.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+
+[node name="Salir" type="Button" parent="CenterContainer/Aviso_error/ColorRect" unique_id=1567457293]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.0
+offset_top = 172.5
+offset_right = 159.0
+offset_bottom = 204.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Salir"
+
+[connection signal="pressed" from="CenterContainer/Compound-info/HBoxContainer/Guardar" to="." method="_on_guardar_pressed"]
+[connection signal="pressed" from="CenterContainer/Compound-info/HBoxContainer/Cancelar" to="." method="_on_cancelar_pressed"]
+[connection signal="text_submitted" from="CenterContainer/Reto/Contenedor/Nomenclatura/Nombre" to="." method="_on_nombre_text_submitted"]
+[connection signal="pressed" from="CenterContainer/Reto/Cancelar" to="." method="_on_cancelar_pressed"]
+[connection signal="pressed" from="CenterContainer/Aviso_error/ColorRect/Salir" to="." method="_on_salir_pressed"]

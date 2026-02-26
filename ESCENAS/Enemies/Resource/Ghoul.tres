@@ -2,73 +2,76 @@
 
 [ext_resource type="Texture2D" uid="uid://b5xacj7pn5w5v" path="res://ASSETS/TileSets/TileSet-ChemestryValley/Enemies/burning-ghoul/burning-ghoul.png" id="1_685xd"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_685xd"]
+atlas = ExtResource("1_685xd")
+region = Rect2(0, 0, 57, 80)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_1478g"]
 atlas = ExtResource("1_685xd")
-region = Rect2(0, 0, 57, 60)
+region = Rect2(57, 0, 57, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1qw7a"]
 atlas = ExtResource("1_685xd")
-region = Rect2(57, 0, 57, 60)
+region = Rect2(114, 0, 57, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5yaoc"]
 atlas = ExtResource("1_685xd")
-region = Rect2(114, 0, 57, 60)
+region = Rect2(171, 0, 57, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g28de"]
 atlas = ExtResource("1_685xd")
-region = Rect2(171, 0, 57, 60)
+region = Rect2(228, 0, 57, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5i81x"]
 atlas = ExtResource("1_685xd")
-region = Rect2(228, 0, 57, 60)
+region = Rect2(285, 0, 57, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m154q"]
 atlas = ExtResource("1_685xd")
-region = Rect2(285, 0, 57, 60)
+region = Rect2(342, 0, 57, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_37sja"]
 atlas = ExtResource("1_685xd")
-region = Rect2(342, 0, 57, 60)
+region = Rect2(399, 0, 57, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f7sv8"]
 atlas = ExtResource("1_685xd")
-region = Rect2(399, 0, 57, 60)
+region = Rect2(456, 0, 57, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uec6h"]
 atlas = ExtResource("1_685xd")
-region = Rect2(456, 0, 57, 60)
+region = Rect2(513, 0, 57, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dhhlu"]
 atlas = ExtResource("1_685xd")
-region = Rect2(513, 0, 57, 60)
+region = Rect2(570, 0, 57, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_78nvt"]
 atlas = ExtResource("1_685xd")
-region = Rect2(570, 0, 57, 60)
+region = Rect2(627, 0, 57, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g5nhc"]
 atlas = ExtResource("1_685xd")
-region = Rect2(627, 0, 57, 60)
+region = Rect2(684, 0, 57, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xbd3d"]
 atlas = ExtResource("1_685xd")
-region = Rect2(684, 0, 57, 60)
+region = Rect2(741, 0, 57, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bdexx"]
 atlas = ExtResource("1_685xd")
-region = Rect2(741, 0, 57, 60)
+region = Rect2(798, 0, 57, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_emd65"]
 atlas = ExtResource("1_685xd")
-region = Rect2(798, 0, 57, 60)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_amdae"]
-atlas = ExtResource("1_685xd")
-region = Rect2(855, 0, 57, 60)
+region = Rect2(855, 0, 57, 80)
 
 [resource]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_685xd")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1478g")
 }, {
@@ -113,9 +116,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_emd65")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_amdae")
 }],
 "loop": true,
 "name": &"Walk",

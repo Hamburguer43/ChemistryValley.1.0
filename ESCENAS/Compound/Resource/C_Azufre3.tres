@@ -5,9 +5,10 @@
 
 [resource]
 script = ExtResource("1_pp1s2")
-nombre = "Anhídrido Sulfúrico"
+nombre = "Anhidrido Sulfurico"
 formula = "SO3"
 textura = ExtResource("2_qkpxs")
 descripcion = "Sólido cristalino o líquido aceitoso que reacciona de forma explosiva con el agua para formar ácido sulfúrico concentrado. Es un agente deshidratante extremadamente agresivo."
 poder_descripcion = "Otorga dano corrosivo a los enemigos"
+formulas = Array[String](["SO4", "S4O2"])
 metadata/_custom_type_script = "uid://bh5yebmttwopt"

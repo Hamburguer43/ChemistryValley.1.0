@@ -17,6 +17,7 @@ func agregar_element(elemento: Element_Res, cantidad: int):
 		Elementos[elemento] += cantidad
 	else:
 		Elementos[elemento] = cantidad
+	actualizar_inventory.emit()
 
 func agregar_compound(compound: Compound_Res, cantidad: int = 1):
 	

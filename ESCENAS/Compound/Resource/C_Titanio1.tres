@@ -5,10 +5,11 @@
 
 [resource]
 script = ExtResource("1_leltx")
-nombre = "Óxido hipotitanioso"
+nombre = "Oxido hipotitanioso"
 formula = "TiO"
 textura = ExtResource("2_1yk2o")
 descripcion = "Un compuesto inusual de brillo metálico y tonalidades bronce. Se distingue por su alta conductividad eléctrica, comportándose casi como un metal puro. Es una pieza clave en la experimentación de nuevos materiales conductores."
 poder_descripcion = "El jugador se recubre de una capa metálica blanca que reduce todo el daño recibido en un 80% durante 5 segundos"
 rareza = "Raro"
+formulas = Array[String](["TiO2", "TiO4"])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"

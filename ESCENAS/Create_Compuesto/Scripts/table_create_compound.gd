@@ -12,12 +12,14 @@ class_name table_create_compound
 @onready var Sprite_slot1 = $"Slot-1/Button/elemento1"
 @onready var Sprite_slot2 = $"Slot-2/Button/elemento2"
 var slot_seleccionado: int = 0
-@export var elemento_1: Element_Res
-@export var elemento_2: Element_Res
-@export var valencia: int = 0
+var elemento_1: Element_Res
+var elemento_2: Element_Res
+var valencia: int = 0
 
 @export var compound_card_scene: PackedScene
-@export var mensaje_error: TextEdit
+var mensaje_error: TextEdit
+
+@export_group("Audios - Sonidos")
 @export var burbuja_audio: AudioStreamPlayer
 @export var cooking_audio: AudioStreamPlayer
 @export var error_audio: AudioStreamPlayer
@@ -90,6 +92,7 @@ func _on_button_mezcla_pressed() -> void:
 	if animation:
 		
 		Button_mezcla.disabled = true
+		optionbutton.disabled = true
 		
 		animation.play("mezclando")
 		if burbuja_audio:
@@ -104,7 +107,7 @@ func _on_button_mezcla_pressed() -> void:
 			cooking_audio.play()
 		
 		Button_mezcla.disabled = false
-	
+		optionbutton.disabled = false
 	#Creamos y calculamos la formula utilizando el metodo que está en el script de Logic-create-compound
 	#pasandole el metal_actual y la valencia asignada
 	#creamo un instancia del script dentro de una variable
@@ -112,7 +115,6 @@ func _on_button_mezcla_pressed() -> void:
 	valencia = optionbutton.get_selected_id();
 	
 	var formula = logic_create_compound.create_formula(metal , valencia)
-	prints("formula calculada", formula)
 	
 	#Ya teniendo la formula le vamos a pasar la formula al metodo del autoload que me verifica si ese compuesto existe o no
 	#y me devuelve una respuesta null o la formula
@@ -122,7 +124,6 @@ func _on_button_mezcla_pressed() -> void:
 	if compound:
 		show_card_compound(compound)
 		Aviso_cooking.visible = false
-		print("creado con exito el compuesto:", compound.formula, "/", compound.nombre)
 		animation.play("inital")
 		
 		BdGlobal.registrar_compuesto(compound.formula)
@@ -130,18 +131,23 @@ func _on_button_mezcla_pressed() -> void:
 		BdGlobal.actualizar_puntaje(nuevos_puntos)
 		
 	else:
-		print("compuesto no existente o imposible de mezclar")
+		mostrar_aviso_error("Mezcla imposible...")
 		
 
 func show_card_compound(compound: Compound_Res):
 	# Instanciamos la escena
 	var card = compound_card_scene.instantiate()
-	
+	var metal
 	# La añadimos al árbol de nodos
 	add_child(card)
 	
+	if elemento_1.nombre == "Oxigeno":
+		metal = elemento_2
+	elif elemento_2.nombre == "Oxigeno":
+		metal = elemento_1
+	
 	# Le pasamos los datos del recurso
-	card.show_card_compound(compound)
+	card.show_card_compound(compound, metal)
 	
 	card.guardar_compound.connect(send_compound)
 
@@ -149,6 +155,16 @@ func send_compound(res: Compound_Res):
 	var compound = res
 	var cantidad = 1
 	
+	Sprite_slot1.texture = null
+	$"Slot-1/Marco_S1".visible = false
+	$"Slot-1/Marco_S1/Simbolo".texture = null
+	
+	Sprite_slot2.texture = null
+	$"Slot-2/Marco_S2".visible = false
+	$"Slot-2/Marco_S2/Simbolo".texture = null
+	
+	Inventory_Global.agregar_element(elemento_1, -1)
+	Inventory_Global.agregar_element(elemento_2, -1)
 	Inventory_Global.agregar_compound(compound, cantidad)
 	
 	if not BdGlobal.game_data.has("inventory_compounds"):
@@ -182,7 +198,7 @@ func mostrar_aviso_error(mensaje: String):
 	Aviso_error.get_node("Label").text = mensaje
 	Aviso_error.visible = true
 	var t = create_tween()
-	t.tween_interval(2)
+	t.tween_interval(5)
 	t.tween_callback(func(): Aviso_error.visible = false)
 	
 #RUTA DEL FUNCIONAMIENTO DE TABLE-CREATE-COMPOUND -------------------------------------

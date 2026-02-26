@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SC_Cobre1" format=3 uid="uid://cmdmlmtpqar83"]
+[gd_resource type="Resource" script_class="SC_Cobre2" format=3 uid="uid://cmdmlmtpqar83"]
 
 [ext_resource type="Script" uid="uid://b64216minv4w0" path="res://ESCENAS/Compound/Script/SC_Cobre2.gd" id="1_qtuow"]
 [ext_resource type="Texture2D" uid="uid://bisa4tyoqv3g7" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon27.png" id="2_ptkvw"]
@@ -6,9 +6,10 @@
 [resource]
 script = ExtResource("1_qtuow")
 color_cobre = Color(1, 0.270588, 0, 1)
-nombre = "Oxido cúprico"
+nombre = "Oxido cuprico"
 formula = "CuO"
 textura = ExtResource("2_ptkvw")
 descripcion = "Polvo negro fino. Se usa en la fabricación de semiconductores y para dar color azul o verde a vidrios y cerámicas."
 poder_descripcion = "Otorga Velocidad II"
+formulas = Array[String](["Cu2O4", "CuO6"])
 metadata/_custom_type_script = "uid://c8qcpcv57bml7"
