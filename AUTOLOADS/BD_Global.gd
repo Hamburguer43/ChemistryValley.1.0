@@ -37,7 +37,7 @@ func cargar_partida():
 		
 		if parse_result == OK:
 			game_data = json.get_data()
-			print("Base de datos cargada correctamente.")
+			print("Base de datos cargada correctamente en la BD.")
 		file.close()
 
 func registrar_compuesto(nombre_compuesto: String):

@@ -26,6 +26,7 @@
 [ext_resource type="Resource" uid="uid://c3jv4co8gno4v" path="res://ESCENAS/Elements/Resource/Metales/Magnesio.tres" id="21_wm3x1"]
 [ext_resource type="SpriteFrames" uid="uid://drfj4qw6rywdy" path="res://ESCENAS/doors/Resource/DoorTower.tres" id="22_4npww"]
 [ext_resource type="Resource" uid="uid://btqv7ef22rrje" path="res://ESCENAS/Elements/Resource/Metales/Oro.tres" id="22_wm3x1"]
+[ext_resource type="PackedScene" uid="uid://s6yyrpenenn7" path="res://ESCENAS/muerte.tscn" id="23_l7rde"]
 [ext_resource type="Resource" uid="uid://b6gi2fnyj0l3n" path="res://ESCENAS/Elements/Resource/NoMetales/Oxigeno.tres" id="26_y50d5"]
 
 [node name="Level" type="Node2D" unique_id=1416783529]
@@ -251,6 +252,29 @@ position = Vector2(1016, 52)
 animaciones_especificas = ExtResource("22_4npww")
 escena_destino = "uid://h8glistof8rr"
 
+[node name="Caidas" type="Node2D" parent="Objects" unique_id=1696954234]
+
+[node name="Area2D" parent="Objects/Caidas" unique_id=1698255777 instance=ExtResource("23_l7rde")]
+position = Vector2(-1553, 708)
+
+[node name="Area2D2" parent="Objects/Caidas" unique_id=1676130178 instance=ExtResource("23_l7rde")]
+position = Vector2(3597, 610)
+
+[node name="Area2D3" parent="Objects/Caidas" unique_id=2097539578 instance=ExtResource("23_l7rde")]
+position = Vector2(5260, 790)
+
+[node name="Area2D4" parent="Objects/Caidas" unique_id=1863754101 instance=ExtResource("23_l7rde")]
+position = Vector2(7441, 1062)
+
+[node name="Area2D5" parent="Objects/Caidas" unique_id=154009168 instance=ExtResource("23_l7rde")]
+position = Vector2(9745, 719)
+
+[node name="Area2D6" parent="Objects/Caidas" unique_id=1530854162 instance=ExtResource("23_l7rde")]
+position = Vector2(11816, 747)
+
+[node name="Area2D7" parent="Objects/Caidas" unique_id=479486329 instance=ExtResource("23_l7rde")]
+position = Vector2(16674, 531)
+
 [node name="Elementos" type="Node2D" parent="." unique_id=1349663198]
 position = Vector2(0, -1)
 
@@ -291,4 +315,4 @@ position = Vector2(4323, 65)
 resource = ExtResource("26_y50d5")
 
 [node name="Player" parent="." unique_id=1795189720 instance=ExtResource("4_qe2ma")]
-position = Vector2(4493, 91)
+position = Vector2(1204, 341)

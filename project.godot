@@ -20,15 +20,16 @@ config/features=PackedStringArray("4.6", "Mobile")
 
 [autoload]
 
-Compoud_Global="*res://AUTOLOADS/Compoud-Global.gd"
 Inventory_Global="*res://AUTOLOADS/Inventory-Global.gd"
 TutorialGeneral="*res://ESCENAS/tutoriales/tutorialGeneral.tscn"
 Trasition_Global="*uid://fynqobo37dq8"
 AudioManager_Global="*uid://b1we7tbm1y3wg"
 BdGlobal="*uid://g7kv1dgndem"
+CompoundGlobal="*uid://bnlswgfabmm7t"
 
 [display]
 
+window/size/mode=3
 window/size/borderless=true
 window/size/window_width_override=1280
 window/size/window_height_override=720
@@ -120,3 +121,4 @@ salirse={
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

@@ -118,17 +118,13 @@ func _on_button_mezcla_pressed() -> void:
 	
 	#Ya teniendo la formula le vamos a pasar la formula al metodo del autoload que me verifica si ese compuesto existe o no
 	#y me devuelve una respuesta null o la formula
-	var compound = Compoud_Global.search_compound(formula)
+	var compound = CompoundGlobal.search_compound(formula)
 	
 	
 	if compound:
 		show_card_compound(compound)
 		Aviso_cooking.visible = false
 		animation.play("inital")
-		
-		BdGlobal.registrar_compuesto(compound.formula)
-		var nuevos_puntos = BdGlobal.game_data.high_score + 100
-		BdGlobal.actualizar_puntaje(nuevos_puntos)
 		
 	else:
 		mostrar_aviso_error("Mezcla imposible...")
@@ -166,13 +162,6 @@ func send_compound(res: Compound_Res):
 	Inventory_Global.agregar_element(elemento_1, -1)
 	Inventory_Global.agregar_element(elemento_2, -1)
 	Inventory_Global.agregar_compound(compound, cantidad)
-	
-	if not BdGlobal.game_data.has("inventory_compounds"):
-		BdGlobal.game_data["inventory_compounds"] = {}
-	
-	BdGlobal.game_data.inventory_compounds[res.formula] = Inventory_Global.Compound[res]
-	
-	BdGlobal.guardar_partida()
 
 func iniciar_conteo(segundos: int):
 	var tiempo_restante = segundos

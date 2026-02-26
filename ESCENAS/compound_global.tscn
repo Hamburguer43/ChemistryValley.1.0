@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bnlswgfabmm7t"]
+
+[ext_resource type="Script" uid="uid://dutbwnfamufah" path="res://ESCENAS/compound_global.gd" id="1_mu2u1"]
+[ext_resource type="Script" uid="uid://c8qcpcv57bml7" path="res://ESCENAS/Compound/Script/CompoundRes.gd" id="2_ce2qq"]
+[ext_resource type="Resource" uid="uid://d3r4cf2ktu6at" path="res://ESCENAS/Compound/Resource/Compound_Aluminio.tres" id="3_c5wdm"]
+[ext_resource type="Resource" uid="uid://dsh0io6cpbg7x" path="res://ESCENAS/Compound/Resource/Compound_Cobre1.tres" id="4_x7moy"]
+[ext_resource type="Resource" uid="uid://f56fviwoem1f" path="res://ESCENAS/Compound/Resource/C_Azufre.tres" id="5_hd6hx"]
+[ext_resource type="Resource" uid="uid://ddygyuxmhbfkw" path="res://ESCENAS/Compound/Resource/C_Azufre2.tres" id="6_ulm0x"]
+[ext_resource type="Resource" uid="uid://beir2srdplx7s" path="res://ESCENAS/Compound/Resource/C_Azufre3.tres" id="7_ktfyc"]
+[ext_resource type="Resource" uid="uid://cfsu0cvrw272y" path="res://ESCENAS/Compound/Resource/C_Bromo1.tres" id="8_ceygk"]
+[ext_resource type="Resource" uid="uid://bo13aou2mikp2" path="res://ESCENAS/Compound/Resource/C_Bromo2.tres" id="9_w6ou0"]
+[ext_resource type="Resource" uid="uid://u4ig4he6mc1h" path="res://ESCENAS/Compound/Resource/C_Bromo3.tres" id="10_chw5o"]
+[ext_resource type="Resource" uid="uid://cxfct14ulfqrw" path="res://ESCENAS/Compound/Resource/C_Bromo4.tres" id="11_0a0lc"]
+[ext_resource type="Resource" uid="uid://diqqmr1putivc" path="res://ESCENAS/Compound/Resource/C_Calcio.tres" id="12_b8wxb"]
+[ext_resource type="Resource" uid="uid://cwgtv5kusdfyl" path="res://ESCENAS/Compound/Resource/C_Carbono1.tres" id="13_8gao8"]
+[ext_resource type="Resource" uid="uid://b5bh214dmgdbf" path="res://ESCENAS/Compound/Resource/C_Carbono2.tres" id="14_2l3ii"]
+[ext_resource type="Script" uid="uid://b64216minv4w0" path="res://ESCENAS/Compound/Script/SC_Cobre2.gd" id="15_fdj07"]
+[ext_resource type="Resource" uid="uid://cf2btshkotqx6" path="res://ESCENAS/Compound/Resource/C_Fosforo1.tres" id="16_fdj07"]
+[ext_resource type="Texture2D" uid="uid://bisa4tyoqv3g7" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon27.png" id="16_kvocv"]
+[ext_resource type="Resource" uid="uid://g3vs7p7fkk5t" path="res://ESCENAS/Compound/Resource/C_Fosforo3.tres" id="18_a5nmj"]
+[ext_resource type="Texture2D" uid="uid://bcop5in1nfovh" path="res://ASSETS/Sprites/48 Free Magic Potions Pixel Art Icons/PNG/Transperent/Icon15.png" id="18_dhbe3"]
+[ext_resource type="Resource" uid="uid://dgo7rm73ft746" path="res://ESCENAS/Compound/Resource/C_Hierro1.tres" id="19_dhbe3"]
+[ext_resource type="Resource" uid="uid://c2xa1vy58hb8k" path="res://ESCENAS/Compound/Resource/C_Hierro2.tres" id="20_yrijx"]
+[ext_resource type="Resource" uid="uid://cd4tobkv66tdk" path="res://ESCENAS/Compound/Resource/C_litio.tres" id="21_kxla4"]
+[ext_resource type="Resource" uid="uid://do5mxf85siah6" path="res://ESCENAS/Compound/Resource/C_niquel1.tres" id="22_jwwpm"]
+[ext_resource type="Resource" uid="uid://cm47c8whao0k0" path="res://ESCENAS/Compound/Resource/C_Niquel2.tres" id="23_fdj07"]
+[ext_resource type="Resource" uid="uid://hrsi3lhvwedy" path="res://ESCENAS/Compound/Resource/C_Nitrogeno1.tres" id="24_kvocv"]
+[ext_resource type="Resource" uid="uid://cx4uosyf6xn6k" path="res://ESCENAS/Compound/Resource/C_Nitrogeno2.tres" id="25_a5nmj"]
+[ext_resource type="Resource" uid="uid://xjm171640ay5" path="res://ESCENAS/Compound/Resource/C_Nitrogeno3.tres" id="26_dhbe3"]
+[ext_resource type="Resource" uid="uid://cb1t3t8j7kjy" path="res://ESCENAS/Compound/Resource/C_Oro1.tres" id="27_yrijx"]
+[ext_resource type="Resource" uid="uid://cpm1v60lluwpm" path="res://ESCENAS/Compound/Resource/C_Oro2.tres" id="28_kxla4"]
+[ext_resource type="Resource" uid="uid://blwi32aimm0qc" path="res://ESCENAS/Compound/Resource/C_Plomo1.tres" id="29_rs74l"]
+[ext_resource type="Resource" uid="uid://fekos0e4gox6" path="res://ESCENAS/Compound/Resource/C_Plomo2.tres" id="30_jxhgw"]
+[ext_resource type="Resource" uid="uid://14brjdqmigjo" path="res://ESCENAS/Compound/Resource/C_Potasio.tres" id="31_g6uhd"]
+[ext_resource type="Resource" uid="uid://bn2foaaslxqik" path="res://ESCENAS/Compound/Resource/C_Sodio.tres" id="32_i6qdf"]
+[ext_resource type="Resource" uid="uid://dwvnsjusjgjc1" path="res://ESCENAS/Compound/Resource/C_Titanio1.tres" id="33_xv8dr"]
+[ext_resource type="Resource" uid="uid://2hm63nvk2ghq" path="res://ESCENAS/Compound/Resource/C_Titanio2.tres" id="34_w2tyr"]
+[ext_resource type="Resource" uid="uid://ciw7m8otpoeno" path="res://ESCENAS/Compound/Resource/C_Titanio3.tres" id="35_7pxa3"]
+
+[sub_resource type="Resource" id="Resource_yrijx"]
+script = ExtResource("15_fdj07")
+color_cobre = Color(1, 0.270588, 0, 1)
+nombre = "Oxido cuprico"
+formula = "CuO"
+textura = ExtResource("16_kvocv")
+descripcion = "Polvo negro fino. Se usa en la fabricación de semiconductores y para dar color azul o verde a vidrios y cerámicas."
+poder_descripcion = "Otorga Velocidad II"
+formulas = Array[String](["Cu2O4", "CuO6"])
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"
+
+[sub_resource type="Resource" id="Resource_kxla4"]
+script = ExtResource("2_ce2qq")
+nombre = "Anhidrido Fosforico"
+formula = "P2O5"
+textura = ExtResource("18_dhbe3")
+descripcion = "Un solido blanco cristalino con un fuerte olor a ajo. Es altamente toxico y reacciona lentamente con el aire."
+poder_descripcion = "\"Veneno Fosforico\": Lanza una nube toxica que inflige daño magico persistente a los enemigos en el area."
+formulas = Array[String](["PO", "P2O6"])
+metadata/_custom_type_script = "uid://c8qcpcv57bml7"
+
+[node name="Compound_Global" type="Node2D" unique_id=2140064495]
+script = ExtResource("1_mu2u1")
+lista_recursos_compuestos = Array[ExtResource("2_ce2qq")]([ExtResource("3_c5wdm"), ExtResource("4_x7moy"), ExtResource("5_hd6hx"), ExtResource("6_ulm0x"), ExtResource("7_ktfyc"), ExtResource("8_ceygk"), ExtResource("9_w6ou0"), ExtResource("10_chw5o"), ExtResource("11_0a0lc"), ExtResource("12_b8wxb"), ExtResource("13_8gao8"), ExtResource("14_2l3ii"), SubResource("Resource_yrijx"), ExtResource("16_fdj07"), SubResource("Resource_kxla4"), ExtResource("18_a5nmj"), ExtResource("19_dhbe3"), ExtResource("20_yrijx"), ExtResource("21_kxla4"), ExtResource("22_jwwpm"), ExtResource("23_fdj07"), ExtResource("24_kvocv"), ExtResource("25_a5nmj"), ExtResource("26_dhbe3"), ExtResource("27_yrijx"), ExtResource("28_kxla4"), ExtResource("29_rs74l"), ExtResource("30_jxhgw"), ExtResource("31_g6uhd"), ExtResource("32_i6qdf"), ExtResource("33_xv8dr"), ExtResource("34_w2tyr"), ExtResource("35_7pxa3")])
